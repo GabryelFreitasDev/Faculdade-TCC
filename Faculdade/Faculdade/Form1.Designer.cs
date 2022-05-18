@@ -36,6 +36,7 @@ namespace Faculdade
             this.Btn_Editar = new System.Windows.Forms.Button();
             this.Txb_nomeAlterar = new System.Windows.Forms.TextBox();
             this.Txb_nomeNovo = new System.Windows.Forms.TextBox();
+            this.Txb_listaCurso = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -96,11 +97,21 @@ namespace Faculdade
             this.Txb_nomeNovo.Size = new System.Drawing.Size(100, 20);
             this.Txb_nomeNovo.TabIndex = 6;
             // 
+            // Txb_listaCurso
+            // 
+            this.Txb_listaCurso.Location = new System.Drawing.Point(520, 96);
+            this.Txb_listaCurso.Multiline = true;
+            this.Txb_listaCurso.Name = "Txb_listaCurso";
+            this.Txb_listaCurso.Size = new System.Drawing.Size(179, 194);
+            this.Txb_listaCurso.TabIndex = 7;
+            this.Txb_listaCurso.TextChanged += new System.EventHandler(this.Txb_listaCurso_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Txb_listaCurso);
             this.Controls.Add(this.Txb_nomeNovo);
             this.Controls.Add(this.Txb_nomeAlterar);
             this.Controls.Add(this.Btn_Editar);
@@ -124,6 +135,7 @@ namespace Faculdade
         private System.Windows.Forms.Button Btn_Editar;
         private System.Windows.Forms.TextBox Txb_nomeAlterar;
         private System.Windows.Forms.TextBox Txb_nomeNovo;
+        private System.Windows.Forms.TextBox Txb_listaCurso;
     }
 }
 

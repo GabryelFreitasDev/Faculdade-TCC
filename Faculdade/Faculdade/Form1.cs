@@ -37,5 +37,12 @@ namespace Faculdade
             curso.Editar(Txb_nomeAlterar.Text, Txb_nomeNovo.Text);
             MessageBox.Show(curso.mensagem);
         }
+
+        private void Txb_listaCurso_TextChanged(object sender, EventArgs e)
+        {
+            Curso curso = new Curso();
+            curso.BuscarTudo();
+
+        }
     }
 }

@@ -56,12 +56,18 @@ namespace Faculdade
                 mensagem = "Erro na Inserção:" + ex.Message;
             }
         }
+
+        internal object toString()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Excluir(string nomeCurso)
         {
             status = true;
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso FROM Curso WHERE nomeCurso = '"+nomeCurso+"'";
+                var SQL = "SELECT idCurso, nomeCurso FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -88,7 +94,7 @@ namespace Faculdade
             status = true;
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso FROM Curso WHERE nomeCurso = '"+nomeAlterar+"'";
+                var SQL = "SELECT idCurso, nomeCurso FROM Curso WHERE nomeCurso = '" + nomeAlterar + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -96,7 +102,7 @@ namespace Faculdade
                     //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                     db.NpgSQLCommand(Sql);
                     status = true;
-                    mensagem = "Edição bem sucedida ! Curso: " +nomeCurso;
+                    mensagem = "Edição bem sucedida ! Curso: " + nomeCurso;
                 }
                 else
                 {
@@ -108,6 +114,40 @@ namespace Faculdade
             {
                 status = false;
                 mensagem = "Erro na Edição:" + ex.Message;
+            }
+        }
+        public void BuscarTudo()
+        {
+            status = true;
+            try
+            {
+                var Sql = "SELECT idCurso, nomeCurso FROM Curso";
+                //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
+                db.NpgSQLCommand(Sql);
+                status = true;
+                mensagem = "Busca bem sucedida ! ";
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro na Busca:" + ex.Message;
+            }
+        }
+        public void Buscar(string nomeCurso)
+        {
+            status = true;
+            try
+            {
+                var Sql = "SELECT idCurso, nomeCurso FROM Curso WHERE nomeCurso = ('" + nomeCurso + "')";
+                //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
+                db.NpgSQLCommand(Sql);
+                status = true;
+                mensagem = "Busca bem sucedida ! ";
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro na Busca:" + ex.Message;
             }
         }
     }
