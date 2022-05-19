@@ -20,20 +20,20 @@
 //                db = new Conexao();
 //                mensagem = "Conexão com o banco efetuada com sucesso !";
 //            }
-//            catch(Exception ex)
+//            catch (Exception ex)
 //            {
 //                status = false;
 //                mensagem = "Falha ao se conectar com o banco !" + ex.Message;
 //            }
 //        }
-//        public void Inserir()
+//        public void Inserir(string nomeAluno, DateTime dataNascimento, string contato1, string endereco, string contatoParente, bool cursando)
 //        {
 //            status = true;
 //            try
 //            {
 //                var Sql = "INSERT INTO Aluno (nomeAluno, dataNascimento, contato1, endereco, contatoParente, cursando,) VALUES (@"
 //            }
-//            catch(Exception ex0)
+//            catch (Exception ex0)
 //            {
 
 //            }
