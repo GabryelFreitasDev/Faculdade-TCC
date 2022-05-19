@@ -30,7 +30,6 @@ C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\bin\Debug\System.Threading.Cha
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\bin\Debug\System.ValueTuple.xml
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.AssemblyReference.cache
-C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Form1.resources
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Properties.Resources.resources
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.GenerateResource.cache
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.CoreCompileInputs.cache
@@ -77,3 +76,4 @@ C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\obj\Debug\Faculdad
 C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.CopyComplete
 C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.exe
 C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.pdb
+C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Curso.resources
