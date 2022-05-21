@@ -46,6 +46,34 @@ namespace Faculdade
             }
         }
 
+        public void BuscaDataGridView()
+        {
+            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade");
+            conn.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand();
+            cmd.Connection = conn;
+            DataTable dt = new DataTable();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text +"%' ORDER BY idCurso";
+            dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            Dgv_Curso.DataSource = null;
+            Dgv_Curso.DataSource = dt;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Curso curso = new Curso();
@@ -107,49 +135,10 @@ namespace Faculdade
             AtualizaDataGridView();
         }
 
-        private void Btn_Editar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Txb_listaCurso_TextChanged(object sender, EventArgs e)
-        {
-            Curso curso = new Curso();
-            curso.BuscarTudo();
-
-        }
-
-
-        private void Btn_atualizaDgv_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dgv_Cursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Frm_Curso_Load(object sender, EventArgs e)
         {
             AtualizaDataGridView();
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Txb_excluiCurso_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Btn_editar_Click_1(object sender, EventArgs e)
         {
             Curso curso = new Curso();
@@ -187,6 +176,11 @@ namespace Faculdade
             }
             MessageBox.Show(curso.mensagem);
             AtualizaDataGridView();
+        }
+
+        private void Txb_buscar_TextChanged(object sender, EventArgs e)
+        {
+            BuscaDataGridView();
         }
     }
 }

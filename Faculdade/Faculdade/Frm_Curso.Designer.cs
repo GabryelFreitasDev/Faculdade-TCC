@@ -46,6 +46,7 @@ namespace Faculdade
             this.Txb_nomeAlterar = new System.Windows.Forms.TextBox();
             this.Txb_nomeNovo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Txb_buscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Curso)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,6 @@ namespace Faculdade
             this.Txb_excluiCurso.Name = "Txb_excluiCurso";
             this.Txb_excluiCurso.Size = new System.Drawing.Size(297, 20);
             this.Txb_excluiCurso.TabIndex = 3;
-            this.Txb_excluiCurso.TextChanged += new System.EventHandler(this.Txb_excluiCurso_TextChanged);
             // 
             // Dgv_Curso
             // 
@@ -95,17 +95,17 @@ namespace Faculdade
             this.Dgv_Curso.ReadOnly = true;
             this.Dgv_Curso.Size = new System.Drawing.Size(467, 413);
             this.Dgv_Curso.TabIndex = 7;
-            this.Dgv_Curso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Cursos_CellContentClick);
             // 
             // Cbx_Turno
             // 
+            this.Cbx_Turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_Turno.FormattingEnabled = true;
             this.Cbx_Turno.Items.AddRange(new object[] {
             "Matutino",
             "Vespertino",
             "Noturno",
             "Integral"});
-            this.Cbx_Turno.Location = new System.Drawing.Point(379, 65);
+            this.Cbx_Turno.Location = new System.Drawing.Point(362, 64);
             this.Cbx_Turno.Name = "Cbx_Turno";
             this.Cbx_Turno.Size = new System.Drawing.Size(153, 21);
             this.Cbx_Turno.TabIndex = 9;
@@ -164,6 +164,7 @@ namespace Faculdade
             // 
             // Cbx_turnoNovo
             // 
+            this.Cbx_turnoNovo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_turnoNovo.FormattingEnabled = true;
             this.Cbx_turnoNovo.Items.AddRange(new object[] {
             "Matutino",
@@ -178,7 +179,7 @@ namespace Faculdade
             // Btn_editar
             // 
             this.Btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Btn_editar.Location = new System.Drawing.Point(379, 317);
+            this.Btn_editar.Location = new System.Drawing.Point(379, 334);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(75, 23);
             this.Btn_editar.TabIndex = 16;
@@ -192,7 +193,6 @@ namespace Faculdade
             this.Txb_nomeAlterar.Name = "Txb_nomeAlterar";
             this.Txb_nomeAlterar.Size = new System.Drawing.Size(161, 20);
             this.Txb_nomeAlterar.TabIndex = 15;
-            this.Txb_nomeAlterar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Txb_nomeNovo
             // 
@@ -211,11 +211,20 @@ namespace Faculdade
             this.label3.TabIndex = 22;
             this.label3.Text = "DELETAR";
             // 
+            // Txb_buscar
+            // 
+            this.Txb_buscar.Location = new System.Drawing.Point(543, 66);
+            this.Txb_buscar.Name = "Txb_buscar";
+            this.Txb_buscar.Size = new System.Drawing.Size(467, 20);
+            this.Txb_buscar.TabIndex = 23;
+            this.Txb_buscar.TextChanged += new System.EventHandler(this.Txb_buscar_TextChanged);
+            // 
             // Frm_Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 543);
+            this.Controls.Add(this.Txb_buscar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Txb_nomeNovo);
             this.Controls.Add(this.label2);
@@ -250,7 +259,6 @@ namespace Faculdade
         private System.Windows.Forms.Button Btn_excluiCurso;
         private System.Windows.Forms.TextBox Txb_excluiCurso;
         private System.Windows.Forms.DataGridView Dgv_Curso;
-        private System.Windows.Forms.ComboBox Cbx_Turno;
         private System.Windows.Forms.TextBox Txb_descricao;
         private System.Windows.Forms.MaskedTextBox MTxb_cargaHoraria;
         private System.Windows.Forms.Label label1;
@@ -262,6 +270,8 @@ namespace Faculdade
         private System.Windows.Forms.TextBox Txb_nomeAlterar;
         private System.Windows.Forms.TextBox Txb_nomeNovo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox Cbx_Turno;
+        private System.Windows.Forms.TextBox Txb_buscar;
     }
 }
 
