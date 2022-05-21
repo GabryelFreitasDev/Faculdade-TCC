@@ -73,8 +73,8 @@ namespace Faculdade
                 conn.Close();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void Btn_InsereCurso_Click(object sender, EventArgs e)
         {
             Curso curso = new Curso();
             try
@@ -88,7 +88,7 @@ namespace Faculdade
                     curso.mensagem = "Digite o nome do Curso";
                 }
 
-                else if (string.IsNullOrEmpty(Cbx_Turno.SelectedItem.ToString()))
+                else if (string.IsNullOrWhiteSpace(Cbx_Turno.SelectedItem.ToString()))
                 {
                     curso.mensagem = "Escolha o turno do Curso";
                 }

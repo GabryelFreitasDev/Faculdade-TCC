@@ -30,7 +30,7 @@ namespace Faculdade
         private void InitializeComponent()
         {
             this.Txb_nomeCurso = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_InsereCurso = new System.Windows.Forms.Button();
             this.Btn_excluiCurso = new System.Windows.Forms.Button();
             this.Txb_excluiCurso = new System.Windows.Forms.TextBox();
             this.Dgv_Curso = new System.Windows.Forms.DataGridView();
@@ -57,16 +57,16 @@ namespace Faculdade
             this.Txb_nomeCurso.Size = new System.Drawing.Size(161, 20);
             this.Txb_nomeCurso.TabIndex = 0;
             // 
-            // button1
+            // Btn_InsereCurso
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button1.Location = new System.Drawing.Point(379, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "INSERIR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_InsereCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Btn_InsereCurso.Location = new System.Drawing.Point(379, 145);
+            this.Btn_InsereCurso.Name = "Btn_InsereCurso";
+            this.Btn_InsereCurso.Size = new System.Drawing.Size(75, 23);
+            this.Btn_InsereCurso.TabIndex = 1;
+            this.Btn_InsereCurso.Text = "INSERIR";
+            this.Btn_InsereCurso.UseVisualStyleBackColor = true;
+            this.Btn_InsereCurso.Click += new System.EventHandler(this.Btn_InsereCurso_Click);
             // 
             // Btn_excluiCurso
             // 
@@ -240,7 +240,7 @@ namespace Faculdade
             this.Controls.Add(this.Dgv_Curso);
             this.Controls.Add(this.Txb_excluiCurso);
             this.Controls.Add(this.Btn_excluiCurso);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_InsereCurso);
             this.Controls.Add(this.Txb_nomeCurso);
             this.Name = "Frm_Curso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -255,7 +255,7 @@ namespace Faculdade
         #endregion
 
         private System.Windows.Forms.TextBox Txb_nomeCurso;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_InsereCurso;
         private System.Windows.Forms.Button Btn_excluiCurso;
         private System.Windows.Forms.TextBox Txb_excluiCurso;
         private System.Windows.Forms.DataGridView Dgv_Curso;
