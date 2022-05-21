@@ -29,8 +29,8 @@ namespace Faculdade
             cmd.CommandText = "SELECT * FROM \"curso\"";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
-            Cbx_editaCurso.DataSource = null;
-            Cbx_editaCurso.DataSource = dt;
+            Dgv_Curso.DataSource = null;
+            Dgv_Curso.DataSource = dt;
 
             try
             {
@@ -53,27 +53,33 @@ namespace Faculdade
             {
                 curso.Inserir(Txb_nomeCurso.Text, Cbx_Turno.SelectedItem.ToString(), MTxb_cargaHoraria.Text, Txb_descricao.Text);
             }
-            catch (NullReferenceException)
+            catch(NullReferenceException)
             {
                 if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
                 {
                     curso.mensagem = "Digite o nome do Curso";
                 }
+
                 else if (string.IsNullOrEmpty(Cbx_Turno.SelectedItem.ToString()))
                 {
                     curso.mensagem = "Escolha o turno do Curso";
                 }
+
                 else if (string.IsNullOrEmpty(MTxb_cargaHoraria.Text))
                 {
                     curso.mensagem = "Digite a carga horária do Curso";
                 }
+
                 else if (string.IsNullOrEmpty(Txb_descricao.Text))
                 {
                     curso.mensagem = "Digite o nome do Curso";
                 }
-
+                else
+                {
+                    curso.mensagem = "Confira se preencheu todos o campos";
+                }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 curso.mensagem = "Erro na Inserção:" + ex.Message;
             }
@@ -83,61 +89,27 @@ namespace Faculdade
 
         private void Btn_excluiCurso_Click(object sender, EventArgs e)
         {
-            Curso curso = new Curso();
+            Curso excluir = new Curso();
             try
             {
-                curso.Excluir(Txb_excluiCurso.Text);
-
+                excluir.Excluir(Txb_excluiCurso.Text);
             }
             catch (NullReferenceException)
             {
-                curso.mensagem = "Digite o nome do curso que deseja excluir";
+                excluir.mensagem = "Digite o nome do curso que deseja excluir";
             }
             catch (Exception ex)
             {
-                curso.mensagem = "Erro na Exclusão:" + ex.Message;
+                excluir.mensagem = "Erro na Exclusão:" + ex.Message;
             }
 
-            MessageBox.Show(curso.mensagem);
+            MessageBox.Show(excluir.mensagem);
             AtualizaDataGridView();
         }
 
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
-            Curso curso = new Curso();
-            try
-            {
-                curso.Editar(Txb_nomeAlterar.Text, Txb_nomeNovo.Text, Cbx_turnoNovo.Text, Mtxb_cargaHoraNova.Text, Txb_descricaoNova.Text);
-            }
-            catch (NullReferenceException)
-            {
-                if (string.IsNullOrEmpty(Txb_nomeAlterar.Text))
-                {
-                    curso.mensagem = "Digite o nome do Curso que deseja alterar";
-                }
-                else if (string.IsNullOrEmpty(Txb_nomeNovo.Text))
-                {
-                    curso.mensagem = "Digite o novo nome do Curso";
-                }
-                else if (string.IsNullOrEmpty(Cbx_turnoNovo.Text))
-                {
-                    curso.mensagem = "Escolha o turno do Curso";
-                }
-                else if (string.IsNullOrEmpty(Mtxb_cargaHoraNova.Text))
-                {
-                    curso.mensagem = "Digite a carga horária do Curso";
-                }
-                else if (string.IsNullOrEmpty(Txb_descricaoNova.Text))
-                {
-                    curso.mensagem = "Digite a descrição do Curso";
-                }
-            }
-            catch (Exception ex)
-            {
-                curso.mensagem = "Erro na Edição:" + ex.Message;
-            }
-            MessageBox.Show(curso.mensagem);
-            AtualizaDataGridView();
+            
         }
 
         private void Txb_listaCurso_TextChanged(object sender, EventArgs e)
@@ -176,6 +148,45 @@ namespace Faculdade
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_editar_Click_1(object sender, EventArgs e)
+        {
+            Curso curso = new Curso();
+            try
+            {
+                curso.Editar(Txb_nomeAlterar.Text, Txb_nomeNovo.Text, Cbx_turnoNovo.Text, Mtxb_cargaHoraNova.Text, Txb_descricaoNova.Text);
+            }
+            catch (NullReferenceException)
+            {
+                if (string.IsNullOrEmpty(Txb_nomeAlterar.Text))
+                {
+                    curso.mensagem = "Digite o nome do Curso que deseja alterar";
+                }
+                else if (string.IsNullOrEmpty(Txb_nomeNovo.Text))
+                {
+                    curso.mensagem = "Digite o novo nome do Curso";
+                }
+                else if (string.IsNullOrEmpty(Cbx_turnoNovo.Text))
+                {
+                    curso.mensagem = "Escolha o turno do Curso";
+                }
+                else if (string.IsNullOrEmpty(Mtxb_cargaHoraNova.Text))
+                {
+                    curso.mensagem = "Digite a carga horária do Curso";
+                }
+                else if (string.IsNullOrEmpty(Txb_descricaoNova.Text))
+                {
+                    curso.mensagem = "Digite a descrição do Curso";
+                }
+                MessageBox.Show(curso.mensagem);
+            }
+            catch (Exception ex)
+            {
+                curso.mensagem = "Erro na Edição:" + ex.Message;
+            }
+            MessageBox.Show(curso.mensagem);
+            AtualizaDataGridView();
         }
     }
 }

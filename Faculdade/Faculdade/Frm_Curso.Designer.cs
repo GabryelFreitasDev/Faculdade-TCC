@@ -33,7 +33,7 @@ namespace Faculdade
             this.button1 = new System.Windows.Forms.Button();
             this.Btn_excluiCurso = new System.Windows.Forms.Button();
             this.Txb_excluiCurso = new System.Windows.Forms.TextBox();
-            this.Cbx_editaCurso = new System.Windows.Forms.DataGridView();
+            this.Dgv_Curso = new System.Windows.Forms.DataGridView();
             this.Cbx_Turno = new System.Windows.Forms.ComboBox();
             this.Txb_descricao = new System.Windows.Forms.TextBox();
             this.MTxb_cargaHoraria = new System.Windows.Forms.MaskedTextBox();
@@ -46,7 +46,7 @@ namespace Faculdade
             this.Txb_nomeAlterar = new System.Windows.Forms.TextBox();
             this.Txb_nomeNovo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Cbx_editaCurso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Curso)).BeginInit();
             this.SuspendLayout();
             // 
             // Txb_nomeCurso
@@ -85,17 +85,17 @@ namespace Faculdade
             this.Txb_excluiCurso.TabIndex = 3;
             this.Txb_excluiCurso.TextChanged += new System.EventHandler(this.Txb_excluiCurso_TextChanged);
             // 
-            // Cbx_editaCurso
+            // Dgv_Curso
             // 
-            this.Cbx_editaCurso.AllowUserToAddRows = false;
-            this.Cbx_editaCurso.AllowUserToDeleteRows = false;
-            this.Cbx_editaCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Cbx_editaCurso.Location = new System.Drawing.Point(559, 123);
-            this.Cbx_editaCurso.Name = "Cbx_editaCurso";
-            this.Cbx_editaCurso.ReadOnly = true;
-            this.Cbx_editaCurso.Size = new System.Drawing.Size(381, 396);
-            this.Cbx_editaCurso.TabIndex = 7;
-            this.Cbx_editaCurso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Cursos_CellContentClick);
+            this.Dgv_Curso.AllowUserToAddRows = false;
+            this.Dgv_Curso.AllowUserToDeleteRows = false;
+            this.Dgv_Curso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_Curso.Location = new System.Drawing.Point(543, 106);
+            this.Dgv_Curso.Name = "Dgv_Curso";
+            this.Dgv_Curso.ReadOnly = true;
+            this.Dgv_Curso.Size = new System.Drawing.Size(467, 413);
+            this.Dgv_Curso.TabIndex = 7;
+            this.Dgv_Curso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Cursos_CellContentClick);
             // 
             // Cbx_Turno
             // 
@@ -103,7 +103,8 @@ namespace Faculdade
             this.Cbx_Turno.Items.AddRange(new object[] {
             "Matutino",
             "Vespertino",
-            "Noturno"});
+            "Noturno",
+            "Integral"});
             this.Cbx_Turno.Location = new System.Drawing.Point(379, 65);
             this.Cbx_Turno.Name = "Cbx_Turno";
             this.Cbx_Turno.Size = new System.Drawing.Size(153, 21);
@@ -167,7 +168,8 @@ namespace Faculdade
             this.Cbx_turnoNovo.Items.AddRange(new object[] {
             "Matutino",
             "Vespertino",
-            "Noturno"});
+            "Noturno",
+            "Integral"});
             this.Cbx_turnoNovo.Location = new System.Drawing.Point(362, 236);
             this.Cbx_turnoNovo.Name = "Cbx_turnoNovo";
             this.Cbx_turnoNovo.Size = new System.Drawing.Size(153, 21);
@@ -182,6 +184,7 @@ namespace Faculdade
             this.Btn_editar.TabIndex = 16;
             this.Btn_editar.Text = "EDITAR";
             this.Btn_editar.UseVisualStyleBackColor = true;
+            this.Btn_editar.Click += new System.EventHandler(this.Btn_editar_Click_1);
             // 
             // Txb_nomeAlterar
             // 
@@ -212,7 +215,7 @@ namespace Faculdade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 543);
+            this.ClientSize = new System.Drawing.Size(1016, 543);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Txb_nomeNovo);
             this.Controls.Add(this.label2);
@@ -225,15 +228,16 @@ namespace Faculdade
             this.Controls.Add(this.MTxb_cargaHoraria);
             this.Controls.Add(this.Txb_descricao);
             this.Controls.Add(this.Cbx_Turno);
-            this.Controls.Add(this.Cbx_editaCurso);
+            this.Controls.Add(this.Dgv_Curso);
             this.Controls.Add(this.Txb_excluiCurso);
             this.Controls.Add(this.Btn_excluiCurso);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Txb_nomeCurso);
             this.Name = "Frm_Curso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Curso";
             this.Load += new System.EventHandler(this.Frm_Curso_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Cbx_editaCurso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Curso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +249,7 @@ namespace Faculdade
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Btn_excluiCurso;
         private System.Windows.Forms.TextBox Txb_excluiCurso;
-        private System.Windows.Forms.DataGridView Cbx_editaCurso;
+        private System.Windows.Forms.DataGridView Dgv_Curso;
         private System.Windows.Forms.ComboBox Cbx_Turno;
         private System.Windows.Forms.TextBox Txb_descricao;
         private System.Windows.Forms.MaskedTextBox MTxb_cargaHoraria;

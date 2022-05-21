@@ -109,6 +109,12 @@
     <Compile Include="Aluno.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Curso.cs" />
+    <Compile Include="Frm_Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Aluno.Designer.cs">
+      <DependentUpon>Frm_Aluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Curso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Aluno.resx">
+      <DependentUpon>Frm_Aluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Curso.resx">
       <DependentUpon>Frm_Curso.cs</DependentUpon>
     </EmbeddedResource>
