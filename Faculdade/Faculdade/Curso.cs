@@ -29,16 +29,16 @@ namespace Faculdade
                 mensagem = "Falha ao se conectar com o banco !" + ex.Message;
             }
         }
-        public void Inserir(string nomeCurso, string turno)
+        public void Inserir(string nomeCurso, string turno,string cargaHoraria,string descricao)
         {
             status = true;
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso, turno FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
+                var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count == 0)
                 {
-                    var Sql = "INSERT INTO Curso (nomeCurso ,turno) VALUES ('" + nomeCurso + "','" + turno + "')";
+                    var Sql = "INSERT INTO Curso (nomeCurso , turno, cargaHoraria, descricao) VALUES ('" + nomeCurso + "','" + turno + "','" + cargaHoraria + "','" + descricao + "')";
                     //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                     db.NpgSQLCommand(Sql);
                     status = true;
@@ -62,7 +62,7 @@ namespace Faculdade
             status = true;
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso,turno FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
+                var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -84,16 +84,16 @@ namespace Faculdade
                 mensagem = "Erro na Exclusão:" + ex.Message;
             }
         }
-        public void Editar(string nomeAlterar, string nomeCurso,string turno)
+        public void Editar(string nomeAlterar, string nomeCurso, string turno, string cargaHoraria, string descricao)
         {
             status = true;
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso,turno FROM Curso WHERE nomeCurso = '" + nomeAlterar + "'";
+                var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeAlterar + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
-                    var Sql = "UPDATE Curso SET nomeCurso = ('" + nomeCurso + "') turno =('" + turno + "')  WHERE nomeCurso = ('" + nomeAlterar + "')";
+                    var Sql = "UPDATE Curso SET nomeCurso = ('" + nomeCurso + "'), turno =('" + turno + "'), cargaHoraria =('" + cargaHoraria + "'), descricao =('" + descricao + "')  WHERE nomeCurso = ('" + nomeAlterar + "')";
                     //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                     db.NpgSQLCommand(Sql);
                     status = true;
@@ -116,7 +116,7 @@ namespace Faculdade
             status = true;
             try
             {
-                var Sql = "SELECT idCurso, nomeCurso, turno FROM Curso";
+                var Sql = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso";
                 //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                 db.NpgSQLCommand(Sql);
                 status = true;
@@ -133,7 +133,7 @@ namespace Faculdade
             status = true;
             try
             {
-                var Sql = "SELECT idCurso, nomeCurso,turno FROM Curso WHERE nomeCurso = ('" + nomeCurso + "')";
+                var Sql = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao WHERE nomeCurso = ('" + nomeCurso + "')";
                 //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                 db.NpgSQLCommand(Sql);
                 status = true;
