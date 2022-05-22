@@ -121,6 +121,12 @@
     <Compile Include="Frm_Curso.Designer.cs">
       <DependentUpon>Frm_Curso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Menu.Designer.cs">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Aluno.resx">
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Curso.resx">
       <DependentUpon>Frm_Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Menu.resx">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

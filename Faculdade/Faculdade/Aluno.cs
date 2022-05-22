@@ -31,7 +31,7 @@ namespace Faculdade
         {
             try
             {
-                var Sql = "INSERT INTO Aluno (nomeAluno, cpf, dataNascimento, contato, contatoParente, email, endereco, turma, idCurso) VALUES ('" + nomeAluno + "','" + cpf + "','" + dataNascimento + "','" + contato + "','" + contatoParente + "','" + email + "','" + endereco + "','" + turma + "','" + idCurso + "')";
+                var Sql = "INSERT INTO Aluno (nomeAluno, cpf, dataNascimento, contato, contatoParente, email, endereco, turma, FK_idCurso) VALUES ('" + nomeAluno + "','" + cpf + "','" + dataNascimento + "','" + contato + "','" + contatoParente + "','" + email + "','" + endereco + "','" + turma + "','" + idCurso + "')";
                 db.NpgSQLCommand(Sql);
                 status = true;
             }

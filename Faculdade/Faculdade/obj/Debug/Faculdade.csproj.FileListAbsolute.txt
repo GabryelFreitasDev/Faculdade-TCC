@@ -118,3 +118,4 @@ C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Facu
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.pdb
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Curso.resources
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Aluno.resources
+C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu.resources

@@ -37,9 +37,10 @@ namespace Faculdade
         }
         private void Btn_insereAluno_Click(object sender, EventArgs e)
         {
-            int num = 1;
+            int num = 2;
             Aluno aluno = new Aluno();
             aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text,num);
+            MessageBox.Show(aluno.mensagem);
         }
 
         private void Frm_Aluno_Load(object sender, EventArgs e)
