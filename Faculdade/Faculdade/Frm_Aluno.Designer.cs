@@ -119,6 +119,7 @@
             this.Cbx_Curso.Name = "Cbx_Curso";
             this.Cbx_Curso.Size = new System.Drawing.Size(636, 21);
             this.Cbx_Curso.TabIndex = 10;
+            this.Cbx_Curso.SelectedIndexChanged += new System.EventHandler(this.Cbx_Curso_SelectedIndexChanged);
             // 
             // Frm_Aluno
             // 

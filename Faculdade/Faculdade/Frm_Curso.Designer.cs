@@ -93,7 +93,7 @@ namespace Faculdade
             this.Dgv_Curso.Location = new System.Drawing.Point(543, 106);
             this.Dgv_Curso.Name = "Dgv_Curso";
             this.Dgv_Curso.ReadOnly = true;
-            this.Dgv_Curso.Size = new System.Drawing.Size(467, 413);
+            this.Dgv_Curso.Size = new System.Drawing.Size(649, 413);
             this.Dgv_Curso.TabIndex = 7;
             // 
             // Cbx_Turno
@@ -223,7 +223,7 @@ namespace Faculdade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 543);
+            this.ClientSize = new System.Drawing.Size(1222, 543);
             this.Controls.Add(this.Txb_buscar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Txb_nomeNovo);

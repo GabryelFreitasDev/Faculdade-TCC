@@ -13,7 +13,7 @@ namespace Faculdade
         public string mensagem = "";
         public bool status;
         public Conexao db;
-        NpgsqlCommand cmd = new NpgsqlCommand();
+        
 
         public Curso()
         {

@@ -18,6 +18,40 @@ namespace Faculdade
             InitializeComponent();
         }
 
+        public class ComboboxItem
+        {
+            public string Text { get; set; }
+            public object Value { get; set; }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
+
+        private void Test()
+        {
+            Conexao conexao = new Conexao();
+            Cbx_Curso.DataSource = conexao;
+            DataTable dt = new DataTable();
+            ComboboxItem item = new ComboboxItem();
+            var Sql = "SELECT idCurso, nomeCurso FROM Curso";
+            NpgsqlCommand cmd = new NpgsqlCommand(Sql);
+            cmd.CommandType = CommandType.Text;
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            da.Fill(dt);
+            string idCurso = dt.Rows.ToString();
+            cmd.CommandType = CommandType.Text;
+            item.Text = idCurso;
+            item.Value = 12;
+
+            Cbx_Curso.Items.Add(item);
+
+            Cbx_Curso.SelectedIndex = 0;
+
+            MessageBox.Show((Cbx_Curso.SelectedItem as ComboboxItem).Value.ToString());
+        }
+
         public void ComboBoxCursos()
         {
             NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade");
@@ -37,15 +71,20 @@ namespace Faculdade
         }
         private void Btn_insereAluno_Click(object sender, EventArgs e)
         {
-            int num = 2;
+            
             Aluno aluno = new Aluno();
-            aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text,num);
+            aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text,Cbx_Curso.SelectedItem.ToString());
             MessageBox.Show(aluno.mensagem);
         }
 
         private void Frm_Aluno_Load(object sender, EventArgs e)
         {
-            ComboBoxCursos();
+            Test();
+        }
+
+        private void Cbx_Curso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
