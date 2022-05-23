@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,62 +30,56 @@ namespace Faculdade
             }
         }
 
-        private void Test()
+        private void preencherCBDescricao()
         {
-            Conexao conexao = new Conexao();
-            Cbx_Curso.DataSource = conexao;
-            DataTable dt = new DataTable();
-            ComboboxItem item = new ComboboxItem();
-            var Sql = "SELECT idCurso, nomeCurso FROM Curso";
-            NpgsqlCommand cmd = new NpgsqlCommand(Sql);
-            cmd.CommandType = CommandType.Text;
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-            da.Fill(dt);
-            string idCurso = dt.Rows.ToString();
-            cmd.CommandType = CommandType.Text;
-            item.Text = idCurso;
-            item.Value = 12;
-
-            Cbx_Curso.Items.Add(item);
-
-            Cbx_Curso.SelectedIndex = 0;
-
-            MessageBox.Show((Cbx_Curso.SelectedItem as ComboboxItem).Value.ToString());
+            String scon = "Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade";
+            NpgsqlConnection con = new NpgsqlConnection(scon);
+            try
+            {
+                con.Open();
+            }
+            catch (NpgsqlException sqle)
+            {
+                MessageBox.Show("Falha ao efetuar a conexão. Erro: " + sqle);
+            }
+            String scom = "SELECT nomeCurso from Curso";
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(scom, con);
+            DataTable dtResultado = new DataTable();
+            dtResultado.Clear();
+            Cbx_Curso.DataSource = null;
+            da.Fill(dtResultado);
+            Cbx_Curso.DataSource = dtResultado;
+            Cbx_Curso.ValueMember = "nomeCurso";
+            Cbx_Curso.DisplayMember = "nomeCurso";
+            Cbx_Curso.Refresh();
         }
 
-        public void ComboBoxCursos()
-        {
-            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade");
-            conn.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conn;
-            DataTable dt = new DataTable();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT nomeCurso FROM Curso";
-            dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            
-            Cbx_Curso.DataSource = dt;
-            dt.Rows.ToString();
-            
-
-        }
         private void Btn_insereAluno_Click(object sender, EventArgs e)
         {
-            
+            int idCurso;
             Aluno aluno = new Aluno();
-            aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text,Cbx_Curso.SelectedItem.ToString());
+            var FK = "SELECT idCurso FROM curso WHERE nomeCurso = '" + Cbx_Curso.SelectedItem.ToString() + "'";
+            NpgsqlCommand comando = new NpgsqlCommand(FK,aluno.db.conn);
+            comando.Parameters.Add(Cbx_Curso.SelectedItem.ToString(), NpgsqlDbType.Varchar).Value = Cbx_Curso.SelectedItem.ToString();
+            NpgsqlDataReader variavel = comando.ExecuteReader();
+            variavel.Read();
+            if (variavel.HasRows)
+            {
+                idCurso = variavel.GetInt32(0);
+                aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, idCurso);
+            }
+            else
+            {
+                MessageBox.Show("Curso nao encontrado");
+            }
+
+            
             MessageBox.Show(aluno.mensagem);
         }
 
         private void Frm_Aluno_Load(object sender, EventArgs e)
         {
-            Test();
-        }
-
-        private void Cbx_Curso_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            preencherCBDescricao();
         }
     }
 }
