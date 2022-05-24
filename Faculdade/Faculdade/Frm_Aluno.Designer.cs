@@ -130,14 +130,14 @@
             this.Dgv_Alunos.Location = new System.Drawing.Point(407, 87);
             this.Dgv_Alunos.Name = "Dgv_Alunos";
             this.Dgv_Alunos.ReadOnly = true;
-            this.Dgv_Alunos.Size = new System.Drawing.Size(708, 339);
+            this.Dgv_Alunos.Size = new System.Drawing.Size(908, 339);
             this.Dgv_Alunos.TabIndex = 11;
             // 
             // Frm_Aluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 586);
+            this.ClientSize = new System.Drawing.Size(1422, 586);
             this.Controls.Add(this.Dgv_Alunos);
             this.Controls.Add(this.Cbx_Curso);
             this.Controls.Add(this.MTxb_contatoParente);

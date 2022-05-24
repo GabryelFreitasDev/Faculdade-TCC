@@ -54,7 +54,7 @@ namespace Faculdade
             cmd.Connection = conn;
             DataTable dt = new DataTable();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text +"%' ORDER BY idCurso";
+            cmd.CommandText = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY idCurso";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
             Dgv_Curso.DataSource = null;
@@ -73,41 +73,44 @@ namespace Faculdade
                 conn.Close();
             }
         }
-        
+
         private void Btn_InsereCurso_Click(object sender, EventArgs e)
         {
             Curso curso = new Curso();
             try
             {
+                if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
+                {
+                    throw new NullReferenceException();
+                }
+                if (MTxb_cargaHoraria.Text == "     Hrs")
+                {
+                    throw new NullReferenceException();
+                }
+                
                 curso.Inserir(Txb_nomeCurso.Text, Cbx_Turno.SelectedItem.ToString(), MTxb_cargaHoraria.Text, Txb_descricao.Text);
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
                 {
                     curso.mensagem = "Digite o nome do Curso";
                 }
-
-                else if (string.IsNullOrWhiteSpace(Cbx_Turno.SelectedItem.ToString()))
+                else if (string.IsNullOrEmpty(Cbx_Turno.Text))
                 {
                     curso.mensagem = "Escolha o turno do Curso";
                 }
-
-                else if (string.IsNullOrEmpty(MTxb_cargaHoraria.Text))
-                {
-                    curso.mensagem = "Digite a carga horária do Curso";
-                }
-
                 else if (string.IsNullOrEmpty(Txb_descricao.Text))
                 {
-                    curso.mensagem = "Digite o nome do Curso";
+                    curso.mensagem = "Digite a descrição do Curso";
                 }
-                else
+                else if (MTxb_cargaHoraria.Text == "     Hrs")
                 {
-                    curso.mensagem = "Confira se preencheu todos o campos";
+                    curso.mensagem = "Digite a carga horária";
                 }
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 curso.mensagem = "Erro na Inserção:" + ex.Message;
             }
@@ -118,8 +121,13 @@ namespace Faculdade
         private void Btn_excluiCurso_Click(object sender, EventArgs e)
         {
             Curso excluir = new Curso();
+            
             try
             {
+                if (string.IsNullOrEmpty(Txb_excluiCurso.Text))
+                {
+                    throw new NullReferenceException();
+                }
                 excluir.Excluir(Txb_excluiCurso.Text);
             }
             catch (NullReferenceException)
@@ -144,6 +152,10 @@ namespace Faculdade
             Curso curso = new Curso();
             try
             {
+                if (Mtxb_cargaHoraNova.Text == "     Hrs")
+                {
+                    throw new NullReferenceException();
+                }
                 curso.Editar(Txb_nomeAlterar.Text, Txb_nomeNovo.Text, Cbx_turnoNovo.Text, Mtxb_cargaHoraNova.Text, Txb_descricaoNova.Text);
             }
             catch (NullReferenceException)
@@ -160,7 +172,7 @@ namespace Faculdade
                 {
                     curso.mensagem = "Escolha o turno do Curso";
                 }
-                else if (string.IsNullOrEmpty(Mtxb_cargaHoraNova.Text))
+                else if (Mtxb_cargaHoraNova.Text == "     Hrs")
                 {
                     curso.mensagem = "Digite a carga horária do Curso";
                 }
@@ -168,7 +180,7 @@ namespace Faculdade
                 {
                     curso.mensagem = "Digite a descrição do Curso";
                 }
-                MessageBox.Show(curso.mensagem);
+                
             }
             catch (Exception ex)
             {

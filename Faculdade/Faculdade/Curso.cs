@@ -31,30 +31,28 @@ namespace Faculdade
         }
         public void Inserir(string nomeCurso, string turno,string cargaHoraria,string descricao)
         {
-            status = true;
-            try
+            
+            var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
+            var dt = db.NpgSQLQuery(SQL);
+            if (dt.Rows.Count == 0)
             {
-                var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
-                var dt = db.NpgSQLQuery(SQL);
-                if (dt.Rows.Count == 0)
+                try
                 {
                     var Sql = "INSERT INTO Curso (nomeCurso , turno, cargaHoraria, descricao) VALUES ('" + nomeCurso + "','" + turno + "','" + cargaHoraria + "','" + descricao + "')";
-                    //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                     db.NpgSQLCommand(Sql);
                     status = true;
                     mensagem = "Inserção bem sucedida ! Curso: " + nomeCurso;
                 }
-                else
+                catch (Exception ex)
                 {
-                    status = false;
-                    mensagem = "Esse Curso já existe";
+                    mensagem = "Erro na Inserção:" + ex.Message;
                 }
             }
-            catch (Exception ex)
+            else
             {
                 status = false;
-                mensagem = "Erro na Inserção:" + ex.Message;
-            }
+                mensagem = "Esse Curso já existe";
+            }      
         }
 
         public void Excluir(string nomeCurso)

@@ -51,14 +51,23 @@ namespace Faculdade
         {
             Dgv_Alunos.RowHeadersVisible = false;
             Dgv_Alunos.Columns[0].HeaderText = "NOME";
-            Dgv_Alunos.Columns[0].Width = 110;
+            Dgv_Alunos.Columns[0].Width = 150;
             Dgv_Alunos.Columns[1].HeaderText = "CPF";
             Dgv_Alunos.Columns[1].Width = 90;
             Dgv_Alunos.Columns[2].HeaderText = "NASC.";
             Dgv_Alunos.Columns[2].Width = 70;
             Dgv_Alunos.Columns[3].HeaderText = "CONTATO";
             Dgv_Alunos.Columns[3].Width = 90;
-
+            Dgv_Alunos.Columns[4].HeaderText = "CONTATO PARENTE";
+            Dgv_Alunos.Columns[4].Width = 90;
+            Dgv_Alunos.Columns[5].HeaderText = "EMAIL";
+            Dgv_Alunos.Columns[5].Width = 150;
+            Dgv_Alunos.Columns[6].HeaderText = "ENDEREÇO";
+            Dgv_Alunos.Columns[6].Width = 150;
+            Dgv_Alunos.Columns[7].HeaderText = "TURMA";
+            Dgv_Alunos.Columns[7].Width = 60;
+            Dgv_Alunos.Columns[8].HeaderText = "CURSO";
+            Dgv_Alunos.Columns[8].Width = 140;
         }
 
         public class ComboboxItem
