@@ -19,6 +19,48 @@ namespace Faculdade
             InitializeComponent();
         }
 
+        public void AtualizaDataGridView()
+        {
+            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade");
+            conn.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand();
+            cmd.Connection = conn;
+            DataTable dt = new DataTable();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,turma,nomeCurso FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso";
+            dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            Dgv_Alunos.DataSource = null;
+            Dgv_Alunos.DataSource = dt;
+            
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        private void EditaColunaDgv()
+        {
+            Dgv_Alunos.RowHeadersVisible = false;
+            Dgv_Alunos.Columns[0].HeaderText = "NOME";
+            Dgv_Alunos.Columns[0].Width = 110;
+            Dgv_Alunos.Columns[1].HeaderText = "CPF";
+            Dgv_Alunos.Columns[1].Width = 90;
+            Dgv_Alunos.Columns[2].HeaderText = "NASC.";
+            Dgv_Alunos.Columns[2].Width = 70;
+            Dgv_Alunos.Columns[3].HeaderText = "CONTATO";
+            Dgv_Alunos.Columns[3].Width = 90;
+
+        }
+
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -64,6 +106,8 @@ namespace Faculdade
         private void Frm_Aluno_Load(object sender, EventArgs e)
         {
             preencherCBDescricao();
+            AtualizaDataGridView();
+            EditaColunaDgv();
         }
     }
 }

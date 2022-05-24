@@ -38,11 +38,13 @@
             this.Mtxb_cpf = new System.Windows.Forms.MaskedTextBox();
             this.MTxb_contatoParente = new System.Windows.Forms.MaskedTextBox();
             this.Cbx_Curso = new System.Windows.Forms.ComboBox();
+            this.Dgv_Alunos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Alunos)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_insereAluno
             // 
-            this.Btn_insereAluno.Location = new System.Drawing.Point(500, 358);
+            this.Btn_insereAluno.Location = new System.Drawing.Point(280, 360);
             this.Btn_insereAluno.Name = "Btn_insereAluno";
             this.Btn_insereAluno.Size = new System.Drawing.Size(88, 24);
             this.Btn_insereAluno.TabIndex = 0;
@@ -117,14 +119,26 @@
             this.Cbx_Curso.FormattingEnabled = true;
             this.Cbx_Curso.Location = new System.Drawing.Point(55, 321);
             this.Cbx_Curso.Name = "Cbx_Curso";
-            this.Cbx_Curso.Size = new System.Drawing.Size(636, 21);
+            this.Cbx_Curso.Size = new System.Drawing.Size(331, 21);
             this.Cbx_Curso.TabIndex = 10;
+            // 
+            // Dgv_Alunos
+            // 
+            this.Dgv_Alunos.AllowUserToAddRows = false;
+            this.Dgv_Alunos.AllowUserToDeleteRows = false;
+            this.Dgv_Alunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_Alunos.Location = new System.Drawing.Point(407, 87);
+            this.Dgv_Alunos.Name = "Dgv_Alunos";
+            this.Dgv_Alunos.ReadOnly = true;
+            this.Dgv_Alunos.Size = new System.Drawing.Size(708, 339);
+            this.Dgv_Alunos.TabIndex = 11;
             // 
             // Frm_Aluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1117, 586);
+            this.Controls.Add(this.Dgv_Alunos);
             this.Controls.Add(this.Cbx_Curso);
             this.Controls.Add(this.MTxb_contatoParente);
             this.Controls.Add(this.Mtxb_cpf);
@@ -138,6 +152,7 @@
             this.Name = "Frm_Aluno";
             this.Text = "Aluno";
             this.Load += new System.EventHandler(this.Frm_Aluno_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Alunos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +170,6 @@
         private System.Windows.Forms.MaskedTextBox Mtxb_cpf;
         private System.Windows.Forms.MaskedTextBox MTxb_contatoParente;
         private System.Windows.Forms.ComboBox Cbx_Curso;
+        private System.Windows.Forms.DataGridView Dgv_Alunos;
     }
 }
