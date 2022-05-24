@@ -42,41 +42,25 @@ namespace Faculdade
             {
                 MessageBox.Show("Falha ao efetuar a conexão. Erro: " + sqle);
             }
-            String scom = "SELECT nomeCurso from Curso";
+            String scom = "SELECT idCurso, nomeCurso from Curso";
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(scom, con);
             DataTable dtResultado = new DataTable();
             dtResultado.Clear();
             Cbx_Curso.DataSource = null;
             da.Fill(dtResultado);
             Cbx_Curso.DataSource = dtResultado;
-            Cbx_Curso.ValueMember = "nomeCurso";
+            Cbx_Curso.ValueMember = "idCurso";
             Cbx_Curso.DisplayMember = "nomeCurso";
             Cbx_Curso.Refresh();
         }
 
         private void Btn_insereAluno_Click(object sender, EventArgs e)
         {
-            int idCurso;
             Aluno aluno = new Aluno();
-            var FK = "SELECT idCurso FROM curso WHERE nomeCurso = '" + Cbx_Curso.SelectedItem.ToString() + "'";
-            NpgsqlCommand comando = new NpgsqlCommand(FK,aluno.db.conn);
-            comando.Parameters.Add(Cbx_Curso.SelectedItem.ToString(), NpgsqlDbType.Varchar).Value = Cbx_Curso.SelectedItem.ToString();
-            NpgsqlDataReader variavel = comando.ExecuteReader();
-            variavel.Read();
-            if (variavel.HasRows)
-            {
-                idCurso = variavel.GetInt32(0);
-                aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, idCurso);
-            }
-            else
-            {
-                MessageBox.Show("Curso nao encontrado");
-            }
-
-            
+            aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, (int)Cbx_Curso.SelectedValue);
             MessageBox.Show(aluno.mensagem);
+            MessageBox.Show(Cbx_Curso.SelectedValue.ToString());
         }
-
         private void Frm_Aluno_Load(object sender, EventArgs e)
         {
             preencherCBDescricao();
