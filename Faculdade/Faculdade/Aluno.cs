@@ -14,7 +14,6 @@ namespace Faculdade
         public string mensagem = "";
         public bool status;
         public Conexao db;
-        
 
         public Aluno()
         {
@@ -37,6 +36,7 @@ namespace Faculdade
                 var Sql = "INSERT INTO Aluno (nomeAluno, cpf, dataNascimento, contato, contatoParente, email, endereco, turma, FK_idCurso) VALUES ('" + nomeAluno + "','" + cpf + "','" + dataNascimento + "','" + contato + "','" + contatoParente + "','" + email + "','" + endereco + "','" + turma + "','" + idCurso + "')";
                 db.NpgSQLCommand(Sql);
                 status = true;
+                mensagem = "Inserção bem sucedida!\nAluno = " + nomeAluno;
             }
             catch (Exception ex)
             {
