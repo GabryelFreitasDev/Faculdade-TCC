@@ -33,7 +33,6 @@ namespace Faculdade
             Dgv_Alunos.DataSource = null;
             Dgv_Alunos.DataSource = dt;
             
-
             try
             {
                 cmd.ExecuteNonQuery();
@@ -108,9 +107,68 @@ namespace Faculdade
         private void Btn_insereAluno_Click(object sender, EventArgs e)
         {
             Aluno aluno = new Aluno();
-            aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, (int)Cbx_Curso.SelectedValue);
+            try
+            {
+                if (Mtxb_cpf.Text.Length < 14)
+                {
+                    throw new NullReferenceException();
+                }
+                if(MTxb_dataNascimento.Text.Length < 10)
+                {
+                    throw new NullReferenceException();
+                }
+                if (MTxb_contato.Text.Length < 15)
+                {
+                    throw new NullReferenceException();
+                }
+                if (MTxb_contatoParente.Text.Length < 15)
+                {
+                    throw new NullReferenceException();
+                }
+                    aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, (int)Cbx_Curso.SelectedValue);
+                    AtualizaDataGridView();
+            }
+            catch (NullReferenceException)
+            {
+                if (string.IsNullOrEmpty(Txb_nomeAluno.Text))
+                {
+                    aluno.mensagem = "Insira o nome do aluno";
+                }
+                else if (Mtxb_cpf.Text.Length < 14)
+                {
+                    aluno.mensagem = "Insira seu CPF corretamente";
+                }
+                else if (MTxb_dataNascimento.Text.Length < 10)
+                {
+                    aluno.mensagem = "Digite sua data de nascimento corretamente";
+                }
+                else if (MTxb_contato.Text.Length < 15)
+                {
+                    aluno.mensagem = "Digite seu contato corretamente";
+                }
+                else if (MTxb_contatoParente.Text.Length < 15)
+                {
+                    aluno.mensagem = "Digite o contato do parente corretamente";
+                }
+                else if (string.IsNullOrEmpty(Txb_email.Text))
+                {
+                    aluno.mensagem = "Digite seu email";
+                }
+                else if (string.IsNullOrEmpty(Txb_endereco.Text))
+                {
+                    aluno.mensagem = "Digite seu endereço";
+                }
+                else if (string.IsNullOrEmpty(Txb_turma.Text))
+                {
+                    aluno.mensagem = "Insira a turma";
+                }
+            }
+            catch (Exception ex)
+            {
+                aluno.mensagem  = "Erro na inserção: " + ex.Message;
+            }
+            
             MessageBox.Show(aluno.mensagem);
-            MessageBox.Show(Cbx_Curso.SelectedValue.ToString());
         }
         private void Frm_Aluno_Load(object sender, EventArgs e)
         {

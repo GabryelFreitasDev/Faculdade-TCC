@@ -116,6 +116,7 @@
             // 
             // Cbx_Curso
             // 
+            this.Cbx_Curso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_Curso.FormattingEnabled = true;
             this.Cbx_Curso.Location = new System.Drawing.Point(55, 321);
             this.Cbx_Curso.Name = "Cbx_Curso";
@@ -137,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1422, 586);
+            this.ClientSize = new System.Drawing.Size(1370, 586);
             this.Controls.Add(this.Dgv_Alunos);
             this.Controls.Add(this.Cbx_Curso);
             this.Controls.Add(this.MTxb_contatoParente);
