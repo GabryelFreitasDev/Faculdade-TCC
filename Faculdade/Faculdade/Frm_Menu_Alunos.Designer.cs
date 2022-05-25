@@ -1,6 +1,6 @@
 ﻿namespace Faculdade
 {
-    partial class Frm_Menu
+    partial class Frm_Menu_Alunos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu_Alunos));
             this.Pnl_Menu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.Btn_Menu = new System.Windows.Forms.Button();
@@ -39,9 +39,8 @@
             this.Btn_Professores = new System.Windows.Forms.Button();
             this.Btn_Alunos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_Aluno = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Lbl_Introducao = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Cor.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,7 +60,7 @@
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(230, 760);
-            this.Pnl_Menu.TabIndex = 3;
+            this.Pnl_Menu.TabIndex = 5;
             // 
             // button1
             // 
@@ -82,7 +81,7 @@
             // 
             // Btn_Menu
             // 
-            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.Btn_Menu.FlatAppearance.BorderSize = 0;
             this.Btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
@@ -95,6 +94,7 @@
             this.Btn_Menu.TabIndex = 1;
             this.Btn_Menu.Text = "    Menu";
             this.Btn_Menu.UseVisualStyleBackColor = false;
+            this.Btn_Menu.Click += new System.EventHandler(this.Btn_Menu_Click);
             // 
             // Btn_Notas
             // 
@@ -170,7 +170,7 @@
             // 
             // Btn_Alunos
             // 
-            this.Btn_Alunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.Btn_Alunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
             this.Btn_Alunos.FlatAppearance.BorderSize = 0;
             this.Btn_Alunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Alunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
@@ -187,57 +187,47 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.Btn_Aluno);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Lbl_Introducao);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(230, 160);
+            this.panel1.Location = new System.Drawing.Point(430, 160);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1051, 253);
-            this.panel1.TabIndex = 4;
+            this.panel1.Size = new System.Drawing.Size(604, 480);
+            this.panel1.TabIndex = 9;
+            // 
+            // Btn_Aluno
+            // 
+            this.Btn_Aluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.Btn_Aluno.Location = new System.Drawing.Point(196, 197);
+            this.Btn_Aluno.Name = "Btn_Aluno";
+            this.Btn_Aluno.Size = new System.Drawing.Size(196, 112);
+            this.Btn_Aluno.TabIndex = 1;
+            this.Btn_Aluno.Text = "ALUNOS";
+            this.Btn_Aluno.UseVisualStyleBackColor = true;
+            this.Btn_Aluno.Click += new System.EventHandler(this.Btn_Aluno_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(6, 196);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.label1.Location = new System.Drawing.Point(162, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1030, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "inovando para garantir a melhor experiencia para nossos professores e alunos";
+            this.label1.Size = new System.Drawing.Size(268, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Por enquanto só clica aqui";
             // 
-            // Lbl_Introducao
-            // 
-            this.Lbl_Introducao.AutoSize = true;
-            this.Lbl_Introducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.Lbl_Introducao.Location = new System.Drawing.Point(19, 165);
-            this.Lbl_Introducao.Name = "Lbl_Introducao";
-            this.Lbl_Introducao.Size = new System.Drawing.Size(1014, 31);
-            this.Lbl_Introducao.TabIndex = 1;
-            this.Lbl_Introducao.Text = "Bem-Vindo a Aliare Academy, sua Faculdade de Tecnologia que está sempre";
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Faculdade.Properties.Resources.blob__1_;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(386, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 105);
-            this.panel2.TabIndex = 0;
-            // 
-            // Frm_Menu
+            // Frm_Menu_Alunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Faculdade.Properties.Resources.bg_imagemTeste;
+            this.BackgroundImage = global::Faculdade.Properties.Resources.bg_alunos1;
             this.ClientSize = new System.Drawing.Size(1280, 760);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Pnl_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Frm_Menu";
+            this.Name = "Frm_Menu_Alunos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu";
+            this.Text = "Alunos";
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Cor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -258,8 +248,7 @@
         private System.Windows.Forms.Button Btn_Professores;
         private System.Windows.Forms.Button Btn_Alunos;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button Btn_Aluno;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Lbl_Introducao;
-        private System.Windows.Forms.Panel panel2;
     }
 }

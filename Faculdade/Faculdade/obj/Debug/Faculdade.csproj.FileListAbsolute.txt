@@ -121,3 +121,47 @@ C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Facu
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu.resources
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Aluno.resources
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu.resources
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Faculdade.exe.config
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Faculdade.exe
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Faculdade.pdb
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Npgsql.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Buffers.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Memory.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Text.Json.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Threading.Channels.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.ValueTuple.dll
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\Npgsql.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Buffers.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Memory.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Text.Json.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Threading.Channels.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\System.ValueTuple.xml
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.AssemblyReference.cache
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.SuggestedBindingRedirects.cache
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Aluno.resources
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Curso.resources
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu.resources
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Properties.Resources.resources
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.GenerateResource.cache
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.CopyComplete
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.exe
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.pdb
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu_Alunos.resources
+C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu_Cursos.resources
