@@ -12,6 +12,7 @@ namespace Faculdade
 {
     public partial class Frm_Menu : Form
     {
+        private Form frm;
         public Frm_Menu()
         {
             InitializeComponent();
@@ -19,16 +20,31 @@ namespace Faculdade
 
         private void Btn_Cursos_Click(object sender, EventArgs e)
         {
-            Frm_Menu_Cursos cursos = new Frm_Menu_Cursos();
-            Visible = false;
-            cursos.Visible = true;
+                frm?.Close();
+                frm = new Frm_Curso()
+                {
+                    TopLevel = false,
+                    FormBorderStyle = FormBorderStyle.None,
+                    Dock = DockStyle.Fill,
+                };
+                Pn_Menu.Controls.Add(frm);
+                Pn_Menu.AutoScroll = true;
+                frm.Show();
         }
 
         private void Btn_Alunos_Click(object sender, EventArgs e)
         {
-            Frm_Menu_Alunos alunos = new Frm_Menu_Alunos();
-            alunos.Visible = true;
-            Visible = false;
+            frm?.Close();
+            frm = new Frm_Aluno()
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill,
+
+            };
+            Pn_Menu.Controls.Add(frm);
+            Pn_Menu.AutoScroll = true;
+            frm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

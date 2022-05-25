@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_Introducao = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Pn_Menu = new System.Windows.Forms.Panel();
             this.Pnl_Menu.SuspendLayout();
             this.Pnl_Cor.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -225,12 +226,20 @@
             this.panel2.Size = new System.Drawing.Size(307, 105);
             this.panel2.TabIndex = 0;
             // 
+            // Pn_Menu
+            // 
+            this.Pn_Menu.Location = new System.Drawing.Point(230, 0);
+            this.Pn_Menu.Name = "Pn_Menu";
+            this.Pn_Menu.Size = new System.Drawing.Size(1051, 760);
+            this.Pn_Menu.TabIndex = 5;
+            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Faculdade.Properties.Resources.bg_imagemTeste;
             this.ClientSize = new System.Drawing.Size(1280, 760);
+            this.Controls.Add(this.Pn_Menu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Pnl_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -261,5 +270,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lbl_Introducao;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Pn_Menu;
     }
 }
