@@ -176,5 +176,10 @@ namespace Faculdade
             AtualizaDataGridView();
             EditaColunaDgv();
         }
+
+        private void MTxb_dataNascimento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

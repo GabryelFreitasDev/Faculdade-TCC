@@ -29,7 +29,6 @@ C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\bin\Debug\System.Text.Json.xml
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\bin\Debug\System.Threading.Channels.xml
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\bin\Debug\System.ValueTuple.xml
-C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.AssemblyReference.cache
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Properties.Resources.resources
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.GenerateResource.cache
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.CoreCompileInputs.cache

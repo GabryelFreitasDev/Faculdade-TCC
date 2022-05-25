@@ -89,6 +89,7 @@
             this.MTxb_dataNascimento.Size = new System.Drawing.Size(100, 20);
             this.MTxb_dataNascimento.TabIndex = 6;
             this.MTxb_dataNascimento.ValidatingType = typeof(System.DateTime);
+            this.MTxb_dataNascimento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MTxb_dataNascimento_MaskInputRejected);
             // 
             // MTxb_contato
             // 

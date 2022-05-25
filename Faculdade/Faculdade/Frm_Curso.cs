@@ -13,6 +13,7 @@ namespace Faculdade
 {
     public partial class Frm_Curso : Form
     {
+        Frm_Menu menu = new Frm_Menu();
         public Frm_Curso()
         {
             InitializeComponent();
@@ -45,6 +46,7 @@ namespace Faculdade
                 conn.Close();
             }
         }
+        
 
         public void BuscaDataGridView()
         {
@@ -74,54 +76,10 @@ namespace Faculdade
             }
         }
 
-        private void Btn_InsereCurso_Click(object sender, EventArgs e)
-        {
-            Curso curso = new Curso();
-            try
-            {
-                if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
-                {
-                    throw new NullReferenceException();
-                }
-                if (MTxb_cargaHoraria.Text == "     Hrs")
-                {
-                    throw new NullReferenceException();
-                }
-                
-                curso.Inserir(Txb_nomeCurso.Text, Cbx_Turno.SelectedItem.ToString(), MTxb_cargaHoraria.Text, Txb_descricao.Text);
-            }
-            catch (NullReferenceException)
-            {
-                if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
-                {
-                    curso.mensagem = "Digite o nome do Curso";
-                }
-                else if (string.IsNullOrEmpty(Cbx_Turno.Text))
-                {
-                    curso.mensagem = "Escolha o turno do Curso";
-                }
-                else if (string.IsNullOrEmpty(Txb_descricao.Text))
-                {
-                    curso.mensagem = "Digite a descrição do Curso";
-                }
-                else if (MTxb_cargaHoraria.Text == "     Hrs")
-                {
-                    curso.mensagem = "Digite a carga horária";
-                }
-
-            }
-            catch (Exception ex)
-            {
-                curso.mensagem = "Erro na Inserção:" + ex.Message;
-            }
-            MessageBox.Show(curso.mensagem);
-            AtualizaDataGridView();
-        }
-
         private void Btn_excluiCurso_Click(object sender, EventArgs e)
         {
             Curso excluir = new Curso();
-            
+
             try
             {
                 if (string.IsNullOrEmpty(Txb_excluiCurso.Text))
@@ -146,6 +104,7 @@ namespace Faculdade
         private void Frm_Curso_Load(object sender, EventArgs e)
         {
             AtualizaDataGridView();
+            
         }
         private void Btn_editar_Click_1(object sender, EventArgs e)
         {
@@ -180,7 +139,7 @@ namespace Faculdade
                 {
                     curso.mensagem = "Digite a descrição do Curso";
                 }
-                
+
             }
             catch (Exception ex)
             {

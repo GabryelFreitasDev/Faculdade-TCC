@@ -96,6 +96,7 @@
             this.Btn_Menu.TabIndex = 1;
             this.Btn_Menu.Text = "    Menu";
             this.Btn_Menu.UseVisualStyleBackColor = false;
+            this.Btn_Menu.Click += new System.EventHandler(this.Btn_Menu_Click);
             // 
             // Btn_Notas
             // 
@@ -194,7 +195,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(230, 160);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1051, 253);
+            this.panel1.Size = new System.Drawing.Size(1171, 253);
             this.panel1.TabIndex = 4;
             // 
             // label1
@@ -228,25 +229,30 @@
             // 
             // Pn_Menu
             // 
+            this.Pn_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pn_Menu.Location = new System.Drawing.Point(230, 0);
             this.Pn_Menu.Name = "Pn_Menu";
-            this.Pn_Menu.Size = new System.Drawing.Size(1051, 760);
+            this.Pn_Menu.Size = new System.Drawing.Size(1170, 760);
             this.Pn_Menu.TabIndex = 5;
+            this.Pn_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_Menu_Paint);
             // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Faculdade.Properties.Resources.bg_imagemTeste;
-            this.ClientSize = new System.Drawing.Size(1280, 760);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1400, 760);
             this.Controls.Add(this.Pn_Menu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Pnl_Menu);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.Pnl_Menu.ResumeLayout(false);
             this.Pnl_Cor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -270,6 +276,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lbl_Introducao;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel Pn_Menu;
+        public System.Windows.Forms.Panel Pn_Menu;
     }
 }
