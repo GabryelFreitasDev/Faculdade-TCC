@@ -13,7 +13,9 @@ namespace Faculdade
 {
     public partial class Frm_Curso : Form
     {
-        Frm_Menu menu = new Frm_Menu();
+        Conexao conexao = new Conexao();
+        NpgsqlCommand cmd = new NpgsqlCommand();
+        DataTable dt = new DataTable();
         public Frm_Curso()
         {
             InitializeComponent();
@@ -21,11 +23,11 @@ namespace Faculdade
 
         public void AtualizaDataGridView()
         {
-            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade");
-            conn.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conn;
-            DataTable dt = new DataTable();
+          if(conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            cmd.Connection = conexao.conn;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT * FROM \"curso\"";
             dt = new DataTable();
@@ -43,18 +45,17 @@ namespace Faculdade
             }
             finally
             {
-                conn.Close();
+                conexao.conn.Close();
             }
         }
         
-
         public void BuscaDataGridView()
         {
-            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade");
-            conn.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conn;
-            DataTable dt = new DataTable();
+            if (conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            cmd.Connection = conexao.conn;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY idCurso";
             dt = new DataTable();
@@ -72,49 +73,80 @@ namespace Faculdade
             }
             finally
             {
-                conn.Close();
+                conexao.conn.Close();
             }
         }
-
-        private void Btn_excluiCurso_Click(object sender, EventArgs e)
-        {
-            Curso excluir = new Curso();
-
-            try
-            {
-                if (string.IsNullOrEmpty(Txb_excluiCurso.Text))
-                {
-                    throw new NullReferenceException();
-                }
-                excluir.Excluir(Txb_excluiCurso.Text);
-            }
-            catch (NullReferenceException)
-            {
-                excluir.mensagem = "Digite o nome do curso que deseja excluir";
-            }
-            catch (Exception ex)
-            {
-                excluir.mensagem = "Erro na Exclusão:" + ex.Message;
-            }
-
-            MessageBox.Show(excluir.mensagem);
-            AtualizaDataGridView();
-        }
-
         private void Frm_Curso_Load(object sender, EventArgs e)
         {
             AtualizaDataGridView();
-            
+
         }
+
+        private void VerificaNullorEmpty(string valor)
+        {
+            if (string.IsNullOrWhiteSpace(valor))
+            {
+                throw new NullReferenceException();
+            }
+        }
+        private void VerificaMaskFull(MaskedTextBox valor)
+        {
+            if (!valor.MaskCompleted)
+            {
+                throw new NullReferenceException();
+            }
+        }
+
+        private void Btn_InsereCurso_Click(object sender, EventArgs e)
+        {
+            Curso curso = new Curso();
+            try
+            {
+                VerificaNullorEmpty(Txb_nomeCurso.Text);
+                VerificaNullorEmpty(Cbx_Turno.Text);
+                VerificaNullorEmpty(Txb_descricao.Text);
+                VerificaMaskFull(MTxb_cargaHoraria);
+                curso.Inserir(Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
+                
+            }
+            catch (NullReferenceException)
+            {
+                if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
+                {
+                    curso.mensagem = "Digite o nome do Curso";
+                }
+                else if (string.IsNullOrEmpty(Cbx_Turno.Text))
+                {
+                    curso.mensagem = "Escolha o turno do Curso";
+                }
+                else if (!MTxb_cargaHoraria.MaskCompleted)
+                {
+                    curso.mensagem = "Digite a carga horária do Curso";
+                }
+                else if (string.IsNullOrEmpty(Txb_descricao.Text))
+                {
+                    curso.mensagem = "Digite a descrição do Curso";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                curso.mensagem = "Erro na Edição:" + ex.Message;
+            }
+            MessageBox.Show(curso.mensagem);
+            AtualizaDataGridView();
+        }
+
         private void Btn_editar_Click_1(object sender, EventArgs e)
         {
             Curso curso = new Curso();
             try
             {
-                if (Mtxb_cargaHoraNova.Text == "     Hrs")
-                {
-                    throw new NullReferenceException();
-                }
+                VerificaNullorEmpty(Txb_nomeAlterar.Text);
+                VerificaNullorEmpty(Txb_nomeNovo.Text);
+                VerificaNullorEmpty(Cbx_turnoNovo.Text);
+                VerificaNullorEmpty(Txb_descricaoNova.Text);
+                VerificaMaskFull(Mtxb_cargaHoraNova);
                 curso.Editar(Txb_nomeAlterar.Text, Txb_nomeNovo.Text, Cbx_turnoNovo.Text, Mtxb_cargaHoraNova.Text, Txb_descricaoNova.Text);
             }
             catch (NullReferenceException)
@@ -149,9 +181,35 @@ namespace Faculdade
             AtualizaDataGridView();
         }
 
+        private void Btn_excluiCurso_Click(object sender, EventArgs e)
+        {
+            Curso excluir = new Curso();
+
+            try
+            {
+                VerificaNullorEmpty(Txb_excluiCurso.Text);
+                if (MessageBox.Show("Deseja realmente excluir o curso " + Txb_excluiCurso.Text + " ?","Validação",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    excluir.Excluir(Txb_excluiCurso.Text);
+                }    
+            }
+            catch (NullReferenceException)
+            {
+                excluir.mensagem = "Digite o nome do curso que deseja excluir";
+            }
+            catch (Exception ex)
+            {
+                excluir.mensagem = "Erro na Exclusão:" + ex.Message;
+            }
+
+            MessageBox.Show(excluir.mensagem);
+            AtualizaDataGridView();
+        }
+
         private void Txb_buscar_TextChanged(object sender, EventArgs e)
         {
             BuscaDataGridView();
         }
     }
 }
+

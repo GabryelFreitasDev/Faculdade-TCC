@@ -109,40 +109,6 @@ namespace Faculdade
                 mensagem = "Erro na Edição:" + ex.Message;
             }
         }
-        public void BuscarTudo()
-        {
-            status = true;
-            try
-            {
-                var Sql = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso";
-                //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
-                db.NpgSQLCommand(Sql);
-                status = true;
-                mensagem = "Busca bem sucedida ! ";
-            }
-            catch (Exception ex)
-            {
-                status = false;
-                mensagem = "Erro na Busca:" + ex.Message;
-            }
-        }
-        public void Buscar(string nomeCurso)
-        {
-            status = true;
-            try
-            {
-                var Sql = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao WHERE nomeCurso = ('" + nomeCurso + "')";
-                //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
-                db.NpgSQLCommand(Sql);
-                status = true;
-                mensagem = "Busca bem sucedida ! ";
-            }
-            catch (Exception ex)
-            {
-                status = false;
-                mensagem = "Erro na Busca:" + ex.Message;
-            }
-        }
     }
 }   
 

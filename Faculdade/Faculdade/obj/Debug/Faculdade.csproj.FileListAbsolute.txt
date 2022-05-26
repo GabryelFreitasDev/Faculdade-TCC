@@ -166,3 +166,5 @@ C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculda
 C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu_Cursos.resources
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu_Alunos.resources
 C:\Users\UNIPAR\Documents\TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu_Cursos.resources
+C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu_Alunos.resources
+C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu_Cursos.resources

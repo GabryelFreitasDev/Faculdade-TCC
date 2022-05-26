@@ -104,29 +104,38 @@ namespace Faculdade
             Cbx_Curso.Refresh();
         }
 
+        private void VerificaNullorEmpty(string valor)
+        {
+            if (string.IsNullOrWhiteSpace(valor))
+            {
+                throw new NullReferenceException();
+            }
+        }
+        private void VerificaMaskFull(MaskedTextBox valor)
+        {
+            if (!valor.MaskCompleted)
+            {
+                throw new NullReferenceException();
+            }
+        }
+
         private void Btn_insereAluno_Click(object sender, EventArgs e)
         {
             Aluno aluno = new Aluno();
             try
             {
-                if (Mtxb_cpf.Text.Length < 14)
-                {
-                    throw new NullReferenceException();
-                }
-                if(MTxb_dataNascimento.Text.Length < 10)
-                {
-                    throw new NullReferenceException();
-                }
-                if (MTxb_contato.Text.Length < 15)
-                {
-                    throw new NullReferenceException();
-                }
-                if (MTxb_contatoParente.Text.Length < 15)
-                {
-                    throw new NullReferenceException();
-                }
-                    aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, (int)Cbx_Curso.SelectedValue);
-                    AtualizaDataGridView();
+                VerificaNullorEmpty(Txb_nomeAluno.Text);
+                VerificaNullorEmpty(Txb_email.Text);
+                VerificaNullorEmpty(Txb_endereco.Text);
+                VerificaNullorEmpty(Txb_turma.Text);
+
+                VerificaMaskFull(Mtxb_cpf);
+                VerificaMaskFull(MTxb_dataNascimento);
+                VerificaMaskFull(MTxb_contato);
+                VerificaMaskFull(MTxb_contatoParente);
+
+                aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, (int)Cbx_Curso.SelectedValue);
+                AtualizaDataGridView();
             }
             catch (NullReferenceException)
             {
@@ -134,19 +143,19 @@ namespace Faculdade
                 {
                     aluno.mensagem = "Insira o nome do aluno";
                 }
-                else if (Mtxb_cpf.Text.Length < 14)
+                else if (!Mtxb_cpf.MaskCompleted)
                 {
                     aluno.mensagem = "Insira seu CPF corretamente";
                 }
-                else if (MTxb_dataNascimento.Text.Length < 10)
+                else if (!MTxb_dataNascimento.MaskCompleted)
                 {
                     aluno.mensagem = "Digite sua data de nascimento corretamente";
                 }
-                else if (MTxb_contato.Text.Length < 15)
+                else if (!MTxb_contato.MaskCompleted)
                 {
                     aluno.mensagem = "Digite seu contato corretamente";
                 }
-                else if (MTxb_contatoParente.Text.Length < 15)
+                else if (!MTxb_contatoParente.MaskCompleted)
                 {
                     aluno.mensagem = "Digite o contato do parente corretamente";
                 }
@@ -175,11 +184,6 @@ namespace Faculdade
             preencherCBDescricao();
             AtualizaDataGridView();
             EditaColunaDgv();
-        }
-
-        private void MTxb_dataNascimento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
     }
 }

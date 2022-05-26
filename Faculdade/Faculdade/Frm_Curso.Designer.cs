@@ -210,6 +210,7 @@ namespace Faculdade
             this.Btn_InsereCurso.TabIndex = 25;
             this.Btn_InsereCurso.Text = "INSERIR";
             this.Btn_InsereCurso.UseVisualStyleBackColor = true;
+            this.Btn_InsereCurso.Click += new System.EventHandler(this.Btn_InsereCurso_Click);
             // 
             // Txb_nomeCurso
             // 

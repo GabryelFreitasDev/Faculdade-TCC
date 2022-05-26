@@ -12,8 +12,6 @@ namespace Faculdade
     {
         public string connString;
         public NpgsqlConnection conn;
-        
-
         public Conexao()
         {
             try
