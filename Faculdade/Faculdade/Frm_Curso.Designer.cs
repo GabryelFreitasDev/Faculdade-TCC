@@ -81,10 +81,10 @@ namespace Faculdade
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(-4, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 37);
+            this.label2.Size = new System.Drawing.Size(133, 37);
             this.label2.TabIndex = 20;
             this.label2.Text = "EDITAR";
             // 
@@ -146,10 +146,10 @@ namespace Faculdade
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(-4, 371);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 37);
+            this.label3.Size = new System.Drawing.Size(164, 37);
             this.label3.TabIndex = 22;
             this.label3.Text = "DELETAR";
             // 
@@ -164,10 +164,10 @@ namespace Faculdade
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 37);
+            this.label1.Size = new System.Drawing.Size(143, 37);
             this.label1.TabIndex = 29;
             this.label1.Text = "INSERIR";
             // 
@@ -217,6 +217,7 @@ namespace Faculdade
             this.Txb_nomeCurso.Name = "Txb_nomeCurso";
             this.Txb_nomeCurso.Size = new System.Drawing.Size(161, 20);
             this.Txb_nomeCurso.TabIndex = 24;
+            this.Txb_nomeCurso.TextChanged += new System.EventHandler(this.Txb_nomeCurso_TextChanged);
             // 
             // Frm_Curso
             // 

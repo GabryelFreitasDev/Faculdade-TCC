@@ -109,6 +109,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abrirAba.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aluno.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Curso.cs" />
@@ -237,6 +240,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg_alunos1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setaBaixo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setaCima.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

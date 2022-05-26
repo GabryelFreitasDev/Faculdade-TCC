@@ -153,5 +153,10 @@ namespace Faculdade
         {
             BuscaDataGridView();
         }
+
+        private void Txb_nomeCurso_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
