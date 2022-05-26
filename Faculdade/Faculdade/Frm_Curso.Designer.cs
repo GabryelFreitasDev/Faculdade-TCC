@@ -47,12 +47,13 @@ namespace Faculdade
             this.Cbx_Turno = new System.Windows.Forms.ComboBox();
             this.Btn_InsereCurso = new System.Windows.Forms.Button();
             this.Txb_nomeCurso = new System.Windows.Forms.TextBox();
+            this.Btn_relatorioCurso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Curso)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_excluiCurso
             // 
-            this.Btn_excluiCurso.Location = new System.Drawing.Point(330, 430);
+            this.Btn_excluiCurso.Location = new System.Drawing.Point(346, 332);
             this.Btn_excluiCurso.Name = "Btn_excluiCurso";
             this.Btn_excluiCurso.Size = new System.Drawing.Size(75, 23);
             this.Btn_excluiCurso.TabIndex = 2;
@@ -62,7 +63,7 @@ namespace Faculdade
             // 
             // Txb_excluiCurso
             // 
-            this.Txb_excluiCurso.Location = new System.Drawing.Point(3, 430);
+            this.Txb_excluiCurso.Location = new System.Drawing.Point(19, 332);
             this.Txb_excluiCurso.Name = "Txb_excluiCurso";
             this.Txb_excluiCurso.Size = new System.Drawing.Size(297, 20);
             this.Txb_excluiCurso.TabIndex = 3;
@@ -72,7 +73,7 @@ namespace Faculdade
             this.Dgv_Curso.AllowUserToAddRows = false;
             this.Dgv_Curso.AllowUserToDeleteRows = false;
             this.Dgv_Curso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_Curso.Location = new System.Drawing.Point(411, 232);
+            this.Dgv_Curso.Location = new System.Drawing.Point(566, 102);
             this.Dgv_Curso.Name = "Dgv_Curso";
             this.Dgv_Curso.ReadOnly = true;
             this.Dgv_Curso.Size = new System.Drawing.Size(649, 413);
@@ -81,16 +82,16 @@ namespace Faculdade
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-4, 150);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 364);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 37);
+            this.label2.Size = new System.Drawing.Size(114, 37);
             this.label2.TabIndex = 20;
             this.label2.Text = "EDITAR";
             // 
             // Mtxb_cargaHoraNova
             // 
-            this.Mtxb_cargaHoraNova.Location = new System.Drawing.Point(215, 190);
+            this.Mtxb_cargaHoraNova.Location = new System.Drawing.Point(273, 404);
             this.Mtxb_cargaHoraNova.Mask = "0000 Hrs";
             this.Mtxb_cargaHoraNova.Name = "Mtxb_cargaHoraNova";
             this.Mtxb_cargaHoraNova.Size = new System.Drawing.Size(55, 20);
@@ -98,7 +99,7 @@ namespace Faculdade
             // 
             // Txb_descricaoNova
             // 
-            this.Txb_descricaoNova.Location = new System.Drawing.Point(3, 258);
+            this.Txb_descricaoNova.Location = new System.Drawing.Point(19, 472);
             this.Txb_descricaoNova.Multiline = true;
             this.Txb_descricaoNova.Name = "Txb_descricaoNova";
             this.Txb_descricaoNova.Size = new System.Drawing.Size(297, 52);
@@ -131,14 +132,14 @@ namespace Faculdade
             // 
             // Txb_nomeAlterar
             // 
-            this.Txb_nomeAlterar.Location = new System.Drawing.Point(3, 190);
+            this.Txb_nomeAlterar.Location = new System.Drawing.Point(19, 404);
             this.Txb_nomeAlterar.Name = "Txb_nomeAlterar";
             this.Txb_nomeAlterar.Size = new System.Drawing.Size(161, 20);
             this.Txb_nomeAlterar.TabIndex = 15;
             // 
             // Txb_nomeNovo
             // 
-            this.Txb_nomeNovo.Location = new System.Drawing.Point(3, 232);
+            this.Txb_nomeNovo.Location = new System.Drawing.Point(19, 446);
             this.Txb_nomeNovo.Name = "Txb_nomeNovo";
             this.Txb_nomeNovo.Size = new System.Drawing.Size(161, 20);
             this.Txb_nomeNovo.TabIndex = 21;
@@ -146,28 +147,28 @@ namespace Faculdade
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-4, 371);
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 273);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 37);
+            this.label3.Size = new System.Drawing.Size(140, 37);
             this.label3.TabIndex = 22;
             this.label3.Text = "DELETAR";
             // 
             // Txb_buscar
             // 
-            this.Txb_buscar.Location = new System.Drawing.Point(472, 189);
+            this.Txb_buscar.Location = new System.Drawing.Point(566, 61);
             this.Txb_buscar.Name = "Txb_buscar";
-            this.Txb_buscar.Size = new System.Drawing.Size(467, 20);
+            this.Txb_buscar.Size = new System.Drawing.Size(649, 20);
             this.Txb_buscar.TabIndex = 23;
             this.Txb_buscar.TextChanged += new System.EventHandler(this.Txb_buscar_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 37);
+            this.label1.Size = new System.Drawing.Size(124, 37);
             this.label1.TabIndex = 29;
             this.label1.Text = "INSERIR";
             // 
@@ -218,13 +219,23 @@ namespace Faculdade
             this.Txb_nomeCurso.Name = "Txb_nomeCurso";
             this.Txb_nomeCurso.Size = new System.Drawing.Size(161, 20);
             this.Txb_nomeCurso.TabIndex = 24;
-            this.Txb_nomeCurso.TextChanged += new System.EventHandler(this.Txb_nomeCurso_TextChanged);
+            // 
+            // Btn_relatorioCurso
+            // 
+            this.Btn_relatorioCurso.Location = new System.Drawing.Point(85, 532);
+            this.Btn_relatorioCurso.Name = "Btn_relatorioCurso";
+            this.Btn_relatorioCurso.Size = new System.Drawing.Size(120, 23);
+            this.Btn_relatorioCurso.TabIndex = 30;
+            this.Btn_relatorioCurso.Text = "RELATORIO";
+            this.Btn_relatorioCurso.UseVisualStyleBackColor = true;
+            this.Btn_relatorioCurso.Click += new System.EventHandler(this.Btn_relatorioCurso_Click);
             // 
             // Frm_Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 719);
+            this.ClientSize = new System.Drawing.Size(1288, 701);
+            this.Controls.Add(this.Btn_relatorioCurso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MTxb_cargaHoraria);
             this.Controls.Add(this.Txb_descricao);
@@ -272,6 +283,7 @@ namespace Faculdade
         private System.Windows.Forms.ComboBox Cbx_Turno;
         private System.Windows.Forms.Button Btn_InsereCurso;
         private System.Windows.Forms.TextBox Txb_nomeCurso;
+        private System.Windows.Forms.Button Btn_relatorioCurso;
     }
 }
 

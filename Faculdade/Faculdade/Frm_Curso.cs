@@ -146,7 +146,9 @@ namespace Faculdade
                 VerificaNullorEmpty(Txb_nomeNovo.Text);
                 VerificaNullorEmpty(Cbx_turnoNovo.Text);
                 VerificaNullorEmpty(Txb_descricaoNova.Text);
+
                 VerificaMaskFull(Mtxb_cargaHoraNova);
+
                 curso.Editar(Txb_nomeAlterar.Text, Txb_nomeNovo.Text, Cbx_turnoNovo.Text, Mtxb_cargaHoraNova.Text, Txb_descricaoNova.Text);
             }
             catch (NullReferenceException)
@@ -210,10 +212,18 @@ namespace Faculdade
         {
             BuscaDataGridView();
         }
-
-        private void Txb_nomeCurso_TextChanged(object sender, EventArgs e)
+        private DataTable GerarRelatorio()
         {
-
+            dt = new DataTable();
+            dt.Rows.Add("");
+        }
+        private void Btn_relatorioCurso_Click(object sender, EventArgs e)
+        {
+            var dt = GerarRelatorio();
+            using(Frm_relatorioCurso rCurso = new Frm_relatorioCurso(dt))
+            {
+                rCurso.ShowDialog();
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.Pnl_Menu = new System.Windows.Forms.Panel();
+            this.Pic_SetaCursos = new System.Windows.Forms.PictureBox();
             this.Btn_PesquisarAlunos = new System.Windows.Forms.Button();
             this.Btn_InserirAlunos = new System.Windows.Forms.Button();
             this.Btn_DeletarAlunos = new System.Windows.Forms.Button();
@@ -56,8 +57,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Btn_Fechar = new System.Windows.Forms.Button();
             this.Pn_Menu = new System.Windows.Forms.Panel();
-            this.Pic_SetaCursos = new System.Windows.Forms.PictureBox();
             this.Pnl_Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaMaterias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaProfessores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaAlunos)).BeginInit();
@@ -65,7 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaNotas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Menu
@@ -96,6 +96,16 @@
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(250, 720);
             this.Pnl_Menu.TabIndex = 3;
+            // 
+            // Pic_SetaCursos
+            // 
+            this.Pic_SetaCursos.Image = global::Faculdade.Properties.Resources.seta;
+            this.Pic_SetaCursos.Location = new System.Drawing.Point(207, 240);
+            this.Pic_SetaCursos.Name = "Pic_SetaCursos";
+            this.Pic_SetaCursos.Size = new System.Drawing.Size(37, 23);
+            this.Pic_SetaCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_SetaCursos.TabIndex = 24;
+            this.Pic_SetaCursos.TabStop = false;
             // 
             // Btn_PesquisarAlunos
             // 
@@ -453,22 +463,12 @@
             // 
             // Pn_Menu
             // 
-            this.Pn_Menu.ForeColor = System.Drawing.SystemColors.Control;
+            this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
             this.Pn_Menu.Size = new System.Drawing.Size(1150, 740);
             this.Pn_Menu.TabIndex = 14;
             this.Pn_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_Menu_Paint_2);
-            // 
-            // Pic_SetaCursos
-            // 
-            this.Pic_SetaCursos.Image = global::Faculdade.Properties.Resources.seta;
-            this.Pic_SetaCursos.Location = new System.Drawing.Point(207, 240);
-            this.Pic_SetaCursos.Name = "Pic_SetaCursos";
-            this.Pic_SetaCursos.Size = new System.Drawing.Size(37, 23);
-            this.Pic_SetaCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_SetaCursos.TabIndex = 24;
-            this.Pic_SetaCursos.TabStop = false;
             // 
             // Frm_Menu
             // 
@@ -489,6 +489,7 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.Pnl_Menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaMaterias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaProfessores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaAlunos)).EndInit();
@@ -497,7 +498,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).EndInit();
             this.ResumeLayout(false);
 
         }

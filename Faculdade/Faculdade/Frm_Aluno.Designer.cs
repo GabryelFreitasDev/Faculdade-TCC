@@ -39,6 +39,7 @@
             this.MTxb_contatoParente = new System.Windows.Forms.MaskedTextBox();
             this.Cbx_Curso = new System.Windows.Forms.ComboBox();
             this.Dgv_Alunos = new System.Windows.Forms.DataGridView();
+            this.Btn_relatorio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Alunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,17 +129,27 @@
             this.Dgv_Alunos.AllowUserToAddRows = false;
             this.Dgv_Alunos.AllowUserToDeleteRows = false;
             this.Dgv_Alunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_Alunos.Location = new System.Drawing.Point(407, 87);
+            this.Dgv_Alunos.Location = new System.Drawing.Point(435, 230);
             this.Dgv_Alunos.Name = "Dgv_Alunos";
             this.Dgv_Alunos.ReadOnly = true;
-            this.Dgv_Alunos.Size = new System.Drawing.Size(908, 339);
+            this.Dgv_Alunos.Size = new System.Drawing.Size(659, 339);
             this.Dgv_Alunos.TabIndex = 11;
+            // 
+            // Btn_relatorio
+            // 
+            this.Btn_relatorio.Location = new System.Drawing.Point(99, 500);
+            this.Btn_relatorio.Name = "Btn_relatorio";
+            this.Btn_relatorio.Size = new System.Drawing.Size(120, 23);
+            this.Btn_relatorio.TabIndex = 12;
+            this.Btn_relatorio.Text = "RELATORIO";
+            this.Btn_relatorio.UseVisualStyleBackColor = true;
             // 
             // Frm_Aluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 586);
+            this.ClientSize = new System.Drawing.Size(1134, 701);
+            this.Controls.Add(this.Btn_relatorio);
             this.Controls.Add(this.Dgv_Alunos);
             this.Controls.Add(this.Cbx_Curso);
             this.Controls.Add(this.MTxb_contatoParente);
@@ -172,5 +183,6 @@
         private System.Windows.Forms.MaskedTextBox MTxb_contatoParente;
         private System.Windows.Forms.ComboBox Cbx_Curso;
         private System.Windows.Forms.DataGridView Dgv_Alunos;
+        private System.Windows.Forms.Button Btn_relatorio;
     }
 }

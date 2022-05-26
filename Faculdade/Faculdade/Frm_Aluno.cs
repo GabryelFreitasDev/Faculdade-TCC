@@ -14,6 +14,10 @@ namespace Faculdade
 {
     public partial class Frm_Aluno : Form
     {
+
+        Conexao conexao = new Conexao();
+        NpgsqlCommand cmd = new NpgsqlCommand();
+        DataTable dt = new DataTable();
         public Frm_Aluno()
         {
             InitializeComponent();
@@ -21,18 +25,18 @@ namespace Faculdade
 
         public void AtualizaDataGridView()
         {
-            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade");
-            conn.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conn;
-            DataTable dt = new DataTable();
+            if (conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            cmd.Connection = conexao.conn;
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,turma,nomeCurso FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
             Dgv_Alunos.DataSource = null;
             Dgv_Alunos.DataSource = dt;
-            
+
             try
             {
                 cmd.ExecuteNonQuery();
@@ -43,7 +47,7 @@ namespace Faculdade
             }
             finally
             {
-                conn.Close();
+                conexao.conn.Close();
             }
         }
         private void EditaColunaDgv()
@@ -185,5 +189,6 @@ namespace Faculdade
             AtualizaDataGridView();
             EditaColunaDgv();
         }
+
     }
 }
