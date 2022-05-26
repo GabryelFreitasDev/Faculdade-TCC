@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.Pnl_Menu = new System.Windows.Forms.Panel();
-            this.Btn_PesquisarAlunos = new System.Windows.Forms.Button();
+            this.Pic_SetaCursos = new System.Windows.Forms.PictureBox();
+            this.Btn_RelatorioAlunos = new System.Windows.Forms.Button();
             this.Btn_InserirAlunos = new System.Windows.Forms.Button();
             this.Btn_DeletarAlunos = new System.Windows.Forms.Button();
             this.Btn_AlterarAlunos = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_DeletarCursos = new System.Windows.Forms.Button();
             this.Btn_AlterarCursos = new System.Windows.Forms.Button();
-            this.Btn_PesquisarCursos = new System.Windows.Forms.Button();
+            this.Btn_RelatorioCursos = new System.Windows.Forms.Button();
             this.Pic_SetaNotas = new System.Windows.Forms.PictureBox();
             this.Btn_Alunos = new System.Windows.Forms.Button();
             this.Btn_Menu = new System.Windows.Forms.Button();
@@ -56,8 +57,24 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Btn_Fechar = new System.Windows.Forms.Button();
             this.Pn_Menu = new System.Windows.Forms.Panel();
-            this.Pic_SetaCursos = new System.Windows.Forms.PictureBox();
+            this.Btn_RelatorioProfessores = new System.Windows.Forms.Button();
+            this.Btn_InserirProfessores = new System.Windows.Forms.Button();
+            this.Btn_AlterarProfessores = new System.Windows.Forms.Button();
+            this.Btn_DeletarProfessores = new System.Windows.Forms.Button();
+            this.Btn_DeletarMaterias = new System.Windows.Forms.Button();
+            this.Btn_AlterarMaterias = new System.Windows.Forms.Button();
+            this.Btn_InserirMaterias = new System.Windows.Forms.Button();
+            this.Btn_RelatorioMaterias = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.Btn_DeletarNotas = new System.Windows.Forms.Button();
+            this.Btn_RelatorioNotas = new System.Windows.Forms.Button();
+            this.Btn_AlterarNotas = new System.Windows.Forms.Button();
+            this.Btn_InserirNotas = new System.Windows.Forms.Button();
             this.Pnl_Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaMaterias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaProfessores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaAlunos)).BeginInit();
@@ -65,14 +82,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaNotas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Menu
             // 
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.Pnl_Menu.Controls.Add(this.Btn_DeletarProfessores);
+            this.Pnl_Menu.Controls.Add(this.Btn_AlterarProfessores);
+            this.Pnl_Menu.Controls.Add(this.Btn_InserirProfessores);
+            this.Pnl_Menu.Controls.Add(this.Btn_RelatorioProfessores);
             this.Pnl_Menu.Controls.Add(this.Pic_SetaCursos);
-            this.Pnl_Menu.Controls.Add(this.Btn_PesquisarAlunos);
+            this.Pnl_Menu.Controls.Add(this.Btn_RelatorioAlunos);
             this.Pnl_Menu.Controls.Add(this.Btn_InserirAlunos);
             this.Pnl_Menu.Controls.Add(this.Btn_DeletarAlunos);
             this.Pnl_Menu.Controls.Add(this.Btn_AlterarAlunos);
@@ -83,7 +103,7 @@
             this.Pnl_Menu.Controls.Add(this.pictureBox1);
             this.Pnl_Menu.Controls.Add(this.Btn_DeletarCursos);
             this.Pnl_Menu.Controls.Add(this.Btn_AlterarCursos);
-            this.Pnl_Menu.Controls.Add(this.Btn_PesquisarCursos);
+            this.Pnl_Menu.Controls.Add(this.Btn_RelatorioCursos);
             this.Pnl_Menu.Controls.Add(this.Pic_SetaNotas);
             this.Pnl_Menu.Controls.Add(this.Btn_Alunos);
             this.Pnl_Menu.Controls.Add(this.Btn_Menu);
@@ -97,22 +117,32 @@
             this.Pnl_Menu.Size = new System.Drawing.Size(250, 720);
             this.Pnl_Menu.TabIndex = 3;
             // 
-            // Btn_PesquisarAlunos
+            // Pic_SetaCursos
             // 
-            this.Btn_PesquisarAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
-            this.Btn_PesquisarAlunos.FlatAppearance.BorderSize = 0;
-            this.Btn_PesquisarAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_PesquisarAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.Btn_PesquisarAlunos.ForeColor = System.Drawing.Color.Transparent;
-            this.Btn_PesquisarAlunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_PesquisarAlunos.Location = new System.Drawing.Point(1450, 690);
-            this.Btn_PesquisarAlunos.Name = "Btn_PesquisarAlunos";
-            this.Btn_PesquisarAlunos.Size = new System.Drawing.Size(250, 30);
-            this.Btn_PesquisarAlunos.TabIndex = 23;
-            this.Btn_PesquisarAlunos.Text = "   PESQUISAR";
-            this.Btn_PesquisarAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_PesquisarAlunos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_PesquisarAlunos.UseVisualStyleBackColor = false;
+            this.Pic_SetaCursos.Image = global::Faculdade.Properties.Resources.seta;
+            this.Pic_SetaCursos.Location = new System.Drawing.Point(207, 240);
+            this.Pic_SetaCursos.Name = "Pic_SetaCursos";
+            this.Pic_SetaCursos.Size = new System.Drawing.Size(37, 23);
+            this.Pic_SetaCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_SetaCursos.TabIndex = 24;
+            this.Pic_SetaCursos.TabStop = false;
+            // 
+            // Btn_RelatorioAlunos
+            // 
+            this.Btn_RelatorioAlunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_RelatorioAlunos.FlatAppearance.BorderSize = 0;
+            this.Btn_RelatorioAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_RelatorioAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_RelatorioAlunos.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_RelatorioAlunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioAlunos.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_RelatorioAlunos.Name = "Btn_RelatorioAlunos";
+            this.Btn_RelatorioAlunos.Size = new System.Drawing.Size(250, 30);
+            this.Btn_RelatorioAlunos.TabIndex = 23;
+            this.Btn_RelatorioAlunos.Text = "   RELATORIO";
+            this.Btn_RelatorioAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioAlunos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_RelatorioAlunos.UseVisualStyleBackColor = false;
             // 
             // Btn_InserirAlunos
             // 
@@ -257,22 +287,22 @@
             this.Btn_AlterarCursos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_AlterarCursos.UseVisualStyleBackColor = false;
             // 
-            // Btn_PesquisarCursos
+            // Btn_RelatorioCursos
             // 
-            this.Btn_PesquisarCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
-            this.Btn_PesquisarCursos.FlatAppearance.BorderSize = 0;
-            this.Btn_PesquisarCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_PesquisarCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.Btn_PesquisarCursos.ForeColor = System.Drawing.Color.Transparent;
-            this.Btn_PesquisarCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_PesquisarCursos.Location = new System.Drawing.Point(1450, 690);
-            this.Btn_PesquisarCursos.Name = "Btn_PesquisarCursos";
-            this.Btn_PesquisarCursos.Size = new System.Drawing.Size(250, 30);
-            this.Btn_PesquisarCursos.TabIndex = 14;
-            this.Btn_PesquisarCursos.Text = "   PESQUISAR";
-            this.Btn_PesquisarCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_PesquisarCursos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_PesquisarCursos.UseVisualStyleBackColor = false;
+            this.Btn_RelatorioCursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_RelatorioCursos.FlatAppearance.BorderSize = 0;
+            this.Btn_RelatorioCursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_RelatorioCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_RelatorioCursos.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_RelatorioCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioCursos.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_RelatorioCursos.Name = "Btn_RelatorioCursos";
+            this.Btn_RelatorioCursos.Size = new System.Drawing.Size(250, 30);
+            this.Btn_RelatorioCursos.TabIndex = 14;
+            this.Btn_RelatorioCursos.Text = "   RELATORIO";
+            this.Btn_RelatorioCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioCursos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_RelatorioCursos.UseVisualStyleBackColor = false;
             // 
             // Pic_SetaNotas
             // 
@@ -353,6 +383,7 @@
             this.Btn_Notas.Text = "  Notas";
             this.Btn_Notas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Notas.UseVisualStyleBackColor = true;
+            this.Btn_Notas.Click += new System.EventHandler(this.Btn_Notas_Click);
             // 
             // Btn_Materias
             // 
@@ -369,6 +400,7 @@
             this.Btn_Materias.Text = "  Matérias";
             this.Btn_Materias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Materias.UseVisualStyleBackColor = true;
+            this.Btn_Materias.Click += new System.EventHandler(this.Btn_Materias_Click);
             // 
             // Btn_Professores
             // 
@@ -385,6 +417,7 @@
             this.Btn_Professores.Text = " Docentes";
             this.Btn_Professores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Professores.UseVisualStyleBackColor = true;
+            this.Btn_Professores.Click += new System.EventHandler(this.Btn_Professores_Click);
             // 
             // panel1
             // 
@@ -453,22 +486,284 @@
             // 
             // Pn_Menu
             // 
-            this.Pn_Menu.ForeColor = System.Drawing.SystemColors.Control;
+            this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
             this.Pn_Menu.Size = new System.Drawing.Size(1150, 740);
             this.Pn_Menu.TabIndex = 14;
             this.Pn_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_Menu_Paint_2);
             // 
-            // Pic_SetaCursos
+            // Btn_RelatorioProfessores
             // 
-            this.Pic_SetaCursos.Image = global::Faculdade.Properties.Resources.seta;
-            this.Pic_SetaCursos.Location = new System.Drawing.Point(207, 240);
-            this.Pic_SetaCursos.Name = "Pic_SetaCursos";
-            this.Pic_SetaCursos.Size = new System.Drawing.Size(37, 23);
-            this.Pic_SetaCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_SetaCursos.TabIndex = 24;
-            this.Pic_SetaCursos.TabStop = false;
+            this.Btn_RelatorioProfessores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_RelatorioProfessores.FlatAppearance.BorderSize = 0;
+            this.Btn_RelatorioProfessores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_RelatorioProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_RelatorioProfessores.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_RelatorioProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioProfessores.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_RelatorioProfessores.Name = "Btn_RelatorioProfessores";
+            this.Btn_RelatorioProfessores.Size = new System.Drawing.Size(250, 30);
+            this.Btn_RelatorioProfessores.TabIndex = 25;
+            this.Btn_RelatorioProfessores.Text = "   RELATORIO";
+            this.Btn_RelatorioProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioProfessores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_RelatorioProfessores.UseVisualStyleBackColor = false;
+            // 
+            // Btn_InserirProfessores
+            // 
+            this.Btn_InserirProfessores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_InserirProfessores.FlatAppearance.BorderSize = 0;
+            this.Btn_InserirProfessores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_InserirProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_InserirProfessores.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_InserirProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_InserirProfessores.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_InserirProfessores.Name = "Btn_InserirProfessores";
+            this.Btn_InserirProfessores.Size = new System.Drawing.Size(250, 30);
+            this.Btn_InserirProfessores.TabIndex = 26;
+            this.Btn_InserirProfessores.Text = "   INCLUIR";
+            this.Btn_InserirProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_InserirProfessores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_InserirProfessores.UseVisualStyleBackColor = false;
+            // 
+            // Btn_AlterarProfessores
+            // 
+            this.Btn_AlterarProfessores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_AlterarProfessores.FlatAppearance.BorderSize = 0;
+            this.Btn_AlterarProfessores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_AlterarProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_AlterarProfessores.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_AlterarProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_AlterarProfessores.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_AlterarProfessores.Name = "Btn_AlterarProfessores";
+            this.Btn_AlterarProfessores.Size = new System.Drawing.Size(250, 30);
+            this.Btn_AlterarProfessores.TabIndex = 27;
+            this.Btn_AlterarProfessores.Text = "   ALTERAR";
+            this.Btn_AlterarProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_AlterarProfessores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_AlterarProfessores.UseVisualStyleBackColor = false;
+            // 
+            // Btn_DeletarProfessores
+            // 
+            this.Btn_DeletarProfessores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_DeletarProfessores.FlatAppearance.BorderSize = 0;
+            this.Btn_DeletarProfessores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_DeletarProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_DeletarProfessores.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_DeletarProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_DeletarProfessores.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_DeletarProfessores.Name = "Btn_DeletarProfessores";
+            this.Btn_DeletarProfessores.Size = new System.Drawing.Size(250, 30);
+            this.Btn_DeletarProfessores.TabIndex = 28;
+            this.Btn_DeletarProfessores.Text = "   DELETAR";
+            this.Btn_DeletarProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_DeletarProfessores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_DeletarProfessores.UseVisualStyleBackColor = false;
+            // 
+            // Btn_DeletarMaterias
+            // 
+            this.Btn_DeletarMaterias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_DeletarMaterias.FlatAppearance.BorderSize = 0;
+            this.Btn_DeletarMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_DeletarMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_DeletarMaterias.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_DeletarMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_DeletarMaterias.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_DeletarMaterias.Name = "Btn_DeletarMaterias";
+            this.Btn_DeletarMaterias.Size = new System.Drawing.Size(250, 30);
+            this.Btn_DeletarMaterias.TabIndex = 32;
+            this.Btn_DeletarMaterias.Text = "   DELETAR";
+            this.Btn_DeletarMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_DeletarMaterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_DeletarMaterias.UseVisualStyleBackColor = false;
+            // 
+            // Btn_AlterarMaterias
+            // 
+            this.Btn_AlterarMaterias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_AlterarMaterias.FlatAppearance.BorderSize = 0;
+            this.Btn_AlterarMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_AlterarMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_AlterarMaterias.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_AlterarMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_AlterarMaterias.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_AlterarMaterias.Name = "Btn_AlterarMaterias";
+            this.Btn_AlterarMaterias.Size = new System.Drawing.Size(250, 30);
+            this.Btn_AlterarMaterias.TabIndex = 31;
+            this.Btn_AlterarMaterias.Text = "   ALTERAR";
+            this.Btn_AlterarMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_AlterarMaterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_AlterarMaterias.UseVisualStyleBackColor = false;
+            // 
+            // Btn_InserirMaterias
+            // 
+            this.Btn_InserirMaterias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_InserirMaterias.FlatAppearance.BorderSize = 0;
+            this.Btn_InserirMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_InserirMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_InserirMaterias.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_InserirMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_InserirMaterias.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_InserirMaterias.Name = "Btn_InserirMaterias";
+            this.Btn_InserirMaterias.Size = new System.Drawing.Size(250, 30);
+            this.Btn_InserirMaterias.TabIndex = 30;
+            this.Btn_InserirMaterias.Text = "   INCLUIR";
+            this.Btn_InserirMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_InserirMaterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_InserirMaterias.UseVisualStyleBackColor = false;
+            // 
+            // Btn_RelatorioMaterias
+            // 
+            this.Btn_RelatorioMaterias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_RelatorioMaterias.FlatAppearance.BorderSize = 0;
+            this.Btn_RelatorioMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_RelatorioMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_RelatorioMaterias.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_RelatorioMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioMaterias.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_RelatorioMaterias.Name = "Btn_RelatorioMaterias";
+            this.Btn_RelatorioMaterias.Size = new System.Drawing.Size(250, 30);
+            this.Btn_RelatorioMaterias.TabIndex = 29;
+            this.Btn_RelatorioMaterias.Text = "   RELATORIO";
+            this.Btn_RelatorioMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioMaterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_RelatorioMaterias.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1450, 690);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 30);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "   DELETAR";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(1450, 690);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 30);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "   RELATORIO";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(1450, 690);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(250, 30);
+            this.button3.TabIndex = 35;
+            this.button3.Text = "   ALTERAR";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button4.ForeColor = System.Drawing.Color.Transparent;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(1450, 690);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(250, 30);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "   INCLUIR";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // Btn_DeletarNotas
+            // 
+            this.Btn_DeletarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_DeletarNotas.FlatAppearance.BorderSize = 0;
+            this.Btn_DeletarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_DeletarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_DeletarNotas.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_DeletarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_DeletarNotas.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_DeletarNotas.Name = "Btn_DeletarNotas";
+            this.Btn_DeletarNotas.Size = new System.Drawing.Size(250, 30);
+            this.Btn_DeletarNotas.TabIndex = 36;
+            this.Btn_DeletarNotas.Text = "   DELETAR";
+            this.Btn_DeletarNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_DeletarNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_DeletarNotas.UseVisualStyleBackColor = false;
+            // 
+            // Btn_RelatorioNotas
+            // 
+            this.Btn_RelatorioNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_RelatorioNotas.FlatAppearance.BorderSize = 0;
+            this.Btn_RelatorioNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_RelatorioNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_RelatorioNotas.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_RelatorioNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioNotas.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_RelatorioNotas.Name = "Btn_RelatorioNotas";
+            this.Btn_RelatorioNotas.Size = new System.Drawing.Size(250, 30);
+            this.Btn_RelatorioNotas.TabIndex = 33;
+            this.Btn_RelatorioNotas.Text = "   RELATORIO";
+            this.Btn_RelatorioNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_RelatorioNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_RelatorioNotas.UseVisualStyleBackColor = false;
+            // 
+            // Btn_AlterarNotas
+            // 
+            this.Btn_AlterarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_AlterarNotas.FlatAppearance.BorderSize = 0;
+            this.Btn_AlterarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_AlterarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_AlterarNotas.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_AlterarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_AlterarNotas.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_AlterarNotas.Name = "Btn_AlterarNotas";
+            this.Btn_AlterarNotas.Size = new System.Drawing.Size(250, 30);
+            this.Btn_AlterarNotas.TabIndex = 35;
+            this.Btn_AlterarNotas.Text = "   ALTERAR";
+            this.Btn_AlterarNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_AlterarNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_AlterarNotas.UseVisualStyleBackColor = false;
+            // 
+            // Btn_InserirNotas
+            // 
+            this.Btn_InserirNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
+            this.Btn_InserirNotas.FlatAppearance.BorderSize = 0;
+            this.Btn_InserirNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_InserirNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Btn_InserirNotas.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_InserirNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_InserirNotas.Location = new System.Drawing.Point(1450, 690);
+            this.Btn_InserirNotas.Name = "Btn_InserirNotas";
+            this.Btn_InserirNotas.Size = new System.Drawing.Size(250, 30);
+            this.Btn_InserirNotas.TabIndex = 34;
+            this.Btn_InserirNotas.Text = "   INCLUIR";
+            this.Btn_InserirNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_InserirNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_InserirNotas.UseVisualStyleBackColor = false;
             // 
             // Frm_Menu
             // 
@@ -477,8 +772,20 @@
             this.BackgroundImage = global::Faculdade.Properties.Resources.bg_imagemTeste;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1400, 720);
+            this.Controls.Add(this.Btn_DeletarMaterias);
+            this.Controls.Add(this.Btn_DeletarNotas);
+            this.Controls.Add(this.Btn_RelatorioMaterias);
+            this.Controls.Add(this.Btn_AlterarMaterias);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_InserirMaterias);
+            this.Controls.Add(this.Btn_RelatorioNotas);
+            this.Controls.Add(this.Btn_AlterarNotas);
             this.Controls.Add(this.Pn_Menu);
+            this.Controls.Add(this.Btn_InserirNotas);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Pnl_Menu);
             this.DoubleBuffered = true;
@@ -489,6 +796,7 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.Pnl_Menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaMaterias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaProfessores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaAlunos)).EndInit();
@@ -497,7 +805,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,16 +828,32 @@
         private System.Windows.Forms.PictureBox Pic_SetaNotas;
         private System.Windows.Forms.PictureBox Pic_SetaMaterias;
         private System.Windows.Forms.PictureBox Pic_SetaProfessores;
-        private System.Windows.Forms.Button Btn_PesquisarCursos;
+        private System.Windows.Forms.Button Btn_RelatorioCursos;
         private System.Windows.Forms.Button Btn_DeletarCursos;
         private System.Windows.Forms.Button Btn_AlterarCursos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Btn_InserirCursos;
-        private System.Windows.Forms.Button Btn_PesquisarAlunos;
+        private System.Windows.Forms.Button Btn_RelatorioAlunos;
         private System.Windows.Forms.Button Btn_InserirAlunos;
         private System.Windows.Forms.Button Btn_DeletarAlunos;
         private System.Windows.Forms.Button Btn_AlterarAlunos;
         public System.Windows.Forms.Panel Pn_Menu;
         private System.Windows.Forms.PictureBox Pic_SetaCursos;
+        private System.Windows.Forms.Button Btn_DeletarProfessores;
+        private System.Windows.Forms.Button Btn_AlterarProfessores;
+        private System.Windows.Forms.Button Btn_InserirProfessores;
+        private System.Windows.Forms.Button Btn_RelatorioProfessores;
+        private System.Windows.Forms.Button Btn_DeletarMaterias;
+        private System.Windows.Forms.Button Btn_AlterarMaterias;
+        private System.Windows.Forms.Button Btn_InserirMaterias;
+        private System.Windows.Forms.Button Btn_RelatorioMaterias;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Btn_DeletarNotas;
+        private System.Windows.Forms.Button Btn_RelatorioNotas;
+        private System.Windows.Forms.Button Btn_AlterarNotas;
+        private System.Windows.Forms.Button Btn_InserirNotas;
     }
 }
