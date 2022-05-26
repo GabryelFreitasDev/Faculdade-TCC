@@ -106,7 +106,7 @@ namespace Faculdade
 
         private void VerificaNullorEmpty(string valor)
         {
-            if (string.IsNullOrWhiteSpace(valor))
+            if (string.IsNullOrEmpty(valor))
             {
                 throw new NullReferenceException();
             }
