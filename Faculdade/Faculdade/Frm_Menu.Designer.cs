@@ -31,11 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.Pnl_Menu = new System.Windows.Forms.Panel();
             this.Pic_SetaCursos = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
-            this.Btn_PesquisarAlunos = new System.Windows.Forms.Button();
-=======
+
+            
             this.Btn_RelatorioAlunos = new System.Windows.Forms.Button();
->>>>>>> back
+
             this.Btn_InserirAlunos = new System.Windows.Forms.Button();
             this.Btn_DeletarAlunos = new System.Windows.Forms.Button();
             this.Btn_AlterarAlunos = new System.Windows.Forms.Button();
@@ -61,8 +60,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Btn_Fechar = new System.Windows.Forms.Button();
             this.Pn_Menu = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
             this.Btn_RelatorioProfessores = new System.Windows.Forms.Button();
             this.Btn_InserirProfessores = new System.Windows.Forms.Button();
             this.Btn_AlterarProfessores = new System.Windows.Forms.Button();
@@ -79,7 +76,7 @@
             this.Btn_RelatorioNotas = new System.Windows.Forms.Button();
             this.Btn_AlterarNotas = new System.Windows.Forms.Button();
             this.Btn_InserirNotas = new System.Windows.Forms.Button();
->>>>>>> back
+
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_SetaMaterias)).BeginInit();
@@ -125,7 +122,7 @@
             this.Pnl_Menu.TabIndex = 3;
             // 
             // Pic_SetaCursos
-<<<<<<< HEAD
+
             // 
             this.Pic_SetaCursos.Image = global::Faculdade.Properties.Resources.seta;
             this.Pic_SetaCursos.Location = new System.Drawing.Point(207, 240);
@@ -136,8 +133,7 @@
             this.Pic_SetaCursos.TabStop = false;
             // 
             // Btn_PesquisarAlunos
-=======
->>>>>>> back
+
             // 
             this.Pic_SetaCursos.Image = global::Faculdade.Properties.Resources.seta;
             this.Pic_SetaCursos.Location = new System.Drawing.Point(207, 240);
@@ -506,19 +502,19 @@
             // 
             // Pn_Menu
             // 
-<<<<<<< HEAD
+
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ControlText;
-=======
+
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
->>>>>>> back
+
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
             this.Pn_Menu.Size = new System.Drawing.Size(1150, 740);
             this.Pn_Menu.TabIndex = 14;
             this.Pn_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_Menu_Paint_2);
             // 
-<<<<<<< HEAD
-=======
+
+
             // Btn_RelatorioProfessores
             // 
             this.Btn_RelatorioProfessores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
@@ -791,7 +787,7 @@
             this.Btn_InserirNotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_InserirNotas.UseVisualStyleBackColor = false;
             // 
->>>>>>> back
+
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

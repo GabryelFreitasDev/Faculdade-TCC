@@ -16,6 +16,7 @@ namespace Faculdade
         Conexao conexao = new Conexao();
         NpgsqlCommand cmd = new NpgsqlCommand();
         DataTable dt = new DataTable();
+        
         public Frm_Curso()
         {
             InitializeComponent();
@@ -214,8 +215,18 @@ namespace Faculdade
         }
         private DataTable GerarRelatorio()
         {
+            if (conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            cmd.Connection = conexao.conn;
+            cmd.CommandType = CommandType.Text;
+            var vamo = cmd.CommandText = "SELECT * FROM \"curso\"";
             dt = new DataTable();
-            dt.Rows.Add("");
+            dt.Load(cmd.ExecuteReader());
+            dt.Columns.Add(vamo);
+            return dt;
+
         }
         private void Btn_relatorioCurso_Click(object sender, EventArgs e)
         {

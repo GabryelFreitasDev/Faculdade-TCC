@@ -27,14 +27,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="idCurso">
+                    <Textbox Name="Textbox2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -43,6 +43,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -363,6 +364,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <DataSetName>Data</DataSetName>
         <Top>0.57891cm</Top>
         <Left>1.18745cm</Left>
         <Height>1.2cm</Height>
@@ -445,6 +447,70 @@
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DevartDataPostgreSql">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e0a3c428-901c-4e5a-a244-90a23d8de0cf</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DevartDataPostgreSql</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CommandText">
+          <DataField>CommandText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CommandTimeout">
+          <DataField>CommandTimeout</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CommandType">
+          <DataField>CommandType</DataField>
+          <rd:TypeName>System.Data.CommandType</rd:TypeName>
+        </Field>
+        <Field Name="Connection">
+          <DataField>Connection</DataField>
+          <rd:TypeName>Devart.Data.PostgreSql.PgSqlConnection</rd:TypeName>
+        </Field>
+        <Field Name="FetchAll">
+          <DataField>FetchAll</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="FetchSize">
+          <DataField>FetchSize</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCheck">
+          <DataField>ParameterCheck</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TargetSession">
+          <DataField>TargetSession</DataField>
+          <rd:TypeName>Devart.Data.PostgreSql.TargetSession</rd:TypeName>
+        </Field>
+        <Field Name="UnpreparedExecute">
+          <DataField>UnpreparedExecute</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="UpdatedRowSource">
+          <DataField>UpdatedRowSource</DataField>
+          <rd:TypeName>System.Data.UpdateRowSource</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Devart.Data.PostgreSql</rd:DataSetName>
+        <rd:TableName>PgSqlCommand</rd:TableName>
+        <rd:ObjectDataSourceType>Devart.Data.PostgreSql.PgSqlCommand, Devart.Data.PostgreSql, Version=7.24.2066.0, Culture=neutral, PublicKeyToken=09af7300eec23701</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>9c6f39f7-3064-4a9c-ac9f-a2d0967842c1</rd:ReportID>
 </Report>
