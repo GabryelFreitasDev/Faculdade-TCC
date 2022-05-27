@@ -39,14 +39,14 @@ namespace Faculdade
             this.RelatorioCurso.Location = new System.Drawing.Point(0, 0);
             this.RelatorioCurso.Name = "RelatorioCurso";
             this.RelatorioCurso.ServerReport.BearerToken = null;
-            this.RelatorioCurso.Size = new System.Drawing.Size(1134, 701);
+            this.RelatorioCurso.Size = new System.Drawing.Size(776, 701);
             this.RelatorioCurso.TabIndex = 0;
             // 
             // Frm_relatorioCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 701);
+            this.ClientSize = new System.Drawing.Size(776, 701);
             this.Controls.Add(this.RelatorioCurso);
             this.Name = "Frm_relatorioCurso";
             this.Text = "Frm_relatorioCurso";
