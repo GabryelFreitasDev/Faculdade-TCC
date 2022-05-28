@@ -22,6 +22,23 @@ namespace Faculdade
             InitializeComponent();
         }
 
+        private void limpaCampos()
+        {
+            Txb_nomeCurso.Clear();
+            Txb_nomeAlterar.Clear();
+            MTxb_cargaHoraria.Clear();
+            Txb_descricao.Clear();
+            Cbx_Turno.SelectedItem = null;
+        }
+
+        private void Frm_Curso_Load(object sender, EventArgs e)
+        {
+            AtualizaDataGridView();
+            Txb_nomeAlterar.Enabled = false;
+            Txb_nomeAlterar.Visible = false;
+            Lbl_nomeAlterar.Visible = false;
+        }
+
         public void AtualizaDataGridView()
         {
             if (conexao.conn.State != ConnectionState.Open)
@@ -33,8 +50,8 @@ namespace Faculdade
             cmd.CommandText = "SELECT * FROM \"curso\"";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
-            Dgv_curso.DataSource = null;
-            Dgv_curso.DataSource = dt;
+            Dgv_cursos.DataSource = null;
+            Dgv_cursos.DataSource = dt;
 
             try
             {
@@ -61,8 +78,9 @@ namespace Faculdade
             cmd.CommandText = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY idCurso";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
-            Dgv_curso.DataSource = null;
-            Dgv_curso.DataSource = dt;
+            Dgv_cursos.DataSource = null;
+            Dgv_cursos.DataSource = dt;
+            
 
             try
             {
@@ -77,12 +95,6 @@ namespace Faculdade
                 conexao.conn.Close();
             }
         }
-        private void Frm_Curso_Load(object sender, EventArgs e)
-        {
-            AtualizaDataGridView();
-            Txb_nomeAlterar.Enabled = false;
-            Txb_nomeAlterar.Visible = false;
-        }
 
         private void VerificaNullorEmpty(string valor)
         {
@@ -91,6 +103,7 @@ namespace Faculdade
                 throw new NullReferenceException();
             }
         }
+
         private void VerificaMaskFull(MaskedTextBox valor)
         {
             if (!valor.MaskCompleted)
@@ -99,121 +112,68 @@ namespace Faculdade
             }
         }
 
+        //INSERIR
         private void Btn_InsereCurso_Click(object sender, EventArgs e)
         {
-            Curso curso = new Curso();
+            Curso inserir = new Curso();
             try
             {
-                if(!Txb_nomeAlterar.Visible)
+                if(!Txb_nomeAlterar.Visible && Lbl_operacao.Text == "INSERIR")
                 {
                     VerificaNullorEmpty(Txb_nomeCurso.Text);
                     VerificaNullorEmpty(Cbx_Turno.Text);
                     VerificaNullorEmpty(Txb_descricao.Text);
                     VerificaMaskFull(MTxb_cargaHoraria);
-                    curso.Inserir(Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
+                    inserir.Inserir(Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
+                    MessageBox.Show(inserir.mensagem);
                 }
                 else
                 {
+                    limpaCampos();
+                    Lbl_operacao.Text = "INSERIR";
+                    Lbl_nomeAcao.Text = "Nome do curso:";
+                    Txb_nomeAlterar.Clear();
                     Txb_nomeAlterar.Enabled = false;
                     Txb_nomeAlterar.Visible = false;
+                    Lbl_nomeAlterar.Visible = false;
                 }
-
-
             }
             catch (NullReferenceException)
             {
                 if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
                 {
-                    curso.mensagem = "Digite o nome do Curso";
+                    inserir.mensagem = "Digite o nome do Curso";
                 }
                 else if (string.IsNullOrEmpty(Cbx_Turno.Text))
                 {
-                    curso.mensagem = "Escolha o turno do Curso";
+                    inserir.mensagem = "Escolha o turno do Curso";
                 }
                 else if (!MTxb_cargaHoraria.MaskCompleted)
                 {
-                    curso.mensagem = "Digite a carga horária do Curso";
+                    inserir.mensagem = "Digite a carga horária do Curso";
                 }
                 else if (string.IsNullOrEmpty(Txb_descricao.Text))
                 {
-                    curso.mensagem = "Digite a descrição do Curso";
+                    inserir.mensagem = "Digite a descrição do Curso";
                 }
-
+                MessageBox.Show(inserir.mensagem);
             }
             catch (Exception ex)
             {
-                curso.mensagem = "Erro na Edição:" + ex.Message;
+                inserir.mensagem = "Erro na Edição:" + ex.Message;
+                MessageBox.Show(inserir.mensagem);
             }
-            MessageBox.Show(curso.mensagem);
+            
             AtualizaDataGridView();
         }
 
-        private void Btn_excluiCurso_Click(object sender, EventArgs e)
-        {
-            Curso excluir = new Curso();
-
-            try
-            {
-                VerificaNullorEmpty(Txb_nomeCurso.Text);
-                if (MessageBox.Show("Deseja realmente excluir o curso " + Txb_nomeCurso.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    excluir.Excluir(Txb_nomeCurso.Text);
-                }
-            }
-            catch (NullReferenceException)
-            {
-                excluir.mensagem = "Digite o nome do curso que deseja excluir";
-            }
-            catch (Exception ex)
-            {
-                excluir.mensagem = "Erro na Exclusão:" + ex.Message;
-            }
-
-            MessageBox.Show(excluir.mensagem);
-            AtualizaDataGridView();
-        }
-
-        private void Txb_buscar_TextChanged(object sender, EventArgs e)
-        {
-            BuscaDataGridView();
-        }
-
-        private void Btn_relatorioCurso_Click(object sender, EventArgs e)
-        {
-            using (Frm_relatorioCurso rCurso = new Frm_relatorioCurso(dt))
-            {
-                rCurso.ShowDialog();
-            }
-        }
-
-        private void Dgv_curso_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try{
-                DataGridViewRow row = Dgv_curso.Rows[e.RowIndex];
-                if (!Txb_nomeAlterar.Visible)
-                {
-                    Txb_nomeCurso.Text = row.Cells["nomecurso"].Value.ToString();
-                }
-                else
-                {
-                    Txb_nomeAlterar.Text = row.Cells["nomecurso"].Value.ToString();
-                    Txb_nomeCurso.Clear();
-                }
-                Txb_descricao.Text = row.Cells["descricao"].Value.ToString();
-                Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
-            }catch(Exception)
-            {
-                MessageBox.Show("Selecione o curso que deseja editar");
-            }
-           
-        }
-
+        //EDITAR
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            Curso curso = new Curso();
+            Curso editar = new Curso();
             try
             {
-                if(Txb_nomeAlterar.Visible)
+                if (Txb_nomeAlterar.Visible && Lbl_operacao.Text == "EDITAR")
                 {
                     VerificaNullorEmpty(Txb_nomeCurso.Text);
                     VerificaNullorEmpty(Cbx_Turno.Text);
@@ -223,46 +183,138 @@ namespace Faculdade
 
                     if (MessageBox.Show("Deseja realmente editar o curso " + Txb_nomeCurso.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        curso.Editar(Txb_nomeAlterar.Text, Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
+                        editar.Editar(Txb_nomeAlterar.Text, Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
+                        MessageBox.Show(editar.mensagem);
                     }
                 }
                 else
                 {
+                    limpaCampos();
+                    Lbl_operacao.Text = "EDITAR";
+                    Lbl_nomeAcao.Text = "Nome do curso:";
+                    Txb_nomeCurso.Clear();
                     Txb_nomeAlterar.Visible = true;
                     Txb_nomeAlterar.Enabled = true;
+                    Lbl_nomeAlterar.Visible = true;
                 }
-               
+
             }
             catch (NullReferenceException)
             {
                 if (string.IsNullOrEmpty(Txb_nomeAlterar.Text))
                 {
-                    curso.mensagem = "Digite o nome do Curso que deseja alterar";
+                    editar.mensagem = "Digite o nome do Curso que deseja alterar";
                 }
                 if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
                 {
-                    curso.mensagem = "Digite o nome do Curso que deseja alterar";
+                    editar.mensagem = "Digite o nome do Curso que deseja alterar";
                 }
                 else if (string.IsNullOrEmpty(Cbx_Turno.Text))
                 {
-                    curso.mensagem = "Escolha o turno do Curso";
+                    editar.mensagem = "Escolha o turno do Curso";
                 }
                 else if (MTxb_cargaHoraria.Text == "     Hrs")
                 {
-                    curso.mensagem = "Digite a carga horária do Curso";
+                    editar.mensagem = "Digite a carga horária do Curso";
                 }
                 else if (string.IsNullOrEmpty(Txb_descricao.Text))
                 {
-                    curso.mensagem = "Digite a descrição do Curso";
+                    editar.mensagem = "Digite a descrição do Curso";
                 }
-
+                MessageBox.Show(editar.mensagem);
             }
             catch (Exception ex)
             {
-                curso.mensagem = "Erro na Edição:" + ex.Message;
+                editar.mensagem = "Erro na Edição:" + ex.Message;
+                MessageBox.Show(editar.mensagem);
             }
-            MessageBox.Show(curso.mensagem);
             AtualizaDataGridView();
+        }
+        //EXCLUIR
+        private void Btn_excluiCurso_Click_1(object sender, EventArgs e)
+        {
+            Curso excluir = new Curso();
+            try
+            {
+                if (!Txb_nomeAlterar.Visible && Lbl_operacao.Text == "EXCLUIR")
+                {
+                    VerificaNullorEmpty(Txb_nomeCurso.Text);
+                    if (MessageBox.Show("Deseja realmente excluir o curso " + Txb_nomeCurso.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        excluir.Excluir(Txb_nomeCurso.Text);
+                        MessageBox.Show(excluir.mensagem);
+                    }
+                }
+                else
+                {
+                    limpaCampos();
+                    Lbl_operacao.Text = "EXCLUIR";
+                    Lbl_nomeAcao.Text = "Nome do curso que será excluído:";
+                    Txb_nomeAlterar.Enabled = false;
+                    Txb_nomeAlterar.Visible = false;
+                    Lbl_nomeAlterar.Visible = false;
+                }
+
+            }
+            catch (NullReferenceException)
+            {
+                excluir.mensagem = "Digite o nome do curso que deseja excluir";
+                MessageBox.Show(excluir.mensagem);
+            }
+            catch (Exception ex)
+            {
+                excluir.mensagem = "Erro na Exclusão:" + ex.Message;
+                MessageBox.Show(excluir.mensagem);
+            }
+            AtualizaDataGridView();
+        }
+
+        private void Txb_buscar_TextChanged(object sender, EventArgs e)
+        {
+            BuscaDataGridView();
+        }
+
+        private void Dgv_curso_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                DataGridViewRow row = Dgv_cursos.Rows[e.RowIndex];
+                if (!Txb_nomeAlterar.Visible)
+                {
+                    Txb_nomeCurso.Text = row.Cells["nomecurso"].Value.ToString();
+                    Txb_nomeAlterar.Text = row.Cells["nomecurso"].Value.ToString();
+                }
+                else
+                {
+                    Txb_nomeAlterar.Text = row.Cells["nomecurso"].Value.ToString();
+                    Txb_nomeCurso.Clear();
+                }
+
+                Txb_descricao.Text = row.Cells["descricao"].Value.ToString();
+                Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
+                MTxb_cargaHoraria.Text = row.Cells["cargaHoraria"].Value.ToString();
+
+            }catch(Exception)
+            {
+                MessageBox.Show("Selecione o curso que deseja editar");
+            }
+           
+        }
+
+        private void Btn_relatorioCurso_Click_1(object sender, EventArgs e)
+        {
+
+            using (Frm_relatorioCurso relatorioCurso = new Frm_relatorioCurso(dt))
+            {
+                relatorioCurso.ShowDialog();
+            }
+        }
+
+        private void Btn_limpar_Click(object sender, EventArgs e)
+        {
+            limpaCampos();
+            Txb_buscar.Clear();
         }
     }
 }

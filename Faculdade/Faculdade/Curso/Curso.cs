@@ -65,7 +65,6 @@ namespace Faculdade
                 if (dt.Rows.Count > 0)
                 {
                     var Sql = "DELETE FROM Curso WHERE nomeCurso =('" + nomeCurso + "')";
-                    //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                     db.NpgSQLCommand(Sql);
                     status = true;
                     mensagem = "Exclusão bem sucedida ! Curso: " + nomeCurso;
@@ -92,7 +91,6 @@ namespace Faculdade
                 if (dt.Rows.Count > 0)
                 {
                     var Sql = "UPDATE Curso SET nomeCurso = ('" + nomeCurso + "'), turno = ('" + turno + "'), cargaHoraria = ('" + cargaHoraria + "'), descricao = ('" + descricao + "')  WHERE nomeCurso = ('" + nomeAlterar + "')";
-                    //cmd.Parameters.AddWithValue("@nomeCurso", nomeCurso);
                     db.NpgSQLCommand(Sql);
                     status = true;
                     mensagem = "Edição bem sucedida ! Curso: " + nomeCurso;
