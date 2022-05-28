@@ -37,8 +37,24 @@ namespace Faculdade
             Txb_nomeAlterar.Enabled = false;
             Txb_nomeAlterar.Visible = false;
             Lbl_nomeAlterar.Visible = false;
+            EditaDgv();
         }
 
+        public void EditaDgv()
+        {
+            Dgv_cursos.RowHeadersVisible = false;
+            Dgv_cursos.Columns[0].HeaderText = "ID"; 
+            Dgv_cursos.Columns[0].Width = 25;
+            Dgv_cursos.Columns[1].HeaderText = "CURSO";
+            Dgv_cursos.Columns[1].Width = 150;
+            Dgv_cursos.Columns[2].HeaderText = "TURNO";
+            Dgv_cursos.Columns[2].Width = 60;
+            Dgv_cursos.Columns[3].HeaderText = "CARGA HORÁRIA";
+            Dgv_cursos.Columns[3].Width = 60;
+            Dgv_cursos.Columns[4].HeaderText = "DESCRIÇÃO";
+            Dgv_cursos.Columns[4].Width = 250;
+       
+        }
         public void AtualizaDataGridView()
         {
             if (conexao.conn.State != ConnectionState.Open)
@@ -52,7 +68,7 @@ namespace Faculdade
             dt.Load(cmd.ExecuteReader());
             Dgv_cursos.DataSource = null;
             Dgv_cursos.DataSource = dt;
-
+            EditaDgv();
             try
             {
                 cmd.ExecuteNonQuery();
@@ -181,7 +197,7 @@ namespace Faculdade
                     VerificaNullorEmpty(Txb_nomeAlterar.Text);
                     VerificaMaskFull(MTxb_cargaHoraria);
 
-                    if (MessageBox.Show("Deseja realmente editar o curso " + Txb_nomeCurso.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Deseja realmente editar o curso " + Txb_nomeAlterar.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         editar.Editar(Txb_nomeAlterar.Text, Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
                         MessageBox.Show(editar.mensagem);
@@ -189,7 +205,6 @@ namespace Faculdade
                 }
                 else
                 {
-                    limpaCampos();
                     Lbl_operacao.Text = "EDITAR";
                     Lbl_nomeAcao.Text = "Nome do curso:";
                     Txb_nomeCurso.Clear();
@@ -247,7 +262,6 @@ namespace Faculdade
                 }
                 else
                 {
-                    limpaCampos();
                     Lbl_operacao.Text = "EXCLUIR";
                     Lbl_nomeAcao.Text = "Nome do curso que será excluído:";
                     Txb_nomeAlterar.Enabled = false;

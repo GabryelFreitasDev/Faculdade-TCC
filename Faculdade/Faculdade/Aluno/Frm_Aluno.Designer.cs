@@ -28,129 +28,311 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_insereAluno = new System.Windows.Forms.Button();
-            this.Txb_nomeAluno = new System.Windows.Forms.TextBox();
-            this.Txb_email = new System.Windows.Forms.TextBox();
-            this.Txb_endereco = new System.Windows.Forms.TextBox();
-            this.Txb_turma = new System.Windows.Forms.TextBox();
-            this.MTxb_dataNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.MTxb_contato = new System.Windows.Forms.MaskedTextBox();
-            this.Mtxb_cpf = new System.Windows.Forms.MaskedTextBox();
-            this.MTxb_contatoParente = new System.Windows.Forms.MaskedTextBox();
-            this.Cbx_Curso = new System.Windows.Forms.ComboBox();
-            this.Dgv_Alunos = new System.Windows.Forms.DataGridView();
+            this.Dgv_alunos = new System.Windows.Forms.DataGridView();
+            this.Lbl_acao = new System.Windows.Forms.Label();
+            this.Lbl_nome = new System.Windows.Forms.Label();
+            this.Lbl_nomeAlterar = new System.Windows.Forms.Label();
+            this.Txb_nomeAlterar = new System.Windows.Forms.TextBox();
+            this.Btn_editaAluno = new System.Windows.Forms.Button();
+            this.Btn_excluiAluno = new System.Windows.Forms.Button();
             this.Btn_relatorio = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Alunos)).BeginInit();
+            this.Cbx_Curso = new System.Windows.Forms.ComboBox();
+            this.MTxb_contatoParente = new System.Windows.Forms.MaskedTextBox();
+            this.Mtxb_cpf = new System.Windows.Forms.MaskedTextBox();
+            this.MTxb_contato = new System.Windows.Forms.MaskedTextBox();
+            this.MTxb_dataNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.Txb_turma = new System.Windows.Forms.TextBox();
+            this.Txb_endereco = new System.Windows.Forms.TextBox();
+            this.Txb_email = new System.Windows.Forms.TextBox();
+            this.Txb_nomeAluno = new System.Windows.Forms.TextBox();
+            this.Btn_insereAluno = new System.Windows.Forms.Button();
+            this.Lbl_cpf = new System.Windows.Forms.Label();
+            this.Lbl_dataNascimento = new System.Windows.Forms.Label();
+            this.Lbl_contatoAluno = new System.Windows.Forms.Label();
+            this.Lbl_contatoParente = new System.Windows.Forms.Label();
+            this.Lbl_email = new System.Windows.Forms.Label();
+            this.Lbl_turma = new System.Windows.Forms.Label();
+            this.Lbl_cursoAluno = new System.Windows.Forms.Label();
+            this.Lbl_endereco = new System.Windows.Forms.Label();
+            this.Btn_limpar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_alunos)).BeginInit();
             this.SuspendLayout();
             // 
-            // Btn_insereAluno
+            // Dgv_alunos
             // 
-            this.Btn_insereAluno.Location = new System.Drawing.Point(280, 360);
-            this.Btn_insereAluno.Name = "Btn_insereAluno";
-            this.Btn_insereAluno.Size = new System.Drawing.Size(88, 24);
-            this.Btn_insereAluno.TabIndex = 0;
-            this.Btn_insereAluno.Text = "INSERIR";
-            this.Btn_insereAluno.UseVisualStyleBackColor = true;
-            this.Btn_insereAluno.Click += new System.EventHandler(this.Btn_insereAluno_Click);
+            this.Dgv_alunos.AllowUserToAddRows = false;
+            this.Dgv_alunos.AllowUserToDeleteRows = false;
+            this.Dgv_alunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_alunos.Location = new System.Drawing.Point(73, 53);
+            this.Dgv_alunos.Name = "Dgv_alunos";
+            this.Dgv_alunos.ReadOnly = true;
+            this.Dgv_alunos.Size = new System.Drawing.Size(993, 339);
+            this.Dgv_alunos.TabIndex = 11;
+            this.Dgv_alunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Alunos_CellContentClick);
             // 
-            // Txb_nomeAluno
+            // Lbl_acao
             // 
-            this.Txb_nomeAluno.Location = new System.Drawing.Point(55, 47);
-            this.Txb_nomeAluno.Name = "Txb_nomeAluno";
-            this.Txb_nomeAluno.Size = new System.Drawing.Size(236, 20);
-            this.Txb_nomeAluno.TabIndex = 1;
+            this.Lbl_acao.AutoSize = true;
+            this.Lbl_acao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Lbl_acao.Location = new System.Drawing.Point(139, 395);
+            this.Lbl_acao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_acao.Name = "Lbl_acao";
+            this.Lbl_acao.Size = new System.Drawing.Size(126, 31);
+            this.Lbl_acao.TabIndex = 55;
+            this.Lbl_acao.Text = "INSERIR";
             // 
-            // Txb_email
+            // Lbl_nome
             // 
-            this.Txb_email.Location = new System.Drawing.Point(55, 209);
-            this.Txb_email.Name = "Txb_email";
-            this.Txb_email.Size = new System.Drawing.Size(286, 20);
-            this.Txb_email.TabIndex = 2;
+            this.Lbl_nome.AutoSize = true;
+            this.Lbl_nome.Location = new System.Drawing.Point(142, 468);
+            this.Lbl_nome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_nome.Name = "Lbl_nome";
+            this.Lbl_nome.Size = new System.Drawing.Size(82, 13);
+            this.Lbl_nome.TabIndex = 54;
+            this.Lbl_nome.Text = "Nome do aluno:";
             // 
-            // Txb_endereco
+            // Lbl_nomeAlterar
             // 
-            this.Txb_endereco.Location = new System.Drawing.Point(55, 254);
-            this.Txb_endereco.Multiline = true;
-            this.Txb_endereco.Name = "Txb_endereco";
-            this.Txb_endereco.Size = new System.Drawing.Size(313, 35);
-            this.Txb_endereco.TabIndex = 3;
+            this.Lbl_nomeAlterar.AutoSize = true;
+            this.Lbl_nomeAlterar.Location = new System.Drawing.Point(145, 427);
+            this.Lbl_nomeAlterar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_nomeAlterar.Name = "Lbl_nomeAlterar";
+            this.Lbl_nomeAlterar.Size = new System.Drawing.Size(173, 13);
+            this.Lbl_nomeAlterar.TabIndex = 53;
+            this.Lbl_nomeAlterar.Text = "Nome do aluno que está alterando:";
             // 
-            // Txb_turma
+            // Txb_nomeAlterar
             // 
-            this.Txb_turma.Location = new System.Drawing.Point(55, 295);
-            this.Txb_turma.Name = "Txb_turma";
-            this.Txb_turma.Size = new System.Drawing.Size(100, 20);
-            this.Txb_turma.TabIndex = 4;
+            this.Txb_nomeAlterar.Location = new System.Drawing.Point(145, 443);
+            this.Txb_nomeAlterar.Name = "Txb_nomeAlterar";
+            this.Txb_nomeAlterar.Size = new System.Drawing.Size(236, 20);
+            this.Txb_nomeAlterar.TabIndex = 52;
             // 
-            // MTxb_dataNascimento
+            // Btn_editaAluno
             // 
-            this.MTxb_dataNascimento.Location = new System.Drawing.Point(55, 114);
-            this.MTxb_dataNascimento.Mask = "00/00/0000";
-            this.MTxb_dataNascimento.Name = "MTxb_dataNascimento";
-            this.MTxb_dataNascimento.Size = new System.Drawing.Size(100, 20);
-            this.MTxb_dataNascimento.TabIndex = 6;
-            this.MTxb_dataNascimento.ValidatingType = typeof(System.DateTime);
+            this.Btn_editaAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Btn_editaAluno.Location = new System.Drawing.Point(970, 457);
+            this.Btn_editaAluno.Name = "Btn_editaAluno";
+            this.Btn_editaAluno.Size = new System.Drawing.Size(75, 23);
+            this.Btn_editaAluno.TabIndex = 51;
+            this.Btn_editaAluno.Text = "EDITAR";
+            this.Btn_editaAluno.UseVisualStyleBackColor = true;
+            this.Btn_editaAluno.Click += new System.EventHandler(this.Btn_editaAluno_Click);
             // 
-            // MTxb_contato
+            // Btn_excluiAluno
             // 
-            this.MTxb_contato.Location = new System.Drawing.Point(55, 157);
-            this.MTxb_contato.Mask = "(00) 00000-0000";
-            this.MTxb_contato.Name = "MTxb_contato";
-            this.MTxb_contato.Size = new System.Drawing.Size(100, 20);
-            this.MTxb_contato.TabIndex = 7;
+            this.Btn_excluiAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Btn_excluiAluno.Location = new System.Drawing.Point(970, 502);
+            this.Btn_excluiAluno.Name = "Btn_excluiAluno";
+            this.Btn_excluiAluno.Size = new System.Drawing.Size(75, 23);
+            this.Btn_excluiAluno.TabIndex = 50;
+            this.Btn_excluiAluno.Text = "EXCLUIR";
+            this.Btn_excluiAluno.UseVisualStyleBackColor = true;
+            this.Btn_excluiAluno.Click += new System.EventHandler(this.Btn_excluiAluno_Click_1);
             // 
-            // Mtxb_cpf
+            // Btn_relatorio
             // 
-            this.Mtxb_cpf.Location = new System.Drawing.Point(55, 88);
-            this.Mtxb_cpf.Mask = "000,000,000-00";
-            this.Mtxb_cpf.Name = "Mtxb_cpf";
-            this.Mtxb_cpf.Size = new System.Drawing.Size(100, 20);
-            this.Mtxb_cpf.TabIndex = 8;
-            // 
-            // MTxb_contatoParente
-            // 
-            this.MTxb_contatoParente.Location = new System.Drawing.Point(55, 183);
-            this.MTxb_contatoParente.Mask = "(00) 00000-0000";
-            this.MTxb_contatoParente.Name = "MTxb_contatoParente";
-            this.MTxb_contatoParente.Size = new System.Drawing.Size(100, 20);
-            this.MTxb_contatoParente.TabIndex = 9;
+            this.Btn_relatorio.Location = new System.Drawing.Point(946, 403);
+            this.Btn_relatorio.Name = "Btn_relatorio";
+            this.Btn_relatorio.Size = new System.Drawing.Size(120, 23);
+            this.Btn_relatorio.TabIndex = 49;
+            this.Btn_relatorio.Text = "RELATORIO";
+            this.Btn_relatorio.UseVisualStyleBackColor = true;
+            this.Btn_relatorio.Click += new System.EventHandler(this.Btn_relatorio_Click);
             // 
             // Cbx_Curso
             // 
             this.Cbx_Curso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_Curso.FormattingEnabled = true;
-            this.Cbx_Curso.Location = new System.Drawing.Point(55, 321);
+            this.Cbx_Curso.Location = new System.Drawing.Point(547, 485);
             this.Cbx_Curso.Name = "Cbx_Curso";
             this.Cbx_Curso.Size = new System.Drawing.Size(331, 21);
-            this.Cbx_Curso.TabIndex = 10;
+            this.Cbx_Curso.TabIndex = 48;
             // 
-            // Dgv_Alunos
+            // MTxb_contatoParente
             // 
-            this.Dgv_Alunos.AllowUserToAddRows = false;
-            this.Dgv_Alunos.AllowUserToDeleteRows = false;
-            this.Dgv_Alunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_Alunos.Location = new System.Drawing.Point(435, 230);
-            this.Dgv_Alunos.Name = "Dgv_Alunos";
-            this.Dgv_Alunos.ReadOnly = true;
-            this.Dgv_Alunos.Size = new System.Drawing.Size(659, 339);
-            this.Dgv_Alunos.TabIndex = 11;
+            this.MTxb_contatoParente.Location = new System.Drawing.Point(145, 591);
+            this.MTxb_contatoParente.Mask = "(00) 00000-0000";
+            this.MTxb_contatoParente.Name = "MTxb_contatoParente";
+            this.MTxb_contatoParente.Size = new System.Drawing.Size(100, 20);
+            this.MTxb_contatoParente.TabIndex = 47;
             // 
-            // Btn_relatorio
+            // Mtxb_cpf
             // 
-            this.Btn_relatorio.Location = new System.Drawing.Point(99, 500);
-            this.Btn_relatorio.Name = "Btn_relatorio";
-            this.Btn_relatorio.Size = new System.Drawing.Size(120, 23);
-            this.Btn_relatorio.TabIndex = 12;
-            this.Btn_relatorio.Text = "RELATORIO";
-            this.Btn_relatorio.UseVisualStyleBackColor = true;
+            this.Mtxb_cpf.Location = new System.Drawing.Point(414, 485);
+            this.Mtxb_cpf.Mask = "000,000,000-00";
+            this.Mtxb_cpf.Name = "Mtxb_cpf";
+            this.Mtxb_cpf.Size = new System.Drawing.Size(100, 20);
+            this.Mtxb_cpf.TabIndex = 46;
+            // 
+            // MTxb_contato
+            // 
+            this.MTxb_contato.Location = new System.Drawing.Point(290, 533);
+            this.MTxb_contato.Mask = "(00) 00000-0000";
+            this.MTxb_contato.Name = "MTxb_contato";
+            this.MTxb_contato.Size = new System.Drawing.Size(100, 20);
+            this.MTxb_contato.TabIndex = 45;
+            // 
+            // MTxb_dataNascimento
+            // 
+            this.MTxb_dataNascimento.Location = new System.Drawing.Point(145, 533);
+            this.MTxb_dataNascimento.Mask = "00/00/0000";
+            this.MTxb_dataNascimento.Name = "MTxb_dataNascimento";
+            this.MTxb_dataNascimento.Size = new System.Drawing.Size(100, 20);
+            this.MTxb_dataNascimento.TabIndex = 44;
+            this.MTxb_dataNascimento.ValidatingType = typeof(System.DateTime);
+            // 
+            // Txb_turma
+            // 
+            this.Txb_turma.Location = new System.Drawing.Point(778, 533);
+            this.Txb_turma.Name = "Txb_turma";
+            this.Txb_turma.Size = new System.Drawing.Size(100, 20);
+            this.Txb_turma.TabIndex = 43;
+            // 
+            // Txb_endereco
+            // 
+            this.Txb_endereco.Location = new System.Drawing.Point(290, 591);
+            this.Txb_endereco.Multiline = true;
+            this.Txb_endereco.Name = "Txb_endereco";
+            this.Txb_endereco.Size = new System.Drawing.Size(437, 39);
+            this.Txb_endereco.TabIndex = 42;
+            // 
+            // Txb_email
+            // 
+            this.Txb_email.Location = new System.Drawing.Point(414, 533);
+            this.Txb_email.Name = "Txb_email";
+            this.Txb_email.Size = new System.Drawing.Size(313, 20);
+            this.Txb_email.TabIndex = 41;
+            // 
+            // Txb_nomeAluno
+            // 
+            this.Txb_nomeAluno.Location = new System.Drawing.Point(145, 484);
+            this.Txb_nomeAluno.Name = "Txb_nomeAluno";
+            this.Txb_nomeAluno.Size = new System.Drawing.Size(236, 20);
+            this.Txb_nomeAluno.TabIndex = 40;
+            // 
+            // Btn_insereAluno
+            // 
+            this.Btn_insereAluno.Location = new System.Drawing.Point(970, 554);
+            this.Btn_insereAluno.Name = "Btn_insereAluno";
+            this.Btn_insereAluno.Size = new System.Drawing.Size(75, 23);
+            this.Btn_insereAluno.TabIndex = 39;
+            this.Btn_insereAluno.Text = "INSERIR";
+            this.Btn_insereAluno.UseVisualStyleBackColor = true;
+            this.Btn_insereAluno.Click += new System.EventHandler(this.Btn_insereAluno_Click_1);
+            // 
+            // Lbl_cpf
+            // 
+            this.Lbl_cpf.AutoSize = true;
+            this.Lbl_cpf.Location = new System.Drawing.Point(411, 472);
+            this.Lbl_cpf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_cpf.Name = "Lbl_cpf";
+            this.Lbl_cpf.Size = new System.Drawing.Size(30, 13);
+            this.Lbl_cpf.TabIndex = 56;
+            this.Lbl_cpf.Text = "CPF:";
+            // 
+            // Lbl_dataNascimento
+            // 
+            this.Lbl_dataNascimento.AutoSize = true;
+            this.Lbl_dataNascimento.Location = new System.Drawing.Point(142, 517);
+            this.Lbl_dataNascimento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_dataNascimento.Name = "Lbl_dataNascimento";
+            this.Lbl_dataNascimento.Size = new System.Drawing.Size(105, 13);
+            this.Lbl_dataNascimento.TabIndex = 57;
+            this.Lbl_dataNascimento.Text = "Data de nascimento:";
+            // 
+            // Lbl_contatoAluno
+            // 
+            this.Lbl_contatoAluno.AutoSize = true;
+            this.Lbl_contatoAluno.Location = new System.Drawing.Point(290, 517);
+            this.Lbl_contatoAluno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_contatoAluno.Name = "Lbl_contatoAluno";
+            this.Lbl_contatoAluno.Size = new System.Drawing.Size(91, 13);
+            this.Lbl_contatoAluno.TabIndex = 58;
+            this.Lbl_contatoAluno.Text = "Contato do aluno:";
+            // 
+            // Lbl_contatoParente
+            // 
+            this.Lbl_contatoParente.AutoSize = true;
+            this.Lbl_contatoParente.Location = new System.Drawing.Point(142, 575);
+            this.Lbl_contatoParente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_contatoParente.Name = "Lbl_contatoParente";
+            this.Lbl_contatoParente.Size = new System.Drawing.Size(132, 13);
+            this.Lbl_contatoParente.TabIndex = 59;
+            this.Lbl_contatoParente.Text = "Contato de algum parente:";
+            // 
+            // Lbl_email
+            // 
+            this.Lbl_email.AutoSize = true;
+            this.Lbl_email.Location = new System.Drawing.Point(411, 517);
+            this.Lbl_email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_email.Name = "Lbl_email";
+            this.Lbl_email.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_email.TabIndex = 60;
+            this.Lbl_email.Text = "Email:";
+            // 
+            // Lbl_turma
+            // 
+            this.Lbl_turma.AutoSize = true;
+            this.Lbl_turma.Location = new System.Drawing.Point(775, 517);
+            this.Lbl_turma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_turma.Name = "Lbl_turma";
+            this.Lbl_turma.Size = new System.Drawing.Size(40, 13);
+            this.Lbl_turma.TabIndex = 61;
+            this.Lbl_turma.Text = "Turma:";
+            // 
+            // Lbl_cursoAluno
+            // 
+            this.Lbl_cursoAluno.AutoSize = true;
+            this.Lbl_cursoAluno.Location = new System.Drawing.Point(544, 468);
+            this.Lbl_cursoAluno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_cursoAluno.Name = "Lbl_cursoAluno";
+            this.Lbl_cursoAluno.Size = new System.Drawing.Size(37, 13);
+            this.Lbl_cursoAluno.TabIndex = 62;
+            this.Lbl_cursoAluno.Text = "Curso:";
+            // 
+            // Lbl_endereco
+            // 
+            this.Lbl_endereco.AutoSize = true;
+            this.Lbl_endereco.Location = new System.Drawing.Point(287, 575);
+            this.Lbl_endereco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_endereco.Name = "Lbl_endereco";
+            this.Lbl_endereco.Size = new System.Drawing.Size(56, 13);
+            this.Lbl_endereco.TabIndex = 63;
+            this.Lbl_endereco.Text = "Endereço:";
+            // 
+            // Btn_limpar
+            // 
+            this.Btn_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Btn_limpar.Location = new System.Drawing.Point(991, 639);
+            this.Btn_limpar.Name = "Btn_limpar";
+            this.Btn_limpar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_limpar.TabIndex = 64;
+            this.Btn_limpar.Text = "LIMPAR";
+            this.Btn_limpar.UseVisualStyleBackColor = true;
+            this.Btn_limpar.Click += new System.EventHandler(this.Btn_limpar_Click);
             // 
             // Frm_Aluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 701);
+            this.Controls.Add(this.Btn_limpar);
+            this.Controls.Add(this.Lbl_endereco);
+            this.Controls.Add(this.Lbl_cursoAluno);
+            this.Controls.Add(this.Lbl_turma);
+            this.Controls.Add(this.Lbl_email);
+            this.Controls.Add(this.Lbl_contatoParente);
+            this.Controls.Add(this.Lbl_contatoAluno);
+            this.Controls.Add(this.Lbl_dataNascimento);
+            this.Controls.Add(this.Lbl_cpf);
+            this.Controls.Add(this.Lbl_acao);
+            this.Controls.Add(this.Lbl_nome);
+            this.Controls.Add(this.Lbl_nomeAlterar);
+            this.Controls.Add(this.Txb_nomeAlterar);
+            this.Controls.Add(this.Btn_editaAluno);
+            this.Controls.Add(this.Btn_excluiAluno);
             this.Controls.Add(this.Btn_relatorio);
-            this.Controls.Add(this.Dgv_Alunos);
             this.Controls.Add(this.Cbx_Curso);
             this.Controls.Add(this.MTxb_contatoParente);
             this.Controls.Add(this.Mtxb_cpf);
@@ -161,28 +343,43 @@
             this.Controls.Add(this.Txb_email);
             this.Controls.Add(this.Txb_nomeAluno);
             this.Controls.Add(this.Btn_insereAluno);
+            this.Controls.Add(this.Dgv_alunos);
             this.Name = "Frm_Aluno";
             this.Text = "Aluno";
             this.Load += new System.EventHandler(this.Frm_Aluno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Alunos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_alunos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Btn_insereAluno;
-        private System.Windows.Forms.TextBox Txb_nomeAluno;
-        private System.Windows.Forms.TextBox Txb_email;
-        private System.Windows.Forms.TextBox Txb_endereco;
-        private System.Windows.Forms.TextBox Txb_turma;
-        private System.Windows.Forms.MaskedTextBox MTxb_dataNascimento;
-        private System.Windows.Forms.MaskedTextBox MTxb_contato;
-        private System.Windows.Forms.MaskedTextBox Mtxb_cpf;
-        private System.Windows.Forms.MaskedTextBox MTxb_contatoParente;
-        private System.Windows.Forms.ComboBox Cbx_Curso;
-        private System.Windows.Forms.DataGridView Dgv_Alunos;
+        private System.Windows.Forms.DataGridView Dgv_alunos;
+        private System.Windows.Forms.Label Lbl_acao;
+        private System.Windows.Forms.Label Lbl_nome;
+        private System.Windows.Forms.Label Lbl_nomeAlterar;
+        private System.Windows.Forms.TextBox Txb_nomeAlterar;
+        private System.Windows.Forms.Button Btn_editaAluno;
+        private System.Windows.Forms.Button Btn_excluiAluno;
         private System.Windows.Forms.Button Btn_relatorio;
+        private System.Windows.Forms.ComboBox Cbx_Curso;
+        private System.Windows.Forms.MaskedTextBox MTxb_contatoParente;
+        private System.Windows.Forms.MaskedTextBox Mtxb_cpf;
+        private System.Windows.Forms.MaskedTextBox MTxb_contato;
+        private System.Windows.Forms.MaskedTextBox MTxb_dataNascimento;
+        private System.Windows.Forms.TextBox Txb_turma;
+        private System.Windows.Forms.TextBox Txb_endereco;
+        private System.Windows.Forms.TextBox Txb_email;
+        private System.Windows.Forms.TextBox Txb_nomeAluno;
+        private System.Windows.Forms.Button Btn_insereAluno;
+        private System.Windows.Forms.Label Lbl_cpf;
+        private System.Windows.Forms.Label Lbl_dataNascimento;
+        private System.Windows.Forms.Label Lbl_contatoAluno;
+        private System.Windows.Forms.Label Lbl_contatoParente;
+        private System.Windows.Forms.Label Lbl_email;
+        private System.Windows.Forms.Label Lbl_turma;
+        private System.Windows.Forms.Label Lbl_cursoAluno;
+        private System.Windows.Forms.Label Lbl_endereco;
+        private System.Windows.Forms.Button Btn_limpar;
     }
 }

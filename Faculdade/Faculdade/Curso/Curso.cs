@@ -41,7 +41,7 @@ namespace Faculdade
                     var Sql = "INSERT INTO Curso (nomeCurso , turno, cargaHoraria, descricao) VALUES ('" + nomeCurso + "','" + turno + "','" + cargaHoraria + "','" + descricao + "')";
                     db.NpgSQLCommand(Sql);
                     status = true;
-                    mensagem = "Inserção bem sucedida ! Curso: " + nomeCurso;
+                    mensagem = "Inserção bem sucedida ! \nCurso: " + nomeCurso;
                 }
                 catch (Exception ex)
                 {
@@ -67,7 +67,7 @@ namespace Faculdade
                     var Sql = "DELETE FROM Curso WHERE nomeCurso =('" + nomeCurso + "')";
                     db.NpgSQLCommand(Sql);
                     status = true;
-                    mensagem = "Exclusão bem sucedida ! Curso: " + nomeCurso;
+                    mensagem = "Exclusão bem sucedida ! \nCurso: " + nomeCurso;
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace Faculdade
                     var Sql = "UPDATE Curso SET nomeCurso = ('" + nomeCurso + "'), turno = ('" + turno + "'), cargaHoraria = ('" + cargaHoraria + "'), descricao = ('" + descricao + "')  WHERE nomeCurso = ('" + nomeAlterar + "')";
                     db.NpgSQLCommand(Sql);
                     status = true;
-                    mensagem = "Edição bem sucedida ! Curso: " + nomeCurso;
+                    mensagem = "Edição bem sucedida ! \nCurso: " + nomeCurso;
                 }
                 else
                 {
