@@ -31,7 +31,7 @@ namespace Faculdade
             }
             DataTable dt = new DataTable();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT nomeAluno, cpf, dataNascimento, contato, contatoParente, email, endereco, turma, nomeCurso FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso";
+            cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma";
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             da.Fill(dt);
             da.Dispose();
