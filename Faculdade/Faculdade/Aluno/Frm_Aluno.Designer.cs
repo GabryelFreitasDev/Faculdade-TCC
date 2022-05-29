@@ -81,7 +81,7 @@
             // 
             this.Lbl_acao.AutoSize = true;
             this.Lbl_acao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Lbl_acao.Location = new System.Drawing.Point(67, 395);
+            this.Lbl_acao.Location = new System.Drawing.Point(67, 412);
             this.Lbl_acao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_acao.Name = "Lbl_acao";
             this.Lbl_acao.Size = new System.Drawing.Size(126, 31);
@@ -91,7 +91,7 @@
             // Lbl_nome
             // 
             this.Lbl_nome.AutoSize = true;
-            this.Lbl_nome.Location = new System.Drawing.Point(70, 468);
+            this.Lbl_nome.Location = new System.Drawing.Point(70, 485);
             this.Lbl_nome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nome.Name = "Lbl_nome";
             this.Lbl_nome.Size = new System.Drawing.Size(82, 13);
@@ -101,7 +101,7 @@
             // Lbl_nomeAlterar
             // 
             this.Lbl_nomeAlterar.AutoSize = true;
-            this.Lbl_nomeAlterar.Location = new System.Drawing.Point(73, 427);
+            this.Lbl_nomeAlterar.Location = new System.Drawing.Point(73, 444);
             this.Lbl_nomeAlterar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nomeAlterar.Name = "Lbl_nomeAlterar";
             this.Lbl_nomeAlterar.Size = new System.Drawing.Size(173, 13);
@@ -110,7 +110,7 @@
             // 
             // Txb_nomeAlterar
             // 
-            this.Txb_nomeAlterar.Location = new System.Drawing.Point(73, 443);
+            this.Txb_nomeAlterar.Location = new System.Drawing.Point(73, 460);
             this.Txb_nomeAlterar.Name = "Txb_nomeAlterar";
             this.Txb_nomeAlterar.Size = new System.Drawing.Size(236, 20);
             this.Txb_nomeAlterar.TabIndex = 52;
@@ -151,7 +151,7 @@
             // 
             this.Cbx_Curso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_Curso.FormattingEnabled = true;
-            this.Cbx_Curso.Location = new System.Drawing.Point(475, 485);
+            this.Cbx_Curso.Location = new System.Drawing.Point(475, 502);
             this.Cbx_Curso.Name = "Cbx_Curso";
             this.Cbx_Curso.Size = new System.Drawing.Size(315, 21);
             this.Cbx_Curso.TabIndex = 48;
@@ -159,7 +159,7 @@
             // 
             // MTxb_contatoParente
             // 
-            this.MTxb_contatoParente.Location = new System.Drawing.Point(73, 591);
+            this.MTxb_contatoParente.Location = new System.Drawing.Point(73, 608);
             this.MTxb_contatoParente.Mask = "(00) 00000-0000";
             this.MTxb_contatoParente.Name = "MTxb_contatoParente";
             this.MTxb_contatoParente.Size = new System.Drawing.Size(100, 20);
@@ -167,7 +167,7 @@
             // 
             // Mtxb_cpf
             // 
-            this.Mtxb_cpf.Location = new System.Drawing.Point(342, 485);
+            this.Mtxb_cpf.Location = new System.Drawing.Point(342, 502);
             this.Mtxb_cpf.Mask = "000,000,000-00";
             this.Mtxb_cpf.Name = "Mtxb_cpf";
             this.Mtxb_cpf.Size = new System.Drawing.Size(100, 20);
@@ -175,7 +175,7 @@
             // 
             // MTxb_contato
             // 
-            this.MTxb_contato.Location = new System.Drawing.Point(218, 533);
+            this.MTxb_contato.Location = new System.Drawing.Point(218, 550);
             this.MTxb_contato.Mask = "(00) 00000-0000";
             this.MTxb_contato.Name = "MTxb_contato";
             this.MTxb_contato.Size = new System.Drawing.Size(100, 20);
@@ -183,7 +183,7 @@
             // 
             // MTxb_dataNascimento
             // 
-            this.MTxb_dataNascimento.Location = new System.Drawing.Point(73, 533);
+            this.MTxb_dataNascimento.Location = new System.Drawing.Point(73, 550);
             this.MTxb_dataNascimento.Mask = "00/00/0000";
             this.MTxb_dataNascimento.Name = "MTxb_dataNascimento";
             this.MTxb_dataNascimento.Size = new System.Drawing.Size(100, 20);
@@ -192,7 +192,7 @@
             // 
             // Txb_endereco
             // 
-            this.Txb_endereco.Location = new System.Drawing.Point(218, 591);
+            this.Txb_endereco.Location = new System.Drawing.Point(218, 608);
             this.Txb_endereco.Multiline = true;
             this.Txb_endereco.Name = "Txb_endereco";
             this.Txb_endereco.Size = new System.Drawing.Size(437, 39);
@@ -200,14 +200,14 @@
             // 
             // Txb_email
             // 
-            this.Txb_email.Location = new System.Drawing.Point(342, 533);
+            this.Txb_email.Location = new System.Drawing.Point(342, 550);
             this.Txb_email.Name = "Txb_email";
             this.Txb_email.Size = new System.Drawing.Size(313, 20);
             this.Txb_email.TabIndex = 41;
             // 
             // Txb_nomeAluno
             // 
-            this.Txb_nomeAluno.Location = new System.Drawing.Point(73, 484);
+            this.Txb_nomeAluno.Location = new System.Drawing.Point(73, 501);
             this.Txb_nomeAluno.Name = "Txb_nomeAluno";
             this.Txb_nomeAluno.Size = new System.Drawing.Size(236, 20);
             this.Txb_nomeAluno.TabIndex = 40;
@@ -225,7 +225,7 @@
             // Lbl_cpf
             // 
             this.Lbl_cpf.AutoSize = true;
-            this.Lbl_cpf.Location = new System.Drawing.Point(339, 472);
+            this.Lbl_cpf.Location = new System.Drawing.Point(339, 489);
             this.Lbl_cpf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cpf.Name = "Lbl_cpf";
             this.Lbl_cpf.Size = new System.Drawing.Size(30, 13);
@@ -235,7 +235,7 @@
             // Lbl_dataNascimento
             // 
             this.Lbl_dataNascimento.AutoSize = true;
-            this.Lbl_dataNascimento.Location = new System.Drawing.Point(70, 517);
+            this.Lbl_dataNascimento.Location = new System.Drawing.Point(70, 534);
             this.Lbl_dataNascimento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_dataNascimento.Name = "Lbl_dataNascimento";
             this.Lbl_dataNascimento.Size = new System.Drawing.Size(105, 13);
@@ -245,7 +245,7 @@
             // Lbl_contatoAluno
             // 
             this.Lbl_contatoAluno.AutoSize = true;
-            this.Lbl_contatoAluno.Location = new System.Drawing.Point(218, 517);
+            this.Lbl_contatoAluno.Location = new System.Drawing.Point(218, 534);
             this.Lbl_contatoAluno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_contatoAluno.Name = "Lbl_contatoAluno";
             this.Lbl_contatoAluno.Size = new System.Drawing.Size(91, 13);
@@ -255,7 +255,7 @@
             // Lbl_contatoParente
             // 
             this.Lbl_contatoParente.AutoSize = true;
-            this.Lbl_contatoParente.Location = new System.Drawing.Point(70, 575);
+            this.Lbl_contatoParente.Location = new System.Drawing.Point(70, 592);
             this.Lbl_contatoParente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_contatoParente.Name = "Lbl_contatoParente";
             this.Lbl_contatoParente.Size = new System.Drawing.Size(132, 13);
@@ -265,7 +265,7 @@
             // Lbl_email
             // 
             this.Lbl_email.AutoSize = true;
-            this.Lbl_email.Location = new System.Drawing.Point(339, 517);
+            this.Lbl_email.Location = new System.Drawing.Point(339, 534);
             this.Lbl_email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_email.Name = "Lbl_email";
             this.Lbl_email.Size = new System.Drawing.Size(35, 13);
@@ -275,7 +275,7 @@
             // Lbl_turma
             // 
             this.Lbl_turma.AutoSize = true;
-            this.Lbl_turma.Location = new System.Drawing.Point(687, 517);
+            this.Lbl_turma.Location = new System.Drawing.Point(687, 534);
             this.Lbl_turma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_turma.Name = "Lbl_turma";
             this.Lbl_turma.Size = new System.Drawing.Size(40, 13);
@@ -285,7 +285,7 @@
             // Lbl_cursoAluno
             // 
             this.Lbl_cursoAluno.AutoSize = true;
-            this.Lbl_cursoAluno.Location = new System.Drawing.Point(472, 468);
+            this.Lbl_cursoAluno.Location = new System.Drawing.Point(472, 485);
             this.Lbl_cursoAluno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cursoAluno.Name = "Lbl_cursoAluno";
             this.Lbl_cursoAluno.Size = new System.Drawing.Size(37, 13);
@@ -295,7 +295,7 @@
             // Lbl_endereco
             // 
             this.Lbl_endereco.AutoSize = true;
-            this.Lbl_endereco.Location = new System.Drawing.Point(215, 575);
+            this.Lbl_endereco.Location = new System.Drawing.Point(215, 592);
             this.Lbl_endereco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_endereco.Name = "Lbl_endereco";
             this.Lbl_endereco.Size = new System.Drawing.Size(56, 13);
@@ -376,7 +376,7 @@
             // 
             this.Cbx_turmaAluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_turmaAluno.FormattingEnabled = true;
-            this.Cbx_turmaAluno.Location = new System.Drawing.Point(690, 532);
+            this.Cbx_turmaAluno.Location = new System.Drawing.Point(690, 549);
             this.Cbx_turmaAluno.Name = "Cbx_turmaAluno";
             this.Cbx_turmaAluno.Size = new System.Drawing.Size(100, 21);
             this.Cbx_turmaAluno.TabIndex = 71;
@@ -385,7 +385,7 @@
             // 
             this.Lbl_disponivel.AutoSize = true;
             this.Lbl_disponivel.ForeColor = System.Drawing.Color.Red;
-            this.Lbl_disponivel.Location = new System.Drawing.Point(674, 556);
+            this.Lbl_disponivel.Location = new System.Drawing.Point(687, 573);
             this.Lbl_disponivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_disponivel.Name = "Lbl_disponivel";
             this.Lbl_disponivel.Size = new System.Drawing.Size(161, 26);
