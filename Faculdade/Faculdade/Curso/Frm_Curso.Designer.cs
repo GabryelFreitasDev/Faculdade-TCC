@@ -33,7 +33,6 @@ namespace Faculdade
             this.Lbl_operacao = new System.Windows.Forms.Label();
             this.MTxb_cargaHoraria = new System.Windows.Forms.MaskedTextBox();
             this.Txb_descricao = new System.Windows.Forms.TextBox();
-            this.Cbx_Turno = new System.Windows.Forms.ComboBox();
             this.Btn_InsereCurso = new System.Windows.Forms.Button();
             this.Txb_nomeCurso = new System.Windows.Forms.TextBox();
             this.Btn_excluiCurso = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@ namespace Faculdade
             this.Lbl_nomeAlterar = new System.Windows.Forms.Label();
             this.Lbl_nomeAcao = new System.Windows.Forms.Label();
             this.Btn_limpar = new System.Windows.Forms.Button();
-            this.Lbl_turno = new System.Windows.Forms.Label();
             this.Lbl_cargaHoraria = new System.Windows.Forms.Label();
             this.Lbl_buscaCurso = new System.Windows.Forms.Label();
             this.Lbl_descricao = new System.Windows.Forms.Label();
@@ -72,7 +70,7 @@ namespace Faculdade
             // 
             // MTxb_cargaHoraria
             // 
-            this.MTxb_cargaHoraria.Location = new System.Drawing.Point(335, 236);
+            this.MTxb_cargaHoraria.Location = new System.Drawing.Point(294, 246);
             this.MTxb_cargaHoraria.Mask = "0000 Hrs";
             this.MTxb_cargaHoraria.Name = "MTxb_cargaHoraria";
             this.MTxb_cargaHoraria.Size = new System.Drawing.Size(55, 20);
@@ -80,25 +78,11 @@ namespace Faculdade
             // 
             // Txb_descricao
             // 
-            this.Txb_descricao.Location = new System.Drawing.Point(19, 309);
+            this.Txb_descricao.Location = new System.Drawing.Point(19, 246);
             this.Txb_descricao.Multiline = true;
             this.Txb_descricao.Name = "Txb_descricao";
-            this.Txb_descricao.Size = new System.Drawing.Size(297, 52);
+            this.Txb_descricao.Size = new System.Drawing.Size(252, 52);
             this.Txb_descricao.TabIndex = 27;
-            // 
-            // Cbx_Turno
-            // 
-            this.Cbx_Turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbx_Turno.FormattingEnabled = true;
-            this.Cbx_Turno.Items.AddRange(new object[] {
-            "Matutino",
-            "Vespertino",
-            "Noturno",
-            "Integral"});
-            this.Cbx_Turno.Location = new System.Drawing.Point(19, 236);
-            this.Cbx_Turno.Name = "Cbx_Turno";
-            this.Cbx_Turno.Size = new System.Drawing.Size(153, 21);
-            this.Cbx_Turno.TabIndex = 26;
             // 
             // Btn_InsereCurso
             // 
@@ -189,20 +173,10 @@ namespace Faculdade
             this.Btn_limpar.UseVisualStyleBackColor = true;
             this.Btn_limpar.Click += new System.EventHandler(this.Btn_limpar_Click);
             // 
-            // Lbl_turno
-            // 
-            this.Lbl_turno.AutoSize = true;
-            this.Lbl_turno.Location = new System.Drawing.Point(16, 220);
-            this.Lbl_turno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_turno.Name = "Lbl_turno";
-            this.Lbl_turno.Size = new System.Drawing.Size(38, 13);
-            this.Lbl_turno.TabIndex = 38;
-            this.Lbl_turno.Text = "Turno:";
-            // 
             // Lbl_cargaHoraria
             // 
             this.Lbl_cargaHoraria.AutoSize = true;
-            this.Lbl_cargaHoraria.Location = new System.Drawing.Point(332, 220);
+            this.Lbl_cargaHoraria.Location = new System.Drawing.Point(291, 220);
             this.Lbl_cargaHoraria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cargaHoraria.Name = "Lbl_cargaHoraria";
             this.Lbl_cargaHoraria.Size = new System.Drawing.Size(73, 13);
@@ -222,7 +196,7 @@ namespace Faculdade
             // Lbl_descricao
             // 
             this.Lbl_descricao.AutoSize = true;
-            this.Lbl_descricao.Location = new System.Drawing.Point(16, 283);
+            this.Lbl_descricao.Location = new System.Drawing.Point(16, 220);
             this.Lbl_descricao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_descricao.Name = "Lbl_descricao";
             this.Lbl_descricao.Size = new System.Drawing.Size(58, 13);
@@ -261,7 +235,6 @@ namespace Faculdade
             this.Controls.Add(this.Lbl_descricao);
             this.Controls.Add(this.Lbl_buscaCurso);
             this.Controls.Add(this.Lbl_cargaHoraria);
-            this.Controls.Add(this.Lbl_turno);
             this.Controls.Add(this.Btn_limpar);
             this.Controls.Add(this.Lbl_nomeAcao);
             this.Controls.Add(this.Lbl_nomeAlterar);
@@ -272,7 +245,6 @@ namespace Faculdade
             this.Controls.Add(this.Lbl_operacao);
             this.Controls.Add(this.MTxb_cargaHoraria);
             this.Controls.Add(this.Txb_descricao);
-            this.Controls.Add(this.Cbx_Turno);
             this.Controls.Add(this.Btn_InsereCurso);
             this.Controls.Add(this.Txb_nomeCurso);
             this.Controls.Add(this.Txb_buscar);
@@ -292,7 +264,6 @@ namespace Faculdade
         private System.Windows.Forms.Label Lbl_operacao;
         private System.Windows.Forms.MaskedTextBox MTxb_cargaHoraria;
         private System.Windows.Forms.TextBox Txb_descricao;
-        private System.Windows.Forms.ComboBox Cbx_Turno;
         private System.Windows.Forms.Button Btn_InsereCurso;
         private System.Windows.Forms.TextBox Txb_nomeCurso;
         private System.Windows.Forms.Button Btn_excluiCurso;
@@ -302,7 +273,6 @@ namespace Faculdade
         private System.Windows.Forms.Label Lbl_nomeAlterar;
         private System.Windows.Forms.Label Lbl_nomeAcao;
         private System.Windows.Forms.Button Btn_limpar;
-        private System.Windows.Forms.Label Lbl_turno;
         private System.Windows.Forms.Label Lbl_cargaHoraria;
         private System.Windows.Forms.Label Lbl_buscaCurso;
         private System.Windows.Forms.Label Lbl_descricao;

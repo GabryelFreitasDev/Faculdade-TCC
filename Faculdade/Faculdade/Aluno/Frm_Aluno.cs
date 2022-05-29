@@ -22,8 +22,6 @@ namespace Faculdade
             InitializeComponent();
             preencherCBCurso(Cbx_Curso);
             preencherCBCurso(Cbx_buscaCurso);
-            Cbx_Curso.SelectedItem = null;
-            Cbx_buscaCurso.SelectedItem = null;
             Txb_nomeAlterar.Visible = false;
             Lbl_nomeAlterar.Visible = false;
             Cbx_turmaAluno.Visible = false;
@@ -33,6 +31,8 @@ namespace Faculdade
 
         private void Frm_Aluno_Load(object sender, EventArgs e)
         {
+            Cbx_Curso.SelectedItem = null;
+            Cbx_buscaCurso.SelectedItem = null;
             AtualizaDataGridView();
             EditaColunaDgv();
             preencherCBTurma();
@@ -255,7 +255,7 @@ namespace Faculdade
                 {
                     cmd.Connection = conexao.conn;
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco, nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '" + Cbx_buscaCurso.Text + "'";
+                    cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco, nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '" + Cbx_buscaCurso.Text + "' ORDER BY nomeAluno";
                     dt = new DataTable();
                     dt.Load(cmd.ExecuteReader());
                     Dgv_aluno.DataSource = null;

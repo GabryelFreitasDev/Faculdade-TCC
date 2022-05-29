@@ -28,7 +28,6 @@ namespace Faculdade
             Txb_nomeAlterar.Clear();
             MTxb_cargaHoraria.Clear();
             Txb_descricao.Clear();
-            Cbx_Turno.SelectedItem = null;
         }
 
         private void Frm_Curso_Load(object sender, EventArgs e)
@@ -46,13 +45,11 @@ namespace Faculdade
             Dgv_cursos.Columns[0].HeaderText = "ID"; 
             Dgv_cursos.Columns[0].Width = 25;
             Dgv_cursos.Columns[1].HeaderText = "CURSO";
-            Dgv_cursos.Columns[1].Width = 150;
-            Dgv_cursos.Columns[2].HeaderText = "TURNO";
-            Dgv_cursos.Columns[2].Width = 60;
-            Dgv_cursos.Columns[3].HeaderText = "CARGA HORÁRIA";
-            Dgv_cursos.Columns[3].Width = 60;
-            Dgv_cursos.Columns[4].HeaderText = "DESCRIÇÃO";
-            Dgv_cursos.Columns[4].Width = 250;
+            Dgv_cursos.Columns[1].Width = 200;
+            Dgv_cursos.Columns[2].HeaderText = "CARGA HORÁRIA";
+            Dgv_cursos.Columns[2].Width = 70;
+            Dgv_cursos.Columns[3].HeaderText = "DESCRIÇÃO";
+            Dgv_cursos.Columns[3].Width = 300;
        
         }
         public void AtualizaDataGridView()
@@ -137,10 +134,9 @@ namespace Faculdade
                 if(!Txb_nomeAlterar.Visible && Lbl_operacao.Text == "INSERIR")
                 {
                     VerificaNullorEmpty(Txb_nomeCurso.Text);
-                    VerificaNullorEmpty(Cbx_Turno.Text);
                     VerificaNullorEmpty(Txb_descricao.Text);
                     VerificaMaskFull(MTxb_cargaHoraria);
-                    inserir.Inserir(Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
+                    inserir.Inserir(Txb_nomeCurso.Text,MTxb_cargaHoraria.Text, Txb_descricao.Text);
                     MessageBox.Show(inserir.mensagem);
                 }
                 else
@@ -159,10 +155,6 @@ namespace Faculdade
                 if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
                 {
                     inserir.mensagem = "Digite o nome do Curso";
-                }
-                else if (string.IsNullOrEmpty(Cbx_Turno.Text))
-                {
-                    inserir.mensagem = "Escolha o turno do Curso";
                 }
                 else if (!MTxb_cargaHoraria.MaskCompleted)
                 {
@@ -192,14 +184,13 @@ namespace Faculdade
                 if (Txb_nomeAlterar.Visible && Lbl_operacao.Text == "EDITAR")
                 {
                     VerificaNullorEmpty(Txb_nomeCurso.Text);
-                    VerificaNullorEmpty(Cbx_Turno.Text);
                     VerificaNullorEmpty(Txb_descricao.Text);
                     VerificaNullorEmpty(Txb_nomeAlterar.Text);
                     VerificaMaskFull(MTxb_cargaHoraria);
 
                     if (MessageBox.Show("Deseja realmente editar o curso " + Txb_nomeAlterar.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        editar.Editar(Txb_nomeAlterar.Text, Txb_nomeCurso.Text, Cbx_Turno.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
+                        editar.Editar(Txb_nomeAlterar.Text, Txb_nomeCurso.Text, MTxb_cargaHoraria.Text, Txb_descricao.Text);
                         MessageBox.Show(editar.mensagem);
                     }
                 }
@@ -211,6 +202,8 @@ namespace Faculdade
                     Txb_nomeAlterar.Visible = true;
                     Txb_nomeAlterar.Enabled = true;
                     Lbl_nomeAlterar.Visible = true;
+                    Txb_descricao.Clear();
+                    MTxb_cargaHoraria.Text = null;   
                 }
 
             }
@@ -220,13 +213,9 @@ namespace Faculdade
                 {
                     editar.mensagem = "Digite o nome do Curso que deseja alterar";
                 }
-                if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
+                else if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
                 {
                     editar.mensagem = "Digite o nome do Curso que deseja alterar";
-                }
-                else if (string.IsNullOrEmpty(Cbx_Turno.Text))
-                {
-                    editar.mensagem = "Escolha o turno do Curso";
                 }
                 else if (MTxb_cargaHoraria.Text == "     Hrs")
                 {
@@ -268,7 +257,6 @@ namespace Faculdade
                     Txb_nomeAlterar.Visible = false;
                     Lbl_nomeAlterar.Visible = false;
                 }
-
             }
             catch (NullReferenceException)
             {
@@ -306,7 +294,6 @@ namespace Faculdade
                 }
 
                 Txb_descricao.Text = row.Cells["descricao"].Value.ToString();
-                Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
                 MTxb_cargaHoraria.Text = row.Cells["cargaHoraria"].Value.ToString();
 
             }catch(Exception)

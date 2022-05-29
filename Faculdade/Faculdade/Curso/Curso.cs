@@ -29,16 +29,16 @@ namespace Faculdade
                 mensagem = "Falha ao se conectar com o banco !" + ex.Message;
             }
         }
-        public void Inserir(string nomeCurso, string turno,string cargaHoraria,string descricao)
+        public void Inserir(string nomeCurso,string cargaHoraria,string descricao)
         {
             
-            var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
+            var SQL = "SELECT idCurso, nomeCurso,cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
             var dt = db.NpgSQLQuery(SQL);
             if (dt.Rows.Count == 0)
             {
                 try
                 {
-                    var Sql = "INSERT INTO Curso (nomeCurso , turno, cargaHoraria, descricao) VALUES ('" + nomeCurso + "','" + turno + "','" + cargaHoraria + "','" + descricao + "')";
+                    var Sql = "INSERT INTO Curso (nomeCurso ,cargaHoraria, descricao) VALUES ('" + nomeCurso + "','" + cargaHoraria + "','" + descricao + "')";
                     db.NpgSQLCommand(Sql);
                     status = true;
                     mensagem = "Inserção bem sucedida ! \nCurso: " + nomeCurso;
@@ -60,7 +60,7 @@ namespace Faculdade
             status = true;
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
+                var SQL = "SELECT idCurso, nomeCurso, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -81,16 +81,16 @@ namespace Faculdade
                 mensagem = "Erro na Exclusão:" + ex.Message;
             }
         }
-        public void Editar(string nomeAlterar, string nomeCurso, string turno, string cargaHoraria, string descricao)
+        public void Editar(string nomeAlterar, string nomeCurso, string cargaHoraria, string descricao)
         {
             status = true;
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso, turno, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeAlterar + "'";
+                var SQL = "SELECT idCurso, nomeCurso, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeAlterar + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
-                    var Sql = "UPDATE Curso SET nomeCurso = ('" + nomeCurso + "'), turno = ('" + turno + "'), cargaHoraria = ('" + cargaHoraria + "'), descricao = ('" + descricao + "')  WHERE nomeCurso = ('" + nomeAlterar + "')";
+                    var Sql = "UPDATE Curso SET nomeCurso = ('" + nomeCurso + "'), cargaHoraria = ('" + cargaHoraria + "'), descricao = ('" + descricao + "')  WHERE nomeCurso = ('" + nomeAlterar + "')";
                     db.NpgSQLCommand(Sql);
                     status = true;
                     mensagem = "Edição bem sucedida ! \nCurso: " + nomeCurso;
