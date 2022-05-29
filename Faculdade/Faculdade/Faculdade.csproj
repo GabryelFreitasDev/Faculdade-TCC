@@ -486,6 +486,9 @@
     <None Include="Resources\setaCima.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Fechar.png" />
+    <None Include="Resources\Maximizar.png" />
+    <None Include="Resources\Minimizar.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
