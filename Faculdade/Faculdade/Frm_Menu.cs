@@ -283,6 +283,9 @@ namespace Faculdade
             {
                 ocultarProfessores();
             }
+
+            Pn_Menu.Visible = true;
+            AbrirForm<Frm_Turma>();
         }
 
         private void Btn_Materias_Click(object sender, EventArgs e)

@@ -113,9 +113,8 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Professores);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(375, 1108);
+            this.Pnl_Menu.Size = new System.Drawing.Size(250, 715);
             this.Pnl_Menu.TabIndex = 3;
             // 
             // Btn_DeletarProfessores
@@ -126,10 +125,9 @@
             this.Btn_DeletarProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_DeletarProfessores.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_DeletarProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_DeletarProfessores.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_DeletarProfessores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_DeletarProfessores.Location = new System.Drawing.Point(1450, 690);
             this.Btn_DeletarProfessores.Name = "Btn_DeletarProfessores";
-            this.Btn_DeletarProfessores.Size = new System.Drawing.Size(375, 46);
+            this.Btn_DeletarProfessores.Size = new System.Drawing.Size(250, 30);
             this.Btn_DeletarProfessores.TabIndex = 28;
             this.Btn_DeletarProfessores.Text = "   DELETAR";
             this.Btn_DeletarProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,10 +142,9 @@
             this.Btn_AlterarProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_AlterarProfessores.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_AlterarProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_AlterarProfessores.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_AlterarProfessores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_AlterarProfessores.Location = new System.Drawing.Point(1450, 690);
             this.Btn_AlterarProfessores.Name = "Btn_AlterarProfessores";
-            this.Btn_AlterarProfessores.Size = new System.Drawing.Size(375, 46);
+            this.Btn_AlterarProfessores.Size = new System.Drawing.Size(250, 30);
             this.Btn_AlterarProfessores.TabIndex = 27;
             this.Btn_AlterarProfessores.Text = "   ALTERAR";
             this.Btn_AlterarProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,10 +159,9 @@
             this.Btn_InserirProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_InserirProfessores.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_InserirProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_InserirProfessores.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_InserirProfessores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_InserirProfessores.Location = new System.Drawing.Point(1450, 690);
             this.Btn_InserirProfessores.Name = "Btn_InserirProfessores";
-            this.Btn_InserirProfessores.Size = new System.Drawing.Size(375, 46);
+            this.Btn_InserirProfessores.Size = new System.Drawing.Size(250, 30);
             this.Btn_InserirProfessores.TabIndex = 26;
             this.Btn_InserirProfessores.Text = "   INCLUIR";
             this.Btn_InserirProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,10 +176,9 @@
             this.Btn_RelatorioProfessores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_RelatorioProfessores.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_RelatorioProfessores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_RelatorioProfessores.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_RelatorioProfessores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_RelatorioProfessores.Location = new System.Drawing.Point(1450, 690);
             this.Btn_RelatorioProfessores.Name = "Btn_RelatorioProfessores";
-            this.Btn_RelatorioProfessores.Size = new System.Drawing.Size(375, 46);
+            this.Btn_RelatorioProfessores.Size = new System.Drawing.Size(250, 30);
             this.Btn_RelatorioProfessores.TabIndex = 25;
             this.Btn_RelatorioProfessores.Text = "   RELATORIO";
             this.Btn_RelatorioProfessores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,10 +188,9 @@
             // Pic_SetaCursos
             // 
             this.Pic_SetaCursos.Image = global::Faculdade.Properties.Resources.seta;
-            this.Pic_SetaCursos.Location = new System.Drawing.Point(310, 369);
-            this.Pic_SetaCursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Pic_SetaCursos.Location = new System.Drawing.Point(207, 240);
             this.Pic_SetaCursos.Name = "Pic_SetaCursos";
-            this.Pic_SetaCursos.Size = new System.Drawing.Size(56, 35);
+            this.Pic_SetaCursos.Size = new System.Drawing.Size(37, 23);
             this.Pic_SetaCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_SetaCursos.TabIndex = 24;
             this.Pic_SetaCursos.TabStop = false;
@@ -209,10 +203,9 @@
             this.Btn_RelatorioAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_RelatorioAlunos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_RelatorioAlunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_RelatorioAlunos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_RelatorioAlunos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_RelatorioAlunos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_RelatorioAlunos.Name = "Btn_RelatorioAlunos";
-            this.Btn_RelatorioAlunos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_RelatorioAlunos.Size = new System.Drawing.Size(250, 30);
             this.Btn_RelatorioAlunos.TabIndex = 23;
             this.Btn_RelatorioAlunos.Text = "   RELATORIO";
             this.Btn_RelatorioAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,10 +220,9 @@
             this.Btn_InserirAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_InserirAlunos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_InserirAlunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_InserirAlunos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_InserirAlunos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_InserirAlunos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_InserirAlunos.Name = "Btn_InserirAlunos";
-            this.Btn_InserirAlunos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_InserirAlunos.Size = new System.Drawing.Size(250, 30);
             this.Btn_InserirAlunos.TabIndex = 22;
             this.Btn_InserirAlunos.Text = "   INSERIR";
             this.Btn_InserirAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,10 +237,9 @@
             this.Btn_DeletarAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_DeletarAlunos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_DeletarAlunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_DeletarAlunos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_DeletarAlunos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_DeletarAlunos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_DeletarAlunos.Name = "Btn_DeletarAlunos";
-            this.Btn_DeletarAlunos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_DeletarAlunos.Size = new System.Drawing.Size(250, 30);
             this.Btn_DeletarAlunos.TabIndex = 21;
             this.Btn_DeletarAlunos.Text = "   DELETAR";
             this.Btn_DeletarAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -263,10 +254,9 @@
             this.Btn_AlterarAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_AlterarAlunos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_AlterarAlunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_AlterarAlunos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_AlterarAlunos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_AlterarAlunos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_AlterarAlunos.Name = "Btn_AlterarAlunos";
-            this.Btn_AlterarAlunos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_AlterarAlunos.Size = new System.Drawing.Size(250, 30);
             this.Btn_AlterarAlunos.TabIndex = 20;
             this.Btn_AlterarAlunos.Text = "   ALTERAR";
             this.Btn_AlterarAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,10 +271,9 @@
             this.Btn_InserirCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_InserirCursos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_InserirCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_InserirCursos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_InserirCursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_InserirCursos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_InserirCursos.Name = "Btn_InserirCursos";
-            this.Btn_InserirCursos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_InserirCursos.Size = new System.Drawing.Size(250, 30);
             this.Btn_InserirCursos.TabIndex = 19;
             this.Btn_InserirCursos.Text = "   INSERIR";
             this.Btn_InserirCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,10 +283,9 @@
             // Pic_SetaMaterias
             // 
             this.Pic_SetaMaterias.Image = global::Faculdade.Properties.Resources.seta;
-            this.Pic_SetaMaterias.Location = new System.Drawing.Point(310, 832);
-            this.Pic_SetaMaterias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Pic_SetaMaterias.Location = new System.Drawing.Point(207, 541);
             this.Pic_SetaMaterias.Name = "Pic_SetaMaterias";
-            this.Pic_SetaMaterias.Size = new System.Drawing.Size(56, 35);
+            this.Pic_SetaMaterias.Size = new System.Drawing.Size(37, 23);
             this.Pic_SetaMaterias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_SetaMaterias.TabIndex = 12;
             this.Pic_SetaMaterias.TabStop = false;
@@ -305,10 +293,9 @@
             // Pic_SetaProfessores
             // 
             this.Pic_SetaProfessores.Image = global::Faculdade.Properties.Resources.seta;
-            this.Pic_SetaProfessores.Location = new System.Drawing.Point(310, 688);
-            this.Pic_SetaProfessores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Pic_SetaProfessores.Location = new System.Drawing.Point(207, 447);
             this.Pic_SetaProfessores.Name = "Pic_SetaProfessores";
-            this.Pic_SetaProfessores.Size = new System.Drawing.Size(56, 35);
+            this.Pic_SetaProfessores.Size = new System.Drawing.Size(37, 23);
             this.Pic_SetaProfessores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_SetaProfessores.TabIndex = 11;
             this.Pic_SetaProfessores.TabStop = false;
@@ -316,10 +303,9 @@
             // Pic_SetaAlunos
             // 
             this.Pic_SetaAlunos.Image = global::Faculdade.Properties.Resources.seta;
-            this.Pic_SetaAlunos.Location = new System.Drawing.Point(310, 525);
-            this.Pic_SetaAlunos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Pic_SetaAlunos.Location = new System.Drawing.Point(207, 341);
             this.Pic_SetaAlunos.Name = "Pic_SetaAlunos";
-            this.Pic_SetaAlunos.Size = new System.Drawing.Size(56, 35);
+            this.Pic_SetaAlunos.Size = new System.Drawing.Size(37, 23);
             this.Pic_SetaAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_SetaAlunos.TabIndex = 0;
             this.Pic_SetaAlunos.TabStop = false;
@@ -329,9 +315,8 @@
             // 
             this.pictureBox1.Image = global::Faculdade.Properties.Resources.blob__1_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(375, 155);
+            this.pictureBox1.Size = new System.Drawing.Size(250, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -344,10 +329,9 @@
             this.Btn_DeletarCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_DeletarCursos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_DeletarCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_DeletarCursos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_DeletarCursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_DeletarCursos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_DeletarCursos.Name = "Btn_DeletarCursos";
-            this.Btn_DeletarCursos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_DeletarCursos.Size = new System.Drawing.Size(250, 30);
             this.Btn_DeletarCursos.TabIndex = 17;
             this.Btn_DeletarCursos.Text = "   DELETAR";
             this.Btn_DeletarCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,10 +346,9 @@
             this.Btn_AlterarCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_AlterarCursos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_AlterarCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_AlterarCursos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_AlterarCursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_AlterarCursos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_AlterarCursos.Name = "Btn_AlterarCursos";
-            this.Btn_AlterarCursos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_AlterarCursos.Size = new System.Drawing.Size(250, 30);
             this.Btn_AlterarCursos.TabIndex = 16;
             this.Btn_AlterarCursos.Text = "   ALTERAR";
             this.Btn_AlterarCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -380,10 +363,9 @@
             this.Btn_RelatorioCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_RelatorioCursos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_RelatorioCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_RelatorioCursos.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_RelatorioCursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_RelatorioCursos.Location = new System.Drawing.Point(1450, 690);
             this.Btn_RelatorioCursos.Name = "Btn_RelatorioCursos";
-            this.Btn_RelatorioCursos.Size = new System.Drawing.Size(375, 46);
+            this.Btn_RelatorioCursos.Size = new System.Drawing.Size(250, 30);
             this.Btn_RelatorioCursos.TabIndex = 14;
             this.Btn_RelatorioCursos.Text = "   RELATORIO";
             this.Btn_RelatorioCursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,10 +375,9 @@
             // Pic_SetaNotas
             // 
             this.Pic_SetaNotas.Image = global::Faculdade.Properties.Resources.seta;
-            this.Pic_SetaNotas.Location = new System.Drawing.Point(310, 988);
-            this.Pic_SetaNotas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Pic_SetaNotas.Location = new System.Drawing.Point(207, 642);
             this.Pic_SetaNotas.Name = "Pic_SetaNotas";
-            this.Pic_SetaNotas.Size = new System.Drawing.Size(56, 35);
+            this.Pic_SetaNotas.Size = new System.Drawing.Size(37, 23);
             this.Pic_SetaNotas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_SetaNotas.TabIndex = 13;
             this.Pic_SetaNotas.TabStop = false;
@@ -410,10 +391,9 @@
             this.Btn_Alunos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Alunos.Image = global::Faculdade.Properties.Resources._57_Student_removebg_preview_2_;
             this.Btn_Alunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Alunos.Location = new System.Drawing.Point(0, 462);
-            this.Btn_Alunos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Alunos.Location = new System.Drawing.Point(0, 300);
             this.Btn_Alunos.Name = "Btn_Alunos";
-            this.Btn_Alunos.Size = new System.Drawing.Size(375, 154);
+            this.Btn_Alunos.Size = new System.Drawing.Size(250, 100);
             this.Btn_Alunos.TabIndex = 3;
             this.Btn_Alunos.Text = "   Alunos";
             this.Btn_Alunos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -429,10 +409,9 @@
             this.Btn_Menu.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Menu.Image = global::Faculdade.Properties.Resources.Home_icon_black1;
             this.Btn_Menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Menu.Location = new System.Drawing.Point(0, 154);
-            this.Btn_Menu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Menu.Location = new System.Drawing.Point(0, 100);
             this.Btn_Menu.Name = "Btn_Menu";
-            this.Btn_Menu.Size = new System.Drawing.Size(375, 154);
+            this.Btn_Menu.Size = new System.Drawing.Size(250, 100);
             this.Btn_Menu.TabIndex = 1;
             this.Btn_Menu.Text = " Menu";
             this.Btn_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -448,10 +427,9 @@
             this.Btn_Cursos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Cursos.Image = global::Faculdade.Properties.Resources.chapeuFormatura;
             this.Btn_Cursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Cursos.Location = new System.Drawing.Point(0, 308);
-            this.Btn_Cursos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Cursos.Location = new System.Drawing.Point(0, 200);
             this.Btn_Cursos.Name = "Btn_Cursos";
-            this.Btn_Cursos.Size = new System.Drawing.Size(375, 154);
+            this.Btn_Cursos.Size = new System.Drawing.Size(250, 100);
             this.Btn_Cursos.TabIndex = 8;
             this.Btn_Cursos.Text = " Cursos";
             this.Btn_Cursos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -466,10 +444,9 @@
             this.Btn_Notas.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Notas.Image = global::Faculdade.Properties.Resources.notas;
             this.Btn_Notas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Notas.Location = new System.Drawing.Point(0, 923);
-            this.Btn_Notas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Notas.Location = new System.Drawing.Point(0, 600);
             this.Btn_Notas.Name = "Btn_Notas";
-            this.Btn_Notas.Size = new System.Drawing.Size(375, 154);
+            this.Btn_Notas.Size = new System.Drawing.Size(250, 100);
             this.Btn_Notas.TabIndex = 6;
             this.Btn_Notas.Text = "  Notas";
             this.Btn_Notas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -484,10 +461,9 @@
             this.Btn_Materias.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Materias.Image = global::Faculdade.Properties.Resources.materias;
             this.Btn_Materias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Materias.Location = new System.Drawing.Point(0, 769);
-            this.Btn_Materias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Materias.Location = new System.Drawing.Point(0, 500);
             this.Btn_Materias.Name = "Btn_Materias";
-            this.Btn_Materias.Size = new System.Drawing.Size(375, 154);
+            this.Btn_Materias.Size = new System.Drawing.Size(250, 100);
             this.Btn_Materias.TabIndex = 5;
             this.Btn_Materias.Text = "  Matérias";
             this.Btn_Materias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -502,12 +478,11 @@
             this.Btn_Professores.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Professores.Image = global::Faculdade.Properties.Resources.professorBnc1;
             this.Btn_Professores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Professores.Location = new System.Drawing.Point(0, 615);
-            this.Btn_Professores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Professores.Location = new System.Drawing.Point(0, 400);
             this.Btn_Professores.Name = "Btn_Professores";
-            this.Btn_Professores.Size = new System.Drawing.Size(375, 154);
+            this.Btn_Professores.Size = new System.Drawing.Size(250, 100);
             this.Btn_Professores.TabIndex = 4;
-            this.Btn_Professores.Text = " Docentes";
+            this.Btn_Professores.Text = "Turmas";
             this.Btn_Professores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Professores.UseVisualStyleBackColor = true;
             this.Btn_Professores.Click += new System.EventHandler(this.Btn_Professores_Click);
@@ -518,20 +493,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Lbl_Introducao);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(375, 271);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(250, 176);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1725, 389);
+            this.panel1.Size = new System.Drawing.Size(1150, 253);
             this.panel1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(9, 302);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(6, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1541, 47);
+            this.label1.Size = new System.Drawing.Size(1030, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "inovando para garantir a melhor experiencia para nossos professores e alunos";
             // 
@@ -539,10 +512,9 @@
             // 
             this.Lbl_Introducao.AutoSize = true;
             this.Lbl_Introducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.Lbl_Introducao.Location = new System.Drawing.Point(28, 254);
-            this.Lbl_Introducao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_Introducao.Location = new System.Drawing.Point(19, 165);
             this.Lbl_Introducao.Name = "Lbl_Introducao";
-            this.Lbl_Introducao.Size = new System.Drawing.Size(1514, 47);
+            this.Lbl_Introducao.Size = new System.Drawing.Size(1014, 31);
             this.Lbl_Introducao.TabIndex = 1;
             this.Lbl_Introducao.Text = "Bem-Vindo a Aliare Academy, sua Faculdade de Tecnologia que está sempre";
             // 
@@ -550,20 +522,18 @@
             // 
             this.panel2.BackgroundImage = global::Faculdade.Properties.Resources.blob__1_;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(579, 38);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(386, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(460, 162);
+            this.panel2.Size = new System.Drawing.Size(307, 105);
             this.panel2.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel3.Controls.Add(this.Btn_Fechar);
-            this.panel3.Location = new System.Drawing.Point(375, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1725, 154);
+            this.panel3.Size = new System.Drawing.Size(1150, 100);
             this.panel3.TabIndex = 10;
             // 
             // Btn_Fechar
@@ -574,10 +544,9 @@
             this.Btn_Fechar.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Fechar.Image = global::Faculdade.Properties.Resources.ButtonExit1;
             this.Btn_Fechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Fechar.Location = new System.Drawing.Point(1650, 48);
-            this.Btn_Fechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Fechar.Location = new System.Drawing.Point(1100, 31);
             this.Btn_Fechar.Name = "Btn_Fechar";
-            this.Btn_Fechar.Size = new System.Drawing.Size(57, 60);
+            this.Btn_Fechar.Size = new System.Drawing.Size(38, 39);
             this.Btn_Fechar.TabIndex = 10;
             this.Btn_Fechar.Text = "    Cursos";
             this.Btn_Fechar.UseVisualStyleBackColor = false;
@@ -586,10 +555,9 @@
             // Pn_Menu
             // 
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Pn_Menu.Location = new System.Drawing.Point(375, 154);
-            this.Pn_Menu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
-            this.Pn_Menu.Size = new System.Drawing.Size(1725, 1138);
+            this.Pn_Menu.Size = new System.Drawing.Size(1150, 740);
             this.Pn_Menu.TabIndex = 14;
             this.Pn_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_Menu_Paint_2);
             // 
@@ -601,10 +569,9 @@
             this.Btn_DeletarMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_DeletarMaterias.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_DeletarMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_DeletarMaterias.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_DeletarMaterias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_DeletarMaterias.Location = new System.Drawing.Point(1450, 690);
             this.Btn_DeletarMaterias.Name = "Btn_DeletarMaterias";
-            this.Btn_DeletarMaterias.Size = new System.Drawing.Size(375, 46);
+            this.Btn_DeletarMaterias.Size = new System.Drawing.Size(250, 30);
             this.Btn_DeletarMaterias.TabIndex = 32;
             this.Btn_DeletarMaterias.Text = "   DELETAR";
             this.Btn_DeletarMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -619,10 +586,9 @@
             this.Btn_AlterarMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_AlterarMaterias.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_AlterarMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_AlterarMaterias.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_AlterarMaterias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_AlterarMaterias.Location = new System.Drawing.Point(1450, 690);
             this.Btn_AlterarMaterias.Name = "Btn_AlterarMaterias";
-            this.Btn_AlterarMaterias.Size = new System.Drawing.Size(375, 46);
+            this.Btn_AlterarMaterias.Size = new System.Drawing.Size(250, 30);
             this.Btn_AlterarMaterias.TabIndex = 31;
             this.Btn_AlterarMaterias.Text = "   ALTERAR";
             this.Btn_AlterarMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -637,10 +603,9 @@
             this.Btn_InserirMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_InserirMaterias.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_InserirMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_InserirMaterias.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_InserirMaterias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_InserirMaterias.Location = new System.Drawing.Point(1450, 690);
             this.Btn_InserirMaterias.Name = "Btn_InserirMaterias";
-            this.Btn_InserirMaterias.Size = new System.Drawing.Size(375, 46);
+            this.Btn_InserirMaterias.Size = new System.Drawing.Size(250, 30);
             this.Btn_InserirMaterias.TabIndex = 30;
             this.Btn_InserirMaterias.Text = "   INCLUIR";
             this.Btn_InserirMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -655,10 +620,9 @@
             this.Btn_RelatorioMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_RelatorioMaterias.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_RelatorioMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_RelatorioMaterias.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_RelatorioMaterias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_RelatorioMaterias.Location = new System.Drawing.Point(1450, 690);
             this.Btn_RelatorioMaterias.Name = "Btn_RelatorioMaterias";
-            this.Btn_RelatorioMaterias.Size = new System.Drawing.Size(375, 46);
+            this.Btn_RelatorioMaterias.Size = new System.Drawing.Size(250, 30);
             this.Btn_RelatorioMaterias.TabIndex = 29;
             this.Btn_RelatorioMaterias.Text = "   RELATORIO";
             this.Btn_RelatorioMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -673,10 +637,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(2175, 1062);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(1450, 690);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(375, 46);
+            this.button1.Size = new System.Drawing.Size(250, 30);
             this.button1.TabIndex = 36;
             this.button1.Text = "   DELETAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -691,10 +654,9 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(2175, 1062);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(1450, 690);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(375, 46);
+            this.button2.Size = new System.Drawing.Size(250, 30);
             this.button2.TabIndex = 33;
             this.button2.Text = "   RELATORIO";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -709,10 +671,9 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button3.ForeColor = System.Drawing.Color.Transparent;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(2175, 1062);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Location = new System.Drawing.Point(1450, 690);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(375, 46);
+            this.button3.Size = new System.Drawing.Size(250, 30);
             this.button3.TabIndex = 35;
             this.button3.Text = "   ALTERAR";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -727,10 +688,9 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.button4.ForeColor = System.Drawing.Color.Transparent;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(2175, 1062);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Location = new System.Drawing.Point(1450, 690);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(375, 46);
+            this.button4.Size = new System.Drawing.Size(250, 30);
             this.button4.TabIndex = 34;
             this.button4.Text = "   INCLUIR";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -745,10 +705,9 @@
             this.Btn_DeletarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_DeletarNotas.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_DeletarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_DeletarNotas.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_DeletarNotas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_DeletarNotas.Location = new System.Drawing.Point(1450, 690);
             this.Btn_DeletarNotas.Name = "Btn_DeletarNotas";
-            this.Btn_DeletarNotas.Size = new System.Drawing.Size(375, 46);
+            this.Btn_DeletarNotas.Size = new System.Drawing.Size(250, 30);
             this.Btn_DeletarNotas.TabIndex = 36;
             this.Btn_DeletarNotas.Text = "   DELETAR";
             this.Btn_DeletarNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -763,10 +722,9 @@
             this.Btn_RelatorioNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_RelatorioNotas.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_RelatorioNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_RelatorioNotas.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_RelatorioNotas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_RelatorioNotas.Location = new System.Drawing.Point(1450, 690);
             this.Btn_RelatorioNotas.Name = "Btn_RelatorioNotas";
-            this.Btn_RelatorioNotas.Size = new System.Drawing.Size(375, 46);
+            this.Btn_RelatorioNotas.Size = new System.Drawing.Size(250, 30);
             this.Btn_RelatorioNotas.TabIndex = 33;
             this.Btn_RelatorioNotas.Text = "   RELATORIO";
             this.Btn_RelatorioNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -781,10 +739,9 @@
             this.Btn_AlterarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_AlterarNotas.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_AlterarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_AlterarNotas.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_AlterarNotas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_AlterarNotas.Location = new System.Drawing.Point(1450, 690);
             this.Btn_AlterarNotas.Name = "Btn_AlterarNotas";
-            this.Btn_AlterarNotas.Size = new System.Drawing.Size(375, 46);
+            this.Btn_AlterarNotas.Size = new System.Drawing.Size(250, 30);
             this.Btn_AlterarNotas.TabIndex = 35;
             this.Btn_AlterarNotas.Text = "   ALTERAR";
             this.Btn_AlterarNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -799,10 +756,9 @@
             this.Btn_InserirNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Btn_InserirNotas.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_InserirNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_InserirNotas.Location = new System.Drawing.Point(2175, 1062);
-            this.Btn_InserirNotas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_InserirNotas.Location = new System.Drawing.Point(1450, 690);
             this.Btn_InserirNotas.Name = "Btn_InserirNotas";
-            this.Btn_InserirNotas.Size = new System.Drawing.Size(375, 46);
+            this.Btn_InserirNotas.Size = new System.Drawing.Size(250, 30);
             this.Btn_InserirNotas.TabIndex = 34;
             this.Btn_InserirNotas.Text = "   INCLUIR";
             this.Btn_InserirNotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -811,11 +767,11 @@
             // 
             // Frm_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Faculdade.Properties.Resources.bg_imagemTeste;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2100, 1108);
+            this.ClientSize = new System.Drawing.Size(1400, 715);
             this.Controls.Add(this.Btn_DeletarMaterias);
             this.Controls.Add(this.Btn_DeletarNotas);
             this.Controls.Add(this.Btn_RelatorioMaterias);
@@ -835,7 +791,6 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

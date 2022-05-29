@@ -236,15 +236,22 @@
     <Compile Include="Curso\Frm_relatorioCurso.Designer.cs">
       <DependentUpon>Frm_relatorioCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_relatorioAluno.cs">
+    <Compile Include="Aluno\Frm_relatorioAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_relatorioAluno.Designer.cs">
+    <Compile Include="Aluno\Frm_relatorioAluno.Designer.cs">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Turma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Turma.Designer.cs">
+      <DependentUpon>Frm_Turma.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Turma.cs" />
     <EmbeddedResource Include="Aluno\Frm_Aluno.resx">
       <DependentUpon>Frm_Aluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,8 +265,11 @@
     <EmbeddedResource Include="Curso\Frm_relatorioCurso.resx">
       <DependentUpon>Frm_relatorioCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_relatorioAluno.resx">
+    <EmbeddedResource Include="Aluno\Frm_relatorioAluno.resx">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Turma.resx">
+      <DependentUpon>Frm_Turma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

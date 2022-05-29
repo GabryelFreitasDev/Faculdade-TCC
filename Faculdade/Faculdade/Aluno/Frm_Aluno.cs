@@ -14,22 +14,29 @@ namespace Faculdade
 {
     public partial class Frm_Aluno : Form
     {
-
         Conexao conexao = new Conexao();
         NpgsqlCommand cmd = new NpgsqlCommand();
         DataTable dt = new DataTable();
         public Frm_Aluno()
         {
             InitializeComponent();
+            AtualizaDataGridView();
+            EditaColunaDgv();
+            preencherCBCurso(Cbx_Curso);
+            preencherCBCurso(Cbx_buscaCurso);
+          
+            Cbx_Curso.SelectedItem = null;
+            Cbx_buscaCurso.SelectedItem = null;
+            Txb_nomeAlterar.Visible = false;
+            Lbl_nomeAlterar.Visible = false;
+            Cbx_turmaAluno.Visible = false;
+            Lbl_disponivel.Visible = false;
+            Lbl_turma.Visible = false;
         }
 
         private void Frm_Aluno_Load(object sender, EventArgs e)
         {
-            preencherCBDescricao();
-            AtualizaDataGridView();
-            EditaColunaDgv();
-            Txb_nomeAlterar.Visible = false;
-            Lbl_nomeAlterar.Visible = false;
+            preencherCBTurma();
         }
         public void AtualizaDataGridView()
         {
@@ -39,11 +46,11 @@ namespace Faculdade
             }
             cmd.Connection = conexao.conn;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,turma,nomeCurso FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso";
+            cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeAluno LIKE '%" + Txb_buscaNome.Text + "%' ORDER BY nomeAluno";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
-            Dgv_alunos.DataSource = null;
-            Dgv_alunos.DataSource = dt;
+            Dgv_aluno.DataSource = null;
+            Dgv_aluno.DataSource = dt;
             EditaColunaDgv();
 
             try
@@ -61,26 +68,25 @@ namespace Faculdade
         }
         private void EditaColunaDgv()
         {
-            Dgv_alunos.RowHeadersVisible = false;
-            Dgv_alunos.Columns[0].HeaderText = "NOME";
-            Dgv_alunos.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            Dgv_alunos.Columns[0].Width = 150;
-            Dgv_alunos.Columns[1].HeaderText = "CPF";
-            Dgv_alunos.Columns[1].Width = 90;
-            Dgv_alunos.Columns[2].HeaderText = "NASC.";
-            Dgv_alunos.Columns[2].Width = 70;
-            Dgv_alunos.Columns[3].HeaderText = "CONTATO";
-            Dgv_alunos.Columns[3].Width = 90;
-            Dgv_alunos.Columns[4].HeaderText = "CONTATO PARENTE";
-            Dgv_alunos.Columns[4].Width = 90;
-            Dgv_alunos.Columns[5].HeaderText = "EMAIL";
-            Dgv_alunos.Columns[5].Width = 150;
-            Dgv_alunos.Columns[6].HeaderText = "ENDEREÇO";
-            Dgv_alunos.Columns[6].Width = 150;
-            Dgv_alunos.Columns[7].HeaderText = "TURMA";
-            Dgv_alunos.Columns[7].Width = 60;
-            Dgv_alunos.Columns[8].HeaderText = "CURSO";
-            Dgv_alunos.Columns[8].Width = 140;
+            Dgv_aluno.RowHeadersVisible = false;
+            Dgv_aluno.Columns[0].HeaderText = "NOME";
+            Dgv_aluno.Columns[0].Width = 150;
+            Dgv_aluno.Columns[1].HeaderText = "CPF";
+            Dgv_aluno.Columns[1].Width = 90;
+            Dgv_aluno.Columns[2].HeaderText = "NASC.";
+            Dgv_aluno.Columns[2].Width = 70;
+            Dgv_aluno.Columns[3].HeaderText = "CONTATO";
+            Dgv_aluno.Columns[3].Width = 90;
+            Dgv_aluno.Columns[4].HeaderText = "CONTATO PARENTE";
+            Dgv_aluno.Columns[4].Width = 90;
+            Dgv_aluno.Columns[5].HeaderText = "EMAIL";
+            Dgv_aluno.Columns[5].Width = 150;
+            Dgv_aluno.Columns[6].HeaderText = "ENDEREÇO";
+            Dgv_aluno.Columns[6].Width = 150;
+            Dgv_aluno.Columns[7].HeaderText = "CURSO";
+            Dgv_aluno.Columns[7].Width = 140;
+            Dgv_aluno.Columns[8].HeaderText = "TURMA";
+            Dgv_aluno.Columns[8].Width = 60;
         }
 
         public class ComboboxItem
@@ -94,10 +100,9 @@ namespace Faculdade
             }
         }
 
-        private void preencherCBDescricao()
+        private void preencherCBCurso(ComboBox cb)
         {
-            String scon = "Host=localhost;Port=5432;Username=postgres;Password=123456789g;Database=Faculdade";
-            NpgsqlConnection con = new NpgsqlConnection(scon);
+            NpgsqlConnection con = new NpgsqlConnection(conexao.connString);
             try
             {
                 con.Open();
@@ -109,14 +114,38 @@ namespace Faculdade
             String scom = "SELECT idCurso, nomeCurso from Curso";
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(scom, con);
             DataTable dtResultado = new DataTable();
-            dtResultado.Clear();
-            Cbx_Curso.DataSource = null;
+            dtResultado.Clear(); 
+            cb.DataSource = null;
             da.Fill(dtResultado);
-            Cbx_Curso.DataSource = dtResultado;
-            Cbx_Curso.ValueMember = "idCurso";
-            Cbx_Curso.DisplayMember = "nomeCurso";
-            Cbx_Curso.Refresh();
+            cb.DataSource = dtResultado;
+            cb.ValueMember = "idCurso";
+            cb.DisplayMember = "nomeCurso";
+            cb.Refresh();
         }
+        private void preencherCBTurma()
+        {
+            NpgsqlConnection con = new NpgsqlConnection(conexao.connString);
+            try
+            {
+                con.Open();
+            }
+            catch (NpgsqlException sqle)
+            {
+                MessageBox.Show("Falha ao efetuar a conexão. Erro: " + sqle);
+            }
+
+            String scom = "SELECT nomeCurso, idTurma, nomeTurma from Curso INNER JOIN Turma on FK_idCurso = idCurso WHERE nomeCurso = '" + Cbx_Curso.Text + "'";
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(scom, con);
+            DataTable dtResultado = new DataTable();
+            dtResultado.Clear();
+            Cbx_turmaAluno.DataSource = null;
+            da.Fill(dtResultado);
+            Cbx_turmaAluno.DataSource = dtResultado;
+            Cbx_turmaAluno.ValueMember = "idTurma";
+            Cbx_turmaAluno.DisplayMember = "nomeTurma";
+            Cbx_turmaAluno.Refresh();
+        }
+
 
         private void VerificaNullorEmpty(string valor)
         {
@@ -143,14 +172,15 @@ namespace Faculdade
             MTxb_contatoParente.Clear();
             Txb_email.Clear();
             Txb_endereco.Clear();
-            Txb_turma.Clear();
+            Cbx_turmaAluno.SelectedItem = null;
         }
+
         private void Dgv_Alunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
 
-                DataGridViewRow row = Dgv_alunos.Rows[e.RowIndex];
+                DataGridViewRow row = Dgv_aluno.Rows[e.RowIndex];
                 if (!Txb_nomeAlterar.Visible)
                 {
                     Txb_nomeAluno.Text = row.Cells["nomealuno"].Value.ToString();
@@ -167,13 +197,77 @@ namespace Faculdade
                 MTxb_contatoParente.Text = row.Cells["contatoparente"].Value.ToString();
                 Txb_email.Text = row.Cells["email"].Value.ToString();
                 Txb_endereco.Text = row.Cells["endereco"].Value.ToString();
-                Txb_turma.Text = row.Cells["turma"].Value.ToString();
                 Cbx_Curso.Text = row.Cells["nomeCurso"].Value.ToString();
+                Cbx_turmaAluno.Text = row.Cells["nomeTurma"].Value.ToString();
 
             }
             catch (Exception)
             {
                 MessageBox.Show("Selecione o curso que deseja editar");
+            }
+        }
+
+        public void BuscaDataGridView()
+        {
+            if (conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            cmd.Connection = conexao.conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeAluno LIKE '%" + Txb_buscaNome.Text + "%' ORDER BY nomeAluno";
+            dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            Dgv_aluno.DataSource = null;
+            Dgv_aluno.DataSource = dt;
+            EditaColunaDgv();
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.conn.Close();
+            }
+        }
+
+        public void BuscaCursoDataGridView()
+        {
+            if (conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            try
+            {
+                if (Cbx_buscaCurso.SelectedItem != null)
+                {
+                    cmd.Connection = conexao.conn;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco, nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '" + Cbx_buscaCurso.Text + "'";
+                    dt = new DataTable();
+                    dt.Load(cmd.ExecuteReader());
+                    Dgv_aluno.DataSource = null;
+                    Dgv_aluno.DataSource = dt;
+                    EditaColunaDgv();
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    AtualizaDataGridView();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.conn.Close();
             }
         }
 
@@ -187,13 +281,12 @@ namespace Faculdade
                     VerificaNullorEmpty(Txb_nomeAluno.Text);
                     VerificaNullorEmpty(Txb_email.Text);
                     VerificaNullorEmpty(Txb_endereco.Text);
-                    VerificaNullorEmpty(Txb_turma.Text);
 
                     VerificaMaskFull(Mtxb_cpf);
                     VerificaMaskFull(MTxb_dataNascimento);
                     VerificaMaskFull(MTxb_contato);
-                    
-                    aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, (int)Cbx_Curso.SelectedValue);
+
+                    aluno.Inserir(Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, (int)Cbx_Curso.SelectedValue ,(int)Cbx_turmaAluno.SelectedValue);
                     MessageBox.Show(aluno.mensagem);
                 }
                 else
@@ -235,10 +328,6 @@ namespace Faculdade
                 else if (string.IsNullOrEmpty(Txb_endereco.Text))
                 {
                     aluno.mensagem = "Digite o endereço";
-                }
-                else if (string.IsNullOrEmpty(Txb_turma.Text))
-                {
-                    aluno.mensagem = "Insira a turma";
                 }
                 MessageBox.Show(aluno.mensagem);
             }
@@ -306,13 +395,12 @@ namespace Faculdade
                     VerificaNullorEmpty(Txb_nomeAluno.Text);
                     VerificaNullorEmpty(Txb_email.Text);
                     VerificaNullorEmpty(Txb_endereco.Text);
-                    VerificaNullorEmpty(Txb_turma.Text);
 
                     VerificaMaskFull(Mtxb_cpf);
                     VerificaMaskFull(MTxb_dataNascimento);
                     VerificaMaskFull(MTxb_contato);
 
-                    editar.Editar(Txb_nomeAlterar.Text, Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, Txb_turma.Text, (int)Cbx_Curso.SelectedValue);
+                    editar.Editar(Txb_nomeAlterar.Text, Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, (int)Cbx_Curso.SelectedValue, (int)Cbx_turmaAluno.SelectedValue);
                     MessageBox.Show(editar.mensagem);
                 }
                 else
@@ -359,10 +447,6 @@ namespace Faculdade
                 {
                     editar.mensagem = "Digite seu endereço";
                 }
-                else if (string.IsNullOrEmpty(Txb_turma.Text))
-                {
-                    editar.mensagem = "Insira a turma";
-                }
                 MessageBox.Show(editar.mensagem);
 
             }
@@ -385,6 +469,44 @@ namespace Faculdade
         private void Btn_limpar_Click(object sender, EventArgs e)
         {
             limpaCampos();
+
+        }
+
+        private void Txb_buscaNome_TextChanged(object sender, EventArgs e)
+        {
+            BuscaDataGridView();
+           
+        }
+
+        private void Cbx_buscaCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            preencherCBCurso(Cbx_buscaCurso);
+            if (Cbx_buscaCurso.Text != null)
+            {
+                BuscaCursoDataGridView();
+            }
+
+        }
+
+        private void Btn_LimparFiltro_Click(object sender, EventArgs e)
+        {
+            Txb_buscaNome.Clear();
+            Cbx_buscaCurso.SelectedItem = null;
+        }
+
+        private void Cbx_Curso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cbx_turmaAluno.Visible = true;
+            Lbl_turma.Text = "Escolha a Turma";
+            preencherCBTurma();
+            if (Cbx_turmaAluno.Items.Count == 0)
+            {
+                Lbl_disponivel.Visible = true;
+            }
+            else
+            {
+                Lbl_disponivel.Visible = false;
+            }
         }
     }
 }

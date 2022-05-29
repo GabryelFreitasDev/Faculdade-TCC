@@ -307,3 +307,4 @@ C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\obj\Debug\Faculdade.csp
 C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\obj\Debug\Faculdade.exe
 C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\obj\Debug\Faculdade.pdb
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_relatorioAluno.resources
+C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Turma.resources

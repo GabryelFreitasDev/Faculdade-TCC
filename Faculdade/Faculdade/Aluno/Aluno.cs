@@ -29,7 +29,7 @@ namespace Faculdade
                 mensagem = "Falha ao se conectar com o banco !" + ex.Message;
             }
         }
-        public void Inserir(string nomeAluno, string cpf, string dataNascimento, string contato, string contatoParente, string email, string endereco, string turma, int idCurso)
+        public void Inserir(string nomeAluno, string cpf, string dataNascimento, string contato, string contatoParente, string email, string endereco, int idCurso, int idTurma)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace Faculdade
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count == 0)
                 {
-                    var Sql = "INSERT INTO Aluno (nomeAluno, cpf, dataNascimento, contato, contatoParente, email, endereco, turma, FK_idCurso) VALUES ('" + nomeAluno + "','" + cpf + "','" + dataNascimento + "','" + contato + "','" + contatoParente + "','" + email + "','" + endereco + "','" + turma + "','" + idCurso + "')";
+                    var Sql = "INSERT INTO Aluno (nomeAluno, cpf, dataNascimento, contato, contatoParente, email, endereco,FK_idCurso, FK_idTurma) VALUES ('" + nomeAluno + "','" + cpf + "','" + dataNascimento + "','" + contato + "','" + contatoParente + "','" + email + "','" + endereco + "','" + idCurso + "','" + idTurma + "')";
                     db.NpgSQLCommand(Sql);
                     status = true;
                     mensagem = "Inserção bem sucedida!\nAluno = " + nomeAluno;
@@ -47,20 +47,20 @@ namespace Faculdade
                     mensagem = "Esse CPF já está cadastrado!\nInsira outra pessoa ou edite a existente";
                     status = false;
                 }
-                    
+
             }
             catch (Exception ex)
             {
-                status=false;
+                status = false;
                 mensagem = "Erro na Inserção: " + ex.Message;
             }
         }
 
-        public void Editar(string nomeAlterar, string nomeAluno, string cpf, string dataNascimento, string contato, string contatoParente, string email, string endereco, string turma, int idCurso)
+        public void Editar(string nomeAlterar, string nomeAluno, string cpf, string dataNascimento, string contato, string contatoParente, string email, string endereco, int idCurso, int idTurma)
         {
             try
             {
-                var Sql = "UPDATE Aluno SET nomeAluno = '" + nomeAluno + "', cpf = '" + cpf + "', dataNascimento = '" + dataNascimento + "', contato = '" + contato + "', contatoParente = '" + contatoParente + "', email = '" + email + "', endereco ='" + endereco + "', turma = '" + turma + "', FK_idCurso = '" + idCurso + "' WHERE nomeAluno = '" + nomeAlterar + "'";
+                var Sql = "UPDATE Aluno SET nomeAluno = '" + nomeAluno + "', cpf = '" + cpf + "', dataNascimento = '" + dataNascimento + "', contato = '" + contato + "', contatoParente = '" + contatoParente + "', email = '" + email + "', endereco ='" + endereco + "', FK_idCurso = '" + idCurso + "',FK_idTurma = '" + idTurma + "' WHERE nomeAluno = '" + nomeAlterar + "'";
                 db.NpgSQLCommand(Sql);
                 status = true;
                 mensagem = "Edição bem sucedida!\nAluno = " + nomeAluno;
@@ -71,23 +71,31 @@ namespace Faculdade
                 mensagem = "Erro na Edição: " + ex.Message;
             }
         }
-        public void Excluir(string nomeAluno,string cpf)
+        public void Excluir(string nomeAluno, string cpf)
         {
 
             try
             {
-                var Sql = "DELETE FROM Aluno WHERE nomeAluno = '" + nomeAluno + "', cpf = '" + cpf + "'";
-                db.NpgSQLCommand(Sql);
-                status = true;
-                mensagem = "Exclusão bem sucedida!\nAluno :" + nomeAluno;
+                var SQL = "SELECT idAluno, nomeAluno,cpf FROM Aluno WHERE cpf = '" + cpf + "'";
+                var dt = db.NpgSQLQuery(SQL);
+                if (dt.Rows.Count > 0)
+                {
+                    var Sql = "DELETE FROM Aluno WHERE cpf = '" + cpf + "'";
+                    db.NpgSQLCommand(Sql);
+                    status = true;
+                    mensagem = "Exclusão bem sucedida!\nAluno :" + nomeAluno;
+                }
+                else
+                {
+                    mensagem = "Esse aluno não existe";
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 status = false;
                 mensagem = "Erro na Exclusão: " + ex.Message;
             }
         }
 
-        }
-
+    }
 }

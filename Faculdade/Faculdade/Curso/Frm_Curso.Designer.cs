@@ -48,6 +48,7 @@ namespace Faculdade
             this.Lbl_buscaCurso = new System.Windows.Forms.Label();
             this.Lbl_descricao = new System.Windows.Forms.Label();
             this.Dgv_cursos = new System.Windows.Forms.DataGridView();
+            this.Lbl_operacaoEscolha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_cursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -241,11 +242,22 @@ namespace Faculdade
             this.Dgv_cursos.TabIndex = 7;
             this.Dgv_cursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_curso_CellContentClick);
             // 
+            // Lbl_operacaoEscolha
+            // 
+            this.Lbl_operacaoEscolha.AutoSize = true;
+            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(11, 411);
+            this.Lbl_operacaoEscolha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_operacaoEscolha.Name = "Lbl_operacaoEscolha";
+            this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(102, 13);
+            this.Lbl_operacaoEscolha.TabIndex = 42;
+            this.Lbl_operacaoEscolha.Text = "O que deseja fazer?";
+            // 
             // Frm_Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 677);
+            this.Controls.Add(this.Lbl_operacaoEscolha);
             this.Controls.Add(this.Lbl_descricao);
             this.Controls.Add(this.Lbl_buscaCurso);
             this.Controls.Add(this.Lbl_cargaHoraria);
@@ -295,6 +307,7 @@ namespace Faculdade
         private System.Windows.Forms.Label Lbl_buscaCurso;
         private System.Windows.Forms.Label Lbl_descricao;
         private System.Windows.Forms.DataGridView Dgv_cursos;
+        private System.Windows.Forms.Label Lbl_operacaoEscolha;
     }
 }
 
