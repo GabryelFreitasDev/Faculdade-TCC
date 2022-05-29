@@ -508,6 +508,31 @@ namespace Faculdade
                 Lbl_disponivel.Visible = false;
             }
         }
+
+        private void Cbx_turmaAluno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_buscaNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_acao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_nomeAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txb_nomeAlterar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

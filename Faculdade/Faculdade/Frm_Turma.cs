@@ -78,5 +78,10 @@ namespace Faculdade
                 MessageBox.Show(inserir.mensagem);
             }
         }
+
+        private void Frm_Turma_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

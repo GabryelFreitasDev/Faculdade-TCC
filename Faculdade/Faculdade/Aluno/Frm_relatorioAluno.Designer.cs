@@ -33,6 +33,7 @@
             // 
             // RelatorioAluno
             // 
+            this.RelatorioAluno.BackColor = System.Drawing.SystemColors.Control;
             this.RelatorioAluno.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RelatorioAluno.LocalReport.ReportEmbeddedResource = "Faculdade.Aluno.Rlt_Aluno .rdlc";
             this.RelatorioAluno.Location = new System.Drawing.Point(0, 0);
@@ -40,6 +41,7 @@
             this.RelatorioAluno.ServerReport.BearerToken = null;
             this.RelatorioAluno.Size = new System.Drawing.Size(848, 450);
             this.RelatorioAluno.TabIndex = 0;
+            this.RelatorioAluno.Load += new System.EventHandler(this.RelatorioAluno_Load);
             // 
             // Frm_relatorioAluno
             // 

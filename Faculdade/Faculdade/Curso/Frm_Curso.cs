@@ -330,6 +330,21 @@ namespace Faculdade
             limpaCampos();
             Txb_buscar.Clear();
         }
+
+        private void Lbl_buscaCurso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_nomeAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txb_nomeAlterar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

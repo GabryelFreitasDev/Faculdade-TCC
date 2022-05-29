@@ -63,12 +63,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(59)))), ((int)(((byte)(115)))));
             this.ClientSize = new System.Drawing.Size(698, 180);
             this.Controls.Add(this.Cbx_cursoTurma);
             this.Controls.Add(this.Txb_nomeTurma);
             this.Controls.Add(this.Btn_insereTurma);
             this.Name = "Frm_Turma";
             this.Text = "Turma";
+            this.Load += new System.EventHandler(this.Frm_Turma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

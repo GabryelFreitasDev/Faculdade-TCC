@@ -45,5 +45,10 @@ namespace Faculdade
             this.RelatorioAluno.LocalReport.DataSources.Add(relatorio);
             this.RelatorioAluno.RefreshReport();
         }
+
+        private void RelatorioAluno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

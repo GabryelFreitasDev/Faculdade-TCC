@@ -23,7 +23,7 @@ namespace Faculdade
         public Frm_Menu()
         {
             InitializeComponent();
-            
+            Btn_Menu.BackColor = Color.FromArgb(23, 30, 67);
         }
 
         private void Frm_Menu_Load(object sender, EventArgs e)
@@ -31,235 +31,35 @@ namespace Faculdade
             Pn_Menu.Visible = false;
         }
 
+        public void descolorirAbas()
+        {
+            Btn_Alunos.BackColor = Color.FromArgb(44, 44, 96);
+            Btn_Cursos.BackColor = Color.FromArgb(44, 44, 96);
+            Btn_Professores.BackColor = Color.FromArgb(44, 44, 96);
+            Btn_Materias.BackColor = Color.FromArgb(44, 44, 96);
+            Btn_Menu.BackColor = Color.FromArgb(44, 44, 96);
+            Btn_Notas.BackColor = Color.FromArgb(44, 44, 96);
+        }
+
         private void Btn_Menu_Click(object sender, EventArgs e)
         {
+            descolorirAbas();
+            Btn_Menu.BackColor = Color.FromArgb(23, 30, 67);
             Pn_Menu.Visible = false;
-        }
-
-        private void exibirCursos()
-        {
-            Location = new Point(Location.X, Location.Y - 60);
-
-            Pic_SetaCursos.Load("setaCima.png");
-            Size = new Size(Width, Height + 120);
-
-            Btn_Alunos.Location = new Point(Btn_Alunos.Location.X, Btn_Alunos.Location.Y + 120);
-            Btn_Professores.Location = new Point(Btn_Professores.Location.X, Btn_Professores.Location.Y + 100);
-            Btn_Materias.Location = new Point(Btn_Materias.Location.X, Btn_Materias.Location.Y + 100);
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y + 100);
-
-            Pic_SetaAlunos.Location = new Point(Pic_SetaAlunos.Location.X, Pic_SetaAlunos.Location.Y + 120);
-            Pic_SetaProfessores.Location = new Point(Pic_SetaProfessores.Location.X, Pic_SetaProfessores.Location.Y + 100);
-            Pic_SetaMaterias.Location = new Point(Pic_SetaMaterias.Location.X, Pic_SetaMaterias.Location.Y + 100);
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y + 100);
-
-            Btn_InserirCursos.Location = new Point(0, Btn_Cursos.Location.Y + 100);
-            Btn_AlterarCursos.Location = new Point(0, Btn_Cursos.Location.Y + 130);
-            Btn_DeletarCursos.Location = new Point(0, Btn_Cursos.Location.Y + 160);
-            Btn_RelatorioCursos.Location = new Point(0, Btn_Cursos.Location.Y + 190);
-        }
-
-        private void ocultarCursos()
-        {
-            Location = new Point(Location.X, Location.Y + 60);
-
-            Pic_SetaCursos.Load("seta.png");
-            Size = new Size(Width, Height - 120);
-            Btn_RelatorioCursos.Location = new Point(1450, 690);
-            Btn_InserirCursos.Location = new Point(1450, 690);
-            Btn_AlterarCursos.Location = new Point(1450, 690);
-            Btn_DeletarCursos.Location = new Point(1450, 690);
-
-            Btn_Alunos.Location = new Point(Btn_Alunos.Location.X, Btn_Alunos.Location.Y - 120);
-            Btn_Professores.Location = new Point(Btn_Professores.Location.X, Btn_Professores.Location.Y - 100);
-            Btn_Materias.Location = new Point(Btn_Materias.Location.X, Btn_Materias.Location.Y - 100);
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y - 100);
-
-            Pic_SetaAlunos.Location = new Point(Pic_SetaAlunos.Location.X, Pic_SetaAlunos.Location.Y - 120);
-            Pic_SetaProfessores.Location = new Point(Pic_SetaProfessores.Location.X, Pic_SetaProfessores.Location.Y - 100);
-            Pic_SetaMaterias.Location = new Point(Pic_SetaMaterias.Location.X, Pic_SetaMaterias.Location.Y - 100);
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y - 100);
-        }
-
-        private void exibirAlunos()
-        {
-            Location = new Point(Location.X, Location.Y - 60);
-
-            Pic_SetaAlunos.Load("setaCima.png");
-            Size = new Size(Width, Height + 120);
-
-            Btn_Professores.Location = new Point(Btn_Professores.Location.X, Btn_Professores.Location.Y + 100);
-            Btn_Materias.Location = new Point(Btn_Materias.Location.X, Btn_Materias.Location.Y + 100);
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y + 100);
-
-            Pic_SetaProfessores.Location = new Point(Pic_SetaProfessores.Location.X, Pic_SetaProfessores.Location.Y + 100);
-            Pic_SetaMaterias.Location = new Point(Pic_SetaMaterias.Location.X, Pic_SetaMaterias.Location.Y + 100);
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y + 100);
-
-            Btn_InserirAlunos.Location = new Point(0, Btn_Alunos.Location.Y + 100);
-            Btn_AlterarAlunos.Location = new Point(0, Btn_Alunos.Location.Y + 130);
-            Btn_DeletarAlunos.Location = new Point(0, Btn_Alunos.Location.Y + 160);
-            Btn_RelatorioAlunos.Location = new Point(0, Btn_Alunos.Location.Y + 190);
-        }
-
-        private void ocultarAlunos()
-        {
-            Location = new Point(Location.X, Location.Y + 60);
-
-            Pic_SetaAlunos.Load("seta.png");
-            Size = new Size(Width, Height - 120);
-            Btn_RelatorioAlunos.Location = new Point(1450, 690);
-            Btn_InserirAlunos.Location = new Point(1450, 690);
-            Btn_AlterarAlunos.Location = new Point(1450, 690);
-            Btn_DeletarAlunos.Location = new Point(1450, 690);
-
-            Btn_Professores.Location = new Point(Btn_Professores.Location.X, Btn_Professores.Location.Y - 100);
-            Btn_Materias.Location = new Point(Btn_Materias.Location.X, Btn_Materias.Location.Y - 100);
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y - 100);
-
-            Pic_SetaProfessores.Location = new Point(Pic_SetaProfessores.Location.X, Pic_SetaProfessores.Location.Y - 100);
-            Pic_SetaMaterias.Location = new Point(Pic_SetaMaterias.Location.X, Pic_SetaMaterias.Location.Y - 100);
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y - 100);
-        }
-
-        private void exibirProfessores()
-        {
-            Location = new Point(Location.X, Location.Y - 60);
-
-            Pic_SetaProfessores.Load("setaCima.png");
-            Size = new Size(Width, Height + 120);
-
-            Btn_Materias.Location = new Point(Btn_Materias.Location.X, Btn_Materias.Location.Y + 100);
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y + 100);
-
-            Pic_SetaMaterias.Location = new Point(Pic_SetaMaterias.Location.X, Pic_SetaMaterias.Location.Y + 100);
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y + 100);
-
-            Btn_InserirProfessores.Location = new Point(0, Btn_Professores.Location.Y + 100);
-            Btn_AlterarProfessores.Location = new Point(0, Btn_Professores.Location.Y + 130);
-            Btn_DeletarProfessores.Location = new Point(0, Btn_Professores.Location.Y + 160);
-            Btn_RelatorioProfessores.Location = new Point(0, Btn_Professores.Location.Y + 190);
-        }
-
-        private void ocultarProfessores()
-        {
-            Location = new Point(Location.X, Location.Y + 60);
-
-            Pic_SetaProfessores.Load("seta.png");
-            Size = new Size(Width, Height - 120);
-            Btn_RelatorioProfessores.Location = new Point(1450, 690);
-            Btn_InserirProfessores.Location = new Point(1450, 690);
-            Btn_AlterarProfessores.Location = new Point(1450, 690);
-            Btn_DeletarProfessores.Location = new Point(1450, 690);
-
-            Btn_Materias.Location = new Point(Btn_Materias.Location.X, Btn_Materias.Location.Y - 100);
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y - 100);
-
-            Pic_SetaMaterias.Location = new Point(Pic_SetaMaterias.Location.X, Pic_SetaMaterias.Location.Y - 100);
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y - 100);
-        }
-
-        private void exibirMaterias()
-        {
-            Location = new Point(Location.X, Location.Y - 60);
-
-            Pic_SetaMaterias.Load("setaCima.png");
-            Size = new Size(Width, Height + 120);
-
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y + 100);
-
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y + 100);
-
-            Btn_InserirMaterias.Location = new Point(0, Btn_Materias.Location.Y + 100);
-            Btn_AlterarMaterias.Location = new Point(0, Btn_Materias.Location.Y + 130);
-            Btn_DeletarMaterias.Location = new Point(0, Btn_Materias.Location.Y + 160);
-            Btn_RelatorioMaterias.Location = new Point(0, Btn_Materias.Location.Y + 190);
-        }
-
-        private void ocultarMaterias()
-        {
-            Location = new Point(Location.X, Location.Y + 60);
-
-            Pic_SetaMaterias.Load("seta.png");
-            Size = new Size(Width, Height - 120);
-            Btn_RelatorioMaterias.Location = new Point(1450, 690);
-            Btn_InserirMaterias.Location = new Point(1450, 690);
-            Btn_AlterarMaterias.Location = new Point(1450, 690);
-            Btn_DeletarMaterias.Location = new Point(1450, 690);
-
-            Btn_Notas.Location = new Point(Btn_Notas.Location.X, Btn_Notas.Location.Y - 100);
-
-            Pic_SetaNotas.Location = new Point(Pic_SetaNotas.Location.X, Pic_SetaNotas.Location.Y - 100);
-        }
-
-        private void exibirNotas()
-        {
-            Location = new Point(Location.X, Location.Y - 60);
-
-            Pic_SetaNotas.Load("setaCima.png");
-            Size = new Size(Width, Height + 120);
-
-            Btn_InserirNotas.Location = new Point(0, Btn_Notas.Location.Y + 100);
-            Btn_AlterarNotas.Location = new Point(0, Btn_Notas.Location.Y + 130);
-            Btn_DeletarNotas.Location = new Point(0, Btn_Notas.Location.Y + 160);
-            Btn_RelatorioNotas.Location = new Point(0, Btn_Notas.Location.Y + 190);
-        }
-
-        private void ocultarNotas()
-        {
-            Location = new Point(Location.X, Location.Y + 60);
-
-            Pic_SetaNotas.Load("seta.png");
-            Size = new Size(Width, Height - 120);
-
-            Btn_RelatorioNotas.Location = new Point(1450, 690);
-            Btn_InserirNotas.Location = new Point(1450, 690);
-            Btn_AlterarNotas.Location = new Point(1450, 690);
-            Btn_DeletarNotas.Location = new Point(1450, 690);
         }
 
         private void Btn_Cursos_Click(object sender, EventArgs e)
         {
-            if (Btn_RelatorioAlunos.Location.X != 1450) ocultarAlunos();
-
-            if (Btn_RelatorioProfessores.Location.X != 1450) ocultarProfessores();
-
-            if (Btn_RelatorioMaterias.Location.X != 1450) ocultarMaterias();
-
-            if (Btn_RelatorioNotas.Location.X != 1450) ocultarNotas();
-
-            if (Btn_RelatorioCursos.Location.X == 1450)
-            {
-                exibirCursos();
-            }
-            else
-            {
-                ocultarCursos();
-            }
-
+            descolorirAbas();
+            Btn_Cursos.BackColor = Color.FromArgb(23, 30, 67);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Curso>();
         }
 
         private void Btn_Alunos_Click(object sender, EventArgs e)
         {
-            if (Btn_RelatorioCursos.Location.X != 1450) ocultarCursos();
-
-            if (Btn_RelatorioProfessores.Location.X != 1450) ocultarProfessores();
-
-            if (Btn_RelatorioMaterias.Location.X != 1450) ocultarMaterias();
-
-            if (Btn_RelatorioNotas.Location.X != 1450) ocultarNotas();
-
-            if (Btn_RelatorioAlunos.Location.X == 1450)
-            {
-                exibirAlunos();
-            }
-            else
-            {
-                ocultarAlunos();
-            }
-
+            descolorirAbas();
+            Btn_Alunos.BackColor = Color.FromArgb(23, 30, 67);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Aluno>();
             
@@ -267,65 +67,22 @@ namespace Faculdade
 
         private void Btn_Professores_Click(object sender, EventArgs e)
         {
-            if (Btn_RelatorioCursos.Location.X != 1450) ocultarCursos();
-
-            if (Btn_RelatorioAlunos.Location.X != 1450) ocultarAlunos();
-
-            if (Btn_RelatorioMaterias.Location.X != 1450) ocultarMaterias();
-
-            if (Btn_RelatorioNotas.Location.X != 1450) ocultarNotas();
-
-            if (Btn_RelatorioProfessores.Location.X == 1450)
-            {
-                exibirProfessores();
-            }
-            else
-            {
-                ocultarProfessores();
-            }
-
+            descolorirAbas();
+            Btn_Professores.BackColor = Color.FromArgb(23, 30, 67);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Turma>();
         }
 
         private void Btn_Materias_Click(object sender, EventArgs e)
         {
-            if (Btn_RelatorioCursos.Location.X != 1450) ocultarCursos();
-
-            if (Btn_RelatorioAlunos.Location.X != 1450) ocultarAlunos();
-
-            if (Btn_RelatorioProfessores.Location.X != 1450) ocultarProfessores();
-
-            if (Btn_RelatorioNotas.Location.X != 1450) ocultarNotas();
-
-            if (Btn_RelatorioMaterias.Location.X == 1450)
-            {
-                exibirMaterias();
-            }
-            else
-            {
-                ocultarMaterias();
-            }
+            descolorirAbas();
+            Btn_Materias.BackColor = Color.FromArgb(23, 30, 67);
         }
 
         private void Btn_Notas_Click(object sender, EventArgs e)
         {
-            if (Btn_RelatorioCursos.Location.X != 1450) ocultarCursos();
-
-            if (Btn_RelatorioAlunos.Location.X != 1450) ocultarAlunos();
-
-            if (Btn_RelatorioProfessores.Location.X != 1450) ocultarProfessores();
-
-            if (Btn_RelatorioMaterias.Location.X != 1450) ocultarMaterias();
-
-            if (Btn_RelatorioNotas.Location.X == 1450)
-            {
-                exibirNotas();
-            }
-            else
-            {
-                ocultarNotas();
-            }
+            descolorirAbas();
+            Btn_Notas.BackColor = Color.FromArgb(23, 30, 67);
         }
 
         public void Pn_Menu_Paint(object sender, PaintEventArgs e)
@@ -400,6 +157,16 @@ namespace Faculdade
         }
 
         private void Pn_Menu_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Pnl_Menu_Paint(object sender, PaintEventArgs e)
         {
 
         }
