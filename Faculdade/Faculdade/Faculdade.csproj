@@ -207,11 +207,6 @@
     <Compile Include="Aluno\Aluno.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Curso\Curso.cs" />
-    <Compile Include="FaculdadeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Aluno\Frm_Aluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +218,11 @@
     </Compile>
     <Compile Include="Curso\Frm_Curso.Designer.cs">
       <DependentUpon>Frm_Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaculdadeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>

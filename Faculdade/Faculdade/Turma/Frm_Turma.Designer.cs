@@ -262,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 701);
+            this.ClientSize = new System.Drawing.Size(1120, 576);
             this.Controls.Add(this.Btn_limpar);
             this.Controls.Add(this.Btn_LimparFiltro);
             this.Controls.Add(this.Cbx_buscaTurno);

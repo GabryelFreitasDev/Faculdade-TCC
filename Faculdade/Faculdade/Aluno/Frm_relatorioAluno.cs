@@ -31,7 +31,7 @@ namespace Faculdade
             }
             DataTable dt = new DataTable();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma";
+            cmd.CommandText = "SELECT idAluno,nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on FK_idCurso = idCurso INNER JOIN Turma on FK_idTurma = idTurma";
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             da.Fill(dt);
             da.Dispose();
@@ -41,7 +41,7 @@ namespace Faculdade
         {
 
             this.RelatorioAluno.LocalReport.DataSources.Clear();
-            ReportDataSource relatorio = new ReportDataSource("alunos", geraRelatorio());
+            ReportDataSource relatorio = new ReportDataSource("aluno", geraRelatorio());
             this.RelatorioAluno.LocalReport.DataSources.Add(relatorio);
             this.RelatorioAluno.RefreshReport();
         }

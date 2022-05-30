@@ -448,3 +448,5 @@ C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculda
 C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Guilherme Araújo\Documents\Programacao\Visual Studio\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.CopyComplete
+C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_relatorioAluno.resources
+C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Turma.resources

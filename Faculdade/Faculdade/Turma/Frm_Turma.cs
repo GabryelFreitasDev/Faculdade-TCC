@@ -35,19 +35,18 @@ namespace Faculdade
             Lbl_cursoAltera.Visible = false;
             Lbl_turmaAltera.Visible = false;
             Lbl_turnoAltera.Visible = false;
+            preencherCBDescricao(Cbx_cursoTurma);
         }
 
         private void EditaColunaDgv()
         {
             Dgv_turmas.RowHeadersVisible = false;
-            Dgv_turmas.Columns[0].HeaderText = "ID";
-            Dgv_turmas.Columns[0].Width = 30;
-            Dgv_turmas.Columns[1].HeaderText = "TURMA";
-            Dgv_turmas.Columns[1].Width = 100;
-            Dgv_turmas.Columns[2].HeaderText = "TURNO";
-            Dgv_turmas.Columns[2].Width = 80;
-            Dgv_turmas.Columns[3].HeaderText = "CURSO";
-            Dgv_turmas.Columns[3].Width = 250;
+            Dgv_turmas.Columns[0].HeaderText = "TURMA";
+            Dgv_turmas.Columns[0].Width = 100;
+            Dgv_turmas.Columns[1].HeaderText = "TURNO";
+            Dgv_turmas.Columns[1].Width = 80;
+            Dgv_turmas.Columns[2].HeaderText = "CURSO";
+            Dgv_turmas.Columns[2].Width = 280;
         }
 
         public void AtualizaDataGridView()
@@ -59,7 +58,7 @@ namespace Faculdade
             }
             cmd.Connection = conexao.conn;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT idTurma, nomeTurma, turno, nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso ORDER BY nomeCurso";
+            cmd.CommandText = "SELECT nomeTurma, turno, nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso ORDER BY nomeCurso LIMIT 100";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
             Dgv_turmas.DataSource = null;
@@ -92,7 +91,7 @@ namespace Faculdade
                 {
                     cmd.Connection = conexao.conn;
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY idTurma";
+                    cmd.CommandText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100" ;
                     dt = new DataTable();
                     dt.Load(cmd.ExecuteReader());
                     Dgv_turmas.DataSource = null;
@@ -122,7 +121,7 @@ namespace Faculdade
             }
             cmd.Connection = conexao.conn;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY idTurma";
+            cmd.CommandText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY nomeTurma LIMIT 100";
             dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
             Dgv_turmas.DataSource = null;
@@ -313,6 +312,7 @@ namespace Faculdade
                     Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
                     Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
                     Cbx_turnoAntigo.Text = row.Cells["turno"].Value.ToString();
+                    Cbx_cursoAntigo.Text = row.Cells["nomecurso"].Value.ToString();
                 }
                 else
                 {
@@ -320,7 +320,7 @@ namespace Faculdade
                     Cbx_cursoAntigo.Text = row.Cells["nomecurso"].Value.ToString();
                     Cbx_turnoAntigo.Text = row.Cells["turno"].Value.ToString();
                     Txb_nomeTurma.Clear();
-                    Cbx_Turno.SelectedItem = null;
+                    Cbx_Turno.Text = null;
                     Cbx_cursoTurma.SelectedItem = null;
                 }
                 Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
@@ -343,9 +343,11 @@ namespace Faculdade
                     VerificaCbxVazio(Cbx_cursoTurma);
                     VerificaCbxVazio(Cbx_Turno);
                     VerificaNullorEmpty(Txb_nomeTurma.Text);
-
-                    excluir.Excluir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
-                    MessageBox.Show(excluir.mensagem);
+                    if (MessageBox.Show("Deseja realmente excluir a turma " + Txb_nomeTurma.Text + " do curso de " +  Cbx_cursoTurma.Text + " do turno "+ Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        excluir.Excluir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
+                        MessageBox.Show(excluir.mensagem);
+                    } 
                     AtualizaDataGridView();
                 }
                 else

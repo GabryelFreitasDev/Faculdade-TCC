@@ -52,7 +52,7 @@ namespace Faculdade
             // 
             // Txb_buscar
             // 
-            this.Txb_buscar.Location = new System.Drawing.Point(456, 77);
+            this.Txb_buscar.Location = new System.Drawing.Point(462, 43);
             this.Txb_buscar.Name = "Txb_buscar";
             this.Txb_buscar.Size = new System.Drawing.Size(548, 20);
             this.Txb_buscar.TabIndex = 23;
@@ -134,7 +134,7 @@ namespace Faculdade
             // Btn_relatorioCurso
             // 
             this.Btn_relatorioCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Btn_relatorioCurso.Location = new System.Drawing.Point(915, 569);
+            this.Btn_relatorioCurso.Location = new System.Drawing.Point(921, 535);
             this.Btn_relatorioCurso.Name = "Btn_relatorioCurso";
             this.Btn_relatorioCurso.Size = new System.Drawing.Size(89, 23);
             this.Btn_relatorioCurso.TabIndex = 33;
@@ -186,7 +186,7 @@ namespace Faculdade
             // Lbl_buscaCurso
             // 
             this.Lbl_buscaCurso.AutoSize = true;
-            this.Lbl_buscaCurso.Location = new System.Drawing.Point(453, 57);
+            this.Lbl_buscaCurso.Location = new System.Drawing.Point(459, 23);
             this.Lbl_buscaCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaCurso.Name = "Lbl_buscaCurso";
             this.Lbl_buscaCurso.Size = new System.Drawing.Size(209, 13);
@@ -208,7 +208,7 @@ namespace Faculdade
             this.Dgv_cursos.AllowUserToAddRows = false;
             this.Dgv_cursos.AllowUserToDeleteRows = false;
             this.Dgv_cursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_cursos.Location = new System.Drawing.Point(456, 115);
+            this.Dgv_cursos.Location = new System.Drawing.Point(462, 81);
             this.Dgv_cursos.Name = "Dgv_cursos";
             this.Dgv_cursos.ReadOnly = true;
             this.Dgv_cursos.RowHeadersWidth = 62;
@@ -230,7 +230,7 @@ namespace Faculdade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 677);
+            this.ClientSize = new System.Drawing.Size(1120, 576);
             this.Controls.Add(this.Lbl_operacaoEscolha);
             this.Controls.Add(this.Lbl_descricao);
             this.Controls.Add(this.Lbl_buscaCurso);

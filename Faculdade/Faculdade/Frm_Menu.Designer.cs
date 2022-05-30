@@ -278,7 +278,7 @@
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
-            this.Pn_Menu.Size = new System.Drawing.Size(1150, 740);
+            this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
             this.Pn_Menu.TabIndex = 14;
             // 
             // Frm_Menu

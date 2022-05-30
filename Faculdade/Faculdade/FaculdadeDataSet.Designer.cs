@@ -20,7 +20,7 @@ namespace Faculdade {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FaculdadeDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FaculdadeDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class FaculdadeDataSet : global::System.Data.DataSet {
         
@@ -28,7 +28,13 @@ namespace Faculdade {
         
         private cursoDataTable tablecurso;
         
+        private turmaDataTable tableturma;
+        
         private global::System.Data.DataRelation relationfk_idcurso;
+        
+        private global::System.Data.DataRelation relationfk_idturma;
+        
+        private global::System.Data.DataRelation relationfk_idcurso1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -63,6 +69,9 @@ namespace Faculdade {
                 }
                 if ((ds.Tables["curso"] != null)) {
                     base.Tables.Add(new cursoDataTable(ds.Tables["curso"]));
+                }
+                if ((ds.Tables["turma"] != null)) {
+                    base.Tables.Add(new turmaDataTable(ds.Tables["turma"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -99,6 +108,16 @@ namespace Faculdade {
         public cursoDataTable curso {
             get {
                 return this.tablecurso;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public turmaDataTable turma {
+            get {
+                return this.tableturma;
             }
         }
         
@@ -175,6 +194,9 @@ namespace Faculdade {
                 if ((ds.Tables["curso"] != null)) {
                     base.Tables.Add(new cursoDataTable(ds.Tables["curso"]));
                 }
+                if ((ds.Tables["turma"] != null)) {
+                    base.Tables.Add(new turmaDataTable(ds.Tables["turma"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -220,25 +242,43 @@ namespace Faculdade {
                     this.tablecurso.InitVars();
                 }
             }
+            this.tableturma = ((turmaDataTable)(base.Tables["turma"]));
+            if ((initTable == true)) {
+                if ((this.tableturma != null)) {
+                    this.tableturma.InitVars();
+                }
+            }
             this.relationfk_idcurso = this.Relations["fk_idcurso"];
+            this.relationfk_idturma = this.Relations["fk_idturma"];
+            this.relationfk_idcurso1 = this.Relations["fk_idcurso1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FaculdadeDataSet";
+            this.DataSetName = "FaculdadeDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FaculdadeDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FaculdadeDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablealuno = new alunoDataTable();
             base.Tables.Add(this.tablealuno);
             this.tablecurso = new cursoDataTable();
             base.Tables.Add(this.tablecurso);
+            this.tableturma = new turmaDataTable();
+            base.Tables.Add(this.tableturma);
             this.relationfk_idcurso = new global::System.Data.DataRelation("fk_idcurso", new global::System.Data.DataColumn[] {
                         this.tablecurso.idcursoColumn}, new global::System.Data.DataColumn[] {
                         this.tablealuno.fk_idcursoColumn}, false);
             this.Relations.Add(this.relationfk_idcurso);
+            this.relationfk_idturma = new global::System.Data.DataRelation("fk_idturma", new global::System.Data.DataColumn[] {
+                        this.tableturma.idturmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tablealuno.fk_idturmaColumn}, false);
+            this.Relations.Add(this.relationfk_idturma);
+            this.relationfk_idcurso1 = new global::System.Data.DataRelation("fk_idcurso1", new global::System.Data.DataColumn[] {
+                        this.tablecurso.idcursoColumn}, new global::System.Data.DataColumn[] {
+                        this.tableturma.fk_idcursoColumn}, false);
+            this.Relations.Add(this.relationfk_idcurso1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -250,6 +290,12 @@ namespace Faculdade {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializecurso() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeturma() {
             return false;
         }
         
@@ -314,6 +360,9 @@ namespace Faculdade {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void cursoRowChangeEventHandler(object sender, cursoRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void turmaRowChangeEventHandler(object sender, turmaRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -337,9 +386,9 @@ namespace Faculdade {
             
             private global::System.Data.DataColumn columnendereco;
             
-            private global::System.Data.DataColumn columnturma;
-            
             private global::System.Data.DataColumn columnfk_idcurso;
+            
+            private global::System.Data.DataColumn columnfk_idturma;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -440,17 +489,17 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn turmaColumn {
+            public global::System.Data.DataColumn fk_idcursoColumn {
                 get {
-                    return this.columnturma;
+                    return this.columnfk_idcurso;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fk_idcursoColumn {
+            public global::System.Data.DataColumn fk_idturmaColumn {
                 get {
-                    return this.columnfk_idcurso;
+                    return this.columnfk_idturma;
                 }
             }
             
@@ -491,7 +540,7 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public alunoRow AddalunoRow(int idaluno, string nomealuno, string cpf, System.DateTime datanascimento, string contato, string contatoparente, string email, string endereco, string turma, cursoRow parentcursoRowByfk_idcurso) {
+            public alunoRow AddalunoRow(int idaluno, string nomealuno, string cpf, System.DateTime datanascimento, string contato, string contatoparente, string email, string endereco, cursoRow parentcursoRowByfk_idcurso, turmaRow parentturmaRowByfk_idturma) {
                 alunoRow rowalunoRow = ((alunoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idaluno,
@@ -502,10 +551,13 @@ namespace Faculdade {
                         contatoparente,
                         email,
                         endereco,
-                        turma,
+                        null,
                         null};
                 if ((parentcursoRowByfk_idcurso != null)) {
-                    columnValuesArray[9] = parentcursoRowByfk_idcurso[0];
+                    columnValuesArray[8] = parentcursoRowByfk_idcurso[0];
+                }
+                if ((parentturmaRowByfk_idturma != null)) {
+                    columnValuesArray[9] = parentturmaRowByfk_idturma[0];
                 }
                 rowalunoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowalunoRow);
@@ -544,8 +596,8 @@ namespace Faculdade {
                 this.columncontatoparente = base.Columns["contatoparente"];
                 this.columnemail = base.Columns["email"];
                 this.columnendereco = base.Columns["endereco"];
-                this.columnturma = base.Columns["turma"];
                 this.columnfk_idcurso = base.Columns["fk_idcurso"];
+                this.columnfk_idturma = base.Columns["fk_idturma"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -567,10 +619,10 @@ namespace Faculdade {
                 base.Columns.Add(this.columnemail);
                 this.columnendereco = new global::System.Data.DataColumn("endereco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnendereco);
-                this.columnturma = new global::System.Data.DataColumn("turma", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnturma);
                 this.columnfk_idcurso = new global::System.Data.DataColumn("fk_idcurso", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfk_idcurso);
+                this.columnfk_idturma = new global::System.Data.DataColumn("fk_idturma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfk_idturma);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidaluno}, true));
                 this.columnidaluno.AllowDBNull = false;
@@ -578,7 +630,7 @@ namespace Faculdade {
                 this.columnnomealuno.AllowDBNull = false;
                 this.columnnomealuno.MaxLength = 100;
                 this.columncpf.AllowDBNull = false;
-                this.columncpf.MaxLength = 15;
+                this.columncpf.MaxLength = 14;
                 this.columndatanascimento.AllowDBNull = false;
                 this.columncontato.AllowDBNull = false;
                 this.columncontato.MaxLength = 15;
@@ -587,9 +639,8 @@ namespace Faculdade {
                 this.columnemail.MaxLength = 100;
                 this.columnendereco.AllowDBNull = false;
                 this.columnendereco.MaxLength = 150;
-                this.columnturma.AllowDBNull = false;
-                this.columnturma.MaxLength = 20;
                 this.columnfk_idcurso.AllowDBNull = false;
+                this.columnfk_idturma.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -727,8 +778,6 @@ namespace Faculdade {
             
             private global::System.Data.DataColumn columnnomecurso;
             
-            private global::System.Data.DataColumn columnturno;
-            
             private global::System.Data.DataColumn columncargahoraria;
             
             private global::System.Data.DataColumn columndescricao;
@@ -779,14 +828,6 @@ namespace Faculdade {
             public global::System.Data.DataColumn nomecursoColumn {
                 get {
                     return this.columnnomecurso;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn turnoColumn {
-                get {
-                    return this.columnturno;
                 }
             }
             
@@ -843,12 +884,11 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public cursoRow AddcursoRow(int idcurso, string nomecurso, string turno, string cargahoraria, string descricao) {
+            public cursoRow AddcursoRow(int idcurso, string nomecurso, string cargahoraria, string descricao) {
                 cursoRow rowcursoRow = ((cursoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idcurso,
                         nomecurso,
-                        turno,
                         cargahoraria,
                         descricao};
                 rowcursoRow.ItemArray = columnValuesArray;
@@ -882,7 +922,6 @@ namespace Faculdade {
             internal void InitVars() {
                 this.columnidcurso = base.Columns["idcurso"];
                 this.columnnomecurso = base.Columns["nomecurso"];
-                this.columnturno = base.Columns["turno"];
                 this.columncargahoraria = base.Columns["cargahoraria"];
                 this.columndescricao = base.Columns["descricao"];
             }
@@ -894,8 +933,6 @@ namespace Faculdade {
                 base.Columns.Add(this.columnidcurso);
                 this.columnnomecurso = new global::System.Data.DataColumn("nomecurso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnomecurso);
-                this.columnturno = new global::System.Data.DataColumn("turno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnturno);
                 this.columncargahoraria = new global::System.Data.DataColumn("cargahoraria", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncargahoraria);
                 this.columndescricao = new global::System.Data.DataColumn("descricao", typeof(string), null, global::System.Data.MappingType.Element);
@@ -906,8 +943,6 @@ namespace Faculdade {
                 this.columnidcurso.Unique = true;
                 this.columnnomecurso.AllowDBNull = false;
                 this.columnnomecurso.MaxLength = 100;
-                this.columnturno.AllowDBNull = false;
-                this.columnturno.MaxLength = 10;
                 this.columncargahoraria.AllowDBNull = false;
                 this.columncargahoraria.MaxLength = 10;
                 this.columndescricao.AllowDBNull = false;
@@ -998,6 +1033,314 @@ namespace Faculdade {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "cursoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class turmaDataTable : global::System.Data.TypedTableBase<turmaRow> {
+            
+            private global::System.Data.DataColumn columnidturma;
+            
+            private global::System.Data.DataColumn columnnometurma;
+            
+            private global::System.Data.DataColumn columnturno;
+            
+            private global::System.Data.DataColumn columnfk_idcurso;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaDataTable() {
+                this.TableName = "turma";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal turmaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected turmaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idturmaColumn {
+                get {
+                    return this.columnidturma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nometurmaColumn {
+                get {
+                    return this.columnnometurma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn turnoColumn {
+                get {
+                    return this.columnturno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fk_idcursoColumn {
+                get {
+                    return this.columnfk_idcurso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRow this[int index] {
+                get {
+                    return ((turmaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event turmaRowChangeEventHandler turmaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event turmaRowChangeEventHandler turmaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event turmaRowChangeEventHandler turmaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event turmaRowChangeEventHandler turmaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddturmaRow(turmaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRow AddturmaRow(int idturma, string nometurma, string turno, cursoRow parentcursoRowByfk_idcurso1) {
+                turmaRow rowturmaRow = ((turmaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        idturma,
+                        nometurma,
+                        turno,
+                        null};
+                if ((parentcursoRowByfk_idcurso1 != null)) {
+                    columnValuesArray[3] = parentcursoRowByfk_idcurso1[0];
+                }
+                rowturmaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowturmaRow);
+                return rowturmaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRow FindByidturma(int idturma) {
+                return ((turmaRow)(this.Rows.Find(new object[] {
+                            idturma})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                turmaDataTable cln = ((turmaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new turmaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnidturma = base.Columns["idturma"];
+                this.columnnometurma = base.Columns["nometurma"];
+                this.columnturno = base.Columns["turno"];
+                this.columnfk_idcurso = base.Columns["fk_idcurso"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnidturma = new global::System.Data.DataColumn("idturma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidturma);
+                this.columnnometurma = new global::System.Data.DataColumn("nometurma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnometurma);
+                this.columnturno = new global::System.Data.DataColumn("turno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnturno);
+                this.columnfk_idcurso = new global::System.Data.DataColumn("fk_idcurso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfk_idcurso);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidturma}, true));
+                this.columnidturma.AllowDBNull = false;
+                this.columnidturma.Unique = true;
+                this.columnnometurma.AllowDBNull = false;
+                this.columnnometurma.MaxLength = 80;
+                this.columnturno.AllowDBNull = false;
+                this.columnturno.MaxLength = 10;
+                this.columnfk_idcurso.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRow NewturmaRow() {
+                return ((turmaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new turmaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(turmaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.turmaRowChanged != null)) {
+                    this.turmaRowChanged(this, new turmaRowChangeEvent(((turmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.turmaRowChanging != null)) {
+                    this.turmaRowChanging(this, new turmaRowChangeEvent(((turmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.turmaRowDeleted != null)) {
+                    this.turmaRowDeleted(this, new turmaRowChangeEvent(((turmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.turmaRowDeleting != null)) {
+                    this.turmaRowDeleting(this, new turmaRowChangeEvent(((turmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveturmaRow(turmaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                FaculdadeDataSet ds = new FaculdadeDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "turmaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1147,17 +1490,6 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string turma {
-                get {
-                    return ((string)(this[this.tablealuno.turmaColumn]));
-                }
-                set {
-                    this[this.tablealuno.turmaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int fk_idcurso {
                 get {
                     return ((int)(this[this.tablealuno.fk_idcursoColumn]));
@@ -1169,12 +1501,34 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int fk_idturma {
+                get {
+                    return ((int)(this[this.tablealuno.fk_idturmaColumn]));
+                }
+                set {
+                    this[this.tablealuno.fk_idturmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public cursoRow cursoRow {
                 get {
                     return ((cursoRow)(this.GetParentRow(this.Table.ParentRelations["fk_idcurso"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["fk_idcurso"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRow turmaRow {
+                get {
+                    return ((turmaRow)(this.GetParentRow(this.Table.ParentRelations["fk_idturma"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["fk_idturma"]);
                 }
             }
             
@@ -1229,17 +1583,6 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string turno {
-                get {
-                    return ((string)(this[this.tablecurso.turnoColumn]));
-                }
-                set {
-                    this[this.tablecurso.turnoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string cargahoraria {
                 get {
                     return ((string)(this[this.tablecurso.cargahorariaColumn]));
@@ -1268,6 +1611,98 @@ namespace Faculdade {
                 }
                 else {
                     return ((alunoRow[])(base.GetChildRows(this.Table.ChildRelations["fk_idcurso"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRow[] GetturmaRows() {
+                if ((this.Table.ChildRelations["fk_idcurso1"] == null)) {
+                    return new turmaRow[0];
+                }
+                else {
+                    return ((turmaRow[])(base.GetChildRows(this.Table.ChildRelations["fk_idcurso1"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class turmaRow : global::System.Data.DataRow {
+            
+            private turmaDataTable tableturma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal turmaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableturma = ((turmaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idturma {
+                get {
+                    return ((int)(this[this.tableturma.idturmaColumn]));
+                }
+                set {
+                    this[this.tableturma.idturmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nometurma {
+                get {
+                    return ((string)(this[this.tableturma.nometurmaColumn]));
+                }
+                set {
+                    this[this.tableturma.nometurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string turno {
+                get {
+                    return ((string)(this[this.tableturma.turnoColumn]));
+                }
+                set {
+                    this[this.tableturma.turnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int fk_idcurso {
+                get {
+                    return ((int)(this[this.tableturma.fk_idcursoColumn]));
+                }
+                set {
+                    this[this.tableturma.fk_idcursoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public cursoRow cursoRow {
+                get {
+                    return ((cursoRow)(this.GetParentRow(this.Table.ParentRelations["fk_idcurso1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["fk_idcurso1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public alunoRow[] GetalunoRows() {
+                if ((this.Table.ChildRelations["fk_idturma"] == null)) {
+                    return new alunoRow[0];
+                }
+                else {
+                    return ((alunoRow[])(base.GetChildRows(this.Table.ChildRelations["fk_idturma"])));
                 }
             }
         }
@@ -1339,9 +1774,43 @@ namespace Faculdade {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class turmaRowChangeEvent : global::System.EventArgs {
+            
+            private turmaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRowChangeEvent(turmaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public turmaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
-namespace Faculdade.FaculdadeDataSetTableAdapters {
+namespace Faculdade.FaculdadeDataSet1TableAdapters {
     
     
     /// <summary>
@@ -1473,12 +1942,12 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("contatoparente", "contatoparente");
             tableMapping.ColumnMappings.Add("email", "email");
             tableMapping.ColumnMappings.Add("endereco", "endereco");
-            tableMapping.ColumnMappings.Add("turma", "turma");
             tableMapping.ColumnMappings.Add("fk_idcurso", "fk_idcurso");
+            tableMapping.ColumnMappings.Add("fk_idturma", "fk_idturma");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""public"".""aluno"" WHERE ((""idaluno"" = :Original_idaluno) AND (""nomealuno"" = :Original_nomealuno) AND (""cpf"" = :Original_cpf) AND (""datanascimento"" = :Original_datanascimento) AND (""contato"" = :Original_contato) AND (""contatoparente"" = :Original_contatoparente) AND ((:IsNull_email = 1 AND ""email"" IS NULL) OR (""email"" = :Original_email)) AND (""endereco"" = :Original_endereco) AND (""turma"" = :Original_turma) AND (""fk_idcurso"" = :Original_fk_idcurso))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""public"".""aluno"" WHERE ((""idaluno"" = :Original_idaluno) AND (""nomealuno"" = :Original_nomealuno) AND (""cpf"" = :Original_cpf) AND (""datanascimento"" = :Original_datanascimento) AND (""contato"" = :Original_contato) AND (""contatoparente"" = :Original_contatoparente) AND ((:IsNull_email = 1 AND ""email"" IS NULL) OR (""email"" = :Original_email)) AND (""endereco"" = :Original_endereco) AND (""fk_idcurso"" = :Original_fk_idcurso) AND (""fk_idturma"" = :Original_fk_idturma))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Devart.Data.PostgreSql.PgSqlParameter param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "Original_idaluno";
@@ -1548,13 +2017,6 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_turma";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turma";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "Original_fk_idcurso";
             param.DbType = global::System.Data.DbType.Int32;
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
@@ -1562,9 +2024,17 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.SourceColumn = "fk_idcurso";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_fk_idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idturma";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""public"".""aluno"" (""idaluno"", ""nomealuno"", ""cpf"", ""datanascimento"", ""contato"", ""contatoparente"", ""email"", ""endereco"", ""turma"", ""fk_idcurso"") VALUES (:idaluno, :nomealuno, :cpf, :datanascimento, :contato, :contatoparente, :email, :endereco, :turma, :fk_idcurso)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO ""public"".""aluno"" (""idaluno"", ""nomealuno"", ""cpf"", ""datanascimento"", ""contato"", ""contatoparente"", ""email"", ""endereco"", ""fk_idcurso"", ""fk_idturma"") VALUES (:idaluno, :nomealuno, :cpf, :datanascimento, :contato, :contatoparente, :email, :endereco, :fk_idcurso, :fk_idturma)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "idaluno";
@@ -1617,21 +2087,22 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.SourceColumn = "endereco";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "turma";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turma";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "fk_idcurso";
             param.DbType = global::System.Data.DbType.Int32;
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
             param.IsNullable = true;
             param.SourceColumn = "fk_idcurso";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "fk_idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idturma";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""public"".""aluno"" SET ""idaluno"" = :idaluno, ""nomealuno"" = :nomealuno, ""cpf"" = :cpf, ""datanascimento"" = :datanascimento, ""contato"" = :contato, ""contatoparente"" = :contatoparente, ""email"" = :email, ""endereco"" = :endereco, ""turma"" = :turma, ""fk_idcurso"" = :fk_idcurso WHERE ((""idaluno"" = :Original_idaluno) AND (""nomealuno"" = :Original_nomealuno) AND (""cpf"" = :Original_cpf) AND (""datanascimento"" = :Original_datanascimento) AND (""contato"" = :Original_contato) AND (""contatoparente"" = :Original_contatoparente) AND ((:IsNull_email = 1 AND ""email"" IS NULL) OR (""email"" = :Original_email)) AND (""endereco"" = :Original_endereco) AND (""turma"" = :Original_turma) AND (""fk_idcurso"" = :Original_fk_idcurso))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""public"".""aluno"" SET ""idaluno"" = :idaluno, ""nomealuno"" = :nomealuno, ""cpf"" = :cpf, ""datanascimento"" = :datanascimento, ""contato"" = :contato, ""contatoparente"" = :contatoparente, ""email"" = :email, ""endereco"" = :endereco, ""fk_idcurso"" = :fk_idcurso, ""fk_idturma"" = :fk_idturma WHERE ((""idaluno"" = :Original_idaluno) AND (""nomealuno"" = :Original_nomealuno) AND (""cpf"" = :Original_cpf) AND (""datanascimento"" = :Original_datanascimento) AND (""contato"" = :Original_contato) AND (""contatoparente"" = :Original_contatoparente) AND ((:IsNull_email = 1 AND ""email"" IS NULL) OR (""email"" = :Original_email)) AND (""endereco"" = :Original_endereco) AND (""fk_idcurso"" = :Original_fk_idcurso) AND (""fk_idturma"" = :Original_fk_idturma))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "idaluno";
@@ -1684,17 +2155,18 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.SourceColumn = "endereco";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "turma";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turma";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "fk_idcurso";
             param.DbType = global::System.Data.DbType.Int32;
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
             param.IsNullable = true;
             param.SourceColumn = "fk_idcurso";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "fk_idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idturma";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "Original_idaluno";
@@ -1764,18 +2236,19 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_turma";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turma";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "Original_fk_idcurso";
             param.DbType = global::System.Data.DbType.Int32;
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
             param.IsNullable = true;
             param.SourceColumn = "fk_idcurso";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_fk_idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idturma";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -1794,7 +2267,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             this._commandCollection[0] = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idaluno, nomealuno, cpf, datanascimento, contato, contatoparente, email, e" +
-                "ndereco, turma, fk_idcurso FROM \"public\".aluno";
+                "ndereco, fk_idcurso, fk_idturma FROM \"public\".aluno";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1855,7 +2328,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idaluno, string Original_nomealuno, string Original_cpf, System.DateTime Original_datanascimento, string Original_contato, string Original_contatoparente, string Original_email, string Original_endereco, string Original_turma, int Original_fk_idcurso) {
+        public virtual int Delete(int Original_idaluno, string Original_nomealuno, string Original_cpf, System.DateTime Original_datanascimento, string Original_contato, string Original_contatoparente, string Original_email, string Original_endereco, int Original_fk_idcurso, int Original_fk_idturma) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idaluno));
             if ((Original_nomealuno == null)) {
                 throw new global::System.ArgumentNullException("Original_nomealuno");
@@ -1895,13 +2368,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_endereco));
             }
-            if ((Original_turma == null)) {
-                throw new global::System.ArgumentNullException("Original_turma");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_turma));
-            }
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_fk_idcurso));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_fk_idcurso));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_fk_idturma));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1922,7 +2390,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idaluno, string nomealuno, string cpf, System.DateTime datanascimento, string contato, string contatoparente, string email, string endereco, string turma, int fk_idcurso) {
+        public virtual int Insert(int idaluno, string nomealuno, string cpf, System.DateTime datanascimento, string contato, string contatoparente, string email, string endereco, int fk_idcurso, int fk_idturma) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idaluno));
             if ((nomealuno == null)) {
                 throw new global::System.ArgumentNullException("nomealuno");
@@ -1961,13 +2429,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(endereco));
             }
-            if ((turma == null)) {
-                throw new global::System.ArgumentNullException("turma");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(turma));
-            }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(fk_idcurso));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(fk_idcurso));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(fk_idturma));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1997,8 +2460,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                     string contatoparente, 
                     string email, 
                     string endereco, 
-                    string turma, 
                     int fk_idcurso, 
+                    int fk_idturma, 
                     int Original_idaluno, 
                     string Original_nomealuno, 
                     string Original_cpf, 
@@ -2007,8 +2470,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                     string Original_contatoparente, 
                     string Original_email, 
                     string Original_endereco, 
-                    string Original_turma, 
-                    int Original_fk_idcurso) {
+                    int Original_fk_idcurso, 
+                    int Original_fk_idturma) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idaluno));
             if ((nomealuno == null)) {
                 throw new global::System.ArgumentNullException("nomealuno");
@@ -2047,13 +2510,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(endereco));
             }
-            if ((turma == null)) {
-                throw new global::System.ArgumentNullException("turma");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(turma));
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(fk_idcurso));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(fk_idcurso));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(fk_idturma));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_idaluno));
             if ((Original_nomealuno == null)) {
                 throw new global::System.ArgumentNullException("Original_nomealuno");
@@ -2093,13 +2551,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_endereco));
             }
-            if ((Original_turma == null)) {
-                throw new global::System.ArgumentNullException("Original_turma");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_turma));
-            }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_fk_idcurso));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_fk_idcurso));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_fk_idturma));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2128,8 +2581,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                     string contatoparente, 
                     string email, 
                     string endereco, 
-                    string turma, 
                     int fk_idcurso, 
+                    int fk_idturma, 
                     int Original_idaluno, 
                     string Original_nomealuno, 
                     string Original_cpf, 
@@ -2138,9 +2591,9 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                     string Original_contatoparente, 
                     string Original_email, 
                     string Original_endereco, 
-                    string Original_turma, 
-                    int Original_fk_idcurso) {
-            return this.Update(Original_idaluno, nomealuno, cpf, datanascimento, contato, contatoparente, email, endereco, turma, fk_idcurso, Original_idaluno, Original_nomealuno, Original_cpf, Original_datanascimento, Original_contato, Original_contatoparente, Original_email, Original_endereco, Original_turma, Original_fk_idcurso);
+                    int Original_fk_idcurso, 
+                    int Original_fk_idturma) {
+            return this.Update(Original_idaluno, nomealuno, cpf, datanascimento, contato, contatoparente, email, endereco, fk_idcurso, fk_idturma, Original_idaluno, Original_nomealuno, Original_cpf, Original_datanascimento, Original_contato, Original_contatoparente, Original_email, Original_endereco, Original_fk_idcurso, Original_fk_idturma);
         }
     }
     
@@ -2267,15 +2720,14 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             tableMapping.DataSetTable = "curso";
             tableMapping.ColumnMappings.Add("idcurso", "idcurso");
             tableMapping.ColumnMappings.Add("nomecurso", "nomecurso");
-            tableMapping.ColumnMappings.Add("turno", "turno");
             tableMapping.ColumnMappings.Add("cargahoraria", "cargahoraria");
             tableMapping.ColumnMappings.Add("descricao", "descricao");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM \"public\".\"curso\" WHERE ((\"idcurso\" = :Original_idcurso) AND (\"nomecur" +
-                "so\" = :Original_nomecurso) AND (\"turno\" = :Original_turno) AND (\"cargahoraria\" =" +
-                " :Original_cargahoraria) AND (\"descricao\" = :Original_descricao))";
+                "so\" = :Original_nomecurso) AND (\"cargahoraria\" = :Original_cargahoraria) AND (\"d" +
+                "escricao\" = :Original_descricao))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Devart.Data.PostgreSql.PgSqlParameter param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "Original_idcurso";
@@ -2290,13 +2742,6 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "nomecurso";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_turno";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turno";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
@@ -2315,8 +2760,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"public\".\"curso\" (\"idcurso\", \"nomecurso\", \"turno\", \"cargahoraria\", \"d" +
-                "escricao\") VALUES (:idcurso, :nomecurso, :turno, :cargahoraria, :descricao)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"public\".\"curso\" (\"idcurso\", \"nomecurso\", \"cargahoraria\", \"descricao\"" +
+                ") VALUES (:idcurso, :nomecurso, :cargahoraria, :descricao)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "idcurso";
@@ -2332,12 +2777,6 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.SourceColumn = "nomecurso";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "turno";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turno";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "cargahoraria";
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
@@ -2351,7 +2790,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""public"".""curso"" SET ""idcurso"" = :idcurso, ""nomecurso"" = :nomecurso, ""turno"" = :turno, ""cargahoraria"" = :cargahoraria, ""descricao"" = :descricao WHERE ((""idcurso"" = :Original_idcurso) AND (""nomecurso"" = :Original_nomecurso) AND (""turno"" = :Original_turno) AND (""cargahoraria"" = :Original_cargahoraria) AND (""descricao"" = :Original_descricao))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""public"".""curso"" SET ""idcurso"" = :idcurso, ""nomecurso"" = :nomecurso, ""cargahoraria"" = :cargahoraria, ""descricao"" = :descricao WHERE ((""idcurso"" = :Original_idcurso) AND (""nomecurso"" = :Original_nomecurso) AND (""cargahoraria"" = :Original_cargahoraria) AND (""descricao"" = :Original_descricao))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "idcurso";
@@ -2365,12 +2804,6 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "nomecurso";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "turno";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turno";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "cargahoraria";
@@ -2397,13 +2830,6 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "nomecurso";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_turno";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "turno";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
@@ -2435,7 +2861,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             this._commandCollection = new global::Devart.Data.PostgreSql.PgSqlCommand[1];
             this._commandCollection[0] = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idcurso, nomecurso, turno, cargahoraria, descricao FROM \"public\".curso";
+            this._commandCollection[0].CommandText = "SELECT idcurso, nomecurso, cargahoraria, descricao FROM \"public\".curso";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2496,7 +2922,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idcurso, string Original_nomecurso, string Original_turno, string Original_cargahoraria, string Original_descricao) {
+        public virtual int Delete(int Original_idcurso, string Original_nomecurso, string Original_cargahoraria, string Original_descricao) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idcurso));
             if ((Original_nomecurso == null)) {
                 throw new global::System.ArgumentNullException("Original_nomecurso");
@@ -2504,23 +2930,17 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_nomecurso));
             }
-            if ((Original_turno == null)) {
-                throw new global::System.ArgumentNullException("Original_turno");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_turno));
-            }
             if ((Original_cargahoraria == null)) {
                 throw new global::System.ArgumentNullException("Original_cargahoraria");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_cargahoraria));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_cargahoraria));
             }
             if ((Original_descricao == null)) {
                 throw new global::System.ArgumentNullException("Original_descricao");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_descricao));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_descricao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2542,7 +2962,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idcurso, string nomecurso, string turno, string cargahoraria, string descricao) {
+        public virtual int Insert(int idcurso, string nomecurso, string cargahoraria, string descricao) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idcurso));
             if ((nomecurso == null)) {
                 throw new global::System.ArgumentNullException("nomecurso");
@@ -2550,23 +2970,17 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nomecurso));
             }
-            if ((turno == null)) {
-                throw new global::System.ArgumentNullException("turno");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(turno));
-            }
             if ((cargahoraria == null)) {
                 throw new global::System.ArgumentNullException("cargahoraria");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(cargahoraria));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(cargahoraria));
             }
             if ((descricao == null)) {
                 throw new global::System.ArgumentNullException("descricao");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(descricao));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(descricao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2588,7 +3002,7 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int idcurso, string nomecurso, string turno, string cargahoraria, string descricao, int Original_idcurso, string Original_nomecurso, string Original_turno, string Original_cargahoraria, string Original_descricao) {
+        public virtual int Update(int idcurso, string nomecurso, string cargahoraria, string descricao, int Original_idcurso, string Original_nomecurso, string Original_cargahoraria, string Original_descricao) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idcurso));
             if ((nomecurso == null)) {
                 throw new global::System.ArgumentNullException("nomecurso");
@@ -2596,48 +3010,36 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nomecurso));
             }
-            if ((turno == null)) {
-                throw new global::System.ArgumentNullException("turno");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(turno));
-            }
             if ((cargahoraria == null)) {
                 throw new global::System.ArgumentNullException("cargahoraria");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(cargahoraria));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(cargahoraria));
             }
             if ((descricao == null)) {
                 throw new global::System.ArgumentNullException("descricao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(descricao));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(descricao));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_idcurso));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idcurso));
             if ((Original_nomecurso == null)) {
                 throw new global::System.ArgumentNullException("Original_nomecurso");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_nomecurso));
-            }
-            if ((Original_turno == null)) {
-                throw new global::System.ArgumentNullException("Original_turno");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_turno));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_nomecurso));
             }
             if ((Original_cargahoraria == null)) {
                 throw new global::System.ArgumentNullException("Original_cargahoraria");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_cargahoraria));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_cargahoraria));
             }
             if ((Original_descricao == null)) {
                 throw new global::System.ArgumentNullException("Original_descricao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_descricao));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_descricao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2659,8 +3061,461 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nomecurso, string turno, string cargahoraria, string descricao, int Original_idcurso, string Original_nomecurso, string Original_turno, string Original_cargahoraria, string Original_descricao) {
-            return this.Update(Original_idcurso, nomecurso, turno, cargahoraria, descricao, Original_idcurso, Original_nomecurso, Original_turno, Original_cargahoraria, Original_descricao);
+        public virtual int Update(string nomecurso, string cargahoraria, string descricao, int Original_idcurso, string Original_nomecurso, string Original_cargahoraria, string Original_descricao) {
+            return this.Update(Original_idcurso, nomecurso, cargahoraria, descricao, Original_idcurso, Original_nomecurso, Original_cargahoraria, Original_descricao);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class turmaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Devart.Data.PostgreSql.PgSqlDataAdapter _adapter;
+        
+        private global::Devart.Data.PostgreSql.PgSqlConnection _connection;
+        
+        private global::System.Data.Common.DbTransaction _transaction;
+        
+        private global::Devart.Data.PostgreSql.PgSqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public turmaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::Devart.Data.PostgreSql.PgSqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::Devart.Data.PostgreSql.PgSqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Devart.Data.PostgreSql.PgSqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.Common.DbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::Devart.Data.PostgreSql.PgSqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Devart.Data.PostgreSql.PgSqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "turma";
+            tableMapping.ColumnMappings.Add("idturma", "idturma");
+            tableMapping.ColumnMappings.Add("nometurma", "nometurma");
+            tableMapping.ColumnMappings.Add("turno", "turno");
+            tableMapping.ColumnMappings.Add("fk_idcurso", "fk_idcurso");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM \"public\".\"turma\" WHERE ((\"idturma\" = :Original_idturma) AND (\"nometur" +
+                "ma\" = :Original_nometurma) AND (\"turno\" = :Original_turno) AND (\"fk_idcurso\" = :" +
+                "Original_fk_idcurso))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::Devart.Data.PostgreSql.PgSqlParameter param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "idturma";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_nometurma";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "nometurma";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_turno";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "turno";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_fk_idcurso";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idcurso";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"public\".\"turma\" (\"idturma\", \"nometurma\", \"turno\", \"fk_idcurso\") VALU" +
+                "ES (:idturma, :nometurma, :turno, :fk_idcurso)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "idturma";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "nometurma";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "nometurma";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "turno";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "turno";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "fk_idcurso";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idcurso";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""public"".""turma"" SET ""idturma"" = :idturma, ""nometurma"" = :nometurma, ""turno"" = :turno, ""fk_idcurso"" = :fk_idcurso WHERE ((""idturma"" = :Original_idturma) AND (""nometurma"" = :Original_nometurma) AND (""turno"" = :Original_turno) AND (""fk_idcurso"" = :Original_fk_idcurso))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "idturma";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "nometurma";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "nometurma";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "turno";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "turno";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "fk_idcurso";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idcurso";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_idturma";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "idturma";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_nometurma";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "nometurma";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_turno";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "turno";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "Original_fk_idcurso";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
+            param.IsNullable = true;
+            param.SourceColumn = "fk_idcurso";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Devart.Data.PostgreSql.PgSqlConnection();
+            this._connection.ConnectionString = global::Faculdade.Properties.Settings.Default.FaculdadeConn;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Devart.Data.PostgreSql.PgSqlCommand[1];
+            this._commandCollection[0] = new global::Devart.Data.PostgreSql.PgSqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT idturma, nometurma, turno, fk_idcurso FROM \"public\".turma";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(FaculdadeDataSet.turmaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual FaculdadeDataSet.turmaDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            FaculdadeDataSet.turmaDataTable dataTable = new FaculdadeDataSet.turmaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(FaculdadeDataSet.turmaDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(FaculdadeDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "turma");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_idturma, string Original_nometurma, string Original_turno, int Original_fk_idcurso) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idturma));
+            if ((Original_nometurma == null)) {
+                throw new global::System.ArgumentNullException("Original_nometurma");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_nometurma));
+            }
+            if ((Original_turno == null)) {
+                throw new global::System.ArgumentNullException("Original_turno");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_turno));
+            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_fk_idcurso));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int idturma, string nometurma, string turno, int fk_idcurso) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idturma));
+            if ((nometurma == null)) {
+                throw new global::System.ArgumentNullException("nometurma");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nometurma));
+            }
+            if ((turno == null)) {
+                throw new global::System.ArgumentNullException("turno");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(turno));
+            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(fk_idcurso));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int idturma, string nometurma, string turno, int fk_idcurso, int Original_idturma, string Original_nometurma, string Original_turno, int Original_fk_idcurso) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idturma));
+            if ((nometurma == null)) {
+                throw new global::System.ArgumentNullException("nometurma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nometurma));
+            }
+            if ((turno == null)) {
+                throw new global::System.ArgumentNullException("turno");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(turno));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(fk_idcurso));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idturma));
+            if ((Original_nometurma == null)) {
+                throw new global::System.ArgumentNullException("Original_nometurma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_nometurma));
+            }
+            if ((Original_turno == null)) {
+                throw new global::System.ArgumentNullException("Original_turno");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_turno));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_fk_idcurso));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string nometurma, string turno, int fk_idcurso, int Original_idturma, string Original_nometurma, string Original_turno, int Original_fk_idcurso) {
+            return this.Update(Original_idturma, nometurma, turno, fk_idcurso, Original_idturma, Original_nometurma, Original_turno, Original_fk_idcurso);
         }
     }
     
@@ -2679,6 +3534,8 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         private alunoTableAdapter _alunoTableAdapter;
         
         private cursoTableAdapter _cursoTableAdapter;
+        
+        private turmaTableAdapter _turmaTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2725,6 +3582,20 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public turmaTableAdapter turmaTableAdapter {
+            get {
+                return this._turmaTableAdapter;
+            }
+            set {
+                this._turmaTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -2750,6 +3621,10 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                             && (this._cursoTableAdapter.Connection != null))) {
                     return this._cursoTableAdapter.Connection;
                 }
+                if (((this._turmaTableAdapter != null) 
+                            && (this._turmaTableAdapter.Connection != null))) {
+                    return this._turmaTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -2769,6 +3644,9 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                 if ((this._cursoTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._turmaTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -2786,6 +3664,15 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._cursoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._turmaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.turma.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._turmaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -2816,6 +3703,14 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._turmaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.turma.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._turmaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._alunoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.aluno.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -2839,6 +3734,14 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._alunoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._turmaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.turma.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._turmaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -2899,6 +3802,11 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
+            if (((this._turmaTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._turmaTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
+                        "cadeia de conexão.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager não contém informações de conexão. Defina cada propriedade Ta" +
@@ -2947,6 +3855,15 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                     if (this._cursoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._cursoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._cursoTableAdapter.Adapter);
+                    }
+                }
+                if ((this._turmaTableAdapter != null)) {
+                    revertConnections.Add(this._turmaTableAdapter, this._turmaTableAdapter.Connection);
+                    this._turmaTableAdapter.Connection = ((global::Devart.Data.PostgreSql.PgSqlConnection)(workConnection));
+                    this._turmaTableAdapter.Transaction = ((global::System.Data.Common.DbTransaction)(workTransaction));
+                    if (this._turmaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._turmaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._turmaTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3014,6 +3931,10 @@ namespace Faculdade.FaculdadeDataSetTableAdapters {
                 if ((this._cursoTableAdapter != null)) {
                     this._cursoTableAdapter.Connection = ((global::Devart.Data.PostgreSql.PgSqlConnection)(revertConnections[this._cursoTableAdapter]));
                     this._cursoTableAdapter.Transaction = null;
+                }
+                if ((this._turmaTableAdapter != null)) {
+                    this._turmaTableAdapter.Connection = ((global::Devart.Data.PostgreSql.PgSqlConnection)(revertConnections[this._turmaTableAdapter]));
+                    this._turmaTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
