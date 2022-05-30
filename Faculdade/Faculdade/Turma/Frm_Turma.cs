@@ -31,19 +31,23 @@ namespace Faculdade
             TxB_nomeAlterar.Visible = false;
             Cbx_cursoTurma.SelectedItem = null;
             Cbx_Turno.SelectedItem = null;
+            Cbx_cursoAntigo.SelectedItem = null;
+            Lbl_cursoAltera.Visible = false;
+            Lbl_turmaAltera.Visible = false;
+            Lbl_turnoAltera.Visible = false;
         }
 
         private void EditaColunaDgv()
         {
             Dgv_turmas.RowHeadersVisible = false;
             Dgv_turmas.Columns[0].HeaderText = "ID";
-            Dgv_turmas.Columns[0].Width = 25;
+            Dgv_turmas.Columns[0].Width = 30;
             Dgv_turmas.Columns[1].HeaderText = "TURMA";
             Dgv_turmas.Columns[1].Width = 100;
             Dgv_turmas.Columns[2].HeaderText = "TURNO";
             Dgv_turmas.Columns[2].Width = 80;
             Dgv_turmas.Columns[3].HeaderText = "CURSO";
-            Dgv_turmas.Columns[3].Width = 200;
+            Dgv_turmas.Columns[3].Width = 250;
         }
 
         public void AtualizaDataGridView()
@@ -76,6 +80,68 @@ namespace Faculdade
             }
         }
 
+        public void BuscaTurnoDataGridView()
+        {
+            if (conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            try
+            {
+                if (Cbx_buscaTurno.SelectedItem != null)
+                {
+                    cmd.Connection = conexao.conn;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY idTurma";
+                    dt = new DataTable();
+                    dt.Load(cmd.ExecuteReader());
+                    Dgv_turmas.DataSource = null;
+                    Dgv_turmas.DataSource = dt;
+                    EditaColunaDgv();
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    AtualizaDataGridView();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.conn.Close();
+            }
+        }
+        public void BuscaDataGridView()
+        {
+            if (conexao.conn.State != ConnectionState.Open)
+            {
+                conexao.conn.Open();
+            }
+            cmd.Connection = conexao.conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY idTurma";
+            dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            Dgv_turmas.DataSource = null;
+            Dgv_turmas.DataSource = dt;
+            EditaColunaDgv();
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.conn.Close();
+            }
+        }
         private void preencherCBDescricao(ComboBox cb)
         {
             NpgsqlConnection con = new NpgsqlConnection(conexao.connString);
@@ -134,6 +200,9 @@ namespace Faculdade
                     TxB_nomeAlterar.Visible = false;
                     Cbx_cursoAntigo.Visible = false;
                     Cbx_turnoAntigo.Visible = false;
+                    Lbl_cursoAltera.Visible = false;
+                    Lbl_turmaAltera.Visible = false;
+                    Lbl_turnoAltera.Visible = false;
                 }
 
             }
@@ -188,7 +257,9 @@ namespace Faculdade
                     TxB_nomeAlterar.Visible = true;
                     Cbx_cursoAntigo.Visible = true;
                     Cbx_turnoAntigo.Visible = true;
-                    Txb_nomeTurma.Text = null;
+                    Lbl_cursoAltera.Visible = true;
+                    Lbl_turmaAltera.Visible = true;
+                    Lbl_turnoAltera.Visible = true;
                     Cbx_cursoTurma.SelectedItem = null;
                     Cbx_Turno.SelectedItem = null;
                 }
@@ -282,6 +353,9 @@ namespace Faculdade
                     TxB_nomeAlterar.Visible = false;
                     Cbx_cursoAntigo.Visible = false;
                     Cbx_turnoAntigo.Visible = false;
+                    Lbl_cursoAltera.Visible = false;
+                    Lbl_turmaAltera.Visible = false;
+                    Lbl_turnoAltera.Visible = false;
                 }
             }
             catch (NullReferenceException)
@@ -306,6 +380,32 @@ namespace Faculdade
                 MessageBox.Show(excluir.mensagem);
             }
             AtualizaDataGridView();
+        }
+
+        private void Txb_buscaTurma_TextChanged(object sender, EventArgs e)
+        {
+            BuscaDataGridView();
+        }
+
+        private void Cbx_buscaTurno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BuscaTurnoDataGridView();
+        }
+
+        private void Btn_LimparFiltro_Click(object sender, EventArgs e)
+        {
+            Txb_buscaTurma.Clear();
+            Cbx_buscaTurno.SelectedItem = null;
+        }
+
+        private void Btn_limpar_Click(object sender, EventArgs e)
+        {
+            Txb_nomeTurma.Clear();
+            TxB_nomeAlterar.Clear();
+            Cbx_cursoAntigo.SelectedItem = null;
+            Cbx_cursoTurma.SelectedItem = null;
+            Cbx_Turno.SelectedItem = null;
+            Cbx_turnoAntigo.SelectedItem = null;
         }
     }
 }

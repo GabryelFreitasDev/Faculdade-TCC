@@ -42,17 +42,17 @@
             this.Lbl_Introducao = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Pic_Fechar = new System.Windows.Forms.PictureBox();
             this.Pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.Pic_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pn_Menu = new System.Windows.Forms.Panel();
-            this.Pic_Fechar = new System.Windows.Forms.PictureBox();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Menu
@@ -81,7 +81,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Btn_Alunos
             // 
@@ -241,6 +240,17 @@
             this.panel3.Size = new System.Drawing.Size(1136, 100);
             this.panel3.TabIndex = 10;
             // 
+            // Pic_Fechar
+            // 
+            this.Pic_Fechar.Image = global::Faculdade.Properties.Resources.Fechar;
+            this.Pic_Fechar.Location = new System.Drawing.Point(1090, 30);
+            this.Pic_Fechar.Name = "Pic_Fechar";
+            this.Pic_Fechar.Size = new System.Drawing.Size(35, 35);
+            this.Pic_Fechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_Fechar.TabIndex = 22;
+            this.Pic_Fechar.TabStop = false;
+            this.Pic_Fechar.Click += new System.EventHandler(this.Pic_Fechar_Click);
+            // 
             // Pic_Minimizar
             // 
             this.Pic_Minimizar.Image = global::Faculdade.Properties.Resources.Minimizar;
@@ -268,20 +278,8 @@
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
-            this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
+            this.Pn_Menu.Size = new System.Drawing.Size(1150, 740);
             this.Pn_Menu.TabIndex = 14;
-            this.Pn_Menu.Paint += new System.Windows.Forms.PaintEventHandler(this.Pn_Menu_Paint_2);
-            // 
-            // Pic_Fechar
-            // 
-            this.Pic_Fechar.Image = global::Faculdade.Properties.Resources.Fechar;
-            this.Pic_Fechar.Location = new System.Drawing.Point(1090, 30);
-            this.Pic_Fechar.Name = "Pic_Fechar";
-            this.Pic_Fechar.Size = new System.Drawing.Size(35, 35);
-            this.Pic_Fechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_Fechar.TabIndex = 22;
-            this.Pic_Fechar.TabStop = false;
-            this.Pic_Fechar.Click += new System.EventHandler(this.Pic_Fechar_Click);
             // 
             // Frm_Menu
             // 
@@ -306,9 +304,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -142,16 +142,6 @@ namespace Faculdade
             
         }
 
-        private void Pn_Menu_Paint_2(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Pic_Fechar_Click(object sender, EventArgs e)
         {
             Application.Exit();

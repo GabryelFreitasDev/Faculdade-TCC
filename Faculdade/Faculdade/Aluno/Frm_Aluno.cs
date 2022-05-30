@@ -22,11 +22,7 @@ namespace Faculdade
             InitializeComponent();
             preencherCBCurso(Cbx_Curso);
             preencherCBCurso(Cbx_buscaCurso);
-            Txb_nomeAlterar.Visible = false;
-            Lbl_nomeAlterar.Visible = false;
-            Cbx_turmaAluno.Visible = false;
-            Lbl_disponivel.Visible = false;
-            Lbl_turma.Visible = false;
+            preencherCBTurma();
         }
 
         private void Frm_Aluno_Load(object sender, EventArgs e)
@@ -35,8 +31,13 @@ namespace Faculdade
             Cbx_buscaCurso.SelectedItem = null;
             AtualizaDataGridView();
             EditaColunaDgv();
-            preencherCBTurma();
+            Txb_nomeAlterar.Visible = false;
+            Lbl_nomeAlterar.Visible = false;
+            Cbx_turmaAluno.Visible = false;
+            Lbl_disponivel.Visible = false;
+            Lbl_turma.Visible = false;
         }
+
         public void AtualizaDataGridView()
         {
             if (conexao.conn.State != ConnectionState.Open)
@@ -144,7 +145,6 @@ namespace Faculdade
             Cbx_turmaAluno.DisplayMember = "nomeTurma";
             Cbx_turmaAluno.Refresh();
         }
-
 
         private void VerificaNullorEmpty(string valor)
         {
