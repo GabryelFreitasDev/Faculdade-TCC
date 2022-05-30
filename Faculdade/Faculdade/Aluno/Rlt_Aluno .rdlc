@@ -2,47 +2,47 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.60042cm</Width>
+              <Width>0.67437cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.30458cm</Width>
+              <Width>4.80187cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.65875cm</Width>
+              <Width>2.28833cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.87042cm</Width>
+              <Width>2.26188cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.71167cm</Width>
+              <Width>2.26188cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.02917cm</Width>
+              <Width>2.28833cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.0875cm</Width>
+              <Width>5.3575cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.98708cm</Width>
+              <Width>6.49521cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.7225cm</Width>
+              <Width>6.01896cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.99729cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.58677cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox2">
+                    <Textbox Name="Textbox22">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -58,7 +58,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -74,7 +74,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox4">
+                    <Textbox Name="Textbox24">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -90,7 +90,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <rd:DefaultName>Textbox24</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -106,7 +106,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox6">
+                    <Textbox Name="Textbox26">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -122,7 +122,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <rd:DefaultName>Textbox26</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -138,7 +138,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox28">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -154,7 +154,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox28</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -170,7 +170,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox12">
+                    <Textbox Name="Textbox30">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -186,7 +186,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <rd:DefaultName>Textbox30</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -202,14 +202,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox32">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CONT. PARENTE</Value>
+                              <Value>CONTATO PAR.</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -218,7 +218,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox32</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -234,7 +234,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox14">
+                    <Textbox Name="Textbox34">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -250,7 +250,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <rd:DefaultName>Textbox34</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -266,7 +266,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox36">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -282,7 +282,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox36</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -298,14 +298,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox18">
+                    <Textbox Name="Textbox38">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NOME CURSO</Value>
+                              <Value>CURSO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -314,7 +314,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox18</rd:DefaultName>
+                      <rd:DefaultName>Textbox38</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -330,14 +330,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox20">
+                    <Textbox Name="Textbox40">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value> TURMA</Value>
+                              <Value>TURMA</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -346,7 +346,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <rd:DefaultName>Textbox40</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -363,7 +363,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.58677cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -378,7 +378,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>idaluno</rd:DefaultName>
@@ -408,7 +410,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>nomealuno</rd:DefaultName>
@@ -438,7 +442,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>cpf</rd:DefaultName>
@@ -468,7 +474,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>datanascimento</rd:DefaultName>
@@ -498,7 +506,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>contato</rd:DefaultName>
@@ -528,7 +538,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>contatoparente</rd:DefaultName>
@@ -558,7 +570,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>email</rd:DefaultName>
@@ -588,7 +602,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>endereco</rd:DefaultName>
@@ -607,21 +623,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="fk_idcurso">
+                    <Textbox Name="nomecurso">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!fk_idcurso.Value</Value>
+                              <Value>=Fields!nomecurso.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>fk_idcurso</rd:DefaultName>
+                      <rd:DefaultName>nomecurso</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -637,21 +655,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="fk_idturma">
+                    <Textbox Name="nometurma">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!fk_idturma.Value</Value>
+                              <Value>=Fields!nometurma.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>fk_idturma</rd:DefaultName>
+                      <rd:DefaultName>nometurma</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -694,10 +714,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>aluno</DataSetName>
-        <Top>1.13453cm</Top>
+        <Top>1.3462cm</Top>
         <Left>0.44662cm</Left>
-        <Height>1.17354cm</Height>
-        <Width>33.96937cm</Width>
+        <Height>1.2cm</Height>
+        <Width>34.94833cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -708,7 +728,7 @@
     <Height>1.94792in</Height>
     <Style />
   </Body>
-  <Width>13.7216in</Width>
+  <Width>14.28919in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -777,32 +797,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DevartDataPostgreSql">
+    <DataSource Name="FaculdadeAluno">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e0a3c428-901c-4e5a-a244-90a23d8de0cf</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="FaculdadeDataSet">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>4a397fd1-01b6-4263-b786-ea934eb29a14</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="FaculdadeDataSet1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>ee447c7e-259d-42e3-b0b8-5727976e69b6</rd:DataSourceID>
+      <rd:DataSourceID>2f285250-48d4-454c-a58d-d8e14a6e144f</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="aluno">
       <Query>
-        <DataSourceName>FaculdadeDataSet</DataSourceName>
+        <DataSourceName>FaculdadeAluno</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -838,22 +844,22 @@
           <DataField>endereco</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fk_idcurso">
-          <DataField>fk_idcurso</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="nomecurso">
+          <DataField>nomecurso</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fk_idturma">
-          <DataField>fk_idturma</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="nometurma">
+          <DataField>nometurma</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>FaculdadeDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\FaculdadeDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>aluno</rd:TableName>
+        <rd:DataSetName>FaculdadeAluno</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\FaculdadeAluno.xsd</rd:SchemaPath>
+        <rd:TableName>AlunoRelatorio</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>alunoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>AlunoRelatorioTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

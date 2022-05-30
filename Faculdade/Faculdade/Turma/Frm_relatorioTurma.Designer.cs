@@ -1,6 +1,7 @@
-﻿namespace Faculdade
+﻿
+namespace Faculdade
 {
-    partial class Frm_relatorioAluno
+    partial class Frm_relatorioTurma
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +29,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.RelatorioAluno = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.relatorioTurma = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // RelatorioAluno
+            // relatorioTurma
             // 
-            this.RelatorioAluno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RelatorioAluno.LocalReport.ReportEmbeddedResource = "Faculdade.Aluno.Rlt_Aluno .rdlc";
-            this.RelatorioAluno.Location = new System.Drawing.Point(0, 0);
-            this.RelatorioAluno.Name = "RelatorioAluno";
-            this.RelatorioAluno.ServerReport.BearerToken = null;
-            this.RelatorioAluno.Size = new System.Drawing.Size(1386, 606);
-            this.RelatorioAluno.TabIndex = 0;
+            this.relatorioTurma.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.relatorioTurma.LocalReport.ReportEmbeddedResource = "Faculdade.Turma.Rlt_Turma.rdlc";
+            this.relatorioTurma.Location = new System.Drawing.Point(0, 0);
+            this.relatorioTurma.Name = "relatorioTurma";
+            this.relatorioTurma.ServerReport.BearerToken = null;
+            this.relatorioTurma.Size = new System.Drawing.Size(800, 450);
+            this.relatorioTurma.TabIndex = 0;
             // 
-            // Frm_relatorioAluno
+            // Frm_relatorioTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 606);
-            this.Controls.Add(this.RelatorioAluno);
-            this.Name = "Frm_relatorioAluno";
-            this.Text = "Frm_relatorioAluno";
-            this.Load += new System.EventHandler(this.Frm_relatorioAluno_Load);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.relatorioTurma);
+            this.Name = "Frm_relatorioTurma";
+            this.Text = "Frm_relatorioTurma";
+            this.Load += new System.EventHandler(this.Frm_relatorioTurma_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer RelatorioAluno;
+        private Microsoft.Reporting.WinForms.ReportViewer relatorioTurma;
     }
 }

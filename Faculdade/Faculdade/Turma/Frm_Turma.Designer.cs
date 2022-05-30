@@ -48,6 +48,7 @@
             this.Cbx_buscaTurno = new System.Windows.Forms.ComboBox();
             this.Btn_LimparFiltro = new System.Windows.Forms.Button();
             this.Btn_limpar = new System.Windows.Forms.Button();
+            this.Btn_relatorioCurso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_turmas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -258,11 +259,23 @@
             this.Btn_limpar.UseVisualStyleBackColor = true;
             this.Btn_limpar.Click += new System.EventHandler(this.Btn_limpar_Click);
             // 
+            // Btn_relatorioCurso
+            // 
+            this.Btn_relatorioCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Btn_relatorioCurso.Location = new System.Drawing.Point(45, 400);
+            this.Btn_relatorioCurso.Name = "Btn_relatorioCurso";
+            this.Btn_relatorioCurso.Size = new System.Drawing.Size(89, 23);
+            this.Btn_relatorioCurso.TabIndex = 71;
+            this.Btn_relatorioCurso.Text = "RELATÓRIO";
+            this.Btn_relatorioCurso.UseVisualStyleBackColor = true;
+            this.Btn_relatorioCurso.Click += new System.EventHandler(this.Btn_relatorioCurso_Click);
+            // 
             // Frm_Turma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 576);
+            this.Controls.Add(this.Btn_relatorioCurso);
             this.Controls.Add(this.Btn_limpar);
             this.Controls.Add(this.Btn_LimparFiltro);
             this.Controls.Add(this.Cbx_buscaTurno);
@@ -314,5 +327,6 @@
         private System.Windows.Forms.ComboBox Cbx_buscaTurno;
         private System.Windows.Forms.Button Btn_LimparFiltro;
         private System.Windows.Forms.Button Btn_limpar;
+        private System.Windows.Forms.Button Btn_relatorioCurso;
     }
 }

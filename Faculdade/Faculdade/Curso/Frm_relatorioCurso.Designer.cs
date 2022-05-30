@@ -29,25 +29,25 @@ namespace Faculdade
         /// </summary>
         private void InitializeComponent()
         {
-            this.RelatorioCurso = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.relatorioCurso = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // RelatorioCurso
+            // relatorioCurso
             // 
-            this.RelatorioCurso.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RelatorioCurso.LocalReport.ReportEmbeddedResource = "Faculdade.Rlt_Curso.rdlc";
-            this.RelatorioCurso.Location = new System.Drawing.Point(0, 0);
-            this.RelatorioCurso.Name = "RelatorioCurso";
-            this.RelatorioCurso.ServerReport.BearerToken = null;
-            this.RelatorioCurso.Size = new System.Drawing.Size(776, 701);
-            this.RelatorioCurso.TabIndex = 0;
+            this.relatorioCurso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.relatorioCurso.LocalReport.ReportEmbeddedResource = "Faculdade.Curso.Rlt_Curso.rdlc";
+            this.relatorioCurso.Location = new System.Drawing.Point(0, 0);
+            this.relatorioCurso.Name = "relatorioCurso";
+            this.relatorioCurso.ServerReport.BearerToken = null;
+            this.relatorioCurso.Size = new System.Drawing.Size(776, 701);
+            this.relatorioCurso.TabIndex = 0;
             // 
             // Frm_relatorioCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 701);
-            this.Controls.Add(this.RelatorioCurso);
+            this.Controls.Add(this.relatorioCurso);
             this.Name = "Frm_relatorioCurso";
             this.Text = "Frm_relatorioCurso";
             this.Load += new System.EventHandler(this.Frm_relatorioCurso_Load);
@@ -57,6 +57,6 @@ namespace Faculdade
 
         #endregion
 
-        public Microsoft.Reporting.WinForms.ReportViewer RelatorioCurso;
+        private Microsoft.Reporting.WinForms.ReportViewer relatorioCurso;
     }
 }

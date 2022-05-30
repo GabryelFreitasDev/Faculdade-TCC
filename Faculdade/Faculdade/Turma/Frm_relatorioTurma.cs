@@ -1,23 +1,26 @@
 ﻿using Microsoft.Reporting.WinForms;
 using Npgsql;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Faculdade
 {
-    public partial class Frm_relatorioCurso : Form
+    public partial class Frm_relatorioTurma : Form
     {
-       
         Conexao conexao = new Conexao();
         DataTable dt = new DataTable();
-
-        public Frm_relatorioCurso(DataTable dt)
+        public Frm_relatorioTurma(DataTable dt)
         {
             this.dt = dt;
             InitializeComponent();
         }
-
         private DataTable geraRelatorio()
         {
             NpgsqlCommand cmd = new NpgsqlCommand();
@@ -28,20 +31,20 @@ namespace Faculdade
             }
             DataTable dt = new DataTable();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM \"curso\""; 
+            cmd.CommandText = "SELECT * FROM Turma";
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             da.Fill(dt);
             da.Dispose();
             return dt;
         }
 
-        private void Frm_relatorioCurso_Load(object sender, EventArgs e)
+        private void Frm_relatorioTurma_Load(object sender, EventArgs e)
         {
-            relatorioCurso.LocalReport.DataSources.Clear();
-            ReportDataSource relatorio = new ReportDataSource("cursos", geraRelatorio());
-            this.relatorioCurso.LocalReport.DataSources.Add(relatorio);
-            this.relatorioCurso.RefreshReport();
-            this.relatorioCurso.RefreshReport();
+            relatorioTurma.LocalReport.DataSources.Clear();
+            ReportDataSource relatorio = new ReportDataSource("turma", geraRelatorio());
+            this.relatorioTurma.LocalReport.DataSources.Add(relatorio);
+            this.relatorioTurma.RefreshReport();
+            this.relatorioTurma.RefreshReport();
         }
     }
 }

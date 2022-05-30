@@ -449,7 +449,6 @@
         private System.Windows.Forms.Button Btn_editaAluno;
         private System.Windows.Forms.Button Btn_excluiAluno;
         private System.Windows.Forms.Button Btn_relatorio;
-        private System.Windows.Forms.ComboBox Cbx_Curso;
         private System.Windows.Forms.MaskedTextBox MTxb_contatoParente;
         private System.Windows.Forms.MaskedTextBox Mtxb_cpf;
         private System.Windows.Forms.MaskedTextBox MTxb_contato;
@@ -475,5 +474,6 @@
         private System.Windows.Forms.Label Lbl_operacaoEscolha;
         private System.Windows.Forms.ComboBox Cbx_turmaAluno;
         private System.Windows.Forms.Label Lbl_disponivel;
+        public System.Windows.Forms.ComboBox Cbx_Curso;
     }
 }

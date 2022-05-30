@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="FaculdadeDataSet1" targetNamespace="http://tempuri.org/FaculdadeDataSet1.xsd" xmlns:mstns="http://tempuri.org/FaculdadeDataSet1.xsd" xmlns="http://tempuri.org/FaculdadeDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="FaculdadeAluno" targetNamespace="http://tempuri.org/FaculdadeAluno.xsd" xmlns:mstns="http://tempuri.org/FaculdadeAluno.xsd" xmlns="http://tempuri.org/FaculdadeAluno.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -207,24 +207,31 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TurmaRelatorioTableAdapter" GeneratorDataComponentClassName="TurmaRelatorioTableAdapter" Name="TurmaRelatorio" UserDataComponentName="TurmaRelatorioTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AlunoRelatorioTableAdapter" GeneratorDataComponentClassName="AlunoRelatorioTableAdapter" Name="AlunoRelatorio" UserDataComponentName="AlunoRelatorioTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="FaculdadeConn (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        turma.idturma, turma.nometurma, turma.turno, curso.nomecurso
-FROM            turma INNER JOIN
-                         curso ON curso.idcurso = turma.fk_idcurso</CommandText>
+                    <CommandText>SELECT        aluno.idaluno, aluno.nomealuno, aluno.cpf, aluno.datanascimento, aluno.contato, aluno.contatoparente, aluno.email, aluno.endereco, curso.nomecurso, turma.nometurma
+FROM            aluno INNER JOIN
+                         curso ON aluno.fk_idcurso = curso.idcurso INNER JOIN
+                         turma ON aluno.fk_idturma = turma.idturma</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="idturma" DataSetColumn="idturma" />
-              <Mapping SourceColumn="nometurma" DataSetColumn="nometurma" />
-              <Mapping SourceColumn="turno" DataSetColumn="turno" />
+              <Mapping SourceColumn="idaluno" DataSetColumn="idaluno" />
+              <Mapping SourceColumn="nomealuno" DataSetColumn="nomealuno" />
+              <Mapping SourceColumn="cpf" DataSetColumn="cpf" />
+              <Mapping SourceColumn="datanascimento" DataSetColumn="datanascimento" />
+              <Mapping SourceColumn="contato" DataSetColumn="contato" />
+              <Mapping SourceColumn="contatoparente" DataSetColumn="contatoparente" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="endereco" DataSetColumn="endereco" />
               <Mapping SourceColumn="nomecurso" DataSetColumn="nomecurso" />
+              <Mapping SourceColumn="nometurma" DataSetColumn="nometurma" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -233,7 +240,7 @@ FROM            turma INNER JOIN
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="FaculdadeDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FaculdadeDataSet1" msprop:Generator_UserDSName="FaculdadeDataSet1">
+  <xs:element name="FaculdadeAluno" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FaculdadeAluno" msprop:Generator_UserDSName="FaculdadeAluno">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="aluno" msprop:Generator_TableClassName="alunoDataTable" msprop:Generator_TableVarName="tablealuno" msprop:Generator_RowChangedName="alunoRowChanged" msprop:Generator_TablePropName="aluno" msprop:Generator_RowDeletingName="alunoRowDeleting" msprop:Generator_RowChangingName="alunoRowChanging" msprop:Generator_RowEvHandlerName="alunoRowChangeEventHandler" msprop:Generator_RowDeletedName="alunoRowDeleted" msprop:Generator_RowClassName="alunoRow" msprop:Generator_UserTableName="aluno" msprop:Generator_RowEvArgName="alunoRowChangeEvent">
@@ -338,21 +345,50 @@ FROM            turma INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TurmaRelatorio" msprop:Generator_TableClassName="TurmaRelatorioDataTable" msprop:Generator_TableVarName="tableTurmaRelatorio" msprop:Generator_TablePropName="TurmaRelatorio" msprop:Generator_RowDeletingName="TurmaRelatorioRowDeleting" msprop:Generator_RowChangingName="TurmaRelatorioRowChanging" msprop:Generator_RowEvHandlerName="TurmaRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="TurmaRelatorioRowDeleted" msprop:Generator_UserTableName="TurmaRelatorio" msprop:Generator_RowChangedName="TurmaRelatorioRowChanged" msprop:Generator_RowEvArgName="TurmaRelatorioRowChangeEvent" msprop:Generator_RowClassName="TurmaRelatorioRow">
+        <xs:element name="AlunoRelatorio" msprop:Generator_TableClassName="AlunoRelatorioDataTable" msprop:Generator_TableVarName="tableAlunoRelatorio" msprop:Generator_TablePropName="AlunoRelatorio" msprop:Generator_RowDeletingName="AlunoRelatorioRowDeleting" msprop:Generator_RowChangingName="AlunoRelatorioRowChanging" msprop:Generator_RowEvHandlerName="AlunoRelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="AlunoRelatorioRowDeleted" msprop:Generator_UserTableName="AlunoRelatorio" msprop:Generator_RowChangedName="AlunoRelatorioRowChanged" msprop:Generator_RowEvArgName="AlunoRelatorioRowChangeEvent" msprop:Generator_RowClassName="AlunoRelatorioRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idturma" msprop:Generator_ColumnVarNameInTable="columnidturma" msprop:Generator_ColumnPropNameInRow="idturma" msprop:Generator_ColumnPropNameInTable="idturmaColumn" msprop:Generator_UserColumnName="idturma" type="xs:int" />
-              <xs:element name="nometurma" msprop:Generator_ColumnVarNameInTable="columnnometurma" msprop:Generator_ColumnPropNameInRow="nometurma" msprop:Generator_ColumnPropNameInTable="nometurmaColumn" msprop:Generator_UserColumnName="nometurma">
+              <xs:element name="idaluno" msprop:Generator_ColumnVarNameInTable="columnidaluno" msprop:Generator_ColumnPropNameInRow="idaluno" msprop:Generator_ColumnPropNameInTable="idalunoColumn" msprop:Generator_UserColumnName="idaluno" type="xs:int" />
+              <xs:element name="nomealuno" msprop:Generator_ColumnVarNameInTable="columnnomealuno" msprop:Generator_ColumnPropNameInRow="nomealuno" msprop:Generator_ColumnPropNameInTable="nomealunoColumn" msprop:Generator_UserColumnName="nomealuno">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="80" />
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="turno" msprop:Generator_ColumnVarNameInTable="columnturno" msprop:Generator_ColumnPropNameInRow="turno" msprop:Generator_ColumnPropNameInTable="turnoColumn" msprop:Generator_UserColumnName="turno">
+              <xs:element name="cpf" msprop:Generator_ColumnVarNameInTable="columncpf" msprop:Generator_ColumnPropNameInRow="cpf" msprop:Generator_ColumnPropNameInTable="cpfColumn" msprop:Generator_UserColumnName="cpf">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datanascimento" msprop:Generator_ColumnVarNameInTable="columndatanascimento" msprop:Generator_ColumnPropNameInRow="datanascimento" msprop:Generator_ColumnPropNameInTable="datanascimentoColumn" msprop:Generator_UserColumnName="datanascimento" type="xs:dateTime" />
+              <xs:element name="contato" msprop:Generator_ColumnVarNameInTable="columncontato" msprop:Generator_ColumnPropNameInRow="contato" msprop:Generator_ColumnPropNameInTable="contatoColumn" msprop:Generator_UserColumnName="contato">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contatoparente" msprop:Generator_ColumnVarNameInTable="columncontatoparente" msprop:Generator_ColumnPropNameInRow="contatoparente" msprop:Generator_ColumnPropNameInTable="contatoparenteColumn" msprop:Generator_UserColumnName="contatoparente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="endereco" msprop:Generator_ColumnVarNameInTable="columnendereco" msprop:Generator_ColumnPropNameInRow="endereco" msprop:Generator_ColumnPropNameInTable="enderecoColumn" msprop:Generator_UserColumnName="endereco">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -360,6 +396,13 @@ FROM            turma INNER JOIN
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nometurma" msprop:Generator_ColumnVarNameInTable="columnnometurma" msprop:Generator_ColumnPropNameInRow="nometurma" msprop:Generator_ColumnPropNameInTable="nometurmaColumn" msprop:Generator_UserColumnName="nometurma">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -380,9 +423,9 @@ FROM            turma INNER JOIN
       <xs:selector xpath=".//mstns:turma" />
       <xs:field xpath="mstns:idturma" />
     </xs:unique>
-    <xs:unique name="TurmaRelatorio_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:TurmaRelatorio" />
-      <xs:field xpath="mstns:idturma" />
+    <xs:unique name="AlunoRelatorio_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AlunoRelatorio" />
+      <xs:field xpath="mstns:idaluno" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

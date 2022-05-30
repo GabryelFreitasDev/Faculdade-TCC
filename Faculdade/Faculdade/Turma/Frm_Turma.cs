@@ -409,5 +409,13 @@ namespace Faculdade
             Cbx_Turno.SelectedItem = null;
             Cbx_turnoAntigo.SelectedItem = null;
         }
+
+        private void Btn_relatorioCurso_Click(object sender, EventArgs e)
+        {
+            using (Frm_relatorioTurma relatorioTurma = new Frm_relatorioTurma(dt))
+            {
+                relatorioTurma.ShowDialog();
+            }
+        }
     }
 }

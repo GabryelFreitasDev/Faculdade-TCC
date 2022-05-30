@@ -219,6 +219,17 @@
     <Compile Include="Curso\Frm_Curso.Designer.cs">
       <DependentUpon>Frm_Curso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FaculdadeAluno.cs">
+      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FaculdadeAluno.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FaculdadeDataSet.cs">
+      <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FaculdadeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -241,6 +252,12 @@
     </Compile>
     <Compile Include="Aluno\Frm_relatorioAluno.Designer.cs">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turma\Frm_relatorioTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turma\Frm_relatorioTurma.Designer.cs">
+      <DependentUpon>Frm_relatorioTurma.cs</DependentUpon>
     </Compile>
     <Compile Include="Turma\Frm_Turma.cs">
       <SubType>Form</SubType>
@@ -268,6 +285,10 @@
     <EmbeddedResource Include="Aluno\Frm_relatorioAluno.resx">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Turma\Rlt_Turma.rdlc" />
+    <EmbeddedResource Include="Turma\Frm_relatorioTurma.resx">
+      <DependentUpon>Frm_relatorioTurma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Turma\Frm_Turma.resx">
       <DependentUpon>Frm_Turma.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +303,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Curso\Rlt_Curso.rdlc" />
+    <None Include="FaculdadeAluno.xsc">
+      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
+    </None>
+    <None Include="FaculdadeAluno.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FaculdadeAluno.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FaculdadeAluno.xss">
+      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
+    </None>
     <None Include="FaculdadeDataSet.xsc">
       <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
     </None>
