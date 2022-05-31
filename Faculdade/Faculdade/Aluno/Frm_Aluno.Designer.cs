@@ -143,7 +143,7 @@
             this.Btn_relatorio.Name = "Btn_relatorio";
             this.Btn_relatorio.Size = new System.Drawing.Size(120, 23);
             this.Btn_relatorio.TabIndex = 49;
-            this.Btn_relatorio.Text = "RELATORIO";
+            this.Btn_relatorio.Text = "RELATÓRIO";
             this.Btn_relatorio.UseVisualStyleBackColor = true;
             this.Btn_relatorio.Click += new System.EventHandler(this.Btn_relatorio_Click);
             // 
@@ -156,6 +156,7 @@
             this.Cbx_Curso.Size = new System.Drawing.Size(315, 21);
             this.Cbx_Curso.TabIndex = 48;
             this.Cbx_Curso.SelectedIndexChanged += new System.EventHandler(this.Cbx_Curso_SelectedIndexChanged);
+            this.Cbx_Curso.Click += new System.EventHandler(this.Cbx_Curso_Click);
             // 
             // MTxb_contatoParente
             // 
@@ -340,6 +341,7 @@
             this.Cbx_buscaCurso.Size = new System.Drawing.Size(286, 21);
             this.Cbx_buscaCurso.TabIndex = 67;
             this.Cbx_buscaCurso.SelectedIndexChanged += new System.EventHandler(this.Cbx_buscaCurso_SelectedIndexChanged);
+            this.Cbx_buscaCurso.Click += new System.EventHandler(this.Cbx_buscaCurso_Click);
             // 
             // Btn_LimparFiltro
             // 
@@ -468,12 +470,12 @@
         private System.Windows.Forms.Button Btn_limpar;
         private System.Windows.Forms.TextBox Txb_buscaNome;
         private System.Windows.Forms.Label Lbl_buscaNome;
-        private System.Windows.Forms.ComboBox Cbx_buscaCurso;
         private System.Windows.Forms.Button Btn_LimparFiltro;
         private System.Windows.Forms.Label Lbl_buscaCurso;
         private System.Windows.Forms.Label Lbl_operacaoEscolha;
-        private System.Windows.Forms.ComboBox Cbx_turmaAluno;
         private System.Windows.Forms.Label Lbl_disponivel;
         public System.Windows.Forms.ComboBox Cbx_Curso;
+        public System.Windows.Forms.ComboBox Cbx_buscaCurso;
+        private System.Windows.Forms.ComboBox Cbx_turmaAluno;
     }
 }

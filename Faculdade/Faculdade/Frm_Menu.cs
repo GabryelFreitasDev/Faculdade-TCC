@@ -23,6 +23,9 @@ namespace Faculdade
         public Frm_Menu()
         {
             InitializeComponent();
+            AbrirForm<Frm_Aluno>();
+            AbrirForm<Frm_Curso>();
+            AbrirForm<Frm_Turma>();
         }
 
         private void Frm_Menu_Load(object sender, EventArgs e)
@@ -55,6 +58,7 @@ namespace Faculdade
             Btn_Cursos.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Curso>();
+           
         }
 
         private void Btn_Alunos_Click(object sender, EventArgs e)
@@ -63,7 +67,6 @@ namespace Faculdade
             Btn_Alunos.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Aluno>();
-            
         }
 
         private void Btn_Professores_Click(object sender, EventArgs e)
@@ -84,35 +87,6 @@ namespace Faculdade
         {
             descolorirAbas();
             Btn_Notas.BackColor = Color.FromArgb(38, 144, 182);
-        }
-
-        public void Pn_Menu_Paint(object sender, PaintEventArgs e)
-        {
-            
-            Form formulario;
-            formulario = Pn_Menu.Controls.OfType<Form>().FirstOrDefault();
-
-            if (formulario == null)
-            {
-                formulario = new Form();
-                formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill;
-                formulario.Size = Pn_Menu.Size;
-                Pn_Menu.Controls.Add(formulario);
-                Pn_Menu.Tag = formulario;
-                formulario.Show();
-                formulario.BringToFront();
-            }
-
-            else
-            {
-                if (formulario.WindowState == FormWindowState.Minimized)
-                    formulario.WindowState = FormWindowState.Normal;
-                formulario.BringToFront();
-            }
-            
-           
         }
 
         public void AbrirForm<Forms>() where Forms : Form, new()
@@ -137,21 +111,22 @@ namespace Faculdade
             {
                 if (formulario.WindowState == FormWindowState.Minimized)
                     formulario.WindowState = FormWindowState.Normal;
-                formulario.BringToFront();
+                    formulario.BringToFront();
             }
-            
+
         }
 
         private void Pic_Fechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void Pic_Maximizar_Click(object sender, EventArgs e)
         {
             if(Width < 1400)
             {
-                WindowState = FormWindowState.Maximized;
+                this.WindowState = FormWindowState.Maximized;
+
             }
             else
             {
@@ -163,11 +138,6 @@ namespace Faculdade
         private void Pic_Minimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

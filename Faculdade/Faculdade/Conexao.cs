@@ -63,5 +63,30 @@ namespace Faculdade
         {
             conn.Close();
         }
+        private void AbreConexao()
+        {
+            try
+            {
+                conn = new NpgsqlConnection(connString);
+                conn.Open();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception (ex.Message);
+            }
+        }
+
+        private void FechaConexao()
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Closed)
+                    conn.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

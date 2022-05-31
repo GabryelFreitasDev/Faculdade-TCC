@@ -16,16 +16,17 @@ namespace Faculdade
         Conexao conexao = new Conexao();
         NpgsqlCommand cmd = new NpgsqlCommand();
         DataTable dt = new DataTable();
+        Verifica verifica = new Verifica();
         public Frm_Turma()
         {
             InitializeComponent();
             AtualizaDataGridView();
-            preencherCBDescricao(Cbx_cursoTurma);
+            preencherCBcurso(Cbx_cursoTurma);
         }
 
         private void Frm_Turma_Load(object sender, EventArgs e)
         {
-            preencherCBDescricao(Cbx_cursoAntigo);
+            preencherCBcurso(Cbx_cursoAntigo);
             Cbx_cursoAntigo.Visible = false;
             Cbx_turnoAntigo.Visible = false;
             TxB_nomeAlterar.Visible = false;
@@ -35,7 +36,7 @@ namespace Faculdade
             Lbl_cursoAltera.Visible = false;
             Lbl_turmaAltera.Visible = false;
             Lbl_turnoAltera.Visible = false;
-            preencherCBDescricao(Cbx_cursoTurma);
+            preencherCBcurso(Cbx_cursoTurma);
         }
 
         private void EditaColunaDgv()
@@ -141,7 +142,7 @@ namespace Faculdade
                 conexao.conn.Close();
             }
         }
-        private void preencherCBDescricao(ComboBox cb)
+        private void preencherCBcurso(ComboBox cb)
         {
             NpgsqlConnection con = new NpgsqlConnection(conexao.connString);
             try
@@ -152,7 +153,7 @@ namespace Faculdade
             {
                 MessageBox.Show("Falha ao efetuar a conexão. Erro: " + sqle);
             }
-            String scom = "SELECT idCurso, nomeCurso from Curso";
+            String scom = "SELECT idCurso, nomeCurso from Curso ORDER BY nomeCurso";
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(scom, con);
             DataTable dtResultado = new DataTable();
             dtResultado.Clear();
@@ -163,20 +164,6 @@ namespace Faculdade
             cb.DisplayMember = "nomeCurso";
             cb.Refresh();
         }
-        private void VerificaNullorEmpty(string valor)
-        {
-            if (string.IsNullOrEmpty(valor))
-            {
-                throw new NullReferenceException();
-            }
-        }
-        private void VerificaCbxVazio(ComboBox cb)
-        {
-            if (cb.SelectedItem == null)
-            {
-                throw new NullReferenceException();
-            }
-        }
 
         private void Btn_insereTurma_Click(object sender, EventArgs e)
         {
@@ -185,10 +172,10 @@ namespace Faculdade
             {
                 if (!TxB_nomeAlterar.Visible)
                 {
-                    VerificaNullorEmpty(Txb_nomeTurma.Text);
+                    verifica.VerificaNullorEmpty(Txb_nomeTurma.Text);
 
-                    VerificaCbxVazio(Cbx_Turno);
-                    VerificaCbxVazio(Cbx_cursoTurma);
+                    verifica.VerificaCbxVazio(Cbx_Turno);
+                    verifica.VerificaCbxVazio(Cbx_cursoTurma);
 
                     inserir.Inserir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
                     MessageBox.Show(inserir.mensagem);
@@ -237,14 +224,14 @@ namespace Faculdade
                 if (TxB_nomeAlterar.Visible)
                 {
 
-                    VerificaNullorEmpty(TxB_nomeAlterar.Text);
-                    VerificaNullorEmpty(Txb_nomeTurma.Text);
+                    verifica.VerificaNullorEmpty(TxB_nomeAlterar.Text);
+                    verifica.VerificaNullorEmpty(Txb_nomeTurma.Text);
 
-                    VerificaCbxVazio(Cbx_turnoAntigo);
-                    VerificaCbxVazio(Cbx_cursoAntigo);
+                    verifica.VerificaCbxVazio(Cbx_turnoAntigo);
+                    verifica.VerificaCbxVazio(Cbx_cursoAntigo);
 
-                    VerificaCbxVazio(Cbx_Turno);
-                    VerificaCbxVazio(Cbx_cursoTurma);
+                    verifica.VerificaCbxVazio(Cbx_Turno);
+                    verifica.VerificaCbxVazio(Cbx_cursoTurma);
 
                     editar.Editar(TxB_nomeAlterar.Text, Cbx_turnoAntigo.Text, (int)Cbx_cursoAntigo.SelectedValue, Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
                     MessageBox.Show(editar.mensagem);
@@ -340,9 +327,9 @@ namespace Faculdade
             {
                 if (!TxB_nomeAlterar.Visible)
                 {
-                    VerificaCbxVazio(Cbx_cursoTurma);
-                    VerificaCbxVazio(Cbx_Turno);
-                    VerificaNullorEmpty(Txb_nomeTurma.Text);
+                    verifica.VerificaCbxVazio(Cbx_cursoTurma);
+                    verifica.VerificaCbxVazio(Cbx_Turno);
+                    verifica.VerificaNullorEmpty(Txb_nomeTurma.Text);
                     if (MessageBox.Show("Deseja realmente excluir a turma " + Txb_nomeTurma.Text + " do curso de " +  Cbx_cursoTurma.Text + " do turno "+ Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         excluir.Excluir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
@@ -416,6 +403,16 @@ namespace Faculdade
             {
                 relatorioTurma.ShowDialog();
             }
+        }
+
+        private void Cbx_cursoTurma_Click(object sender, EventArgs e)
+        {
+            preencherCBcurso(Cbx_cursoTurma);
+        }
+
+        private void Cbx_cursoAntigo_Click(object sender, EventArgs e)
+        {
+            preencherCBcurso(Cbx_cursoAntigo);
         }
     }
 }

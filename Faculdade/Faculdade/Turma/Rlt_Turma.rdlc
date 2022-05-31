@@ -9,13 +9,13 @@
               <Width>1.32292cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.71167cm</Width>
+              <Width>2.89688cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.24083cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.2625cm</Width>
+              <Width>8.05625cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -307,9 +307,9 @@
         </TablixRowHierarchy>
         <DataSetName>turma</DataSetName>
         <Top>1.47849cm</Top>
-        <Left>1.95474cm</Left>
-        <Height>1.08479cm</Height>
-        <Width>14.53792cm</Width>
+        <Left>1.05516cm</Left>
+        <Height>1.0848cm</Height>
+        <Width>15.51688cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -323,7 +323,7 @@
   <Width>6.90984in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>2.67229cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

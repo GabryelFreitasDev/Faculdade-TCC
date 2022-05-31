@@ -96,6 +96,5 @@ namespace Faculdade
                 mensagem = "Erro na Exclusão: " + ex.Message;
             }
         }
-
     }
 }

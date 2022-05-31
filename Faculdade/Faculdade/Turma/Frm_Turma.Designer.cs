@@ -77,6 +77,7 @@
             this.Cbx_cursoTurma.Name = "Cbx_cursoTurma";
             this.Cbx_cursoTurma.Size = new System.Drawing.Size(220, 21);
             this.Cbx_cursoTurma.TabIndex = 2;
+            this.Cbx_cursoTurma.Click += new System.EventHandler(this.Cbx_cursoTurma_Click);
             // 
             // Dgv_turmas
             // 
@@ -153,6 +154,7 @@
             this.Cbx_cursoAntigo.Name = "Cbx_cursoAntigo";
             this.Cbx_cursoAntigo.Size = new System.Drawing.Size(220, 21);
             this.Cbx_cursoAntigo.TabIndex = 44;
+            this.Cbx_cursoAntigo.Click += new System.EventHandler(this.Cbx_cursoAntigo_Click);
             // 
             // Btn_excluir
             // 
@@ -309,14 +311,12 @@
 
         private System.Windows.Forms.Button Btn_insereTurma;
         private System.Windows.Forms.TextBox Txb_nomeTurma;
-        private System.Windows.Forms.ComboBox Cbx_cursoTurma;
         private System.Windows.Forms.DataGridView Dgv_turmas;
         private System.Windows.Forms.Label Lbl_turnoAltera;
         private System.Windows.Forms.ComboBox Cbx_Turno;
         private System.Windows.Forms.TextBox TxB_nomeAlterar;
         private System.Windows.Forms.Button Btn_editar;
         private System.Windows.Forms.ComboBox Cbx_turnoAntigo;
-        private System.Windows.Forms.ComboBox Cbx_cursoAntigo;
         private System.Windows.Forms.Button Btn_excluir;
         private System.Windows.Forms.Label Lbl_turmaAltera;
         private System.Windows.Forms.Label Lbl_cursoAltera;
@@ -328,5 +328,7 @@
         private System.Windows.Forms.Button Btn_LimparFiltro;
         private System.Windows.Forms.Button Btn_limpar;
         private System.Windows.Forms.Button Btn_relatorioCurso;
+        private System.Windows.Forms.ComboBox Cbx_cursoTurma;
+        private System.Windows.Forms.ComboBox Cbx_cursoAntigo;
     }
 }

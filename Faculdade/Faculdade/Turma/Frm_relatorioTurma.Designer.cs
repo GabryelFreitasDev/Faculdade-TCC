@@ -38,14 +38,14 @@ namespace Faculdade
             this.relatorioTurma.LocalReport.ReportEmbeddedResource = "Faculdade.Turma.Rlt_Turma.rdlc";
             this.relatorioTurma.Location = new System.Drawing.Point(0, 0);
             this.relatorioTurma.Name = "relatorioTurma";
-            this.relatorioTurma.Size = new System.Drawing.Size(800, 450);
+            this.relatorioTurma.Size = new System.Drawing.Size(682, 508);
             this.relatorioTurma.TabIndex = 0;
             // 
             // Frm_relatorioTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(682, 508);
             this.Controls.Add(this.relatorioTurma);
             this.Name = "Frm_relatorioTurma";
             this.Text = "Frm_relatorioTurma";

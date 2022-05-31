@@ -188,6 +188,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label1);
@@ -233,14 +235,15 @@
             this.panel3.Controls.Add(this.Pic_Fechar);
             this.panel3.Controls.Add(this.Pic_Minimizar);
             this.panel3.Controls.Add(this.Pic_Maximizar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1139, 100);
+            this.panel3.Size = new System.Drawing.Size(1136, 100);
             this.panel3.TabIndex = 10;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Pic_Fechar
             // 
+            this.Pic_Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pic_Fechar.Image = global::Faculdade.Properties.Resources.Fechar;
             this.Pic_Fechar.Location = new System.Drawing.Point(1090, 30);
             this.Pic_Fechar.Name = "Pic_Fechar";
@@ -252,6 +255,7 @@
             // 
             // Pic_Minimizar
             // 
+            this.Pic_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pic_Minimizar.Image = global::Faculdade.Properties.Resources.Minimizar;
             this.Pic_Minimizar.Location = new System.Drawing.Point(990, 30);
             this.Pic_Minimizar.Name = "Pic_Minimizar";
@@ -263,6 +267,7 @@
             // 
             // Pic_Maximizar
             // 
+            this.Pic_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pic_Maximizar.Image = global::Faculdade.Properties.Resources.Maximizar;
             this.Pic_Maximizar.Location = new System.Drawing.Point(1040, 30);
             this.Pic_Maximizar.Name = "Pic_Maximizar";
@@ -274,12 +279,15 @@
             // 
             // Pn_Menu
             // 
+            this.Pn_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Pn_Menu.BackColor = System.Drawing.SystemColors.Control;
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
             this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
-            this.Pn_Menu.TabIndex = 14;
+            this.Pn_Menu.TabIndex = 15;
             // 
             // Frm_Menu
             // 
@@ -327,9 +335,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Panel Pn_Menu;
         private System.Windows.Forms.PictureBox Pic_Maximizar;
         private System.Windows.Forms.PictureBox Pic_Minimizar;
         private System.Windows.Forms.PictureBox Pic_Fechar;
+        public System.Windows.Forms.Panel Pn_Menu;
     }
 }

@@ -16,6 +16,7 @@ namespace Faculdade
         Conexao conexao = new Conexao();
         NpgsqlCommand cmd = new NpgsqlCommand();
         DataTable dt = new DataTable();
+        Verifica verifica = new Verifica();
 
         public Frm_Curso()
         {
@@ -50,7 +51,6 @@ namespace Faculdade
             Dgv_cursos.Columns[2].Width = 70;
             Dgv_cursos.Columns[3].HeaderText = "DESCRIÇÃO";
             Dgv_cursos.Columns[3].Width = 300;
-       
         }
         public void AtualizaDataGridView()
         {
@@ -94,7 +94,6 @@ namespace Faculdade
             Dgv_cursos.DataSource = null;
             Dgv_cursos.DataSource = dt;
             
-
             try
             {
                 cmd.ExecuteNonQuery();
@@ -109,22 +108,6 @@ namespace Faculdade
             }
         }
 
-        private void VerificaNullorEmpty(string valor)
-        {
-            if (string.IsNullOrEmpty(valor))
-            {
-                throw new NullReferenceException();
-            }
-        }
-
-        private void VerificaMaskFull(MaskedTextBox valor)
-        {
-            if (!valor.MaskCompleted)
-            {
-                throw new NullReferenceException();
-            }
-        }
-
         //INSERIR
         private void Btn_InsereCurso_Click(object sender, EventArgs e)
         {
@@ -133,11 +116,12 @@ namespace Faculdade
             {
                 if(!Txb_nomeAlterar.Visible && Lbl_operacao.Text == "INSERIR")
                 {
-                    VerificaNullorEmpty(Txb_nomeCurso.Text);
-                    VerificaNullorEmpty(Txb_descricao.Text);
-                    VerificaMaskFull(MTxb_cargaHoraria);
+                    verifica.VerificaNullorEmpty(Txb_nomeCurso.Text);
+                    verifica.VerificaNullorEmpty(Txb_descricao.Text);
+                    verifica.VerificaMaskFull(MTxb_cargaHoraria);
                     inserir.Inserir(Txb_nomeCurso.Text,MTxb_cargaHoraria.Text, Txb_descricao.Text);
                     MessageBox.Show(inserir.mensagem);
+                    AtualizaDataGridView();
                 }
                 else
                 {
@@ -171,8 +155,6 @@ namespace Faculdade
                 inserir.mensagem = "Erro na Edição:" + ex.Message;
                 MessageBox.Show(inserir.mensagem);
             }
-            
-            AtualizaDataGridView();
         }
 
         //EDITAR
@@ -183,10 +165,10 @@ namespace Faculdade
             {
                 if (Txb_nomeAlterar.Visible && Lbl_operacao.Text == "EDITAR")
                 {
-                    VerificaNullorEmpty(Txb_nomeCurso.Text);
-                    VerificaNullorEmpty(Txb_descricao.Text);
-                    VerificaNullorEmpty(Txb_nomeAlterar.Text);
-                    VerificaMaskFull(MTxb_cargaHoraria);
+                    verifica.VerificaNullorEmpty(Txb_nomeCurso.Text);
+                    verifica.VerificaNullorEmpty(Txb_descricao.Text);
+                    verifica.VerificaNullorEmpty(Txb_nomeAlterar.Text);
+                    verifica.VerificaMaskFull(MTxb_cargaHoraria);
 
                     if (MessageBox.Show("Deseja realmente editar o curso " + Txb_nomeAlterar.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -242,7 +224,7 @@ namespace Faculdade
             {
                 if (!Txb_nomeAlterar.Visible && Lbl_operacao.Text == "EXCLUIR")
                 {
-                    VerificaNullorEmpty(Txb_nomeCurso.Text);
+                    verifica.VerificaNullorEmpty(Txb_nomeCurso.Text);
                     if (MessageBox.Show("Deseja realmente excluir o curso " + Txb_nomeCurso.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         excluir.Excluir(Txb_nomeCurso.Text);
@@ -316,11 +298,6 @@ namespace Faculdade
         {
             limpaCampos();
             Txb_buscar.Clear();
-        }
-
-        private void Lbl_nomeAcao_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
