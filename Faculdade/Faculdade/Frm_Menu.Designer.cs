@@ -57,8 +57,7 @@
             // 
             // Pnl_Menu
             // 
-            this.Pnl_Menu.AutoSize = true;
-            this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.Pnl_Menu.Controls.Add(this.pictureBox1);
             this.Pnl_Menu.Controls.Add(this.Btn_Alunos);
             this.Pnl_Menu.Controls.Add(this.Btn_Menu);
@@ -69,7 +68,7 @@
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(253, 715);
+            this.Pnl_Menu.Size = new System.Drawing.Size(250, 715);
             this.Pnl_Menu.TabIndex = 3;
             // 
             // pictureBox1
@@ -84,7 +83,7 @@
             // 
             // Btn_Alunos
             // 
-            this.Btn_Alunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.Btn_Alunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.Btn_Alunos.FlatAppearance.BorderSize = 0;
             this.Btn_Alunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Alunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
@@ -102,7 +101,7 @@
             // 
             // Btn_Menu
             // 
-            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.Btn_Menu.FlatAppearance.BorderSize = 0;
             this.Btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
@@ -120,7 +119,7 @@
             // 
             // Btn_Cursos
             // 
-            this.Btn_Cursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.Btn_Cursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.Btn_Cursos.FlatAppearance.BorderSize = 0;
             this.Btn_Cursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Cursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
@@ -196,7 +195,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(250, 176);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1136, 253);
+            this.panel1.Size = new System.Drawing.Size(1139, 253);
             this.panel1.TabIndex = 4;
             // 
             // label1
@@ -230,15 +229,15 @@
             // 
             // panel3
             // 
-            this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.panel3.Controls.Add(this.Pic_Fechar);
             this.panel3.Controls.Add(this.Pic_Minimizar);
             this.panel3.Controls.Add(this.Pic_Maximizar);
             this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1136, 100);
+            this.panel3.Size = new System.Drawing.Size(1139, 100);
             this.panel3.TabIndex = 10;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Pic_Fechar
             // 
@@ -275,6 +274,7 @@
             // 
             // Pn_Menu
             // 
+            this.Pn_Menu.BackColor = System.Drawing.SystemColors.Control;
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";

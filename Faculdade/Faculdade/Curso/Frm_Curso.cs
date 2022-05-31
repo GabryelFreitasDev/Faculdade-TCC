@@ -143,7 +143,7 @@ namespace Faculdade
                 {
                     limpaCampos();
                     Lbl_operacao.Text = "INSERIR";
-                    Lbl_nomeAcao.Text = "Nome do curso:";
+                    Lbl_nomeAcao.Text = "NOME DO CURSO:";
                     Txb_nomeAlterar.Clear();
                     Txb_nomeAlterar.Enabled = false;
                     Txb_nomeAlterar.Visible = false;
@@ -197,7 +197,7 @@ namespace Faculdade
                 else
                 {
                     Lbl_operacao.Text = "EDITAR";
-                    Lbl_nomeAcao.Text = "Nome do curso:";
+                    Lbl_nomeAcao.Text = "NOME DO CURSO:";
                     Txb_nomeCurso.Clear();
                     Txb_nomeAlterar.Visible = true;
                     Txb_nomeAlterar.Enabled = true;
@@ -252,7 +252,7 @@ namespace Faculdade
                 else
                 {
                     Lbl_operacao.Text = "EXCLUIR";
-                    Lbl_nomeAcao.Text = "Nome do curso que será excluído:";
+                    Lbl_nomeAcao.Text = "NOME DO CURSO QUE SERÁ EXCLUIDO:";
                     Txb_nomeAlterar.Enabled = false;
                     Txb_nomeAlterar.Visible = false;
                     Lbl_nomeAlterar.Visible = false;
@@ -316,6 +316,11 @@ namespace Faculdade
         {
             limpaCampos();
             Txb_buscar.Clear();
+        }
+
+        private void Lbl_nomeAcao_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
