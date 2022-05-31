@@ -30,7 +30,7 @@ namespace Faculdade {
         
         private turmaDataTable tableturma;
         
-        private TurmaRelatorioDataTable tableTurmaRelatorio;
+        private RelatorioTurmaDataTable tableRelatorioTurma;
         
         private global::System.Data.DataRelation relationfk_idcurso;
         
@@ -75,8 +75,8 @@ namespace Faculdade {
                 if ((ds.Tables["turma"] != null)) {
                     base.Tables.Add(new turmaDataTable(ds.Tables["turma"]));
                 }
-                if ((ds.Tables["TurmaRelatorio"] != null)) {
-                    base.Tables.Add(new TurmaRelatorioDataTable(ds.Tables["TurmaRelatorio"]));
+                if ((ds.Tables["RelatorioTurma"] != null)) {
+                    base.Tables.Add(new RelatorioTurmaDataTable(ds.Tables["RelatorioTurma"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -130,9 +130,9 @@ namespace Faculdade {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TurmaRelatorioDataTable TurmaRelatorio {
+        public RelatorioTurmaDataTable RelatorioTurma {
             get {
-                return this.tableTurmaRelatorio;
+                return this.tableRelatorioTurma;
             }
         }
         
@@ -212,8 +212,8 @@ namespace Faculdade {
                 if ((ds.Tables["turma"] != null)) {
                     base.Tables.Add(new turmaDataTable(ds.Tables["turma"]));
                 }
-                if ((ds.Tables["TurmaRelatorio"] != null)) {
-                    base.Tables.Add(new TurmaRelatorioDataTable(ds.Tables["TurmaRelatorio"]));
+                if ((ds.Tables["RelatorioTurma"] != null)) {
+                    base.Tables.Add(new RelatorioTurmaDataTable(ds.Tables["RelatorioTurma"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -266,10 +266,10 @@ namespace Faculdade {
                     this.tableturma.InitVars();
                 }
             }
-            this.tableTurmaRelatorio = ((TurmaRelatorioDataTable)(base.Tables["TurmaRelatorio"]));
+            this.tableRelatorioTurma = ((RelatorioTurmaDataTable)(base.Tables["RelatorioTurma"]));
             if ((initTable == true)) {
-                if ((this.tableTurmaRelatorio != null)) {
-                    this.tableTurmaRelatorio.InitVars();
+                if ((this.tableRelatorioTurma != null)) {
+                    this.tableRelatorioTurma.InitVars();
                 }
             }
             this.relationfk_idcurso = this.Relations["fk_idcurso"];
@@ -291,8 +291,8 @@ namespace Faculdade {
             base.Tables.Add(this.tablecurso);
             this.tableturma = new turmaDataTable();
             base.Tables.Add(this.tableturma);
-            this.tableTurmaRelatorio = new TurmaRelatorioDataTable();
-            base.Tables.Add(this.tableTurmaRelatorio);
+            this.tableRelatorioTurma = new RelatorioTurmaDataTable();
+            base.Tables.Add(this.tableRelatorioTurma);
             this.relationfk_idcurso = new global::System.Data.DataRelation("fk_idcurso", new global::System.Data.DataColumn[] {
                         this.tablecurso.idcursoColumn}, new global::System.Data.DataColumn[] {
                         this.tablealuno.fk_idcursoColumn}, false);
@@ -327,7 +327,7 @@ namespace Faculdade {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeTurmaRelatorio() {
+        private bool ShouldSerializeRelatorioTurma() {
             return false;
         }
         
@@ -396,7 +396,7 @@ namespace Faculdade {
         public delegate void turmaRowChangeEventHandler(object sender, turmaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void TurmaRelatorioRowChangeEventHandler(object sender, TurmaRelatorioRowChangeEvent e);
+        public delegate void RelatorioTurmaRowChangeEventHandler(object sender, RelatorioTurmaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1421,20 +1421,20 @@ namespace Faculdade {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TurmaRelatorioDataTable : global::System.Data.TypedTableBase<TurmaRelatorioRow> {
+        public partial class RelatorioTurmaDataTable : global::System.Data.TypedTableBase<RelatorioTurmaRow> {
             
             private global::System.Data.DataColumn columnidturma;
             
-            private global::System.Data.DataColumn columnnometurma;
-            
             private global::System.Data.DataColumn columnturno;
+            
+            private global::System.Data.DataColumn columnnometurma;
             
             private global::System.Data.DataColumn columnnomecurso;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TurmaRelatorioDataTable() {
-                this.TableName = "TurmaRelatorio";
+            public RelatorioTurmaDataTable() {
+                this.TableName = "RelatorioTurma";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1442,7 +1442,7 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TurmaRelatorioDataTable(global::System.Data.DataTable table) {
+            internal RelatorioTurmaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1459,7 +1459,7 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected TurmaRelatorioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected RelatorioTurmaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1474,17 +1474,17 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nometurmaColumn {
+            public global::System.Data.DataColumn turnoColumn {
                 get {
-                    return this.columnnometurma;
+                    return this.columnturno;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn turnoColumn {
+            public global::System.Data.DataColumn nometurmaColumn {
                 get {
-                    return this.columnturno;
+                    return this.columnnometurma;
                 }
             }
             
@@ -1507,55 +1507,55 @@ namespace Faculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TurmaRelatorioRow this[int index] {
+            public RelatorioTurmaRow this[int index] {
                 get {
-                    return ((TurmaRelatorioRow)(this.Rows[index]));
+                    return ((RelatorioTurmaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TurmaRelatorioRowChangeEventHandler TurmaRelatorioRowChanging;
+            public event RelatorioTurmaRowChangeEventHandler RelatorioTurmaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TurmaRelatorioRowChangeEventHandler TurmaRelatorioRowChanged;
+            public event RelatorioTurmaRowChangeEventHandler RelatorioTurmaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TurmaRelatorioRowChangeEventHandler TurmaRelatorioRowDeleting;
+            public event RelatorioTurmaRowChangeEventHandler RelatorioTurmaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TurmaRelatorioRowChangeEventHandler TurmaRelatorioRowDeleted;
+            public event RelatorioTurmaRowChangeEventHandler RelatorioTurmaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddTurmaRelatorioRow(TurmaRelatorioRow row) {
+            public void AddRelatorioTurmaRow(RelatorioTurmaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TurmaRelatorioRow AddTurmaRelatorioRow(int idturma, string nometurma, string turno, string nomecurso) {
-                TurmaRelatorioRow rowTurmaRelatorioRow = ((TurmaRelatorioRow)(this.NewRow()));
+            public RelatorioTurmaRow AddRelatorioTurmaRow(int idturma, string turno, string nometurma, string nomecurso) {
+                RelatorioTurmaRow rowRelatorioTurmaRow = ((RelatorioTurmaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idturma,
-                        nometurma,
                         turno,
+                        nometurma,
                         nomecurso};
-                rowTurmaRelatorioRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTurmaRelatorioRow);
-                return rowTurmaRelatorioRow;
+                rowRelatorioTurmaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRelatorioTurmaRow);
+                return rowRelatorioTurmaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TurmaRelatorioRow FindByidturma(int idturma) {
-                return ((TurmaRelatorioRow)(this.Rows.Find(new object[] {
+            public RelatorioTurmaRow FindByidturma(int idturma) {
+                return ((RelatorioTurmaRow)(this.Rows.Find(new object[] {
                             idturma})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TurmaRelatorioDataTable cln = ((TurmaRelatorioDataTable)(base.Clone()));
+                RelatorioTurmaDataTable cln = ((RelatorioTurmaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1563,15 +1563,15 @@ namespace Faculdade {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TurmaRelatorioDataTable();
+                return new RelatorioTurmaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnidturma = base.Columns["idturma"];
-                this.columnnometurma = base.Columns["nometurma"];
                 this.columnturno = base.Columns["turno"];
+                this.columnnometurma = base.Columns["nometurma"];
                 this.columnnomecurso = base.Columns["nomecurso"];
             }
             
@@ -1580,48 +1580,48 @@ namespace Faculdade {
             private void InitClass() {
                 this.columnidturma = new global::System.Data.DataColumn("idturma", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidturma);
-                this.columnnometurma = new global::System.Data.DataColumn("nometurma", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnometurma);
                 this.columnturno = new global::System.Data.DataColumn("turno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnturno);
+                this.columnnometurma = new global::System.Data.DataColumn("nometurma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnometurma);
                 this.columnnomecurso = new global::System.Data.DataColumn("nomecurso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnomecurso);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidturma}, true));
                 this.columnidturma.AllowDBNull = false;
                 this.columnidturma.Unique = true;
-                this.columnnometurma.AllowDBNull = false;
-                this.columnnometurma.MaxLength = 80;
                 this.columnturno.AllowDBNull = false;
                 this.columnturno.MaxLength = 10;
+                this.columnnometurma.AllowDBNull = false;
+                this.columnnometurma.MaxLength = 80;
                 this.columnnomecurso.AllowDBNull = false;
                 this.columnnomecurso.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TurmaRelatorioRow NewTurmaRelatorioRow() {
-                return ((TurmaRelatorioRow)(this.NewRow()));
+            public RelatorioTurmaRow NewRelatorioTurmaRow() {
+                return ((RelatorioTurmaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TurmaRelatorioRow(builder);
+                return new RelatorioTurmaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TurmaRelatorioRow);
+                return typeof(RelatorioTurmaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TurmaRelatorioRowChanged != null)) {
-                    this.TurmaRelatorioRowChanged(this, new TurmaRelatorioRowChangeEvent(((TurmaRelatorioRow)(e.Row)), e.Action));
+                if ((this.RelatorioTurmaRowChanged != null)) {
+                    this.RelatorioTurmaRowChanged(this, new RelatorioTurmaRowChangeEvent(((RelatorioTurmaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1629,8 +1629,8 @@ namespace Faculdade {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TurmaRelatorioRowChanging != null)) {
-                    this.TurmaRelatorioRowChanging(this, new TurmaRelatorioRowChangeEvent(((TurmaRelatorioRow)(e.Row)), e.Action));
+                if ((this.RelatorioTurmaRowChanging != null)) {
+                    this.RelatorioTurmaRowChanging(this, new RelatorioTurmaRowChangeEvent(((RelatorioTurmaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1638,8 +1638,8 @@ namespace Faculdade {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TurmaRelatorioRowDeleted != null)) {
-                    this.TurmaRelatorioRowDeleted(this, new TurmaRelatorioRowChangeEvent(((TurmaRelatorioRow)(e.Row)), e.Action));
+                if ((this.RelatorioTurmaRowDeleted != null)) {
+                    this.RelatorioTurmaRowDeleted(this, new RelatorioTurmaRowChangeEvent(((RelatorioTurmaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1647,14 +1647,14 @@ namespace Faculdade {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TurmaRelatorioRowDeleting != null)) {
-                    this.TurmaRelatorioRowDeleting(this, new TurmaRelatorioRowChangeEvent(((TurmaRelatorioRow)(e.Row)), e.Action));
+                if ((this.RelatorioTurmaRowDeleting != null)) {
+                    this.RelatorioTurmaRowDeleting(this, new RelatorioTurmaRowChangeEvent(((RelatorioTurmaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveTurmaRelatorioRow(TurmaRelatorioRow row) {
+            public void RemoveRelatorioTurmaRow(RelatorioTurmaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1681,7 +1681,7 @@ namespace Faculdade {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TurmaRelatorioDataTable";
+                attribute2.FixedValue = "RelatorioTurmaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2051,36 +2051,25 @@ namespace Faculdade {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TurmaRelatorioRow : global::System.Data.DataRow {
+        public partial class RelatorioTurmaRow : global::System.Data.DataRow {
             
-            private TurmaRelatorioDataTable tableTurmaRelatorio;
+            private RelatorioTurmaDataTable tableRelatorioTurma;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TurmaRelatorioRow(global::System.Data.DataRowBuilder rb) : 
+            internal RelatorioTurmaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTurmaRelatorio = ((TurmaRelatorioDataTable)(this.Table));
+                this.tableRelatorioTurma = ((RelatorioTurmaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int idturma {
                 get {
-                    return ((int)(this[this.tableTurmaRelatorio.idturmaColumn]));
+                    return ((int)(this[this.tableRelatorioTurma.idturmaColumn]));
                 }
                 set {
-                    this[this.tableTurmaRelatorio.idturmaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nometurma {
-                get {
-                    return ((string)(this[this.tableTurmaRelatorio.nometurmaColumn]));
-                }
-                set {
-                    this[this.tableTurmaRelatorio.nometurmaColumn] = value;
+                    this[this.tableRelatorioTurma.idturmaColumn] = value;
                 }
             }
             
@@ -2088,10 +2077,21 @@ namespace Faculdade {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string turno {
                 get {
-                    return ((string)(this[this.tableTurmaRelatorio.turnoColumn]));
+                    return ((string)(this[this.tableRelatorioTurma.turnoColumn]));
                 }
                 set {
-                    this[this.tableTurmaRelatorio.turnoColumn] = value;
+                    this[this.tableRelatorioTurma.turnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nometurma {
+                get {
+                    return ((string)(this[this.tableRelatorioTurma.nometurmaColumn]));
+                }
+                set {
+                    this[this.tableRelatorioTurma.nometurmaColumn] = value;
                 }
             }
             
@@ -2099,10 +2099,10 @@ namespace Faculdade {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nomecurso {
                 get {
-                    return ((string)(this[this.tableTurmaRelatorio.nomecursoColumn]));
+                    return ((string)(this[this.tableRelatorioTurma.nomecursoColumn]));
                 }
                 set {
-                    this[this.tableTurmaRelatorio.nomecursoColumn] = value;
+                    this[this.tableRelatorioTurma.nomecursoColumn] = value;
                 }
             }
         }
@@ -2213,22 +2213,22 @@ namespace Faculdade {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class TurmaRelatorioRowChangeEvent : global::System.EventArgs {
+        public class RelatorioTurmaRowChangeEvent : global::System.EventArgs {
             
-            private TurmaRelatorioRow eventRow;
+            private RelatorioTurmaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TurmaRelatorioRowChangeEvent(TurmaRelatorioRow row, global::System.Data.DataRowAction action) {
+            public RelatorioTurmaRowChangeEvent(RelatorioTurmaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TurmaRelatorioRow Row {
+            public RelatorioTurmaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3962,7 +3962,7 @@ namespace Faculdade.FaculdadeDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TurmaRelatorioTableAdapter : global::System.ComponentModel.Component {
+    public partial class RelatorioTurmaTableAdapter : global::System.ComponentModel.Component {
         
         private global::Devart.Data.PostgreSql.PgSqlDataAdapter _adapter;
         
@@ -3976,7 +3976,7 @@ namespace Faculdade.FaculdadeDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public TurmaRelatorioTableAdapter() {
+        public RelatorioTurmaTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4073,10 +4073,10 @@ namespace Faculdade.FaculdadeDataSet1TableAdapters {
             this._adapter = new global::Devart.Data.PostgreSql.PgSqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "TurmaRelatorio";
+            tableMapping.DataSetTable = "RelatorioTurma";
             tableMapping.ColumnMappings.Add("idturma", "idturma");
-            tableMapping.ColumnMappings.Add("nometurma", "nometurma");
             tableMapping.ColumnMappings.Add("turno", "turno");
+            tableMapping.ColumnMappings.Add("nometurma", "nometurma");
             tableMapping.ColumnMappings.Add("nomecurso", "nomecurso");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -4094,9 +4094,9 @@ namespace Faculdade.FaculdadeDataSet1TableAdapters {
             this._commandCollection = new global::Devart.Data.PostgreSql.PgSqlCommand[1];
             this._commandCollection[0] = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        turma.idturma, turma.nometurma, turma.turno, curso.nomecurso\r\nFROM " +
-                "           turma INNER JOIN\r\n                         curso ON curso.idcurso = t" +
-                "urma.fk_idcurso";
+            this._commandCollection[0].CommandText = "SELECT        turma.idturma, turma.turno, turma.nometurma, curso.nomecurso\r\nFROM " +
+                "           turma INNER JOIN\r\n                         curso ON turma.fk_idcurso " +
+                "= curso.idcurso";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4104,7 +4104,7 @@ namespace Faculdade.FaculdadeDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FaculdadeDataSet1.TurmaRelatorioDataTable dataTable) {
+        public virtual int Fill(FaculdadeDataSet1.RelatorioTurmaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4117,9 +4117,9 @@ namespace Faculdade.FaculdadeDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FaculdadeDataSet1.TurmaRelatorioDataTable GetData() {
+        public virtual FaculdadeDataSet1.RelatorioTurmaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FaculdadeDataSet1.TurmaRelatorioDataTable dataTable = new FaculdadeDataSet1.TurmaRelatorioDataTable();
+            FaculdadeDataSet1.RelatorioTurmaDataTable dataTable = new FaculdadeDataSet1.RelatorioTurmaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

@@ -54,7 +54,7 @@ namespace Faculdade
             // 
             this.Txb_buscar.Location = new System.Drawing.Point(462, 43);
             this.Txb_buscar.Name = "Txb_buscar";
-            this.Txb_buscar.Size = new System.Drawing.Size(548, 20);
+            this.Txb_buscar.Size = new System.Drawing.Size(598, 20);
             this.Txb_buscar.TabIndex = 23;
             this.Txb_buscar.TextChanged += new System.EventHandler(this.Txb_buscar_TextChanged);
             // 
@@ -212,7 +212,7 @@ namespace Faculdade
             this.Dgv_cursos.Name = "Dgv_cursos";
             this.Dgv_cursos.ReadOnly = true;
             this.Dgv_cursos.RowHeadersWidth = 62;
-            this.Dgv_cursos.Size = new System.Drawing.Size(548, 448);
+            this.Dgv_cursos.Size = new System.Drawing.Size(598, 448);
             this.Dgv_cursos.TabIndex = 7;
             this.Dgv_cursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_curso_CellContentClick);
             // 

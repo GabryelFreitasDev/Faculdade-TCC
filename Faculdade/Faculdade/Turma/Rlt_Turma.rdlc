@@ -2,43 +2,45 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix6">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.55132cm</Width>
+              <Width>1.32292cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.71167cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.92174cm</Width>
+              <Width>3.24083cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>7.2625cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.69979cm</Height>
+              <Height>0.5424cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox38">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>idturma</Value>
+                              <Value>ID</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox38</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -54,21 +56,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox48">
+                    <Textbox Name="Textbox15">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nometurma</Value>
+                              <Value>TURMA</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox48</rd:DefaultName>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -84,21 +88,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox42">
+                    <Textbox Name="Textbox17">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>turno</Value>
+                              <Value>TURNO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox42</rd:DefaultName>
+                      <rd:DefaultName>Textbox17</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -114,21 +120,23 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox52">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nomecurso</Value>
+                              <Value>CURSO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox52</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -145,7 +153,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.69979cm</Height>
+              <Height>0.5424cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -160,7 +168,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>idturma</rd:DefaultName>
@@ -190,7 +200,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>nometurma1</rd:DefaultName>
@@ -220,7 +232,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>turno</rd:DefaultName>
@@ -239,7 +253,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nomecurso1">
+                    <Textbox Name="nomecurso">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -250,10 +264,12 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nomecurso1</rd:DefaultName>
+                      <rd:DefaultName>nomecurso</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -290,10 +306,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>turma</DataSetName>
-        <Top>1.26683cm</Top>
-        <Left>1.76953cm</Left>
-        <Height>1.39958cm</Height>
-        <Width>8.47306cm</Width>
+        <Top>1.47849cm</Top>
+        <Left>1.95474cm</Left>
+        <Height>1.08479cm</Height>
+        <Width>14.53792cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -304,7 +320,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>9.64811in</Width>
+  <Width>6.90984in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -333,7 +349,7 @@
           <rd:DefaultName>Textbox21</rd:DefaultName>
           <Top>1.0287cm</Top>
           <Height>0.86458cm</Height>
-          <Width>16.51cm</Width>
+          <Width>17.5212cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -377,7 +393,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>9b6e5502-1696-45ad-b1e7-d961a11ae283</rd:DataSourceID>
+      <rd:DataSourceID>6a81ebe8-6ede-4243-9581-db515e75ca85</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -391,12 +407,12 @@
           <DataField>idturma</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="nometurma">
-          <DataField>nometurma</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="turno">
           <DataField>turno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nometurma">
+          <DataField>nometurma</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="nomecurso">
@@ -406,11 +422,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>FaculdadeDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\FaculdadeDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>TurmaRelatorio</rd:TableName>
+        <rd:SchemaPath>C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\FaculdadeDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>RelatorioTurma</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>TurmaRelatorioTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>RelatorioTurmaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

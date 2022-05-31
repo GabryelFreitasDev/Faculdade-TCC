@@ -38,7 +38,6 @@ namespace Faculdade
             this.relatorioCurso.LocalReport.ReportEmbeddedResource = "Faculdade.Curso.Rlt_Curso.rdlc";
             this.relatorioCurso.Location = new System.Drawing.Point(0, 0);
             this.relatorioCurso.Name = "relatorioCurso";
-            this.relatorioCurso.ServerReport.BearerToken = null;
             this.relatorioCurso.Size = new System.Drawing.Size(776, 701);
             this.relatorioCurso.TabIndex = 0;
             // 
