@@ -13,15 +13,9 @@ namespace Faculdade
 {
     public partial class Frm_Curso : Form
     {
-        Conexao conexao = new Conexao();
-        NpgsqlCommand cmd = new NpgsqlCommand();
         DataTable dt = new DataTable();
         Verifica verifica = new Verifica();
-
-        public Frm_Curso()
-        {
-            InitializeComponent();
-        }
+        Busca busca = new Busca();
 
         private void limpaCampos()
         {
@@ -31,13 +25,10 @@ namespace Faculdade
             Txb_descricao.Clear();
         }
 
-        private void Frm_Curso_Load(object sender, EventArgs e)
+        public void AtualizaDataGridView()
         {
-            AtualizaDataGridView();
-            Txb_nomeAlterar.Enabled = false;
-            Txb_nomeAlterar.Visible = false;
-            Lbl_nomeAlterar.Visible = false;
-            EditaDgv();
+            string select = "SELECT * FROM \"curso\"";
+            busca.AtualizaDataGridView(select, Dgv_cursos);
         }
 
         public void EditaDgv()
@@ -52,63 +43,51 @@ namespace Faculdade
             Dgv_cursos.Columns[3].HeaderText = "DESCRIÇÃO";
             Dgv_cursos.Columns[3].Width = 300;
         }
-        public void AtualizaDataGridView()
-        {
-            if (conexao.conn.State != ConnectionState.Open)
-            {
-                conexao.conn.Open();
-            }
-            cmd.Connection = conexao.conn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM \"curso\"";
-            dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            Dgv_cursos.DataSource = null;
-            Dgv_cursos.DataSource = dt;
-            EditaDgv();
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.conn.Close();
-            }
-        }
-
+       
         public void BuscaDataGridView()
         {
-            if (conexao.conn.State != ConnectionState.Open)
-            {
-                conexao.conn.Open();
-            }
-            cmd.Connection = conexao.conn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY idCurso";
-            dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            Dgv_cursos.DataSource = null;
-            Dgv_cursos.DataSource = dt;
-            
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.conn.Close();
-            }
+            string select = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY nomeCurso";
+            busca.AtualizaDataGridView(select,Dgv_cursos);
         }
 
-        //INSERIR
+        private void verificaIsNullOrWhiteSpace()
+        {
+            verifica.VerificaNullorWhiteSpace(Txb_nomeCurso.Text);
+            verifica.VerificaNullorWhiteSpace(Txb_descricao.Text);
+            verifica.VerificaMaskFull(MTxb_cargaHoraria);
+        }
+
+        private void someCampos()
+        {
+            Txb_nomeAlterar.Clear();
+            Txb_nomeAlterar.Enabled = false;
+            Txb_nomeAlterar.Visible = false;
+            Lbl_nomeAlterar.Visible = false;
+        }
+
+        private void confereCampos(Curso curso)
+        {
+            if (string.IsNullOrWhiteSpace(Txb_nomeCurso.Text))
+                curso.mensagem = "Digite o nome do Curso";
+            else if (!MTxb_cargaHoraria.MaskCompleted)
+                curso.mensagem = "Digite a carga horária do Curso";
+            else if (string.IsNullOrWhiteSpace(Txb_descricao.Text))
+            {
+                curso.mensagem = "Digite a descrição do Curso";
+            }
+            MessageBox.Show(curso.mensagem);
+        }
+        public Frm_Curso()
+        {
+            InitializeComponent();
+        }
+        private void Frm_Curso_Load(object sender, EventArgs e)
+        {
+            AtualizaDataGridView();
+            someCampos();
+            EditaDgv();
+        }
+
         private void Btn_InsereCurso_Click(object sender, EventArgs e)
         {
             Curso inserir = new Curso();
@@ -116,48 +95,31 @@ namespace Faculdade
             {
                 if(!Txb_nomeAlterar.Visible && Lbl_operacao.Text == "INSERIR")
                 {
-                    verifica.VerificaNullorEmpty(Txb_nomeCurso.Text);
-                    verifica.VerificaNullorEmpty(Txb_descricao.Text);
-                    verifica.VerificaMaskFull(MTxb_cargaHoraria);
+                    verificaIsNullOrWhiteSpace();
                     inserir.Inserir(Txb_nomeCurso.Text,MTxb_cargaHoraria.Text, Txb_descricao.Text);
                     MessageBox.Show(inserir.mensagem);
-                    AtualizaDataGridView();
                 }
                 else
                 {
                     limpaCampos();
                     Lbl_operacao.Text = "INSERIR";
                     Lbl_nomeAcao.Text = "NOME DO CURSO:";
-                    Txb_nomeAlterar.Clear();
-                    Txb_nomeAlterar.Enabled = false;
-                    Txb_nomeAlterar.Visible = false;
-                    Lbl_nomeAlterar.Visible = false;
+                    someCampos();
                 }
             }
             catch (NullReferenceException)
             {
-                if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
-                {
-                    inserir.mensagem = "Digite o nome do Curso";
-                }
-                else if (!MTxb_cargaHoraria.MaskCompleted)
-                {
-                    inserir.mensagem = "Digite a carga horária do Curso";
-                }
-                else if (string.IsNullOrEmpty(Txb_descricao.Text))
-                {
-                    inserir.mensagem = "Digite a descrição do Curso";
-                }
-                MessageBox.Show(inserir.mensagem);
+                confereCampos(inserir);
             }
             catch (Exception ex)
             {
                 inserir.mensagem = "Erro na Edição:" + ex.Message;
                 MessageBox.Show(inserir.mensagem);
             }
+            AtualizaDataGridView();
+            EditaDgv();
         }
 
-        //EDITAR
         private void Btn_editar_Click(object sender, EventArgs e)
         {
             Curso editar = new Curso();
@@ -165,10 +127,8 @@ namespace Faculdade
             {
                 if (Txb_nomeAlterar.Visible && Lbl_operacao.Text == "EDITAR")
                 {
-                    verifica.VerificaNullorEmpty(Txb_nomeCurso.Text);
-                    verifica.VerificaNullorEmpty(Txb_descricao.Text);
-                    verifica.VerificaNullorEmpty(Txb_nomeAlterar.Text);
-                    verifica.VerificaMaskFull(MTxb_cargaHoraria);
+                    verifica.VerificaNullorWhiteSpace(Txb_nomeAlterar.Text);
+                    verificaIsNullOrWhiteSpace();
 
                     if (MessageBox.Show("Deseja realmente editar o curso " + Txb_nomeAlterar.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -187,7 +147,6 @@ namespace Faculdade
                     Txb_descricao.Clear();
                     MTxb_cargaHoraria.Text = null;   
                 }
-
             }
             catch (NullReferenceException)
             {
@@ -195,19 +154,10 @@ namespace Faculdade
                 {
                     editar.mensagem = "Digite o nome do Curso que deseja alterar";
                 }
-                else if (string.IsNullOrEmpty(Txb_nomeCurso.Text))
+                else
                 {
-                    editar.mensagem = "Digite o nome do Curso que deseja alterar";
+                    confereCampos(editar);
                 }
-                else if (MTxb_cargaHoraria.Text == "     Hrs")
-                {
-                    editar.mensagem = "Digite a carga horária do Curso";
-                }
-                else if (string.IsNullOrEmpty(Txb_descricao.Text))
-                {
-                    editar.mensagem = "Digite a descrição do Curso";
-                }
-                MessageBox.Show(editar.mensagem);
             }
             catch (Exception ex)
             {
@@ -215,8 +165,9 @@ namespace Faculdade
                 MessageBox.Show(editar.mensagem);
             }
             AtualizaDataGridView();
+            EditaDgv();
         }
-        //EXCLUIR
+
         private void Btn_excluiCurso_Click_1(object sender, EventArgs e)
         {
             Curso excluir = new Curso();
@@ -224,7 +175,7 @@ namespace Faculdade
             {
                 if (!Txb_nomeAlterar.Visible && Lbl_operacao.Text == "EXCLUIR")
                 {
-                    verifica.VerificaNullorEmpty(Txb_nomeCurso.Text);
+                    verifica.VerificaNullorWhiteSpace(Txb_nomeCurso.Text);
                     if (MessageBox.Show("Deseja realmente excluir o curso " + Txb_nomeCurso.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         excluir.Excluir(Txb_nomeCurso.Text);
@@ -235,9 +186,7 @@ namespace Faculdade
                 {
                     Lbl_operacao.Text = "EXCLUIR";
                     Lbl_nomeAcao.Text = "NOME DO CURSO QUE SERÁ EXCLUIDO:";
-                    Txb_nomeAlterar.Enabled = false;
-                    Txb_nomeAlterar.Visible = false;
-                    Lbl_nomeAlterar.Visible = false;
+                    someCampos();
                 }
             }
             catch (NullReferenceException)
@@ -251,6 +200,7 @@ namespace Faculdade
                 MessageBox.Show(excluir.mensagem);
             }
             AtualizaDataGridView();
+            EditaDgv();
         }
 
         private void Txb_buscar_TextChanged(object sender, EventArgs e)
@@ -262,7 +212,6 @@ namespace Faculdade
         {
             try
             {
-
                 DataGridViewRow row = Dgv_cursos.Rows[e.RowIndex];
                 if (!Txb_nomeAlterar.Visible)
                 {
@@ -274,15 +223,13 @@ namespace Faculdade
                     Txb_nomeAlterar.Text = row.Cells["nomecurso"].Value.ToString();
                     Txb_nomeCurso.Clear();
                 }
-
                 Txb_descricao.Text = row.Cells["descricao"].Value.ToString();
                 MTxb_cargaHoraria.Text = row.Cells["cargaHoraria"].Value.ToString();
-
-            }catch(Exception)
+            }
+            catch(Exception)
             {
                 MessageBox.Show("Selecione o curso que deseja editar");
             }
-           
         }
 
         private void Btn_relatorioCurso_Click_1(object sender, EventArgs e)

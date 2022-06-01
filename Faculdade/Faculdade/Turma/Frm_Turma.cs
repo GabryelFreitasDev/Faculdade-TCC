@@ -172,7 +172,7 @@ namespace Faculdade
             {
                 if (!TxB_nomeAlterar.Visible)
                 {
-                    verifica.VerificaNullorEmpty(Txb_nomeTurma.Text);
+                    verifica.VerificaNullorWhiteSpace(Txb_nomeTurma.Text);
 
                     verifica.VerificaCbxVazio(Cbx_Turno);
                     verifica.VerificaCbxVazio(Cbx_cursoTurma);
@@ -224,8 +224,8 @@ namespace Faculdade
                 if (TxB_nomeAlterar.Visible)
                 {
 
-                    verifica.VerificaNullorEmpty(TxB_nomeAlterar.Text);
-                    verifica.VerificaNullorEmpty(Txb_nomeTurma.Text);
+                    verifica.VerificaNullorWhiteSpace(TxB_nomeAlterar.Text);
+                    verifica.VerificaNullorWhiteSpace(Txb_nomeTurma.Text);
 
                     verifica.VerificaCbxVazio(Cbx_turnoAntigo);
                     verifica.VerificaCbxVazio(Cbx_cursoAntigo);
@@ -329,7 +329,7 @@ namespace Faculdade
                 {
                     verifica.VerificaCbxVazio(Cbx_cursoTurma);
                     verifica.VerificaCbxVazio(Cbx_Turno);
-                    verifica.VerificaNullorEmpty(Txb_nomeTurma.Text);
+                    verifica.VerificaNullorWhiteSpace(Txb_nomeTurma.Text);
                     if (MessageBox.Show("Deseja realmente excluir a turma " + Txb_nomeTurma.Text + " do curso de " +  Cbx_cursoTurma.Text + " do turno "+ Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         excluir.Excluir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);

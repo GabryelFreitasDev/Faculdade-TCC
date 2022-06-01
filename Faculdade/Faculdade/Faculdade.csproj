@@ -254,6 +254,7 @@
     <Compile Include="Aluno\Frm_relatorioAluno.Designer.cs">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busca.cs" />
     <Compile Include="Turma\Frm_relatorioTurma.cs">
       <SubType>Form</SubType>
     </Compile>

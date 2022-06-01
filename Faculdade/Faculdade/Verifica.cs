@@ -9,9 +9,9 @@ namespace Faculdade
 {
     class Verifica
     {
-         public void VerificaNullorEmpty(string valor)
+         public void VerificaNullorWhiteSpace(string valor)
         {
-            if (string.IsNullOrEmpty(valor))
+            if (string.IsNullOrWhiteSpace(valor))
             {
                 throw new NullReferenceException();
             }
