@@ -207,27 +207,6 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RelatorioTurmaTableAdapter" GeneratorDataComponentClassName="RelatorioTurmaTableAdapter" Name="RelatorioTurma" UserDataComponentName="RelatorioTurmaTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="FaculdadeConn (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        turma.idturma, turma.turno, turma.nometurma, curso.nomecurso
-FROM            turma INNER JOIN
-                         curso ON turma.fk_idcurso = curso.idcurso</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="idturma" DataSetColumn="idturma" />
-              <Mapping SourceColumn="turno" DataSetColumn="turno" />
-              <Mapping SourceColumn="nometurma" DataSetColumn="nometurma" />
-              <Mapping SourceColumn="nomecurso" DataSetColumn="nomecurso" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -236,7 +215,7 @@ FROM            turma INNER JOIN
   <xs:element name="FaculdadeDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FaculdadeDataSet1" msprop:Generator_UserDSName="FaculdadeDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="aluno" msprop:Generator_TableClassName="alunoDataTable" msprop:Generator_TableVarName="tablealuno" msprop:Generator_TablePropName="aluno" msprop:Generator_RowDeletingName="alunoRowDeleting" msprop:Generator_RowChangingName="alunoRowChanging" msprop:Generator_RowEvHandlerName="alunoRowChangeEventHandler" msprop:Generator_RowDeletedName="alunoRowDeleted" msprop:Generator_UserTableName="aluno" msprop:Generator_RowChangedName="alunoRowChanged" msprop:Generator_RowEvArgName="alunoRowChangeEvent" msprop:Generator_RowClassName="alunoRow">
+        <xs:element name="aluno" msprop:Generator_TableClassName="alunoDataTable" msprop:Generator_TableVarName="tablealuno" msprop:Generator_RowChangedName="alunoRowChanged" msprop:Generator_TablePropName="aluno" msprop:Generator_RowDeletingName="alunoRowDeleting" msprop:Generator_RowChangingName="alunoRowChanging" msprop:Generator_RowEvHandlerName="alunoRowChangeEventHandler" msprop:Generator_RowDeletedName="alunoRowDeleted" msprop:Generator_RowClassName="alunoRow" msprop:Generator_UserTableName="aluno" msprop:Generator_RowEvArgName="alunoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idaluno" msprop:Generator_ColumnVarNameInTable="columnidaluno" msprop:Generator_ColumnPropNameInRow="idaluno" msprop:Generator_ColumnPropNameInTable="idalunoColumn" msprop:Generator_UserColumnName="idaluno" type="xs:int" />
@@ -288,7 +267,7 @@ FROM            turma INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="curso" msprop:Generator_TableClassName="cursoDataTable" msprop:Generator_TableVarName="tablecurso" msprop:Generator_TablePropName="curso" msprop:Generator_RowDeletingName="cursoRowDeleting" msprop:Generator_RowChangingName="cursoRowChanging" msprop:Generator_RowEvHandlerName="cursoRowChangeEventHandler" msprop:Generator_RowDeletedName="cursoRowDeleted" msprop:Generator_UserTableName="curso" msprop:Generator_RowChangedName="cursoRowChanged" msprop:Generator_RowEvArgName="cursoRowChangeEvent" msprop:Generator_RowClassName="cursoRow">
+        <xs:element name="curso" msprop:Generator_TableClassName="cursoDataTable" msprop:Generator_TableVarName="tablecurso" msprop:Generator_RowChangedName="cursoRowChanged" msprop:Generator_TablePropName="curso" msprop:Generator_RowDeletingName="cursoRowDeleting" msprop:Generator_RowChangingName="cursoRowChanging" msprop:Generator_RowEvHandlerName="cursoRowChangeEventHandler" msprop:Generator_RowDeletedName="cursoRowDeleted" msprop:Generator_RowClassName="cursoRow" msprop:Generator_UserTableName="curso" msprop:Generator_RowEvArgName="cursoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idcurso" msprop:Generator_ColumnVarNameInTable="columnidcurso" msprop:Generator_ColumnPropNameInRow="idcurso" msprop:Generator_ColumnPropNameInTable="idcursoColumn" msprop:Generator_UserColumnName="idcurso" type="xs:int" />
@@ -316,7 +295,7 @@ FROM            turma INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="turma" msprop:Generator_TableClassName="turmaDataTable" msprop:Generator_TableVarName="tableturma" msprop:Generator_TablePropName="turma" msprop:Generator_RowDeletingName="turmaRowDeleting" msprop:Generator_RowChangingName="turmaRowChanging" msprop:Generator_RowEvHandlerName="turmaRowChangeEventHandler" msprop:Generator_RowDeletedName="turmaRowDeleted" msprop:Generator_UserTableName="turma" msprop:Generator_RowChangedName="turmaRowChanged" msprop:Generator_RowEvArgName="turmaRowChangeEvent" msprop:Generator_RowClassName="turmaRow">
+        <xs:element name="turma" msprop:Generator_TableClassName="turmaDataTable" msprop:Generator_TableVarName="tableturma" msprop:Generator_RowChangedName="turmaRowChanged" msprop:Generator_TablePropName="turma" msprop:Generator_RowDeletingName="turmaRowDeleting" msprop:Generator_RowChangingName="turmaRowChanging" msprop:Generator_RowEvHandlerName="turmaRowChangeEventHandler" msprop:Generator_RowDeletedName="turmaRowDeleted" msprop:Generator_RowClassName="turmaRow" msprop:Generator_UserTableName="turma" msprop:Generator_RowEvArgName="turmaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idturma" msprop:Generator_ColumnVarNameInTable="columnidturma" msprop:Generator_ColumnPropNameInRow="idturma" msprop:Generator_ColumnPropNameInTable="idturmaColumn" msprop:Generator_UserColumnName="idturma" type="xs:int" />
@@ -338,7 +317,7 @@ FROM            turma INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RelatorioTurma" msprop:Generator_TableClassName="RelatorioTurmaDataTable" msprop:Generator_TableVarName="tableRelatorioTurma" msprop:Generator_TablePropName="RelatorioTurma" msprop:Generator_RowDeletingName="RelatorioTurmaRowDeleting" msprop:Generator_RowChangingName="RelatorioTurmaRowChanging" msprop:Generator_RowEvHandlerName="RelatorioTurmaRowChangeEventHandler" msprop:Generator_RowDeletedName="RelatorioTurmaRowDeleted" msprop:Generator_UserTableName="RelatorioTurma" msprop:Generator_RowChangedName="RelatorioTurmaRowChanged" msprop:Generator_RowEvArgName="RelatorioTurmaRowChangeEvent" msprop:Generator_RowClassName="RelatorioTurmaRow">
+        <xs:element name="RelatorioTurma" msprop:Generator_TableClassName="RelatorioTurmaDataTable" msprop:Generator_TableVarName="tableRelatorioTurma" msprop:Generator_RowChangedName="RelatorioTurmaRowChanged" msprop:Generator_TablePropName="RelatorioTurma" msprop:Generator_RowDeletingName="RelatorioTurmaRowDeleting" msprop:Generator_RowChangingName="RelatorioTurmaRowChanging" msprop:Generator_RowEvHandlerName="RelatorioTurmaRowChangeEventHandler" msprop:Generator_RowDeletedName="RelatorioTurmaRowDeleted" msprop:Generator_RowClassName="RelatorioTurmaRow" msprop:Generator_UserTableName="RelatorioTurma" msprop:Generator_RowEvArgName="RelatorioTurmaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idturma" msprop:Generator_ColumnVarNameInTable="columnidturma" msprop:Generator_ColumnPropNameInRow="idturma" msprop:Generator_ColumnPropNameInTable="idturmaColumn" msprop:Generator_UserColumnName="idturma" type="xs:int" />
@@ -387,9 +366,9 @@ FROM            turma INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="fk_idcurso" msdata:parent="curso" msdata:child="aluno" msdata:parentkey="idcurso" msdata:childkey="fk_idcurso" msprop:Generator_UserChildTable="aluno" msprop:Generator_ChildPropName="GetalunoRows" msprop:Generator_UserRelationName="fk_idcurso" msprop:Generator_RelationVarName="relationfk_idcurso" msprop:Generator_UserParentTable="curso" msprop:Generator_ParentPropName="cursoRow" />
-      <msdata:Relationship name="fk_idturma" msdata:parent="turma" msdata:child="aluno" msdata:parentkey="idturma" msdata:childkey="fk_idturma" msprop:Generator_UserChildTable="aluno" msprop:Generator_ChildPropName="GetalunoRows" msprop:Generator_UserRelationName="fk_idturma" msprop:Generator_RelationVarName="relationfk_idturma" msprop:Generator_UserParentTable="turma" msprop:Generator_ParentPropName="turmaRow" />
-      <msdata:Relationship name="fk_idcurso1" msdata:parent="curso" msdata:child="turma" msdata:parentkey="idcurso" msdata:childkey="fk_idcurso" msprop:Generator_UserChildTable="turma" msprop:Generator_ChildPropName="GetturmaRows" msprop:Generator_UserRelationName="fk_idcurso1" msprop:Generator_ParentPropName="cursoRow" msprop:Generator_RelationVarName="relationfk_idcurso1" msprop:Generator_UserParentTable="curso" />
+      <msdata:Relationship name="fk_idcurso" msdata:parent="curso" msdata:child="aluno" msdata:parentkey="idcurso" msdata:childkey="fk_idcurso" msprop:Generator_UserChildTable="aluno" msprop:Generator_ChildPropName="GetalunoRows" msprop:Generator_UserRelationName="fk_idcurso" msprop:Generator_ParentPropName="cursoRow" msprop:Generator_RelationVarName="relationfk_idcurso" msprop:Generator_UserParentTable="curso" />
+      <msdata:Relationship name="fk_idturma" msdata:parent="turma" msdata:child="aluno" msdata:parentkey="idturma" msdata:childkey="fk_idturma" msprop:Generator_UserChildTable="aluno" msprop:Generator_ChildPropName="GetalunoRows" msprop:Generator_UserRelationName="fk_idturma" msprop:Generator_ParentPropName="turmaRow" msprop:Generator_RelationVarName="relationfk_idturma" msprop:Generator_UserParentTable="turma" />
+      <msdata:Relationship name="fk_idcurso1" msdata:parent="curso" msdata:child="turma" msdata:parentkey="idcurso" msdata:childkey="fk_idcurso" msprop:Generator_UserChildTable="turma" msprop:Generator_ChildPropName="GetturmaRows" msprop:Generator_UserRelationName="fk_idcurso1" msprop:Generator_RelationVarName="relationfk_idcurso1" msprop:Generator_UserParentTable="curso" msprop:Generator_ParentPropName="cursoRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

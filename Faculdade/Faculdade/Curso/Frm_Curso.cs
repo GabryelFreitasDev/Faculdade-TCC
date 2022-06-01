@@ -27,7 +27,7 @@ namespace Faculdade
 
         public void AtualizaDataGridView()
         {
-            string select = "SELECT * FROM \"curso\"";
+            string select = "SELECT * FROM Curso";
             busca.AtualizaDataGridView(select, Dgv_cursos);
         }
 
@@ -46,7 +46,7 @@ namespace Faculdade
        
         public void BuscaDataGridView()
         {
-            string select = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY nomeCurso";
+            string select = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY nomeCurso LIMIT 100";
             busca.AtualizaDataGridView(select,Dgv_cursos);
         }
 
@@ -81,11 +81,12 @@ namespace Faculdade
         {
             InitializeComponent();
         }
+
         private void Frm_Curso_Load(object sender, EventArgs e)
         {
             AtualizaDataGridView();
-            someCampos();
             EditaDgv();
+            someCampos();
         }
 
         private void Btn_InsereCurso_Click(object sender, EventArgs e)
@@ -207,6 +208,7 @@ namespace Faculdade
         private void Txb_buscar_TextChanged(object sender, EventArgs e)
         {
             BuscaDataGridView();
+            EditaDgv();
         }
 
         private void Dgv_curso_CellContentClick(object sender, DataGridViewCellEventArgs e)

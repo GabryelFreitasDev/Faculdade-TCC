@@ -34,8 +34,18 @@ namespace Faculdade
             string preencheTurma = "SELECT nomeCurso, idTurma, nomeTurma from Curso INNER JOIN Turma on FK_idCurso = idCurso WHERE nomeCurso = '" + Cbx_Curso.Text + "' ORDER BY nomeTurma";
             string valueTurma = "idTurma";
             string displayTurma = "nomeTurma";
-
             busca.preencherComboBox(Cbx_turmaAluno, preencheTurma, valueTurma, displayTurma);
+        }
+
+        public void BuscaDataGridView()
+        {
+            string selectText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeAluno LIKE '%" + Txb_buscaNome.Text + "%' ORDER BY nomeAluno LIMIT 100";
+            busca.AtualizaDataGridView(selectText, Dgv_aluno);
+        }
+        public void BuscaCursoDataGridView()
+        {
+            string selectTurno = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '"+ Cbx_buscaCurso.Text +"' ORDER BY nomeAluno LIMIT 100";
+            busca.BuscaDataGridView(Cbx_buscaCurso, selectTurno, Dgv_aluno);
         }
 
         private void AtualizaDGV()
@@ -44,10 +54,11 @@ namespace Faculdade
             busca.AtualizaDataGridView(dgvSelect, Dgv_aluno);
         }
 
-        private void someCamposEditar()
+        private void someCamposEditar(bool ft)
         {
-            Txb_nomeAlterar.Visible = false;
-            Lbl_nomeAlterar.Visible = false;
+            Txb_nomeAlterar.Enabled = ft;
+            Txb_nomeAlterar.Visible = ft;
+            Lbl_nomeAlterar.Visible = ft;
         }
 
         private void verificaIsNullOrWhiteSpace()
@@ -158,16 +169,17 @@ namespace Faculdade
         {
             InitializeComponent();
             preencheCurso();
+            preencheBuscaCurso();
             preencheTurma();
         }
 
         public void Frm_Aluno_Load(object sender, EventArgs e)
         {
             Cbx_Curso.SelectedItem = null;
-            Cbx_buscaCurso.SelectedItem = null;
+            Cbx_buscaCurso.Text = null;
             AtualizaDGV();
             EditaColunaDgv();
-            someCamposEditar();
+            someCamposEditar(false);
             Cbx_turmaAluno.Visible = false;
             Lbl_disponivel.Visible = false;
             Lbl_turma.Visible = false;
@@ -187,7 +199,7 @@ namespace Faculdade
                 {
                     Lbl_acao.Text = "INSERIR";
                     Lbl_nome.Text = "Nome do aluno:";
-                    someCamposEditar();
+                    someCamposEditar(false);
                 }
             }
             catch (NullReferenceException)
@@ -222,7 +234,7 @@ namespace Faculdade
                 {
                     Lbl_acao.Text = "EXCLUIR";
                     Lbl_nome.Text = "Nome do aluno que será excluído:";
-                    someCamposEditar();
+                    someCamposEditar(false);
                 }
             }
             catch (NullReferenceException)
@@ -262,9 +274,7 @@ namespace Faculdade
                     Lbl_acao.Text = "EDITAR";
                     Lbl_nomeAlterar.Text = "Nome do aluno que será editado";
                     Lbl_nome.Text = "Nome do aluno:";
-                    Txb_nomeAlterar.Enabled = true;
-                    Txb_nomeAlterar.Visible = true;
-                    Lbl_nomeAlterar.Visible = true;
+                    someCamposEditar(true);
                 }
             }
             catch (NullReferenceException)
@@ -303,29 +313,37 @@ namespace Faculdade
 
         private void Txb_buscaNome_TextChanged(object sender, EventArgs e)
         {
-            string selectCurso = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeAluno LIKE '%" + Txb_buscaNome.Text + "%' ORDER BY nomeAluno";
-            busca.BuscaDataGridView(Cbx_buscaCurso, selectCurso, Dgv_aluno);
+            BuscaDataGridView();
             EditaColunaDgv();
-        }
-
-        private void Cbx_buscaCurso_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            preencheBuscaCurso();
-            if (Cbx_buscaCurso.Text != null)
-            {
-                string selectCurso = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco, nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '" + Cbx_buscaCurso.Text + "' ORDER BY nomeAluno";
-                busca.BuscaDataGridView(Cbx_buscaCurso, selectCurso, Dgv_aluno);
-                EditaColunaDgv();
-            }
         }
 
         private void Btn_LimparFiltro_Click(object sender, EventArgs e)
         {
             Txb_buscaNome.Clear();
             Cbx_buscaCurso.SelectedItem = null;
+            AtualizaDGV();
+            EditaColunaDgv();
         }
 
-        private void Cbx_Curso_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cbx_buscaCurso_DropDown(object sender, EventArgs e)
+        {
+            preencheBuscaCurso();
+        }
+        private void Cbx_Curso_DropDown(object sender, EventArgs e)
+        {
+            preencheCurso();
+        }
+
+        private void Cbx_buscaCurso_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text))
+            {
+                BuscaCursoDataGridView();
+                EditaColunaDgv();
+            }
+        }
+
+        private void Cbx_Curso_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Cbx_turmaAluno.Visible = true;
             Lbl_turma.Text = "Escolha a Turma";
@@ -334,16 +352,6 @@ namespace Faculdade
                 Lbl_disponivel.Visible = true;
             else
                 Lbl_disponivel.Visible = false;
-        }
-
-        private void Cbx_Curso_Click(object sender, EventArgs e)
-        {
-            preencheCurso();
-        }
-
-        private void Cbx_buscaCurso_Click(object sender, EventArgs e)
-        {
-            preencheBuscaCurso();
         }
     }
 }

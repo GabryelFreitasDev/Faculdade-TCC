@@ -23,8 +23,6 @@ namespace Faculdade
                 String scom = select;
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(scom, con);
                 DataTable dtResultado = new DataTable();
-                dtResultado.Clear();
-                cb.DataSource = null;
                 da.Fill(dtResultado);
                 cb.DataSource = dtResultado;
                 cb.ValueMember = valueMember;
@@ -57,6 +55,10 @@ namespace Faculdade
             try
             {
                 cmd.ExecuteNonQuery();
+            }
+            catch(PostgresException)
+            {
+                MessageBox.Show("Erro na busca insira caracteres válidos");
             }
             catch (Exception ex)
             {

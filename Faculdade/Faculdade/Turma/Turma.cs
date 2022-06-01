@@ -49,7 +49,7 @@ namespace Faculdade
                 mensagem = "Erro na inserção: " + ex.Message;
             }
         }
-        public void Editar(string nomeAlterar,string turnoAlterar, int idCursoAlterar, string nomeTurma, string turno, int idCurso)
+        public void Editar(string nomeAlterar, string turnoAlterar, int idCursoAlterar, string nomeTurma, string turno, int idCurso)
         {
             try
             {

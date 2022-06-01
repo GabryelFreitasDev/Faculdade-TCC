@@ -405,13 +405,6 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DevartDataPostgreSql">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>e0a3c428-901c-4e5a-a244-90a23d8de0cf</rd:DataSourceID>
-    </DataSource>
     <DataSource Name="FaculdadeDataSet1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>

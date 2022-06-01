@@ -26,7 +26,7 @@ namespace Faculdade
 
         private void Frm_Turma_Load(object sender, EventArgs e)
         {
-            
+
             Cbx_cursoTurma.SelectedItem = null;
             Cbx_Turno.SelectedItem = null;
             Cbx_cursoAntigo.SelectedItem = null;
@@ -49,19 +49,23 @@ namespace Faculdade
         public void AtualizaDataGridView()
         {
             string select = "SELECT nomeTurma, turno, nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso ORDER BY nomeCurso LIMIT 100";
-            busca.AtualizaDataGridView(select,Dgv_turmas);
+            busca.AtualizaDataGridView(select, Dgv_turmas);
+            EditaColunaDgv();
         }
 
         public void BuscaTurnoDataGridView()
         {
-          string selectTurno = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
-          busca.BuscaDataGridView(Cbx_buscaTurno,selectTurno,Dgv_turmas);
+
+            string selectTurno = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
+            busca.BuscaDataGridView(Cbx_buscaTurno, selectTurno, Dgv_turmas);
+            EditaColunaDgv();
         }
 
         public void BuscaDataGridView()
         {
-           string selectText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY nomeTurma LIMIT 100";
-            busca.AtualizaDataGridView(selectText,Dgv_turmas);
+            string selectText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY nomeTurma LIMIT 100";
+            busca.AtualizaDataGridView(selectText, Dgv_turmas);
+            EditaColunaDgv();
         }
 
         private void preencherCBcurso(ComboBox cb)
@@ -70,6 +74,7 @@ namespace Faculdade
             string valueMember = "idCurso";
             string displayMember = "nomeCurso";
             busca.preencherComboBox(cb, selectCurso, valueMember, displayMember);
+
         }
 
         private void someCampos(bool ft)
@@ -115,7 +120,7 @@ namespace Faculdade
                 {
                     verificaIsNullOrWhiteSpace();
                     inserir.Inserir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
-                    MessageBox.Show(inserir.mensagem);                   
+                    MessageBox.Show(inserir.mensagem);
                 }
                 else
                 {
@@ -151,7 +156,7 @@ namespace Faculdade
                     {
                         editar.Editar(TxB_nomeAlterar.Text, Cbx_turnoAntigo.Text, (int)Cbx_cursoAntigo.SelectedValue, Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
                         MessageBox.Show(editar.mensagem);
-                    } 
+                    }
                 }
                 else
                 {
@@ -167,13 +172,13 @@ namespace Faculdade
                     editar.mensagem = "Escolha o curso que deseja alterar";
                     MessageBox.Show(editar.mensagem);
                 }
-               
+
                 else if (Cbx_turnoAntigo.SelectedItem == null)
                 {
                     editar.mensagem = "Selecione o turno do curso que deseja alterar";
                     MessageBox.Show(editar.mensagem);
                 }
-                
+
                 else if (Cbx_cursoAntigo.SelectedItem == null)
                 {
                     editar.mensagem = "Selecione o curso da turma que está tentando alterar";
@@ -230,7 +235,7 @@ namespace Faculdade
                 if (!TxB_nomeAlterar.Visible)
                 {
                     verificaIsNullOrWhiteSpace();
-                    if (MessageBox.Show("Deseja realmente excluir a turma " + Txb_nomeTurma.Text + " do curso de " +  Cbx_cursoTurma.Text + " do turno "+ Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Deseja realmente excluir a turma " + Txb_nomeTurma.Text + " do curso de " + Cbx_cursoTurma.Text + " do turno " + Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         excluir.Excluir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
                         MessageBox.Show(excluir.mensagem);
@@ -243,7 +248,7 @@ namespace Faculdade
             }
             catch (NullReferenceException)
             {
-              
+
             }
             catch (Exception ex)
             {
@@ -268,6 +273,7 @@ namespace Faculdade
         {
             Txb_buscaTurma.Clear();
             Cbx_buscaTurno.SelectedItem = null;
+            AtualizaDataGridView();
         }
 
         private void Btn_limpar_Click(object sender, EventArgs e)

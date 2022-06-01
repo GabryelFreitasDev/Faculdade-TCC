@@ -155,8 +155,8 @@
             this.Cbx_Curso.Name = "Cbx_Curso";
             this.Cbx_Curso.Size = new System.Drawing.Size(315, 21);
             this.Cbx_Curso.TabIndex = 48;
-            this.Cbx_Curso.SelectedIndexChanged += new System.EventHandler(this.Cbx_Curso_SelectedIndexChanged);
-            this.Cbx_Curso.Click += new System.EventHandler(this.Cbx_Curso_Click);
+            this.Cbx_Curso.DropDown += new System.EventHandler(this.Cbx_Curso_DropDown);
+            this.Cbx_Curso.SelectionChangeCommitted += new System.EventHandler(this.Cbx_Curso_SelectionChangeCommitted);
             // 
             // MTxb_contatoParente
             // 
@@ -340,8 +340,8 @@
             this.Cbx_buscaCurso.Name = "Cbx_buscaCurso";
             this.Cbx_buscaCurso.Size = new System.Drawing.Size(286, 21);
             this.Cbx_buscaCurso.TabIndex = 67;
-            this.Cbx_buscaCurso.SelectedIndexChanged += new System.EventHandler(this.Cbx_buscaCurso_SelectedIndexChanged);
-            this.Cbx_buscaCurso.Click += new System.EventHandler(this.Cbx_buscaCurso_Click);
+            this.Cbx_buscaCurso.DropDown += new System.EventHandler(this.Cbx_buscaCurso_DropDown);
+            this.Cbx_buscaCurso.SelectionChangeCommitted += new System.EventHandler(this.Cbx_buscaCurso_SelectionChangeCommitted);
             // 
             // Btn_LimparFiltro
             // 

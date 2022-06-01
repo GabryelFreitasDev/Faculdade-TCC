@@ -24,7 +24,6 @@ namespace Faculdade
             {
                 throw new Exception(ex.Message);
             }
-
         }
 
         public DataTable NpgSQLQuery(string SQL)
@@ -52,36 +51,6 @@ namespace Faculdade
                 myCommand.CommandTimeout = 0;
                 var myReader = myCommand.ExecuteReader();
                 return "";
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public void Close()
-        {
-            conn.Close();
-        }
-        private void AbreConexao()
-        {
-            try
-            {
-                conn = new NpgsqlConnection(connString);
-                conn.Open();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception (ex.Message);
-            }
-        }
-
-        private void FechaConexao()
-        {
-            try
-            {
-                if (conn.State != ConnectionState.Closed)
-                    conn.Close();
             }
             catch (Exception ex)
             {
