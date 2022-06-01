@@ -270,7 +270,10 @@ namespace Faculdade
             catch (NullReferenceException)
             {
                 if (string.IsNullOrWhiteSpace(Txb_nomeAlterar.Text))
+                {
                     editar.mensagem = "Insira o nome do aluno que deseja editar";
+                    MessageBox.Show(editar.mensagem);
+                }
                 else
                 {
                     confereCampos(editar);

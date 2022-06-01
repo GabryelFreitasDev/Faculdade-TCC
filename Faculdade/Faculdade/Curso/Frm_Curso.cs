@@ -152,7 +152,8 @@ namespace Faculdade
             {
                 if (string.IsNullOrEmpty(Txb_nomeAlterar.Text))
                 {
-                    editar.mensagem = "Digite o nome do Curso que deseja alterar";
+                    editar.mensagem = "Digite o nome do curso que deseja alterar";
+                    MessageBox.Show(editar.mensagem);
                 }
                 else
                 {

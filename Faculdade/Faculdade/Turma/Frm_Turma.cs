@@ -13,30 +13,26 @@ namespace Faculdade
 {
     public partial class Frm_Turma : Form
     {
-        Conexao conexao = new Conexao();
-        NpgsqlCommand cmd = new NpgsqlCommand();
         DataTable dt = new DataTable();
         Verifica verifica = new Verifica();
+        Busca busca = new Busca();
+
         public Frm_Turma()
         {
             InitializeComponent();
             AtualizaDataGridView();
-            preencherCBcurso(Cbx_cursoTurma);
+            EditaColunaDgv();
         }
 
         private void Frm_Turma_Load(object sender, EventArgs e)
         {
-            preencherCBcurso(Cbx_cursoAntigo);
-            Cbx_cursoAntigo.Visible = false;
-            Cbx_turnoAntigo.Visible = false;
-            TxB_nomeAlterar.Visible = false;
+            
             Cbx_cursoTurma.SelectedItem = null;
             Cbx_Turno.SelectedItem = null;
             Cbx_cursoAntigo.SelectedItem = null;
-            Lbl_cursoAltera.Visible = false;
-            Lbl_turmaAltera.Visible = false;
-            Lbl_turnoAltera.Visible = false;
+            someCampos(false);
             preencherCBcurso(Cbx_cursoTurma);
+            preencherCBcurso(Cbx_cursoAntigo);
         }
 
         private void EditaColunaDgv()
@@ -52,117 +48,62 @@ namespace Faculdade
 
         public void AtualizaDataGridView()
         {
-
-            if (conexao.conn.State != ConnectionState.Open)
-            {
-                conexao.conn.Open();
-            }
-            cmd.Connection = conexao.conn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT nomeTurma, turno, nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso ORDER BY nomeCurso LIMIT 100";
-            dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            Dgv_turmas.DataSource = null;
-            Dgv_turmas.DataSource = dt;
-            EditaColunaDgv();
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.conn.Close();
-            }
+            string select = "SELECT nomeTurma, turno, nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso ORDER BY nomeCurso LIMIT 100";
+            busca.AtualizaDataGridView(select,Dgv_turmas);
         }
 
         public void BuscaTurnoDataGridView()
         {
-            if (conexao.conn.State != ConnectionState.Open)
-            {
-                conexao.conn.Open();
-            }
-            try
-            {
-                if (Cbx_buscaTurno.SelectedItem != null)
-                {
-                    cmd.Connection = conexao.conn;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100" ;
-                    dt = new DataTable();
-                    dt.Load(cmd.ExecuteReader());
-                    Dgv_turmas.DataSource = null;
-                    Dgv_turmas.DataSource = dt;
-                    EditaColunaDgv();
-                    cmd.ExecuteNonQuery();
-                }
-                else
-                {
-                    AtualizaDataGridView();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.conn.Close();
-            }
+          string selectTurno = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
+          busca.BuscaDataGridView(Cbx_buscaTurno,selectTurno,Dgv_turmas);
         }
+
         public void BuscaDataGridView()
         {
-            if (conexao.conn.State != ConnectionState.Open)
-            {
-                conexao.conn.Open();
-            }
-            cmd.Connection = conexao.conn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY nomeTurma LIMIT 100";
-            dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            Dgv_turmas.DataSource = null;
-            Dgv_turmas.DataSource = dt;
-            EditaColunaDgv();
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.conn.Close();
-            }
+           string selectText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY nomeTurma LIMIT 100";
+            busca.AtualizaDataGridView(selectText,Dgv_turmas);
         }
+
         private void preencherCBcurso(ComboBox cb)
         {
-            NpgsqlConnection con = new NpgsqlConnection(conexao.connString);
-            try
+            string selectCurso = "SELECT idCurso, nomeCurso from Curso ORDER BY nomeCurso";
+            string valueMember = "idCurso";
+            string displayMember = "nomeCurso";
+            busca.preencherComboBox(cb, selectCurso, valueMember, displayMember);
+        }
+
+        private void someCampos(bool ft)
+        {
+            TxB_nomeAlterar.Visible = ft;
+            Cbx_cursoAntigo.Visible = ft;
+            Cbx_turnoAntigo.Visible = ft;
+            Lbl_cursoAltera.Visible = ft;
+            Lbl_turmaAltera.Visible = ft;
+            Lbl_turnoAltera.Visible = ft;
+        }
+
+        private void verificaIsNullOrWhiteSpace()
+        {
+            verifica.VerificaCbxVazio(Cbx_cursoTurma);
+            verifica.VerificaCbxVazio(Cbx_Turno);
+            verifica.VerificaNullorWhiteSpace(Txb_nomeTurma.Text);
+        }
+
+        private void confereCampos(Turma turma)
+        {
+            if (string.IsNullOrWhiteSpace(Txb_nomeTurma.Text))
             {
-                con.Open();
+                turma.mensagem = "Insira o nome da turma";
             }
-            catch (NpgsqlException sqle)
+            else if (Cbx_Turno.SelectedItem == null)
             {
-                MessageBox.Show("Falha ao efetuar a conexão. Erro: " + sqle);
+                turma.mensagem = "Insira o turno da turma";
             }
-            String scom = "SELECT idCurso, nomeCurso from Curso ORDER BY nomeCurso";
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(scom, con);
-            DataTable dtResultado = new DataTable();
-            dtResultado.Clear();
-            cb.DataSource = null;
-            da.Fill(dtResultado);
-            cb.DataSource = dtResultado;
-            cb.ValueMember = "idCurso";
-            cb.DisplayMember = "nomeCurso";
-            cb.Refresh();
+            else if (Cbx_cursoTurma.SelectedItem == null)
+            {
+                turma.mensagem = "Escolha o curso que a turma pertence";
+            }
+            MessageBox.Show(turma.mensagem);
         }
 
         private void Btn_insereTurma_Click(object sender, EventArgs e)
@@ -172,41 +113,18 @@ namespace Faculdade
             {
                 if (!TxB_nomeAlterar.Visible)
                 {
-                    verifica.VerificaNullorWhiteSpace(Txb_nomeTurma.Text);
-
-                    verifica.VerificaCbxVazio(Cbx_Turno);
-                    verifica.VerificaCbxVazio(Cbx_cursoTurma);
-
+                    verificaIsNullOrWhiteSpace();
                     inserir.Inserir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
-                    MessageBox.Show(inserir.mensagem);
-                    AtualizaDataGridView();
+                    MessageBox.Show(inserir.mensagem);                   
                 }
                 else
                 {
-                    TxB_nomeAlterar.Visible = false;
-                    Cbx_cursoAntigo.Visible = false;
-                    Cbx_turnoAntigo.Visible = false;
-                    Lbl_cursoAltera.Visible = false;
-                    Lbl_turmaAltera.Visible = false;
-                    Lbl_turnoAltera.Visible = false;
+                    someCampos(false);
                 }
-
             }
             catch (NullReferenceException)
             {
-                if (string.IsNullOrEmpty(Txb_nomeTurma.Text))
-                {
-                    inserir.mensagem = "Insira o nome da turma";
-                }
-                else if (Cbx_Turno.SelectedItem == null)
-                {
-                    inserir.mensagem = "Insira o turno da turma";
-                }
-                else if (Cbx_cursoTurma.SelectedItem == null)
-                {
-                    inserir.mensagem = "Escolha o curso que a turma pertence";
-                }
-                MessageBox.Show(inserir.mensagem);
+                confereCampos(inserir);
             }
 
             catch (Exception ex)
@@ -214,6 +132,8 @@ namespace Faculdade
                 inserir.mensagem = "Erro na inserção:" + ex.Message;
                 MessageBox.Show(inserir.mensagem);
             }
+            AtualizaDataGridView();
+            EditaColunaDgv();
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
@@ -223,60 +143,43 @@ namespace Faculdade
             {
                 if (TxB_nomeAlterar.Visible)
                 {
-
                     verifica.VerificaNullorWhiteSpace(TxB_nomeAlterar.Text);
-                    verifica.VerificaNullorWhiteSpace(Txb_nomeTurma.Text);
-
                     verifica.VerificaCbxVazio(Cbx_turnoAntigo);
                     verifica.VerificaCbxVazio(Cbx_cursoAntigo);
-
-                    verifica.VerificaCbxVazio(Cbx_Turno);
-                    verifica.VerificaCbxVazio(Cbx_cursoTurma);
-
-                    editar.Editar(TxB_nomeAlterar.Text, Cbx_turnoAntigo.Text, (int)Cbx_cursoAntigo.SelectedValue, Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
-                    MessageBox.Show(editar.mensagem);
-                    AtualizaDataGridView();
-
+                    verificaIsNullOrWhiteSpace();
+                    if (MessageBox.Show("Deseja realmente editar a turma " + Txb_nomeTurma.Text + " do curso de " + Cbx_cursoTurma.Text + " do turno " + Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        editar.Editar(TxB_nomeAlterar.Text, Cbx_turnoAntigo.Text, (int)Cbx_cursoAntigo.SelectedValue, Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
+                        MessageBox.Show(editar.mensagem);
+                    } 
                 }
                 else
                 {
-                    TxB_nomeAlterar.Visible = true;
-                    Cbx_cursoAntigo.Visible = true;
-                    Cbx_turnoAntigo.Visible = true;
-                    Lbl_cursoAltera.Visible = true;
-                    Lbl_turmaAltera.Visible = true;
-                    Lbl_turnoAltera.Visible = true;
+                    someCampos(true);
                     Cbx_cursoTurma.SelectedItem = null;
                     Cbx_Turno.SelectedItem = null;
                 }
             }
             catch (NullReferenceException)
             {
-                if (string.IsNullOrEmpty(Txb_nomeTurma.Text))
-                {
-                    editar.mensagem = "Insira o nome da turma";
-                }
-                else if (string.IsNullOrEmpty(TxB_nomeAlterar.Text))
+                if (string.IsNullOrEmpty(TxB_nomeAlterar.Text))
                 {
                     editar.mensagem = "Escolha o curso que deseja alterar";
+                    MessageBox.Show(editar.mensagem);
                 }
-                else if (Cbx_Turno.SelectedItem == null)
-                {
-                    editar.mensagem = "Insira o turno da turma";
-                }
+               
                 else if (Cbx_turnoAntigo.SelectedItem == null)
                 {
                     editar.mensagem = "Selecione o turno do curso que deseja alterar";
+                    MessageBox.Show(editar.mensagem);
                 }
-                else if (Cbx_cursoTurma.SelectedItem == null)
-                {
-                    editar.mensagem = "Escolha o curso que a turma pertence";
-                }
+                
                 else if (Cbx_cursoAntigo.SelectedItem == null)
                 {
                     editar.mensagem = "Selecione o curso da turma que está tentando alterar";
+                    MessageBox.Show(editar.mensagem);
                 }
-                MessageBox.Show(editar.mensagem);
+                verificaIsNullOrWhiteSpace();
             }
             catch (Exception ex)
             {
@@ -284,13 +187,13 @@ namespace Faculdade
                 MessageBox.Show(editar.mensagem);
             }
             AtualizaDataGridView();
+            EditaColunaDgv();
         }
 
         private void Dgv_turmas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-
                 DataGridViewRow row = Dgv_turmas.Rows[e.RowIndex];
                 if (!TxB_nomeAlterar.Visible)
                 {
@@ -312,7 +215,6 @@ namespace Faculdade
                 }
                 Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
                 Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
-
             }
             catch (Exception)
             {
@@ -327,41 +229,21 @@ namespace Faculdade
             {
                 if (!TxB_nomeAlterar.Visible)
                 {
-                    verifica.VerificaCbxVazio(Cbx_cursoTurma);
-                    verifica.VerificaCbxVazio(Cbx_Turno);
-                    verifica.VerificaNullorWhiteSpace(Txb_nomeTurma.Text);
+                    verificaIsNullOrWhiteSpace();
                     if (MessageBox.Show("Deseja realmente excluir a turma " + Txb_nomeTurma.Text + " do curso de " +  Cbx_cursoTurma.Text + " do turno "+ Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         excluir.Excluir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
                         MessageBox.Show(excluir.mensagem);
-                    } 
-                    AtualizaDataGridView();
+                    }
                 }
                 else
                 {
-                    TxB_nomeAlterar.Visible = false;
-                    Cbx_cursoAntigo.Visible = false;
-                    Cbx_turnoAntigo.Visible = false;
-                    Lbl_cursoAltera.Visible = false;
-                    Lbl_turmaAltera.Visible = false;
-                    Lbl_turnoAltera.Visible = false;
+                    someCampos(false);
                 }
             }
             catch (NullReferenceException)
             {
-                if (string.IsNullOrEmpty(Txb_nomeTurma.Text))
-                {
-                    excluir.mensagem = "Insira o nome da turma";
-                }
-                else if (Cbx_Turno.SelectedItem == null)
-                {
-                    excluir.mensagem = "Insira o turno da turma";
-                }
-                else if (Cbx_cursoTurma.SelectedItem == null)
-                {
-                    excluir.mensagem = "Escolha o curso que a turma pertence";
-                }
-                MessageBox.Show(excluir.mensagem);
+              
             }
             catch (Exception ex)
             {
@@ -369,6 +251,7 @@ namespace Faculdade
                 MessageBox.Show(excluir.mensagem);
             }
             AtualizaDataGridView();
+            EditaColunaDgv();
         }
 
         private void Txb_buscaTurma_TextChanged(object sender, EventArgs e)
