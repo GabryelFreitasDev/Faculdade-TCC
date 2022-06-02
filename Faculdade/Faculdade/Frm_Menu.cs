@@ -123,11 +123,11 @@ namespace Faculdade
 
         private void Pic_Maximizar_Click(object sender, EventArgs e)
         {
-           Maximazar();
+           Maximizar();
         }
 
         // Serve para arrumar o botão de Maximizar e também a posição de alguns itens
-        private void Maximazar()
+        private void Maximizar()
         {
             Pic_Maximizar.Visible = !Pic_Maximizar.Visible;
             Pic_Maximizar2.Visible = !Pic_Maximizar2.Visible;
@@ -150,7 +150,7 @@ namespace Faculdade
 
         private void Pic_Maximizar2_Click(object sender, EventArgs e)
         {
-            Maximazar();
+            Maximizar();
         }
     }
 }

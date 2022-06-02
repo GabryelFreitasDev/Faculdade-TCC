@@ -42,19 +42,19 @@
             this.Lbl_Introducao = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Pic_Maximizar2 = new System.Windows.Forms.PictureBox();
             this.Pic_Fechar = new System.Windows.Forms.PictureBox();
             this.Pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.Pic_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pn_Menu = new System.Windows.Forms.Panel();
-            this.Pic_Maximizar2 = new System.Windows.Forms.PictureBox();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Pnl_Letreiro.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Menu
@@ -205,8 +205,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(60, 196);
@@ -217,8 +216,7 @@
             // 
             // Lbl_Introducao
             // 
-            this.Lbl_Introducao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lbl_Introducao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lbl_Introducao.AutoSize = true;
             this.Lbl_Introducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_Introducao.Location = new System.Drawing.Point(64, 165);
@@ -250,6 +248,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1136, 100);
             this.panel3.TabIndex = 10;
+            // 
+            // Pic_Maximizar2
+            // 
+            this.Pic_Maximizar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pic_Maximizar2.Image = global::Faculdade.Properties.Resources.maximizar2;
+            this.Pic_Maximizar2.Location = new System.Drawing.Point(1040, 29);
+            this.Pic_Maximizar2.Name = "Pic_Maximizar2";
+            this.Pic_Maximizar2.Size = new System.Drawing.Size(38, 40);
+            this.Pic_Maximizar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_Maximizar2.TabIndex = 24;
+            this.Pic_Maximizar2.TabStop = false;
+            this.Pic_Maximizar2.Visible = false;
+            this.Pic_Maximizar2.Click += new System.EventHandler(this.Pic_Maximizar2_Click);
             // 
             // Pic_Fechar
             // 
@@ -299,19 +310,6 @@
             this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
             this.Pn_Menu.TabIndex = 15;
             // 
-            // Pic_Maximizar2
-            // 
-            this.Pic_Maximizar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pic_Maximizar2.Image = global::Faculdade.Properties.Resources.maximizar2;
-            this.Pic_Maximizar2.Location = new System.Drawing.Point(1040, 29);
-            this.Pic_Maximizar2.Name = "Pic_Maximizar2";
-            this.Pic_Maximizar2.Size = new System.Drawing.Size(38, 40);
-            this.Pic_Maximizar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_Maximizar2.TabIndex = 24;
-            this.Pic_Maximizar2.TabStop = false;
-            this.Pic_Maximizar2.Visible = false;
-            this.Pic_Maximizar2.Click += new System.EventHandler(this.Pic_Maximizar2_Click);
-            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,10 +333,10 @@
             this.Pnl_Letreiro.ResumeLayout(false);
             this.Pnl_Letreiro.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

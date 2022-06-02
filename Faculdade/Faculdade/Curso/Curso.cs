@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Npgsql;
+using System.Windows.Forms;
 
 namespace Faculdade
 {
@@ -12,7 +13,7 @@ namespace Faculdade
     {
         public string mensagem = "";
         public Conexao db;
-        
+
         public Curso()
         {
             try
@@ -26,9 +27,9 @@ namespace Faculdade
             }
         }
 
-        public void Inserir(string nomeCurso,string cargaHoraria,string descricao)
+        public void Inserir(string nomeCurso, string cargaHoraria, string descricao)
         {
-            
+
             var SQL = "SELECT idCurso, nomeCurso,cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
             var dt = db.NpgSQLQuery(SQL);
             if (dt.Rows.Count == 0)
@@ -47,24 +48,33 @@ namespace Faculdade
             else
             {
                 mensagem = "Esse Curso já existe";
-            }      
+            }
         }
 
         public void Excluir(string nomeCurso)
         {
             try
             {
-                var SQL = "SELECT idCurso, nomeCurso, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
+                var SQL = "SELECT nomeAluno,nomeCurso FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso WHERE nomeCurso = '" + nomeCurso + "'";
                 var dt = db.NpgSQLQuery(SQL);
-                if (dt.Rows.Count > 0)
+                if (dt.Rows.Count == 0)
                 {
-                    var Sql = "DELETE FROM Curso WHERE nomeCurso =('" + nomeCurso + "')";
-                    db.NpgSQLCommand(Sql);
-                    mensagem = "Exclusão bem sucedida ! \nCurso: " + nomeCurso;
+                    SQL = "SELECT idCurso, nomeCurso, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeCurso + "'";
+                    dt = db.NpgSQLQuery(SQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        var Sql = "DELETE FROM Curso WHERE nomeCurso =('" + nomeCurso + "')";
+                        db.NpgSQLCommand(Sql);
+                        mensagem = "Exclusão bem sucedida ! \nCurso: " + nomeCurso;
+                    }
+                    else
+                    {
+                        mensagem = "Esse Curso não existe";
+                    }
                 }
                 else
                 {
-                    mensagem = "Esse Curso não existe";
+                    mensagem = "Esse curso possui alunos! \nVocê não pode excluí-la!";
                 }
             }
             catch (Exception ex)
@@ -76,6 +86,7 @@ namespace Faculdade
         {
             try
             {
+
                 var SQL = "SELECT idCurso, nomeCurso, cargaHoraria, descricao FROM Curso WHERE nomeCurso = '" + nomeAlterar + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
@@ -85,9 +96,10 @@ namespace Faculdade
                     mensagem = "Edição bem sucedida ! \nCurso: " + nomeCurso;
                 }
                 else
-                {      
+                {
                     mensagem = "Esse Curso não existe";
                 }
+
             }
             catch (Exception ex)
             {
@@ -95,5 +107,5 @@ namespace Faculdade
             }
         }
     }
-}   
+}
 
