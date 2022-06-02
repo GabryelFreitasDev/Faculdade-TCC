@@ -123,21 +123,34 @@ namespace Faculdade
 
         private void Pic_Maximizar_Click(object sender, EventArgs e)
         {
-            if(Width < 1400)
-            {
-                this.WindowState = FormWindowState.Maximized;
+           Maximazar();
+        }
 
-            }
-            else
+        // Serve para arrumar o botão de Maximizar e também a posição de alguns itens
+        private void Maximazar()
+        {
+            Pic_Maximizar.Visible = !Pic_Maximizar.Visible;
+            Pic_Maximizar2.Visible = !Pic_Maximizar2.Visible;
+
+            if(Pic_Maximizar.Visible) // Se a tela não estiver maximizada
             {
                 WindowState = FormWindowState.Normal;
+                Pnl_Letreiro.Location = new Point(Pnl_Letreiro.Location.X, Pnl_Letreiro.Location.Y - 120);
+            } else
+            {
+                WindowState = FormWindowState.Maximized;
+                Pnl_Letreiro.Location = new Point(Pnl_Letreiro.Location.X, Pnl_Letreiro.Location.Y + 120);
             }
-
         }
 
         private void Pic_Minimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void Pic_Maximizar2_Click(object sender, EventArgs e)
+        {
+            Maximazar();
         }
     }
 }

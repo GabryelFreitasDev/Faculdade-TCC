@@ -37,7 +37,7 @@
             this.Btn_Notas = new System.Windows.Forms.Button();
             this.Btn_Materias = new System.Windows.Forms.Button();
             this.Btn_Professores = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Pnl_Letreiro = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_Introducao = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,17 +46,21 @@
             this.Pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.Pic_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pn_Menu = new System.Windows.Forms.Panel();
+            this.Pic_Maximizar2 = new System.Windows.Forms.PictureBox();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.Pnl_Letreiro.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Menu
             // 
+            this.Pnl_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.Pnl_Menu.Controls.Add(this.pictureBox1);
             this.Pnl_Menu.Controls.Add(this.Btn_Alunos);
@@ -65,18 +69,17 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Notas);
             this.Pnl_Menu.Controls.Add(this.Btn_Materias);
             this.Pnl_Menu.Controls.Add(this.Btn_Professores);
-            this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(250, 715);
+            this.Pnl_Menu.Size = new System.Drawing.Size(250, 840);
             this.Pnl_Menu.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Faculdade.Properties.Resources.blob__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-9, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(259, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -186,25 +189,27 @@
             this.Btn_Professores.UseVisualStyleBackColor = true;
             this.Btn_Professores.Click += new System.EventHandler(this.Btn_Professores_Click);
             // 
-            // panel1
+            // Pnl_Letreiro
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Pnl_Letreiro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Lbl_Introducao);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(250, 176);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1139, 253);
-            this.panel1.TabIndex = 4;
+            this.Pnl_Letreiro.AutoSize = true;
+            this.Pnl_Letreiro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Pnl_Letreiro.Controls.Add(this.label1);
+            this.Pnl_Letreiro.Controls.Add(this.Lbl_Introducao);
+            this.Pnl_Letreiro.Controls.Add(this.panel2);
+            this.Pnl_Letreiro.Location = new System.Drawing.Point(250, 176);
+            this.Pnl_Letreiro.Name = "Pnl_Letreiro";
+            this.Pnl_Letreiro.Size = new System.Drawing.Size(1139, 253);
+            this.Pnl_Letreiro.TabIndex = 4;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(6, 196);
+            this.label1.Location = new System.Drawing.Point(60, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1030, 31);
             this.label1.TabIndex = 2;
@@ -212,9 +217,11 @@
             // 
             // Lbl_Introducao
             // 
+            this.Lbl_Introducao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Introducao.AutoSize = true;
             this.Lbl_Introducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.Lbl_Introducao.Location = new System.Drawing.Point(19, 165);
+            this.Lbl_Introducao.Location = new System.Drawing.Point(64, 165);
             this.Lbl_Introducao.Name = "Lbl_Introducao";
             this.Lbl_Introducao.Size = new System.Drawing.Size(1014, 31);
             this.Lbl_Introducao.TabIndex = 1;
@@ -222,6 +229,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackgroundImage = global::Faculdade.Properties.Resources.blob__1_;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel2.Location = new System.Drawing.Point(386, 25);
@@ -231,11 +239,13 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
+            this.panel3.Controls.Add(this.Pic_Maximizar2);
             this.panel3.Controls.Add(this.Pic_Fechar);
             this.panel3.Controls.Add(this.Pic_Minimizar);
             this.panel3.Controls.Add(this.Pic_Maximizar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1136, 100);
@@ -245,9 +255,9 @@
             // 
             this.Pic_Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pic_Fechar.Image = global::Faculdade.Properties.Resources.Fechar;
-            this.Pic_Fechar.Location = new System.Drawing.Point(1090, 30);
+            this.Pic_Fechar.Location = new System.Drawing.Point(1094, 34);
             this.Pic_Fechar.Name = "Pic_Fechar";
-            this.Pic_Fechar.Size = new System.Drawing.Size(35, 35);
+            this.Pic_Fechar.Size = new System.Drawing.Size(30, 30);
             this.Pic_Fechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Fechar.TabIndex = 22;
             this.Pic_Fechar.TabStop = false;
@@ -257,9 +267,9 @@
             // 
             this.Pic_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pic_Minimizar.Image = global::Faculdade.Properties.Resources.Minimizar;
-            this.Pic_Minimizar.Location = new System.Drawing.Point(990, 30);
+            this.Pic_Minimizar.Location = new System.Drawing.Point(994, 34);
             this.Pic_Minimizar.Name = "Pic_Minimizar";
-            this.Pic_Minimizar.Size = new System.Drawing.Size(35, 35);
+            this.Pic_Minimizar.Size = new System.Drawing.Size(30, 30);
             this.Pic_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Minimizar.TabIndex = 21;
             this.Pic_Minimizar.TabStop = false;
@@ -269,9 +279,9 @@
             // 
             this.Pic_Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pic_Maximizar.Image = global::Faculdade.Properties.Resources.Maximizar;
-            this.Pic_Maximizar.Location = new System.Drawing.Point(1040, 30);
+            this.Pic_Maximizar.Location = new System.Drawing.Point(1048, 34);
             this.Pic_Maximizar.Name = "Pic_Maximizar";
-            this.Pic_Maximizar.Size = new System.Drawing.Size(35, 35);
+            this.Pic_Maximizar.Size = new System.Drawing.Size(30, 30);
             this.Pic_Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Maximizar.TabIndex = 20;
             this.Pic_Maximizar.TabStop = false;
@@ -289,6 +299,19 @@
             this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
             this.Pn_Menu.TabIndex = 15;
             // 
+            // Pic_Maximizar2
+            // 
+            this.Pic_Maximizar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pic_Maximizar2.Image = global::Faculdade.Properties.Resources.maximizar2;
+            this.Pic_Maximizar2.Location = new System.Drawing.Point(1040, 29);
+            this.Pic_Maximizar2.Name = "Pic_Maximizar2";
+            this.Pic_Maximizar2.Size = new System.Drawing.Size(38, 40);
+            this.Pic_Maximizar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_Maximizar2.TabIndex = 24;
+            this.Pic_Maximizar2.TabStop = false;
+            this.Pic_Maximizar2.Visible = false;
+            this.Pic_Maximizar2.Click += new System.EventHandler(this.Pic_Maximizar2_Click);
+            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +321,7 @@
             this.ClientSize = new System.Drawing.Size(1386, 715);
             this.Controls.Add(this.Pn_Menu);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Pnl_Letreiro);
             this.Controls.Add(this.Pnl_Menu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -309,12 +332,13 @@
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.Pnl_Menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Pnl_Letreiro.ResumeLayout(false);
+            this.Pnl_Letreiro.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +353,7 @@
         private System.Windows.Forms.Button Btn_Materias;
         private System.Windows.Forms.Button Btn_Professores;
         private System.Windows.Forms.Button Btn_Alunos;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Pnl_Letreiro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lbl_Introducao;
         private System.Windows.Forms.Panel panel2;
@@ -339,5 +363,6 @@
         private System.Windows.Forms.PictureBox Pic_Minimizar;
         private System.Windows.Forms.PictureBox Pic_Fechar;
         public System.Windows.Forms.Panel Pn_Menu;
+        private System.Windows.Forms.PictureBox Pic_Maximizar2;
     }
 }
