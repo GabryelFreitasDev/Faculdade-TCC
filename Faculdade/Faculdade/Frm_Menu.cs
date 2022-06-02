@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Faculdade.Materia;
+using Faculdade.Nota;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +28,8 @@ namespace Faculdade
             AbrirForm<Frm_Aluno>();
             AbrirForm<Frm_Curso>();
             AbrirForm<Frm_Turma>();
+            AbrirForm<Frm_Materia>();
+            AbrirForm<Frm_Nota>();
         }
 
         private void Frm_Menu_Load(object sender, EventArgs e)
@@ -81,12 +85,16 @@ namespace Faculdade
         {
             descolorirAbas();
             Btn_Materias.BackColor = Color.FromArgb(38, 144, 182);
+            Pn_Menu.Visible = true;
+            AbrirForm<Frm_Materia>();
         }
 
         private void Btn_Notas_Click(object sender, EventArgs e)
         {
             descolorirAbas();
             Btn_Notas.BackColor = Color.FromArgb(38, 144, 182);
+            Pn_Menu.Visible= true;  
+            AbrirForm<Frm_Nota>();
         }
 
         public void AbrirForm<Forms>() where Forms : Form, new()
@@ -151,6 +159,20 @@ namespace Faculdade
         private void Pic_Maximizar2_Click(object sender, EventArgs e)
         {
             Maximizar();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var i = 2;
+            while (i > 0) 
+            {
+                i *= i;
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

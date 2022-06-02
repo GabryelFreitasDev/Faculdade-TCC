@@ -79,10 +79,11 @@
             this.pictureBox1.Image = global::Faculdade.Properties.Resources.blob__1_;
             this.pictureBox1.Location = new System.Drawing.Point(-9, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(264, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Btn_Alunos
             // 
@@ -248,6 +249,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1136, 100);
             this.panel3.TabIndex = 10;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Pic_Maximizar2
             // 
