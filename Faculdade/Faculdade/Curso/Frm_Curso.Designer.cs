@@ -52,7 +52,7 @@ namespace Faculdade
             // 
             // Txb_buscar
             // 
-            this.Txb_buscar.Location = new System.Drawing.Point(432, 44);
+            this.Txb_buscar.Location = new System.Drawing.Point(432, 47);
             this.Txb_buscar.Name = "Txb_buscar";
             this.Txb_buscar.Size = new System.Drawing.Size(598, 20);
             this.Txb_buscar.TabIndex = 23;
@@ -87,7 +87,6 @@ namespace Faculdade
             // Btn_InsereCurso
             // 
             this.Btn_InsereCurso.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_InsereCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_InsereCurso.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_InsereCurso.Location = new System.Drawing.Point(12, 415);
             this.Btn_InsereCurso.Name = "Btn_InsereCurso";
@@ -107,7 +106,6 @@ namespace Faculdade
             // Btn_excluiCurso
             // 
             this.Btn_excluiCurso.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_excluiCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_excluiCurso.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_excluiCurso.Location = new System.Drawing.Point(212, 415);
             this.Btn_excluiCurso.Name = "Btn_excluiCurso";
@@ -120,7 +118,6 @@ namespace Faculdade
             // Btn_editar
             // 
             this.Btn_editar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_editar.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_editar.Location = new System.Drawing.Point(112, 415);
             this.Btn_editar.Name = "Btn_editar";
@@ -139,11 +136,10 @@ namespace Faculdade
             // 
             // Btn_relatorioCurso
             // 
-            this.Btn_relatorioCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_relatorioCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.Btn_relatorioCurso.Location = new System.Drawing.Point(920, 536);
+            this.Btn_relatorioCurso.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_relatorioCurso.Location = new System.Drawing.Point(930, 536);
             this.Btn_relatorioCurso.Name = "Btn_relatorioCurso";
-            this.Btn_relatorioCurso.Size = new System.Drawing.Size(110, 34);
+            this.Btn_relatorioCurso.Size = new System.Drawing.Size(100, 32);
             this.Btn_relatorioCurso.TabIndex = 33;
             this.Btn_relatorioCurso.Text = "RELATÓRIO";
             this.Btn_relatorioCurso.UseVisualStyleBackColor = true;
@@ -162,11 +158,10 @@ namespace Faculdade
             // 
             // Btn_limpar
             // 
-            this.Btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_limpar.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_limpar.Location = new System.Drawing.Point(12, 475);
             this.Btn_limpar.Name = "Btn_limpar";
-            this.Btn_limpar.Size = new System.Drawing.Size(75, 34);
+            this.Btn_limpar.Size = new System.Drawing.Size(84, 32);
             this.Btn_limpar.TabIndex = 37;
             this.Btn_limpar.Text = "LIMPAR";
             this.Btn_limpar.UseVisualStyleBackColor = true;
@@ -209,6 +204,7 @@ namespace Faculdade
             // 
             this.Dgv_cursos.AllowUserToAddRows = false;
             this.Dgv_cursos.AllowUserToDeleteRows = false;
+            this.Dgv_cursos.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_cursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_cursos.Location = new System.Drawing.Point(432, 82);
             this.Dgv_cursos.Name = "Dgv_cursos";

@@ -46,7 +46,7 @@ namespace Faculdade
             Btn_Materias.BackColor = Color.FromArgb(43, 100, 132);
             Btn_Cursos.BackColor = Color.FromArgb(43, 100, 132);
             Btn_Notas.BackColor = Color.FromArgb(43, 100, 132);
-            Btn_Professores.BackColor = Color.FromArgb(43, 100, 132);
+            Btn_Turmas.BackColor = Color.FromArgb(43, 100, 132);
         }
 
         private void Btn_Menu_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace Faculdade
         private void Btn_Professores_Click(object sender, EventArgs e)
         {
             descolorirAbas();
-            Btn_Professores.BackColor = Color.FromArgb(38, 144, 182);
+            Btn_Turmas.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Turma>();           
         }
@@ -163,11 +163,7 @@ namespace Faculdade
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var i = 2;
-            while (i > 0) 
-            {
-                i *= i;
-            }
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

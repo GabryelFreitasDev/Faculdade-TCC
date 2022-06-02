@@ -36,7 +36,7 @@
             this.Btn_Cursos = new System.Windows.Forms.Button();
             this.Btn_Notas = new System.Windows.Forms.Button();
             this.Btn_Materias = new System.Windows.Forms.Button();
-            this.Btn_Professores = new System.Windows.Forms.Button();
+            this.Btn_Turmas = new System.Windows.Forms.Button();
             this.Pnl_Letreiro = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_Introducao = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Cursos);
             this.Pnl_Menu.Controls.Add(this.Btn_Notas);
             this.Pnl_Menu.Controls.Add(this.Btn_Materias);
-            this.Pnl_Menu.Controls.Add(this.Btn_Professores);
+            this.Pnl_Menu.Controls.Add(this.Btn_Turmas);
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(250, 840);
@@ -94,7 +94,7 @@
             this.Btn_Alunos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Alunos.Image = global::Faculdade.Properties.Resources._57_Student_removebg_preview_2_;
             this.Btn_Alunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Alunos.Location = new System.Drawing.Point(0, 300);
+            this.Btn_Alunos.Location = new System.Drawing.Point(0, 400);
             this.Btn_Alunos.Name = "Btn_Alunos";
             this.Btn_Alunos.Size = new System.Drawing.Size(250, 100);
             this.Btn_Alunos.TabIndex = 3;
@@ -173,22 +173,22 @@
             this.Btn_Materias.UseVisualStyleBackColor = true;
             this.Btn_Materias.Click += new System.EventHandler(this.Btn_Materias_Click);
             // 
-            // Btn_Professores
+            // Btn_Turmas
             // 
-            this.Btn_Professores.FlatAppearance.BorderSize = 0;
-            this.Btn_Professores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Professores.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_Professores.ForeColor = System.Drawing.Color.Transparent;
-            this.Btn_Professores.Image = global::Faculdade.Properties.Resources.professorBnc1;
-            this.Btn_Professores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Professores.Location = new System.Drawing.Point(0, 400);
-            this.Btn_Professores.Name = "Btn_Professores";
-            this.Btn_Professores.Size = new System.Drawing.Size(250, 100);
-            this.Btn_Professores.TabIndex = 4;
-            this.Btn_Professores.Text = "Turmas";
-            this.Btn_Professores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_Professores.UseVisualStyleBackColor = true;
-            this.Btn_Professores.Click += new System.EventHandler(this.Btn_Professores_Click);
+            this.Btn_Turmas.FlatAppearance.BorderSize = 0;
+            this.Btn_Turmas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Turmas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_Turmas.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_Turmas.Image = global::Faculdade.Properties.Resources.professorBnc1;
+            this.Btn_Turmas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Turmas.Location = new System.Drawing.Point(0, 300);
+            this.Btn_Turmas.Name = "Btn_Turmas";
+            this.Btn_Turmas.Size = new System.Drawing.Size(250, 100);
+            this.Btn_Turmas.TabIndex = 4;
+            this.Btn_Turmas.Text = " Turmas";
+            this.Btn_Turmas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Turmas.UseVisualStyleBackColor = true;
+            this.Btn_Turmas.Click += new System.EventHandler(this.Btn_Professores_Click);
             // 
             // Pnl_Letreiro
             // 
@@ -351,7 +351,7 @@
         private System.Windows.Forms.Button Btn_Notas;
         private System.Windows.Forms.Button Btn_Cursos;
         private System.Windows.Forms.Button Btn_Materias;
-        private System.Windows.Forms.Button Btn_Professores;
+        private System.Windows.Forms.Button Btn_Turmas;
         private System.Windows.Forms.Button Btn_Alunos;
         private System.Windows.Forms.Panel Pnl_Letreiro;
         private System.Windows.Forms.Label label1;
