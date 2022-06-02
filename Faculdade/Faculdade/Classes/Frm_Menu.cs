@@ -99,11 +99,11 @@ namespace Faculdade
             {
                 formulario = new Forms();
                 formulario.TopLevel = false;
+                Pn_Menu.Controls.Add(formulario);
+                Pn_Menu.Tag = formulario;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
                 formulario.Size = Pn_Menu.Size;
-                Pn_Menu.Controls.Add(formulario);
-                Pn_Menu.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
             }

@@ -434,6 +434,7 @@
             this.Controls.Add(this.Btn_insereAluno);
             this.Controls.Add(this.Dgv_aluno);
             this.Name = "Frm_Aluno";
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aluno";
             this.Load += new System.EventHandler(this.Frm_Aluno_Load);

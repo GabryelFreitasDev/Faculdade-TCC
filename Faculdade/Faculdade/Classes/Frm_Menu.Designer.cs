@@ -59,8 +59,6 @@
             // 
             // Pnl_Menu
             // 
-            this.Pnl_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.Pnl_Menu.Controls.Add(this.pictureBox1);
             this.Pnl_Menu.Controls.Add(this.Btn_Alunos);
@@ -69,15 +67,16 @@
             this.Pnl_Menu.Controls.Add(this.Btn_Notas);
             this.Pnl_Menu.Controls.Add(this.Btn_Materias);
             this.Pnl_Menu.Controls.Add(this.Btn_Professores);
+            this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Menu.Name = "Pnl_Menu";
-            this.Pnl_Menu.Size = new System.Drawing.Size(250, 840);
+            this.Pnl_Menu.Size = new System.Drawing.Size(250, 715);
             this.Pnl_Menu.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Faculdade.Properties.Resources.blob__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(-9, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(259, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -184,7 +183,7 @@
             this.Btn_Professores.Name = "Btn_Professores";
             this.Btn_Professores.Size = new System.Drawing.Size(250, 100);
             this.Btn_Professores.TabIndex = 4;
-            this.Btn_Professores.Text = "Turmas";
+            this.Btn_Professores.Text = " Turmas";
             this.Btn_Professores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Professores.UseVisualStyleBackColor = true;
             this.Btn_Professores.Click += new System.EventHandler(this.Btn_Professores_Click);
@@ -237,13 +236,12 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
             this.panel3.Controls.Add(this.Pic_Maximizar2);
             this.panel3.Controls.Add(this.Pic_Fechar);
             this.panel3.Controls.Add(this.Pic_Minimizar);
             this.panel3.Controls.Add(this.Pic_Maximizar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1136, 100);
@@ -300,10 +298,9 @@
             // 
             // Pn_Menu
             // 
-            this.Pn_Menu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pn_Menu.AutoSize = true;
             this.Pn_Menu.BackColor = System.Drawing.SystemColors.Control;
+            this.Pn_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
