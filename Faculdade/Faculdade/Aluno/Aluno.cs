@@ -12,12 +12,10 @@ namespace Faculdade
     class Aluno
     {
         public string mensagem = "";
-        public bool status;
         public Conexao db;
 
         public Aluno()
         {
-            status = true;
             try
             {
                 db = new Conexao();
@@ -25,7 +23,6 @@ namespace Faculdade
             }
             catch (Exception ex)
             {
-                status = false;
                 mensagem = "Falha ao se conectar com o banco !" + ex.Message;
             }
         }
@@ -39,19 +36,16 @@ namespace Faculdade
                 {
                     var Sql = "INSERT INTO Aluno (nomeAluno, cpf, dataNascimento, contato, contatoParente, email, endereco,FK_idCurso, FK_idTurma) VALUES ('" + nomeAluno + "','" + cpf + "','" + dataNascimento + "','" + contato + "','" + contatoParente + "','" + email + "','" + endereco + "','" + idCurso + "','" + idTurma + "')";
                     db.NpgSQLCommand(Sql);
-                    status = true;
                     mensagem = "Inserção bem sucedida!\nAluno = " + nomeAluno;
                 }
                 else
                 {
                     mensagem = "Esse CPF já está cadastrado!\nInsira outra pessoa ou edite a existente";
-                    status = false;
                 }
 
             }
             catch (Exception ex)
             {
-                status = false;
                 mensagem = "Erro na Inserção: " + ex.Message;
             }
         }
@@ -62,12 +56,10 @@ namespace Faculdade
             {
                 var Sql = "UPDATE Aluno SET nomeAluno = '" + nomeAluno + "', cpf = '" + cpf + "', dataNascimento = '" + dataNascimento + "', contato = '" + contato + "', contatoParente = '" + contatoParente + "', email = '" + email + "', endereco ='" + endereco + "', FK_idCurso = '" + idCurso + "',FK_idTurma = '" + idTurma + "' WHERE nomeAluno = '" + nomeAlterar + "'";
                 db.NpgSQLCommand(Sql);
-                status = true;
                 mensagem = "Edição bem sucedida!\nAluno = " + nomeAluno;
             }
             catch (Exception ex)
             {
-                status = false;
                 mensagem = "Erro na Edição: " + ex.Message;
             }
         }
@@ -82,7 +74,6 @@ namespace Faculdade
                 {
                     var Sql = "DELETE FROM Aluno WHERE cpf = '" + cpf + "'";
                     db.NpgSQLCommand(Sql);
-                    status = true;
                     mensagem = "Exclusão bem sucedida!\nAluno :" + nomeAluno;
                 }
                 else
@@ -92,7 +83,6 @@ namespace Faculdade
             }
             catch (Exception ex)
             {
-                status = false;
                 mensagem = "Erro na Exclusão: " + ex.Message;
             }
         }

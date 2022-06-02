@@ -265,7 +265,7 @@ namespace Faculdade
                 {
                     verifica.VerificaNullorWhiteSpace(Txb_nomeAlterar.Text);
                     verificaIsNullOrWhiteSpace();
-                    if (MessageBox.Show("Deseja realmente editar o aluno: " + Txb_nomeAluno.Text + " ?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Deseja realmente editar o aluno: " + Txb_nomeAluno.Text + " ?\n\n*Todos os aluno cadastrados irão para a turma nova*", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         editar.Editar(Txb_nomeAlterar.Text, Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, (int)Cbx_Curso.SelectedValue, (int)Cbx_turmaAluno.SelectedValue);
                         MessageBox.Show(editar.mensagem);
                 }

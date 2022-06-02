@@ -37,9 +37,9 @@ namespace Faculdade
             da.Dispose();
             return dt;
         }
+
         private void Frm_relatorioAluno_Load(object sender, EventArgs e)
         {
-
             this.RelatorioAluno.LocalReport.DataSources.Clear();
             ReportDataSource relatorio = new ReportDataSource("aluno", geraRelatorio());
             this.RelatorioAluno.LocalReport.DataSources.Add(relatorio);
