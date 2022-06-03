@@ -32,6 +32,7 @@ namespace Faculdade
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Txb_buscar = new System.Windows.Forms.TextBox();
             this.Lbl_operacao = new System.Windows.Forms.Label();
             this.MTxb_cargaHoraria = new System.Windows.Forms.MaskedTextBox();
@@ -75,14 +76,16 @@ namespace Faculdade
             // 
             // MTxb_cargaHoraria
             // 
+            this.MTxb_cargaHoraria.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MTxb_cargaHoraria.Location = new System.Drawing.Point(11, 234);
             this.MTxb_cargaHoraria.Mask = "0000 Hrs";
             this.MTxb_cargaHoraria.Name = "MTxb_cargaHoraria";
-            this.MTxb_cargaHoraria.Size = new System.Drawing.Size(55, 20);
+            this.MTxb_cargaHoraria.Size = new System.Drawing.Size(55, 23);
             this.MTxb_cargaHoraria.TabIndex = 28;
             // 
             // Txb_descricao
             // 
+            this.Txb_descricao.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txb_descricao.Location = new System.Drawing.Point(11, 291);
             this.Txb_descricao.Multiline = true;
             this.Txb_descricao.Name = "Txb_descricao";
@@ -105,9 +108,10 @@ namespace Faculdade
             // 
             // Txb_nomeCurso
             // 
+            this.Txb_nomeCurso.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txb_nomeCurso.Location = new System.Drawing.Point(11, 162);
             this.Txb_nomeCurso.Name = "Txb_nomeCurso";
-            this.Txb_nomeCurso.Size = new System.Drawing.Size(379, 20);
+            this.Txb_nomeCurso.Size = new System.Drawing.Size(379, 23);
             this.Txb_nomeCurso.TabIndex = 24;
             // 
             // Btn_excluiCurso
@@ -136,9 +140,10 @@ namespace Faculdade
             // 
             // Txb_nomeAlterar
             // 
+            this.Txb_nomeAlterar.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txb_nomeAlterar.Location = new System.Drawing.Point(12, 99);
             this.Txb_nomeAlterar.Name = "Txb_nomeAlterar";
-            this.Txb_nomeAlterar.Size = new System.Drawing.Size(379, 20);
+            this.Txb_nomeAlterar.Size = new System.Drawing.Size(379, 23);
             this.Txb_nomeAlterar.TabIndex = 32;
             // 
             // Btn_relatorioCurso
@@ -218,7 +223,11 @@ namespace Faculdade
             // 
             this.Dgv_cursos.AllowUserToAddRows = false;
             this.Dgv_cursos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_cursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_cursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -244,6 +253,14 @@ namespace Faculdade
             this.Dgv_cursos.Location = new System.Drawing.Point(432, 82);
             this.Dgv_cursos.Name = "Dgv_cursos";
             this.Dgv_cursos.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_cursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_cursos.RowHeadersWidth = 62;
             this.Dgv_cursos.Size = new System.Drawing.Size(598, 438);
             this.Dgv_cursos.TabIndex = 7;
@@ -277,7 +294,7 @@ namespace Faculdade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1120, 576);
             this.Controls.Add(this.Lbl_nomeAcao);
             this.Controls.Add(this.Lbl_operacaoEscolha);
