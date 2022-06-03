@@ -42,7 +42,6 @@ namespace Faculdade
                 {
                     mensagem = "Esse CPF já está cadastrado!\nInsira outra pessoa ou edite a existente";
                 }
-
             }
             catch (Exception ex)
             {

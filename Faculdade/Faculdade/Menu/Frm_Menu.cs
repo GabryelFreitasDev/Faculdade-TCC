@@ -32,6 +32,21 @@ namespace Faculdade
             AbrirForm<Frm_Nota>();
         }
 
+        Form formAtivo = null;
+        private void AbreFormulario(Form formulario)
+        {
+            if (formAtivo != null)
+                formAtivo.Close();
+            formAtivo = formulario;
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            Pn_Menu.Controls.Add(formulario);
+            Pn_Menu.Tag = formulario;
+            formulario.Show();
+            formulario.BringToFront();
+        } 
+
         private void Frm_Menu_Load(object sender, EventArgs e)
         {
             Pn_Menu.Visible = false;
@@ -51,23 +66,22 @@ namespace Faculdade
 
         private void Btn_Menu_Click(object sender, EventArgs e)
         {
-            descolorirAbas();
+            //descolorirAbas();
             Btn_Menu.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = false;
         }
 
         private void Btn_Cursos_Click(object sender, EventArgs e)
         {
-            descolorirAbas();
+            //descolorirAbas();
             Btn_Cursos.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
-            AbrirForm<Frm_Curso>();
-           
+            AbreFormulario(new Frm_Curso());
         }
 
         private void Btn_Alunos_Click(object sender, EventArgs e)
         {
-            descolorirAbas();
+            //descolorirAbas();
             Btn_Alunos.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Aluno>();
@@ -75,7 +89,7 @@ namespace Faculdade
 
         private void Btn_Professores_Click(object sender, EventArgs e)
         {
-            descolorirAbas();
+            //descolorirAbas();
             Btn_Turmas.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Turma>();           
@@ -83,7 +97,7 @@ namespace Faculdade
 
         private void Btn_Materias_Click(object sender, EventArgs e)
         {
-            descolorirAbas();
+            //descolorirAbas();
             Btn_Materias.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Materia>();
@@ -91,7 +105,7 @@ namespace Faculdade
 
         private void Btn_Notas_Click(object sender, EventArgs e)
         {
-            descolorirAbas();
+            //descolorirAbas();
             Btn_Notas.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible= true;  
             AbrirForm<Frm_Nota>();
@@ -99,7 +113,6 @@ namespace Faculdade
 
         public void AbrirForm<Forms>() where Forms : Form, new()
         {
-            
             Form formulario;
             formulario = Pn_Menu.Controls.OfType<Forms>().FirstOrDefault();
 
@@ -121,8 +134,8 @@ namespace Faculdade
                     formulario.WindowState = FormWindowState.Normal;
                     formulario.BringToFront();
             }
-
         }
+        
 
         private void Pic_Fechar_Click(object sender, EventArgs e)
         {

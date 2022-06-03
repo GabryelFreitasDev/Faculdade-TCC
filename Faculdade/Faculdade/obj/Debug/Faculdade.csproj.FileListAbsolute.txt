@@ -478,3 +478,5 @@ C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\Faculdade\obj\Debu
 C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.pdb
 C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Materia.Frm_Materia.resources
 C:\Users\UNIPAR\Documents\Programacao\TCC\Faculdade\Faculdade\Faculdade\obj\Debug\Faculdade.Nota.Frm_Nota.resources
+C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Materia.Frm_Materia.resources
+C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Nota.Frm_Nota.resources

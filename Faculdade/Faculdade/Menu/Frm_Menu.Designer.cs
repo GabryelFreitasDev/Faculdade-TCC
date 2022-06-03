@@ -47,6 +47,9 @@
             this.Pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.Pic_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pn_Menu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Pnl_Letreiro.SuspendLayout();
@@ -55,23 +58,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).BeginInit();
+            this.Pn_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl_Menu
             // 
-            this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
+            this.Pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.Pnl_Menu.Controls.Add(this.pictureBox1);
             this.Pnl_Menu.Controls.Add(this.Btn_Alunos);
             this.Pnl_Menu.Controls.Add(this.Btn_Menu);
             this.Pnl_Menu.Controls.Add(this.Btn_Cursos);
             this.Pnl_Menu.Controls.Add(this.Btn_Notas);
             this.Pnl_Menu.Controls.Add(this.Btn_Materias);
-<<<<<<< HEAD:Faculdade/Faculdade/Classes/Frm_Menu.Designer.cs
-            this.Pnl_Menu.Controls.Add(this.Btn_Professores);
-            this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
-=======
             this.Pnl_Menu.Controls.Add(this.Btn_Turmas);
->>>>>>> f535dc541342bce96b93c5fe811fba703ec4f365:Faculdade/Faculdade/Frm_Menu.Designer.cs
+            this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Menu.Name = "Pnl_Menu";
             this.Pnl_Menu.Size = new System.Drawing.Size(250, 715);
@@ -90,10 +90,10 @@
             // 
             // Btn_Alunos
             // 
-            this.Btn_Alunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
+            this.Btn_Alunos.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Alunos.FlatAppearance.BorderSize = 0;
             this.Btn_Alunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Alunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_Alunos.Font = new System.Drawing.Font("Nirmala UI", 20.25F);
             this.Btn_Alunos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Alunos.Image = global::Faculdade.Properties.Resources._57_Student_removebg_preview_2_;
             this.Btn_Alunos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,11 +108,11 @@
             // 
             // Btn_Menu
             // 
-            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
+            this.Btn_Menu.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Menu.FlatAppearance.BorderSize = 0;
             this.Btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_Menu.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_Menu.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Menu.ForeColor = System.Drawing.SystemColors.Window;
             this.Btn_Menu.Image = global::Faculdade.Properties.Resources.Home_icon_black1;
             this.Btn_Menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Menu.Location = new System.Drawing.Point(0, 100);
@@ -126,10 +126,10 @@
             // 
             // Btn_Cursos
             // 
-            this.Btn_Cursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
+            this.Btn_Cursos.BackColor = System.Drawing.Color.Transparent;
             this.Btn_Cursos.FlatAppearance.BorderSize = 0;
             this.Btn_Cursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Cursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_Cursos.Font = new System.Drawing.Font("Nirmala UI", 20.25F);
             this.Btn_Cursos.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Cursos.Image = global::Faculdade.Properties.Resources.chapeuFormatura;
             this.Btn_Cursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,7 +146,7 @@
             // 
             this.Btn_Notas.FlatAppearance.BorderSize = 0;
             this.Btn_Notas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Notas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_Notas.Font = new System.Drawing.Font("Nirmala UI", 20.25F);
             this.Btn_Notas.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Notas.Image = global::Faculdade.Properties.Resources.notas;
             this.Btn_Notas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,7 +163,7 @@
             // 
             this.Btn_Materias.FlatAppearance.BorderSize = 0;
             this.Btn_Materias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Materias.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_Materias.Font = new System.Drawing.Font("Nirmala UI", 20.25F);
             this.Btn_Materias.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Materias.Image = global::Faculdade.Properties.Resources.materias;
             this.Btn_Materias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,25 +178,9 @@
             // 
             // Btn_Turmas
             // 
-<<<<<<< HEAD:Faculdade/Faculdade/Classes/Frm_Menu.Designer.cs
-            this.Btn_Professores.FlatAppearance.BorderSize = 0;
-            this.Btn_Professores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Professores.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_Professores.ForeColor = System.Drawing.Color.Transparent;
-            this.Btn_Professores.Image = global::Faculdade.Properties.Resources.professorBnc1;
-            this.Btn_Professores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Professores.Location = new System.Drawing.Point(0, 400);
-            this.Btn_Professores.Name = "Btn_Professores";
-            this.Btn_Professores.Size = new System.Drawing.Size(250, 100);
-            this.Btn_Professores.TabIndex = 4;
-            this.Btn_Professores.Text = " Turmas";
-            this.Btn_Professores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_Professores.UseVisualStyleBackColor = true;
-            this.Btn_Professores.Click += new System.EventHandler(this.Btn_Professores_Click);
-=======
             this.Btn_Turmas.FlatAppearance.BorderSize = 0;
             this.Btn_Turmas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Turmas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_Turmas.Font = new System.Drawing.Font("Nirmala UI", 20.25F);
             this.Btn_Turmas.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_Turmas.Image = global::Faculdade.Properties.Resources.professorBnc1;
             this.Btn_Turmas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,7 +192,6 @@
             this.Btn_Turmas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btn_Turmas.UseVisualStyleBackColor = true;
             this.Btn_Turmas.Click += new System.EventHandler(this.Btn_Professores_Click);
->>>>>>> f535dc541342bce96b93c5fe811fba703ec4f365:Faculdade/Faculdade/Frm_Menu.Designer.cs
             // 
             // Pnl_Letreiro
             // 
@@ -258,7 +241,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(100)))), ((int)(((byte)(132)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel3.Controls.Add(this.Pic_Maximizar2);
             this.panel3.Controls.Add(this.Pic_Fechar);
             this.panel3.Controls.Add(this.Pic_Minimizar);
@@ -323,12 +306,36 @@
             // 
             this.Pn_Menu.AutoSize = true;
             this.Pn_Menu.BackColor = System.Drawing.SystemColors.Control;
+            this.Pn_Menu.Controls.Add(this.panel4);
+            this.Pn_Menu.Controls.Add(this.panel5);
+            this.Pn_Menu.Controls.Add(this.panel1);
             this.Pn_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
             this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
             this.Pn_Menu.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(89, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(215, 236);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(454, 36);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(215, 236);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(823, 36);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(215, 236);
+            this.panel5.TabIndex = 1;
             // 
             // Frm_Menu
             // 
@@ -357,6 +364,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).EndInit();
+            this.Pn_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,5 +390,8 @@
         private System.Windows.Forms.PictureBox Pic_Fechar;
         public System.Windows.Forms.Panel Pn_Menu;
         private System.Windows.Forms.PictureBox Pic_Maximizar2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel1;
     }
 }

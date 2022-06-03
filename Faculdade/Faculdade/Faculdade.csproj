@@ -236,10 +236,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Frm_Menu.cs">
+    <Compile Include="Menu\Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\Frm_Menu.Designer.cs">
+    <Compile Include="Menu\Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Curso\Frm_relatorioCurso.cs">
@@ -254,10 +254,7 @@
     <Compile Include="Aluno\Frm_relatorioAluno.Designer.cs">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Classes\Busca.cs" />
-=======
-    <Compile Include="Busca.cs" />
     <Compile Include="Materia\Frm_Materia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,7 +267,6 @@
     <Compile Include="Nota\Frm_Nota.Designer.cs">
       <DependentUpon>Frm_Nota.cs</DependentUpon>
     </Compile>
->>>>>>> f535dc541342bce96b93c5fe811fba703ec4f365
     <Compile Include="Turma\Frm_relatorioTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,7 +291,7 @@
       <DependentUpon>Frm_Curso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aluno\Rlt_Aluno .rdlc" />
-    <EmbeddedResource Include="Classes\Frm_Menu.resx">
+    <EmbeddedResource Include="Menu\Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Curso\Frm_relatorioCurso.resx">

@@ -37,12 +37,12 @@ namespace Faculdade
             busca.preencherComboBox(Cbx_turmaAluno, preencheTurma, valueTurma, displayTurma);
         }
 
-        public void BuscaDataGridView()
+        private void BuscaDataGridView()
         {
             string selectText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeAluno LIKE '%" + Txb_buscaNome.Text + "%' ORDER BY nomeAluno LIMIT 100";
             busca.AtualizaDataGridView(selectText, Dgv_aluno);
         }
-        public void BuscaCursoDataGridView()
+        private void BuscaCursoDataGridView()
         {
             string selectTurno = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '"+ Cbx_buscaCurso.Text +"' ORDER BY nomeAluno LIMIT 100";
             busca.BuscaDataGridView(Cbx_buscaCurso, selectTurno, Dgv_aluno);
@@ -157,14 +157,12 @@ namespace Faculdade
                 Txb_endereco.Text = row.Cells["endereco"].Value.ToString();
                 Cbx_Curso.Text = row.Cells["nomeCurso"].Value.ToString();
                 Cbx_turmaAluno.Text = row.Cells["nomeTurma"].Value.ToString();
-
             }
             catch (Exception)
             {
                 MessageBox.Show("Selecione o curso que deseja editar");
             }
         }
-
         public Frm_Aluno()
         {
             InitializeComponent();

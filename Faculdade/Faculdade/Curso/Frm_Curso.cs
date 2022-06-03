@@ -27,7 +27,7 @@ namespace Faculdade
 
         public void AtualizaDataGridView()
         {
-            string select = "SELECT * FROM Curso";
+            string select = "SELECT * FROM Curso ORDER BY idCurso";
             busca.AtualizaDataGridView(select, Dgv_cursos);
         }
 
@@ -42,6 +42,7 @@ namespace Faculdade
             Dgv_cursos.Columns[2].Width = 70;
             Dgv_cursos.Columns[3].HeaderText = "DESCRIÇÃO";
             Dgv_cursos.Columns[3].Width = 300;
+            Dgv_cursos.AutoResizeColumns();
         }
        
         public void BuscaDataGridView()
