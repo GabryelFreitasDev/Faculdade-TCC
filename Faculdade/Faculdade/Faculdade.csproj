@@ -254,7 +254,23 @@
     <Compile Include="Aluno\Frm_relatorioAluno.Designer.cs">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Classes\Busca.cs" />
+=======
+    <Compile Include="Busca.cs" />
+    <Compile Include="Materia\Frm_Materia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materia\Frm_Materia.Designer.cs">
+      <DependentUpon>Frm_Materia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nota\Frm_Nota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota\Frm_Nota.Designer.cs">
+      <DependentUpon>Frm_Nota.cs</DependentUpon>
+    </Compile>
+>>>>>>> f535dc541342bce96b93c5fe811fba703ec4f365
     <Compile Include="Turma\Frm_relatorioTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +303,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aluno\Frm_relatorioAluno.resx">
       <DependentUpon>Frm_relatorioAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materia\Frm_Materia.resx">
+      <DependentUpon>Frm_Materia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota\Frm_Nota.resx">
+      <DependentUpon>Frm_Nota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Turma\Rlt_Turma.rdlc" />
     <EmbeddedResource Include="Turma\Frm_relatorioTurma.resx">

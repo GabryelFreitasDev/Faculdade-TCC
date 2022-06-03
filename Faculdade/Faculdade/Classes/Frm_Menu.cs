@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Faculdade.Materia;
+using Faculdade.Nota;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +28,8 @@ namespace Faculdade
             AbrirForm<Frm_Aluno>();
             AbrirForm<Frm_Curso>();
             AbrirForm<Frm_Turma>();
+            AbrirForm<Frm_Materia>();
+            AbrirForm<Frm_Nota>();
         }
 
         private void Frm_Menu_Load(object sender, EventArgs e)
@@ -42,7 +46,7 @@ namespace Faculdade
             Btn_Materias.BackColor = Color.FromArgb(43, 100, 132);
             Btn_Cursos.BackColor = Color.FromArgb(43, 100, 132);
             Btn_Notas.BackColor = Color.FromArgb(43, 100, 132);
-            Btn_Professores.BackColor = Color.FromArgb(43, 100, 132);
+            Btn_Turmas.BackColor = Color.FromArgb(43, 100, 132);
         }
 
         private void Btn_Menu_Click(object sender, EventArgs e)
@@ -72,7 +76,7 @@ namespace Faculdade
         private void Btn_Professores_Click(object sender, EventArgs e)
         {
             descolorirAbas();
-            Btn_Professores.BackColor = Color.FromArgb(38, 144, 182);
+            Btn_Turmas.BackColor = Color.FromArgb(38, 144, 182);
             Pn_Menu.Visible = true;
             AbrirForm<Frm_Turma>();           
         }
@@ -81,12 +85,16 @@ namespace Faculdade
         {
             descolorirAbas();
             Btn_Materias.BackColor = Color.FromArgb(38, 144, 182);
+            Pn_Menu.Visible = true;
+            AbrirForm<Frm_Materia>();
         }
 
         private void Btn_Notas_Click(object sender, EventArgs e)
         {
             descolorirAbas();
             Btn_Notas.BackColor = Color.FromArgb(38, 144, 182);
+            Pn_Menu.Visible= true;  
+            AbrirForm<Frm_Nota>();
         }
 
         public void AbrirForm<Forms>() where Forms : Form, new()
@@ -151,6 +159,16 @@ namespace Faculdade
         private void Pic_Maximizar2_Click(object sender, EventArgs e)
         {
             Maximizar();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Faculdade
             // 
             // Txb_buscar
             // 
-            this.Txb_buscar.Location = new System.Drawing.Point(432, 44);
+            this.Txb_buscar.Location = new System.Drawing.Point(432, 47);
             this.Txb_buscar.Name = "Txb_buscar";
             this.Txb_buscar.Size = new System.Drawing.Size(598, 20);
             this.Txb_buscar.TabIndex = 23;
@@ -87,8 +87,7 @@ namespace Faculdade
             // Btn_InsereCurso
             // 
             this.Btn_InsereCurso.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_InsereCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_InsereCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_InsereCurso.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_InsereCurso.Location = new System.Drawing.Point(12, 415);
             this.Btn_InsereCurso.Name = "Btn_InsereCurso";
             this.Btn_InsereCurso.Size = new System.Drawing.Size(84, 32);
@@ -107,8 +106,7 @@ namespace Faculdade
             // Btn_excluiCurso
             // 
             this.Btn_excluiCurso.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_excluiCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_excluiCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_excluiCurso.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_excluiCurso.Location = new System.Drawing.Point(212, 415);
             this.Btn_excluiCurso.Name = "Btn_excluiCurso";
             this.Btn_excluiCurso.Size = new System.Drawing.Size(84, 32);
@@ -120,8 +118,7 @@ namespace Faculdade
             // Btn_editar
             // 
             this.Btn_editar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_editar.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_editar.Location = new System.Drawing.Point(112, 415);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(84, 32);
@@ -139,11 +136,10 @@ namespace Faculdade
             // 
             // Btn_relatorioCurso
             // 
-            this.Btn_relatorioCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_relatorioCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.Btn_relatorioCurso.Location = new System.Drawing.Point(920, 536);
+            this.Btn_relatorioCurso.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_relatorioCurso.Location = new System.Drawing.Point(930, 536);
             this.Btn_relatorioCurso.Name = "Btn_relatorioCurso";
-            this.Btn_relatorioCurso.Size = new System.Drawing.Size(110, 34);
+            this.Btn_relatorioCurso.Size = new System.Drawing.Size(100, 32);
             this.Btn_relatorioCurso.TabIndex = 33;
             this.Btn_relatorioCurso.Text = "RELATÓRIO";
             this.Btn_relatorioCurso.UseVisualStyleBackColor = true;
@@ -152,21 +148,20 @@ namespace Faculdade
             // Lbl_nomeAlterar
             // 
             this.Lbl_nomeAlterar.AutoSize = true;
-            this.Lbl_nomeAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Lbl_nomeAlterar.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_nomeAlterar.Location = new System.Drawing.Point(9, 78);
             this.Lbl_nomeAlterar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nomeAlterar.Name = "Lbl_nomeAlterar";
-            this.Lbl_nomeAlterar.Size = new System.Drawing.Size(200, 17);
+            this.Lbl_nomeAlterar.Size = new System.Drawing.Size(191, 21);
             this.Lbl_nomeAlterar.TabIndex = 35;
             this.Lbl_nomeAlterar.Text = "NOME ATUAL DO CURSO:";
             // 
             // Btn_limpar
             // 
-            this.Btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_limpar.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_limpar.Location = new System.Drawing.Point(12, 475);
             this.Btn_limpar.Name = "Btn_limpar";
-            this.Btn_limpar.Size = new System.Drawing.Size(75, 34);
+            this.Btn_limpar.Size = new System.Drawing.Size(84, 32);
             this.Btn_limpar.TabIndex = 37;
             this.Btn_limpar.Text = "LIMPAR";
             this.Btn_limpar.UseVisualStyleBackColor = true;
@@ -175,33 +170,33 @@ namespace Faculdade
             // Lbl_cargaHoraria
             // 
             this.Lbl_cargaHoraria.AutoSize = true;
-            this.Lbl_cargaHoraria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Lbl_cargaHoraria.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_cargaHoraria.Location = new System.Drawing.Point(9, 209);
             this.Lbl_cargaHoraria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cargaHoraria.Name = "Lbl_cargaHoraria";
-            this.Lbl_cargaHoraria.Size = new System.Drawing.Size(140, 17);
+            this.Lbl_cargaHoraria.Size = new System.Drawing.Size(134, 21);
             this.Lbl_cargaHoraria.TabIndex = 39;
             this.Lbl_cargaHoraria.Text = "CARGA HORÁRIA:";
             // 
             // Lbl_buscaCurso
             // 
             this.Lbl_buscaCurso.AutoSize = true;
-            this.Lbl_buscaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Lbl_buscaCurso.Location = new System.Drawing.Point(428, 21);
+            this.Lbl_buscaCurso.Font = new System.Drawing.Font("Raleway SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_buscaCurso.Location = new System.Drawing.Point(427, 15);
             this.Lbl_buscaCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaCurso.Name = "Lbl_buscaCurso";
-            this.Lbl_buscaCurso.Size = new System.Drawing.Size(445, 20);
+            this.Lbl_buscaCurso.Size = new System.Drawing.Size(463, 26);
             this.Lbl_buscaCurso.TabIndex = 40;
             this.Lbl_buscaCurso.Text = "DIGITE O NOME DO CURSO QUE DESEJA BUSCAR:";
             // 
             // Lbl_descricao
             // 
             this.Lbl_descricao.AutoSize = true;
-            this.Lbl_descricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Lbl_descricao.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_descricao.Location = new System.Drawing.Point(9, 267);
             this.Lbl_descricao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_descricao.Name = "Lbl_descricao";
-            this.Lbl_descricao.Size = new System.Drawing.Size(101, 17);
+            this.Lbl_descricao.Size = new System.Drawing.Size(97, 21);
             this.Lbl_descricao.TabIndex = 41;
             this.Lbl_descricao.Text = "DESCRIÇÃO:";
             // 
@@ -209,6 +204,7 @@ namespace Faculdade
             // 
             this.Dgv_cursos.AllowUserToAddRows = false;
             this.Dgv_cursos.AllowUserToDeleteRows = false;
+            this.Dgv_cursos.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_cursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_cursos.Location = new System.Drawing.Point(432, 82);
             this.Dgv_cursos.Name = "Dgv_cursos";
@@ -221,22 +217,22 @@ namespace Faculdade
             // Lbl_operacaoEscolha
             // 
             this.Lbl_operacaoEscolha.AutoSize = true;
-            this.Lbl_operacaoEscolha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Lbl_operacaoEscolha.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(9, 389);
             this.Lbl_operacaoEscolha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_operacaoEscolha.Name = "Lbl_operacaoEscolha";
-            this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(186, 17);
+            this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(172, 21);
             this.Lbl_operacaoEscolha.TabIndex = 42;
             this.Lbl_operacaoEscolha.Text = "O QUE DESEJA FAZER?";
             // 
             // Lbl_nomeAcao
             // 
             this.Lbl_nomeAcao.AutoSize = true;
-            this.Lbl_nomeAcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Lbl_nomeAcao.Font = new System.Drawing.Font("Raleway SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_nomeAcao.Location = new System.Drawing.Point(9, 138);
             this.Lbl_nomeAcao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nomeAcao.Name = "Lbl_nomeAcao";
-            this.Lbl_nomeAcao.Size = new System.Drawing.Size(145, 17);
+            this.Lbl_nomeAcao.Size = new System.Drawing.Size(139, 21);
             this.Lbl_nomeAcao.TabIndex = 43;
             this.Lbl_nomeAcao.Text = "NOME DO CURSO:";
             // 
