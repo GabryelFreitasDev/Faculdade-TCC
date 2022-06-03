@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Dgv_turmas = new System.Windows.Forms.DataGridView();
             this.Txb_buscaTurma = new System.Windows.Forms.TextBox();
             this.Cbx_buscaTurno = new System.Windows.Forms.ComboBox();
@@ -60,10 +57,7 @@
             this.Btn_insereTurma = new System.Windows.Forms.Button();
             this.Lbl_operacao = new System.Windows.Forms.Label();
             this.Lbl_buscaCurso = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-=======
             this.label2 = new System.Windows.Forms.Label();
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Lbl_operacaoEscolha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_turmas)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +70,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dgv_turmas.BackgroundColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
@@ -106,7 +99,6 @@
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_turmas.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.Dgv_turmas.Size = new System.Drawing.Size(598, 412);
-=======
             dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle34.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
@@ -136,7 +128,6 @@
             dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_turmas.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.Dgv_turmas.Size = new System.Drawing.Size(600, 444);
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Dgv_turmas.TabIndex = 3;
             this.Dgv_turmas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_turmas_CellContentClick);
             // 
@@ -169,11 +160,8 @@
             this.Btn_LimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_LimparFiltro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_LimparFiltro.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< HEAD
             this.Btn_LimparFiltro.Location = new System.Drawing.Point(894, 40);
-=======
             this.Btn_LimparFiltro.Location = new System.Drawing.Point(894, 43);
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Btn_LimparFiltro.Name = "Btn_LimparFiltro";
             this.Btn_LimparFiltro.Size = new System.Drawing.Size(138, 30);
             this.Btn_LimparFiltro.TabIndex = 69;
@@ -270,11 +258,8 @@
             // 
             this.Btn_excluir.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_excluir.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< HEAD
             this.Btn_excluir.Location = new System.Drawing.Point(208, 378);
-=======
             this.Btn_excluir.Location = new System.Drawing.Point(214, 415);
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Btn_excluir.Name = "Btn_excluir";
             this.Btn_excluir.Size = new System.Drawing.Size(84, 32);
             this.Btn_excluir.TabIndex = 81;
@@ -312,11 +297,8 @@
             // 
             this.Btn_editar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_editar.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< HEAD
             this.Btn_editar.Location = new System.Drawing.Point(108, 378);
-=======
             this.Btn_editar.Location = new System.Drawing.Point(114, 415);
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(84, 32);
             this.Btn_editar.TabIndex = 78;
@@ -383,11 +365,8 @@
             // 
             this.Btn_insereTurma.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_insereTurma.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< HEAD
             this.Btn_insereTurma.Location = new System.Drawing.Point(8, 378);
-=======
             this.Btn_insereTurma.Location = new System.Drawing.Point(12, 415);
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Btn_insereTurma.Name = "Btn_insereTurma";
             this.Btn_insereTurma.Size = new System.Drawing.Size(84, 32);
             this.Btn_insereTurma.TabIndex = 72;
@@ -462,10 +441,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1120, 576);
             this.Controls.Add(this.Lbl_operacaoEscolha);
-<<<<<<< HEAD
-=======
             this.Controls.Add(this.label2);
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
             this.Controls.Add(this.Lbl_buscaCurso);
             this.Controls.Add(this.Lbl_operacao);
             this.Controls.Add(this.Btn_limpar);
@@ -523,10 +499,7 @@
         private System.Windows.Forms.Button Btn_insereTurma;
         private System.Windows.Forms.Label Lbl_operacao;
         private System.Windows.Forms.Label Lbl_buscaCurso;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.Label label2;
->>>>>>> b6c05a76c62238634b238c8f7a00531137c1cc3c
         private System.Windows.Forms.Label Lbl_operacaoEscolha;
     }
 }
