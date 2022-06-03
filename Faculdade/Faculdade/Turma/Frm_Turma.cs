@@ -111,6 +111,63 @@ namespace Faculdade
             MessageBox.Show(turma.mensagem);
         }
 
+        private void Dgv_turmas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = Dgv_turmas.Rows[e.RowIndex];
+                if (!TxB_nomeAlterar.Visible)
+                {
+                    Txb_nomeTurma.Text = row.Cells["nomeTurma"].Value.ToString();
+                    TxB_nomeAlterar.Text = row.Cells["nomeTurma"].Value.ToString();
+                    Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
+                    Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
+                    Cbx_turnoAntigo.Text = row.Cells["turno"].Value.ToString();
+                    Cbx_cursoAntigo.Text = row.Cells["nomecurso"].Value.ToString();
+                }
+                else
+                {
+                    TxB_nomeAlterar.Text = row.Cells["nomeTurma"].Value.ToString();
+                    Cbx_cursoAntigo.Text = row.Cells["nomecurso"].Value.ToString();
+                    Cbx_turnoAntigo.Text = row.Cells["turno"].Value.ToString();
+                    Txb_nomeTurma.Clear();
+                    Cbx_Turno.Text = null;
+                    Cbx_cursoTurma.SelectedItem = null;
+                }
+                Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
+                Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selecione o curso que deseja editar");
+            }
+        }
+
+        private void Txb_buscaTurma_TextChanged(object sender, EventArgs e)
+        {
+            BuscaDataGridView();
+        }
+
+        private void Cbx_buscaTurno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BuscaTurnoDataGridView();
+        }
+
+        private void Btn_LimparFiltro_Click(object sender, EventArgs e)
+        {
+            Txb_buscaTurma.Clear();
+            Cbx_buscaTurno.SelectedItem = null;
+            AtualizaDataGridView();
+        }
+
+        private void Btn_relatorioCurso_Click(object sender, EventArgs e)
+        {
+            using (Frm_relatorioTurma relatorioTurma = new Frm_relatorioTurma(dt))
+            {
+                relatorioTurma.ShowDialog();
+            }
+        }
+
         private void Btn_insereTurma_Click(object sender, EventArgs e)
         {
             Turma inserir = new Turma();
@@ -195,38 +252,6 @@ namespace Faculdade
             EditaColunaDgv();
         }
 
-        private void Dgv_turmas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow row = Dgv_turmas.Rows[e.RowIndex];
-                if (!TxB_nomeAlterar.Visible)
-                {
-                    Txb_nomeTurma.Text = row.Cells["nomeTurma"].Value.ToString();
-                    TxB_nomeAlterar.Text = row.Cells["nomeTurma"].Value.ToString();
-                    Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
-                    Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
-                    Cbx_turnoAntigo.Text = row.Cells["turno"].Value.ToString();
-                    Cbx_cursoAntigo.Text = row.Cells["nomecurso"].Value.ToString();
-                }
-                else
-                {
-                    TxB_nomeAlterar.Text = row.Cells["nomeTurma"].Value.ToString();
-                    Cbx_cursoAntigo.Text = row.Cells["nomecurso"].Value.ToString();
-                    Cbx_turnoAntigo.Text = row.Cells["turno"].Value.ToString();
-                    Txb_nomeTurma.Clear();
-                    Cbx_Turno.Text = null;
-                    Cbx_cursoTurma.SelectedItem = null;
-                }
-                Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
-                Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Selecione o curso que deseja editar");
-            }
-        }
-
         private void Btn_excluir_Click(object sender, EventArgs e)
         {
             Turma excluir = new Turma();
@@ -259,23 +284,6 @@ namespace Faculdade
             EditaColunaDgv();
         }
 
-        private void Txb_buscaTurma_TextChanged(object sender, EventArgs e)
-        {
-            BuscaDataGridView();
-        }
-
-        private void Cbx_buscaTurno_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            BuscaTurnoDataGridView();
-        }
-
-        private void Btn_LimparFiltro_Click(object sender, EventArgs e)
-        {
-            Txb_buscaTurma.Clear();
-            Cbx_buscaTurno.SelectedItem = null;
-            AtualizaDataGridView();
-        }
-
         private void Btn_limpar_Click(object sender, EventArgs e)
         {
             Txb_nomeTurma.Clear();
@@ -286,20 +294,12 @@ namespace Faculdade
             Cbx_turnoAntigo.SelectedItem = null;
         }
 
-        private void Btn_relatorioCurso_Click(object sender, EventArgs e)
-        {
-            using (Frm_relatorioTurma relatorioTurma = new Frm_relatorioTurma(dt))
-            {
-                relatorioTurma.ShowDialog();
-            }
-        }
-
-        private void Cbx_cursoTurma_Click(object sender, EventArgs e)
+        private void Cbx_cursoTurma_SelectedIndexChanged(object sender, EventArgs e)
         {
             preencherCBcurso(Cbx_cursoTurma);
         }
 
-        private void Cbx_cursoAntigo_Click(object sender, EventArgs e)
+        private void Cbx_cursoAntigo_SelectedIndexChanged(object sender, EventArgs e)
         {
             preencherCBcurso(Cbx_cursoAntigo);
         }
