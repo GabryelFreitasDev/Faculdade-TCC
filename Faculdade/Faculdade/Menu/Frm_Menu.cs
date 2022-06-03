@@ -1,5 +1,4 @@
-﻿using Faculdade.Materia;
-using Faculdade.Nota;
+﻿using Faculdade.Nota;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

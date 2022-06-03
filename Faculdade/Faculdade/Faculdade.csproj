@@ -236,6 +236,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Materia.cs" />
     <Compile Include="Menu\Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
