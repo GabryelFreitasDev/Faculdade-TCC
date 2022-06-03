@@ -47,9 +47,9 @@
             this.Pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.Pic_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pn_Menu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Pnl_Letreiro.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             // Btn_Alunos
             // 
-            this.Btn_Alunos.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Alunos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.Btn_Alunos.FlatAppearance.BorderSize = 0;
             this.Btn_Alunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Alunos.Font = new System.Drawing.Font("Nirmala UI", 20.25F);
@@ -108,7 +108,7 @@
             // 
             // Btn_Menu
             // 
-            this.Btn_Menu.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.Btn_Menu.FlatAppearance.BorderSize = 0;
             this.Btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Menu.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +126,7 @@
             // 
             // Btn_Cursos
             // 
-            this.Btn_Cursos.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Cursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.Btn_Cursos.FlatAppearance.BorderSize = 0;
             this.Btn_Cursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Cursos.Font = new System.Drawing.Font("Nirmala UI", 20.25F);
@@ -316,13 +316,6 @@
             this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
             this.Pn_Menu.TabIndex = 15;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(89, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 236);
-            this.panel1.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.Location = new System.Drawing.Point(454, 36);
@@ -336,6 +329,13 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(215, 236);
             this.panel5.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(89, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(215, 236);
+            this.panel1.TabIndex = 0;
             // 
             // Frm_Menu
             // 

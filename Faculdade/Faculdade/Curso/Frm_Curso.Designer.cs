@@ -153,7 +153,7 @@ namespace Faculdade
             this.Btn_relatorioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_relatorioCurso.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_relatorioCurso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_relatorioCurso.Location = new System.Drawing.Point(918, 532);
+            this.Btn_relatorioCurso.Location = new System.Drawing.Point(920, 532);
             this.Btn_relatorioCurso.Name = "Btn_relatorioCurso";
             this.Btn_relatorioCurso.Size = new System.Drawing.Size(112, 32);
             this.Btn_relatorioCurso.TabIndex = 33;
@@ -205,9 +205,9 @@ namespace Faculdade
             this.Lbl_buscaCurso.Location = new System.Drawing.Point(428, 21);
             this.Lbl_buscaCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaCurso.Name = "Lbl_buscaCurso";
-            this.Lbl_buscaCurso.Size = new System.Drawing.Size(359, 20);
+            this.Lbl_buscaCurso.Size = new System.Drawing.Size(303, 20);
             this.Lbl_buscaCurso.TabIndex = 40;
-            this.Lbl_buscaCurso.Text = "DIGITE O NOME DO CURSO QUE DESEJA BUSCAR:";
+            this.Lbl_buscaCurso.Text = "INFORME O CURSO QUE DESEJA BUSCAR:";
             // 
             // Lbl_descricao
             // 
@@ -261,7 +261,7 @@ namespace Faculdade
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_cursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.Dgv_cursos.RowHeadersWidth = 62;
-            this.Dgv_cursos.Size = new System.Drawing.Size(598, 438);
+            this.Dgv_cursos.Size = new System.Drawing.Size(600, 444);
             this.Dgv_cursos.TabIndex = 7;
             this.Dgv_cursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_curso_CellContentClick);
             // 
