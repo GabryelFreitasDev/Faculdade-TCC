@@ -203,9 +203,9 @@ namespace Faculdade
             this.Lbl_buscaCurso.Location = new System.Drawing.Point(428, 21);
             this.Lbl_buscaCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaCurso.Name = "Lbl_buscaCurso";
-            this.Lbl_buscaCurso.Size = new System.Drawing.Size(359, 20);
+            this.Lbl_buscaCurso.Size = new System.Drawing.Size(303, 20);
             this.Lbl_buscaCurso.TabIndex = 40;
-            this.Lbl_buscaCurso.Text = "DIGITE O NOME DO CURSO QUE DESEJA BUSCAR:";
+            this.Lbl_buscaCurso.Text = "INFORME O CURSO QUE DESEJA BUSCAR:";
             // 
             // Lbl_descricao
             // 
@@ -223,10 +223,6 @@ namespace Faculdade
             // 
             this.Dgv_cursos.AllowUserToAddRows = false;
             this.Dgv_cursos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_cursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_cursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -262,7 +258,7 @@ namespace Faculdade
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_cursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_cursos.RowHeadersWidth = 62;
-            this.Dgv_cursos.Size = new System.Drawing.Size(598, 438);
+            this.Dgv_cursos.Size = new System.Drawing.Size(600, 444);
             this.Dgv_cursos.TabIndex = 7;
             this.Dgv_cursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_curso_CellContentClick);
             // 
