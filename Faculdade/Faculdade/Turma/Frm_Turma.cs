@@ -39,11 +39,8 @@ namespace Faculdade
         {
             Dgv_turmas.RowHeadersVisible = false;
             Dgv_turmas.Columns[0].HeaderText = "TURMA";
-            Dgv_turmas.Columns[0].Width = 100;
             Dgv_turmas.Columns[1].HeaderText = "TURNO";
-            Dgv_turmas.Columns[1].Width = 80;
             Dgv_turmas.Columns[2].HeaderText = "CURSO";
-            Dgv_turmas.Columns[2].Width = 280;
         }
 
         public void AtualizaDataGridView()
@@ -273,7 +270,7 @@ namespace Faculdade
             }
             catch (NullReferenceException)
             {
-
+                confereCampos(excluir);
             }
             catch (Exception ex)
             {

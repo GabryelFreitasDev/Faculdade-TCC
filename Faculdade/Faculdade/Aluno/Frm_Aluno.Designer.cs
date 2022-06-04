@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Dgv_aluno = new System.Windows.Forms.DataGridView();
             this.Lbl_acao = new System.Windows.Forms.Label();
             this.Lbl_nome = new System.Windows.Forms.Label();
@@ -69,14 +70,30 @@
             // 
             this.Dgv_aluno.AllowUserToAddRows = false;
             this.Dgv_aluno.AllowUserToDeleteRows = false;
+            this.Dgv_aluno.AllowUserToOrderColumns = true;
+            this.Dgv_aluno.AllowUserToResizeRows = false;
             this.Dgv_aluno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dgv_aluno.BackgroundColor = System.Drawing.Color.White;
-            this.Dgv_aluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_aluno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_aluno.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
+            this.Dgv_aluno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_aluno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_aluno.ColumnHeadersHeight = 37;
+            this.Dgv_aluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_aluno.Location = new System.Drawing.Point(9, 108);
             this.Dgv_aluno.Name = "Dgv_aluno";
             this.Dgv_aluno.ReadOnly = true;
+            this.Dgv_aluno.RowHeadersVisible = false;
+            this.Dgv_aluno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_aluno.Size = new System.Drawing.Size(1094, 278);
             this.Dgv_aluno.TabIndex = 11;
             this.Dgv_aluno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Alunos_CellContentClick);

@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Dgv_turmas = new System.Windows.Forms.DataGridView();
             this.Txb_buscaTurma = new System.Windows.Forms.TextBox();
             this.Cbx_buscaTurno = new System.Windows.Forms.ComboBox();
@@ -66,67 +63,46 @@
             // 
             this.Dgv_turmas.AllowUserToAddRows = false;
             this.Dgv_turmas.AllowUserToDeleteRows = false;
+            this.Dgv_turmas.AllowUserToOrderColumns = true;
+            this.Dgv_turmas.AllowUserToResizeRows = false;
             this.Dgv_turmas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dgv_turmas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.Dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_turmas.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Dgv_turmas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_turmas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
+            this.Dgv_turmas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_turmas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_turmas.ColumnHeadersHeight = 30;
+            this.Dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_turmas.DefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_turmas.Location = new System.Drawing.Point(432, 82);
             this.Dgv_turmas.Name = "Dgv_turmas";
             this.Dgv_turmas.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_turmas.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.Dgv_turmas.Size = new System.Drawing.Size(598, 412);
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_turmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
-            this.Dgv_turmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_turmas.DefaultCellStyle = dataGridViewCellStyle35;
-            this.Dgv_turmas.Location = new System.Drawing.Point(432, 82);
-            this.Dgv_turmas.Name = "Dgv_turmas";
-            this.Dgv_turmas.ReadOnly = true;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_turmas.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_turmas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_turmas.RowHeadersVisible = false;
+            this.Dgv_turmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_turmas.Size = new System.Drawing.Size(600, 444);
             this.Dgv_turmas.TabIndex = 3;
             this.Dgv_turmas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_turmas_CellContentClick);
@@ -160,7 +136,6 @@
             this.Btn_LimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_LimparFiltro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_LimparFiltro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_LimparFiltro.Location = new System.Drawing.Point(894, 40);
             this.Btn_LimparFiltro.Location = new System.Drawing.Point(894, 43);
             this.Btn_LimparFiltro.Name = "Btn_LimparFiltro";
             this.Btn_LimparFiltro.Size = new System.Drawing.Size(138, 30);
@@ -258,7 +233,6 @@
             // 
             this.Btn_excluir.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_excluir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_excluir.Location = new System.Drawing.Point(208, 378);
             this.Btn_excluir.Location = new System.Drawing.Point(214, 415);
             this.Btn_excluir.Name = "Btn_excluir";
             this.Btn_excluir.Size = new System.Drawing.Size(84, 32);
@@ -297,7 +271,6 @@
             // 
             this.Btn_editar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_editar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_editar.Location = new System.Drawing.Point(108, 378);
             this.Btn_editar.Location = new System.Drawing.Point(114, 415);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(84, 32);
@@ -365,7 +338,6 @@
             // 
             this.Btn_insereTurma.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_insereTurma.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_insereTurma.Location = new System.Drawing.Point(8, 378);
             this.Btn_insereTurma.Location = new System.Drawing.Point(12, 415);
             this.Btn_insereTurma.Name = "Btn_insereTurma";
             this.Btn_insereTurma.Size = new System.Drawing.Size(84, 32);
@@ -409,18 +381,6 @@
             this.label2.Size = new System.Drawing.Size(155, 20);
             this.label2.TabIndex = 90;
             this.label2.Text = "INFORME A TURMA:";
-            // 
-            // Lbl_operacaoEscolha
-            // 
-            this.Lbl_operacaoEscolha.AutoSize = true;
-            this.Lbl_operacaoEscolha.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Lbl_operacaoEscolha.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(9, 389);
-            this.Lbl_operacaoEscolha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_operacaoEscolha.Name = "Lbl_operacaoEscolha";
-            this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(167, 20);
-            this.Lbl_operacaoEscolha.TabIndex = 91;
-            this.Lbl_operacaoEscolha.Text = "O QUE DESEJA FAZER?";
             // 
             // Lbl_operacaoEscolha
             // 

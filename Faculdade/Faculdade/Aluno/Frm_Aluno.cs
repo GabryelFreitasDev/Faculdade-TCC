@@ -101,23 +101,14 @@ namespace Faculdade
         {
             Dgv_aluno.RowHeadersVisible = false;
             Dgv_aluno.Columns[0].HeaderText = "NOME";
-            Dgv_aluno.Columns[0].Width = 150;
             Dgv_aluno.Columns[1].HeaderText = "CPF";
-            Dgv_aluno.Columns[1].Width = 90;
-            Dgv_aluno.Columns[2].HeaderText = "NASC.";
-            Dgv_aluno.Columns[2].Width = 70;
+            Dgv_aluno.Columns[2].HeaderText = "NASCIMENTO";
             Dgv_aluno.Columns[3].HeaderText = "CONTATO";
-            Dgv_aluno.Columns[3].Width = 90;
             Dgv_aluno.Columns[4].HeaderText = "CONTATO PARENTE";
-            Dgv_aluno.Columns[4].Width = 90;
             Dgv_aluno.Columns[5].HeaderText = "EMAIL";
-            Dgv_aluno.Columns[5].Width = 150;
             Dgv_aluno.Columns[6].HeaderText = "ENDEREÇO";
-            Dgv_aluno.Columns[6].Width = 150;
             Dgv_aluno.Columns[7].HeaderText = "CURSO";
-            Dgv_aluno.Columns[7].Width = 140;
             Dgv_aluno.Columns[8].HeaderText = "TURMA";
-            Dgv_aluno.Columns[8].Width = 60;
         }
 
         private void limpaCampos()

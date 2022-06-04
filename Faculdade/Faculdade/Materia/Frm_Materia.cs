@@ -21,45 +21,56 @@ namespace Faculdade
             InitializeComponent();
             AtualizaDataGridView();
             preencherCBcurso(Cbx_cursoMateria);
-            preencherCBturma(Cbx_Turma);
+            preencherCBturma(Cbx_buscaTurma, Cbx_buscaCurso);
+            preencherCBturma(Cbx_Turma, Cbx_cursoMateria);
             preencherCBcurso(Cbx_buscaCurso);
-            preencherCBturma(Cbx_buscaTurma);
+            someCampos(false);
         }
+        private void EditaColunaDgv()
+        {
+            Dgv_materias.Columns[0].HeaderText = "MATÉRIA";
+            Dgv_materias.Columns[1].HeaderText = "DESCRIÇÃO";
+            Dgv_materias.Columns[2].HeaderText = "CURSO";
+            Dgv_materias.Columns[3].HeaderText = "TURMA";
+        }
+        private void someCampos(bool tf)
+        {
+            Txb_nomeAlterar.Visible = tf;
+            Lbl_nomeAlterar.Visible = tf;
+        }
+
         public void AtualizaDataGridView()
         {
             string select = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma ORDER BY nomeMateria LIMIT 100";
             busca.AtualizaDataGridView(select, Dgv_materias);
-            //EditaColunaDgv();
+            EditaColunaDgv();
         }
 
         public void BuscaTurmaDataGridView()
         {
-
             string selectTurno = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeTurma ='" + Cbx_buscaTurma.Text + "'  ORDER BY nomeMateria LIMIT 100";
             busca.BuscaDataGridView(Cbx_buscaTurma,selectTurno,Dgv_materias);
-            //EditaColunaDgv();
+            EditaColunaDgv();
         }
 
-        public void BuscaDataGridView()
+        public void BuscaNomeDataGridView()
         {
-            //string selectText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY nomeTurma LIMIT 100";
-            //busca.AtualizaDataGridView(selectText, Dgv_turmas);
+            string selectText = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeTurma ='" + Txb_buscaMateria.Text + "'  ORDER BY nomeMateria LIMIT 100";
+            busca.AtualizaDataGridView(selectText, Dgv_materias);
             //EditaColunaDgv();
         }
 
         private void preencherCBcurso(ComboBox cb)
         {
-            string selectCurso = "SELECT idCurso, nomeCurso from Curso ORDER BY nomeCurso";
+            string selectCurso = "SELECT idCurso, nomeCurso FROM Curso ORDER BY nomeCurso";
             string valueMember = "idCurso";
             string displayMember = "nomeCurso";
             busca.preencherComboBox(cb, selectCurso, valueMember, displayMember);
-            preencherCBturma(Cbx_buscaTurma);
-            preencherCBturma(Cbx_Turma);
         }
 
-        private void preencherCBturma(ComboBox cb)
+        private void preencherCBturma(ComboBox cb,ComboBox parametro)
         {
-            string selectCurso = "SELECT idTurma,nomeTurma,nomeCurso FROM Turma INNER JOIN Curso on FK_idCurso = idCurso WHERE nomeCurso ='" + Cbx_buscaCurso.Text + "' ORDER BY nomeTurma";
+            string selectCurso = "SELECT idTurma,nomeTurma,nomeCurso FROM Turma INNER JOIN Curso on FK_idCurso = idCurso WHERE nomeCurso ='" + parametro.Text + "' ORDER BY nomeTurma";
             string valueMember = "idTurma";
             string displayMember = "nomeTurma";
             busca.preencherComboBox(cb, selectCurso, valueMember, displayMember);
@@ -99,9 +110,17 @@ namespace Faculdade
             Materia inserir = new Materia();
             try
             {
-                confereCampos();
-                inserir.Inserir(Txb_nomeMateria.Text,Txb_descricao.Text,(int)Cbx_cursoMateria.SelectedValue,(int)Cbx_Turma.SelectedValue);
-                MessageBox.Show(inserir.mensagem);
+                if(!Lbl_nomeAlterar.Visible)
+                {
+                    confereCampos();
+                    inserir.Inserir(Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue);
+                    MessageBox.Show(inserir.mensagem);
+                }
+                else
+                {
+                    someCampos(false);
+                    Lbl_nome.Text = "INSERIR";
+                }
             }
             catch(NullReferenceException)
             {
@@ -120,10 +139,18 @@ namespace Faculdade
             Materia editar = new Materia();
             try
             {
-                verifica.VerificaNullorWhiteSpace(Txb_nomeAlterar.Text);
-                confereCampos();
-                editar.Editar(Txb_nomeAlterar.Text,Txb_nomeMateria.Text,Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue);
-                MessageBox.Show(editar.mensagem);
+                if (Lbl_nomeAlterar.Visible)
+                {
+                    verifica.VerificaNullorWhiteSpace(Txb_nomeAlterar.Text);
+                    confereCampos();
+                    editar.Editar(Txb_nomeAlterar.Text, Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue);
+                    MessageBox.Show(editar.mensagem);
+                }
+                else
+                {
+                    someCampos(true);
+                    Lbl_nome.Text = "EDITAR";
+                }
             }
             catch(NullReferenceException)
             {
@@ -141,14 +168,49 @@ namespace Faculdade
             AtualizaDataGridView();
         }
 
+        private void Btn_excluir_Click(object sender, EventArgs e)
+        {
+            Materia excluir = new Materia();
+            try
+            {
+                if (!Txb_nomeAlterar.Visible && Lbl_nome.Text == "EXCLUIR")
+                {
+                    confereCampos();
+                    excluir.Excluir(Txb_nomeMateria.Text);
+                    MessageBox.Show(excluir.mensagem);
+                }
+                else
+                {
+                    someCampos(false);
+                    Lbl_nome.Text = "EXCLUIR";
+                }
+              
+            }
+            catch (NullReferenceException)
+            {
+                validaCampos(excluir);
+            }
+            catch(Exception ex)
+            {
+                excluir.mensagem = "Erro na exclusão:" + ex.Message;
+                MessageBox.Show(excluir.mensagem);
+            }
+            AtualizaDataGridView();
+        }
+
         private void Cbx_buscaCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
-            preencherCBturma(Cbx_buscaTurma);
+            preencherCBturma(Cbx_buscaTurma,Cbx_buscaCurso);
         }
 
         private void Cbx_cursoMateria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            preencherCBturma(Cbx_Turma);
+            preencherCBturma(Cbx_Turma, Cbx_cursoMateria);
+        }
+
+        private void Txb_buscaMateria_TextChanged(object sender, EventArgs e)
+        {
+            BuscaNomeDataGridView();
         }
     }
 }
