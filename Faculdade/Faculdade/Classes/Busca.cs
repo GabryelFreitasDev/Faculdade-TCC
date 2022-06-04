@@ -44,19 +44,18 @@ namespace Faculdade
             {
                 conexao.conn.Open();
             }
-            cmd.Connection = conexao.conn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = atualiza;
-            dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            Dgv.DataSource = null;
-            Dgv.DataSource = dt;
-
             try
             {
+                cmd.Connection = conexao.conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = atualiza;
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                Dgv.DataSource = null;
+                Dgv.DataSource = dt;
                 cmd.ExecuteNonQuery();
             }
-            catch(PostgresException)
+            catch(Npgsql.PostgresException)
             {
                 MessageBox.Show("Erro na busca insira caracteres válidos");
             }

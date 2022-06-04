@@ -26,6 +26,12 @@ namespace Faculdade
             preencherCBcurso(Cbx_buscaCurso);
             someCampos(false);
         }
+        private void Frm_Materia_Load(object sender, EventArgs e)
+        {
+            Cbx_cursoMateria.SelectedItem = null;
+            Cbx_buscaCurso.SelectedItem = null;
+        }
+
         private void EditaColunaDgv()
         {
             Dgv_materias.Columns[0].HeaderText = "MATÉRIA";
@@ -39,6 +45,33 @@ namespace Faculdade
             Lbl_nomeAlterar.Visible = tf;
         }
 
+        private void Dgv_materias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = Dgv_materias.Rows[e.RowIndex];
+                if (!Txb_nomeAlterar.Visible)
+                {
+                    Txb_nomeMateria.Text = row.Cells["nomeMateria"].Value.ToString();
+                    Txb_nomeAlterar.Text = row.Cells["nomeMateria"].Value.ToString();
+                    Txb_descricao.Text = row.Cells["descricaoMateria"].Value.ToString();
+                    Cbx_cursoMateria.Text = row.Cells["nomeCurso"].Value.ToString();
+                    Cbx_buscaTurma.Text = row.Cells["nomeTurma"].Value.ToString();
+                }
+                else
+                {
+                    Txb_nomeAlterar.Text = row.Cells["nomeMateria"].Value.ToString();
+                    Txb_nomeMateria.Clear();
+                    Cbx_cursoMateria.Text = row.Cells["nomeCurso"].Value.ToString();
+                    Cbx_buscaTurma.Text = row.Cells["nomeTurma"].Value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selecione o curso que deseja editar");
+            }
+        }
+
         public void AtualizaDataGridView()
         {
             string select = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma ORDER BY nomeMateria LIMIT 100";
@@ -49,7 +82,7 @@ namespace Faculdade
         public void BuscaTurmaDataGridView()
         {
             string selectTurno = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeTurma ='" + Cbx_buscaTurma.Text + "'  ORDER BY nomeMateria LIMIT 100";
-            busca.BuscaDataGridView(Cbx_buscaTurma,selectTurno,Dgv_materias);
+            busca.BuscaDataGridView(Cbx_buscaTurma, selectTurno, Dgv_materias);
             EditaColunaDgv();
         }
 
@@ -57,7 +90,7 @@ namespace Faculdade
         {
             string selectText = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeTurma ='" + Txb_buscaMateria.Text + "'  ORDER BY nomeMateria LIMIT 100";
             busca.AtualizaDataGridView(selectText, Dgv_materias);
-            //EditaColunaDgv();
+            EditaColunaDgv();
         }
 
         private void preencherCBcurso(ComboBox cb)
@@ -68,7 +101,7 @@ namespace Faculdade
             busca.preencherComboBox(cb, selectCurso, valueMember, displayMember);
         }
 
-        private void preencherCBturma(ComboBox cb,ComboBox parametro)
+        private void preencherCBturma(ComboBox cb, ComboBox parametro)
         {
             string selectCurso = "SELECT idTurma,nomeTurma,nomeCurso FROM Turma INNER JOIN Curso on FK_idCurso = idCurso WHERE nomeCurso ='" + parametro.Text + "' ORDER BY nomeTurma";
             string valueMember = "idTurma";
@@ -103,14 +136,14 @@ namespace Faculdade
                 materia.mensagem = "Escolha o curso que a matéria pertence";
             }
             MessageBox.Show(materia.mensagem);
-        } 
+        }
 
         private void Btn_inserir_Click(object sender, EventArgs e)
         {
             Materia inserir = new Materia();
             try
             {
-                if(!Lbl_nomeAlterar.Visible)
+                if (!Lbl_nomeAlterar.Visible)
                 {
                     confereCampos();
                     inserir.Inserir(Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue);
@@ -122,11 +155,11 @@ namespace Faculdade
                     Lbl_nome.Text = "INSERIR";
                 }
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 validaCampos(inserir);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 inserir.mensagem = "Erro na inserção:" + ex.Message;
                 MessageBox.Show(inserir.mensagem);
@@ -143,8 +176,11 @@ namespace Faculdade
                 {
                     verifica.VerificaNullorWhiteSpace(Txb_nomeAlterar.Text);
                     confereCampos();
-                    editar.Editar(Txb_nomeAlterar.Text, Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue);
-                    MessageBox.Show(editar.mensagem);
+                    if(MessageBox.Show("Deseja realmente editar a matéria " + Txb_nomeAlterar.Text + " do curso de " + Cbx_cursoMateria.Text + " da turma " + Cbx_Turma.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        editar.Editar(Txb_nomeAlterar.Text, Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue);
+                        MessageBox.Show(editar.mensagem);
+                    }
                 }
                 else
                 {
@@ -152,7 +188,7 @@ namespace Faculdade
                     Lbl_nome.Text = "EDITAR";
                 }
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 if (string.IsNullOrWhiteSpace(Txb_nomeAlterar.Text))
                 {
@@ -160,9 +196,9 @@ namespace Faculdade
                 }
                 validaCampos(editar);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                editar.mensagem = "Erro na inserção:" + ex.Message;
+                editar.mensagem = "Erro na edição:" + ex.Message;
                 MessageBox.Show(editar.mensagem);
             }
             AtualizaDataGridView();
@@ -176,21 +212,23 @@ namespace Faculdade
                 if (!Txb_nomeAlterar.Visible && Lbl_nome.Text == "EXCLUIR")
                 {
                     confereCampos();
-                    excluir.Excluir(Txb_nomeMateria.Text);
-                    MessageBox.Show(excluir.mensagem);
+                    if (MessageBox.Show("Deseja realmente excluir a matéria " + Txb_nomeAlterar.Text + " do curso de " + Cbx_cursoMateria.Text + " da turma " + Cbx_Turma.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        excluir.Excluir(Txb_nomeMateria.Text);
+                        MessageBox.Show(excluir.mensagem);
+                    }
                 }
                 else
                 {
                     someCampos(false);
                     Lbl_nome.Text = "EXCLUIR";
                 }
-              
             }
             catch (NullReferenceException)
             {
                 validaCampos(excluir);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 excluir.mensagem = "Erro na exclusão:" + ex.Message;
                 MessageBox.Show(excluir.mensagem);
@@ -200,7 +238,7 @@ namespace Faculdade
 
         private void Cbx_buscaCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
-            preencherCBturma(Cbx_buscaTurma,Cbx_buscaCurso);
+            preencherCBturma(Cbx_buscaTurma, Cbx_buscaCurso);
         }
 
         private void Cbx_cursoMateria_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,6 +249,16 @@ namespace Faculdade
         private void Txb_buscaMateria_TextChanged(object sender, EventArgs e)
         {
             BuscaNomeDataGridView();
+        }
+
+        private void Cbx_cursoMateria_DropDown(object sender, EventArgs e)
+        {
+            preencherCBcurso(Cbx_cursoMateria);
+        }
+
+        private void Cbx_buscaCurso_DropDown(object sender, EventArgs e)
+        {
+            preencherCBcurso(Cbx_buscaCurso);
         }
     }
 }

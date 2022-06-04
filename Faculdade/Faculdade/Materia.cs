@@ -54,7 +54,7 @@ namespace Faculdade
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {
-                    SQL = "UPDATE Materia SET nomeMateria = '" + nomeMateria + "', descricaoMateria = '" + descricao + ",FK_idTurma = '" + idTurma + "',FK_idCurso = '" + idCurso + "' WHERE nomeMateria = '" + nomeAlterar + "'";
+                    SQL = "UPDATE Materia SET nomeMateria = '" + nomeMateria + "', descricaoMateria = '" + descricao + "', FK_idTurma = '" + idTurma + "', FK_idCurso = '" + idCurso + "' WHERE nomeMateria = '" + nomeAlterar + "'";
                     db.NpgSQLCommand(SQL);
                     mensagem = "Edição bem sucedida!\nMatéria = " + nomeMateria;
                 }

@@ -91,7 +91,6 @@ namespace Faculdade
             this.Txb_descricao.Name = "Txb_descricao";
             this.Txb_descricao.Size = new System.Drawing.Size(379, 67);
             this.Txb_descricao.TabIndex = 27;
-            this.Txb_descricao.TextChanged += new System.EventHandler(this.Txb_descricao_TextChanged);
             // 
             // Btn_InsereCurso
             // 
@@ -114,7 +113,6 @@ namespace Faculdade
             this.Txb_nomeCurso.Name = "Txb_nomeCurso";
             this.Txb_nomeCurso.Size = new System.Drawing.Size(379, 23);
             this.Txb_nomeCurso.TabIndex = 24;
-            this.Txb_nomeCurso.TextChanged += new System.EventHandler(this.Txb_nomeCurso_TextChanged);
             // 
             // Btn_excluiCurso
             // 
@@ -220,7 +218,6 @@ namespace Faculdade
             this.Lbl_descricao.Size = new System.Drawing.Size(95, 20);
             this.Lbl_descricao.TabIndex = 41;
             this.Lbl_descricao.Text = "DESCRIÇÃO:";
-            this.Lbl_descricao.Click += new System.EventHandler(this.Lbl_descricao_Click);
             // 
             // Dgv_cursos
             // 
@@ -284,7 +281,6 @@ namespace Faculdade
             this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(167, 20);
             this.Lbl_operacaoEscolha.TabIndex = 42;
             this.Lbl_operacaoEscolha.Text = "O QUE DESEJA FAZER?";
-            this.Lbl_operacaoEscolha.Click += new System.EventHandler(this.Lbl_operacaoEscolha_Click);
             // 
             // Lbl_nomeAcao
             // 
@@ -297,7 +293,6 @@ namespace Faculdade
             this.Lbl_nomeAcao.Size = new System.Drawing.Size(137, 20);
             this.Lbl_nomeAcao.TabIndex = 43;
             this.Lbl_nomeAcao.Text = "NOME DO CURSO:";
-            this.Lbl_nomeAcao.Click += new System.EventHandler(this.Lbl_nomeAcao_Click);
             // 
             // Frm_Curso
             // 

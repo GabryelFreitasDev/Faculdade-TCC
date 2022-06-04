@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Lbl_nomeAcao = new System.Windows.Forms.Label();
             this.Lbl_operacaoEscolha = new System.Windows.Forms.Label();
             this.Lbl_descricao = new System.Windows.Forms.Label();
@@ -216,6 +216,7 @@
             this.Cbx_cursoMateria.Name = "Cbx_cursoMateria";
             this.Cbx_cursoMateria.Size = new System.Drawing.Size(220, 23);
             this.Cbx_cursoMateria.TabIndex = 76;
+            this.Cbx_cursoMateria.DropDown += new System.EventHandler(this.Cbx_cursoMateria_DropDown);
             this.Cbx_cursoMateria.SelectedIndexChanged += new System.EventHandler(this.Cbx_cursoMateria_SelectedIndexChanged);
             // 
             // Lbl_Curso
@@ -255,39 +256,40 @@
             this.Dgv_materias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.Dgv_materias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_materias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_materias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_materias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_materias.ColumnHeadersHeight = 30;
             this.Dgv_materias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_materias.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_materias.DefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_materias.Location = new System.Drawing.Point(468, 103);
             this.Dgv_materias.Name = "Dgv_materias";
             this.Dgv_materias.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_materias.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_materias.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgv_materias.RowHeadersVisible = false;
             this.Dgv_materias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_materias.Size = new System.Drawing.Size(598, 412);
             this.Dgv_materias.TabIndex = 89;
+            this.Dgv_materias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_materias_CellContentClick);
             // 
             // Txb_buscaMateria
             // 
@@ -316,6 +318,7 @@
             this.Cbx_buscaCurso.Name = "Cbx_buscaCurso";
             this.Cbx_buscaCurso.Size = new System.Drawing.Size(151, 23);
             this.Cbx_buscaCurso.TabIndex = 92;
+            this.Cbx_buscaCurso.DropDown += new System.EventHandler(this.Cbx_buscaCurso_DropDown);
             this.Cbx_buscaCurso.SelectedIndexChanged += new System.EventHandler(this.Cbx_buscaCurso_SelectedIndexChanged);
             // 
             // Lbl_nomeMateria
@@ -398,6 +401,7 @@
             this.Controls.Add(this.Txb_nomeMateria);
             this.Name = "Frm_Materia";
             this.Text = "Materia";
+            this.Load += new System.EventHandler(this.Frm_Materia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_materias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

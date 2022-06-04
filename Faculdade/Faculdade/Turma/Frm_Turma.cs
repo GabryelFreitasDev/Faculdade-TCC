@@ -26,10 +26,10 @@ namespace Faculdade
 
         private void Frm_Turma_Load(object sender, EventArgs e)
         {
-
-            Cbx_cursoTurma.SelectedItem = null;
+          
             Cbx_Turno.SelectedItem = null;
             Cbx_cursoAntigo.SelectedItem = null;
+            Cbx_cursoTurma.SelectedItem = null;
             someCampos(false);
             preencherCBcurso(Cbx_cursoTurma);
             preencherCBcurso(Cbx_cursoAntigo);
@@ -71,7 +71,6 @@ namespace Faculdade
             string valueMember = "idCurso";
             string displayMember = "nomeCurso";
             busca.preencherComboBox(cb, selectCurso, valueMember, displayMember);
-
         }
 
         private void someCampos(bool ft)
@@ -129,7 +128,7 @@ namespace Faculdade
                     Cbx_turnoAntigo.Text = row.Cells["turno"].Value.ToString();
                     Txb_nomeTurma.Clear();
                     Cbx_Turno.Text = null;
-                    Cbx_cursoTurma.SelectedItem = null;
+                    Cbx_cursoTurma.Text = null;
                 }
                 Cbx_cursoTurma.Text = row.Cells["nomeCurso"].Value.ToString();
                 Cbx_Turno.Text = row.Cells["turno"].Value.ToString();
@@ -170,7 +169,7 @@ namespace Faculdade
             Turma inserir = new Turma();
             try
             {
-                if (!TxB_nomeAlterar.Visible)
+                if (!TxB_nomeAlterar.Visible && Lbl_operacao.Text == "INSERIR")
                 {
                     verificaIsNullOrWhiteSpace();
                     inserir.Inserir(Txb_nomeTurma.Text, Cbx_Turno.Text, (int)Cbx_cursoTurma.SelectedValue);
@@ -179,6 +178,7 @@ namespace Faculdade
                 else
                 {
                     someCampos(false);
+                    Lbl_operacao.Text = "INSERIR";
                 }
             }
             catch (NullReferenceException)
@@ -200,7 +200,7 @@ namespace Faculdade
             Turma editar = new Turma();
             try
             {
-                if (TxB_nomeAlterar.Visible)
+                if (TxB_nomeAlterar.Visible && Lbl_operacao.Text == "EDITAR")
                 {
                     verifica.VerificaNullorWhiteSpace(TxB_nomeAlterar.Text);
                     verifica.VerificaCbxVazio(Cbx_turnoAntigo);
@@ -217,6 +217,7 @@ namespace Faculdade
                     someCampos(true);
                     Cbx_cursoTurma.SelectedItem = null;
                     Cbx_Turno.SelectedItem = null;
+                    Lbl_operacao.Text = "EDITAR";
                 }
             }
             catch (NullReferenceException)
@@ -254,7 +255,7 @@ namespace Faculdade
             Turma excluir = new Turma();
             try
             {
-                if (!TxB_nomeAlterar.Visible)
+                if (!TxB_nomeAlterar.Visible && Lbl_operacao.Text == "EXCLUIR")
                 {
                     verificaIsNullOrWhiteSpace();
                     if (MessageBox.Show("Deseja realmente excluir a turma " + Txb_nomeTurma.Text + " do curso de " + Cbx_cursoTurma.Text + " do turno " + Cbx_Turno.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -266,6 +267,7 @@ namespace Faculdade
                 else
                 {
                     someCampos(false);
+                    Lbl_operacao.Text = "EXCLUIR";
                 }
             }
             catch (NullReferenceException)
@@ -291,12 +293,12 @@ namespace Faculdade
             Cbx_turnoAntigo.SelectedItem = null;
         }
 
-        private void Cbx_cursoTurma_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cbx_cursoTurma_DropDown(object sender, EventArgs e)
         {
             preencherCBcurso(Cbx_cursoTurma);
         }
 
-        private void Cbx_cursoAntigo_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cbx_cursoAntigo_DropDown(object sender, EventArgs e)
         {
             preencherCBcurso(Cbx_cursoAntigo);
         }

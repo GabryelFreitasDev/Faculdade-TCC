@@ -14,12 +14,12 @@ namespace Faculdade
 {
     public partial class Frm_Menu : Form
     {
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0X2;
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
+        //public const int WM_NCLBUTTONDOWN = 0xA1;
+        //public const int HT_CAPTION = 0X2;
+        //[DllImport("user32.dll")]
+        //public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        //[DllImport("user32.dll")]
+        //public static extern bool ReleaseCapture();
 
         public Frm_Menu()
         {
@@ -52,7 +52,6 @@ namespace Faculdade
             Btn_Menu.BackColor = Color.FromArgb(43, 51, 90);
         }
 
-
         public void descolorirAbas()
         {
             Btn_Menu.BackColor = Color.FromArgb(24, 30, 54);
@@ -75,7 +74,7 @@ namespace Faculdade
             descolorirAbas();
             Btn_Cursos.BackColor = Color.FromArgb(43, 51, 90);
             Pn_Menu.Visible = true;
-            AbreFormulario(new Frm_Curso());
+            AbrirForm<Frm_Curso>();
         }
 
         private void Btn_Alunos_Click(object sender, EventArgs e)
@@ -171,16 +170,6 @@ namespace Faculdade
         private void Pic_Maximizar2_Click(object sender, EventArgs e)
         {
             Maximizar();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

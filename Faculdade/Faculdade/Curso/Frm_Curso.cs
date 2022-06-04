@@ -99,7 +99,6 @@ namespace Faculdade
                 }
                 else
                 {
-                    limpaCampos();
                     Lbl_operacao.Text = "INSERIR";
                     Lbl_nomeAcao.Text = "NOME DO CURSO:";
                     someCampos();
@@ -245,31 +244,6 @@ namespace Faculdade
         {
             limpaCampos();
             Txb_buscar.Clear();
-        }
-
-        private void Lbl_nomeAcao_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Txb_nomeCurso_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Lbl_descricao_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Txb_descricao_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Lbl_operacaoEscolha_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

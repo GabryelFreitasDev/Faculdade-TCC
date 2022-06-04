@@ -187,7 +187,7 @@ namespace Faculdade
                 else
                 {
                     Lbl_acao.Text = "INSERIR";
-                    Lbl_nome.Text = "Nome do aluno:";
+                    Lbl_nome.Text = "NOME DO ALUNO:";
                     someCamposEditar(false);
                 }
             }
@@ -222,7 +222,7 @@ namespace Faculdade
                 else
                 {
                     Lbl_acao.Text = "EXCLUIR";
-                    Lbl_nome.Text = "Nome do aluno que será excluído:";
+                    Lbl_nome.Text = "NOME DO ALUNO QUE SERÁ EXCLUÍDO:";
                     someCamposEditar(false);
                 }
             }
@@ -261,8 +261,8 @@ namespace Faculdade
                 else
                 {
                     Lbl_acao.Text = "EDITAR";
-                    Lbl_nomeAlterar.Text = "Nome do aluno que será editado";
-                    Lbl_nome.Text = "Nome do aluno:";
+                    Lbl_nomeAlterar.Text = "NOME DO ALUNO QUE SERÁ EDITADO:";
+                    Lbl_nome.Text = "NOME DO ALUNO:";
                     someCamposEditar(true);
                 }
             }
