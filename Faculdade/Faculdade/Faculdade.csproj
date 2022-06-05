@@ -274,6 +274,7 @@
     <Compile Include="Nota\Frm_Nota.Designer.cs">
       <DependentUpon>Frm_Nota.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Relatorios.cs" />
     <Compile Include="Turma\Frm_relatorioTurma.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -21,12 +21,12 @@ namespace Faculdade
         string preecheCurso = "SELECT idCurso, nomeCurso from Curso ORDER BY nomeCurso";
         string valueCurso = "idCurso";
         string displayCurso = "nomeCurso";
-        private void preencheCurso(ComboBox cb)
+        public void preencheCurso(ComboBox cb)
         {
             busca.preencherComboBox(cb, preecheCurso, valueCurso, displayCurso);
             cb.Text = null;
         }
-        private void preencheTurma()
+        public void preencheTurma()
         {
             string preencheTurma = "SELECT nomeCurso, idTurma, nomeTurma from Curso INNER JOIN Turma on FK_idCurso = idCurso WHERE nomeCurso = '" + Cbx_Curso.Text + "' ORDER BY nomeTurma";
             string valueTurma = "idTurma";

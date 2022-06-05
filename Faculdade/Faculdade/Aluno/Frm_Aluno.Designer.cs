@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Dgv_aluno = new System.Windows.Forms.DataGridView();
             this.Lbl_acao = new System.Windows.Forms.Label();
             this.Lbl_nome = new System.Windows.Forms.Label();
@@ -79,14 +79,14 @@
             this.Dgv_aluno.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.Dgv_aluno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_aluno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_aluno.ColumnHeadersHeight = 37;
             this.Dgv_aluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_aluno.Location = new System.Drawing.Point(369, 86);
@@ -384,9 +384,9 @@
             // 
             this.Cbx_buscaCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_buscaCurso.FormattingEnabled = true;
-            this.Cbx_buscaCurso.Location = new System.Drawing.Point(752, 57);
+            this.Cbx_buscaCurso.Location = new System.Drawing.Point(747, 52);
             this.Cbx_buscaCurso.Name = "Cbx_buscaCurso";
-            this.Cbx_buscaCurso.Size = new System.Drawing.Size(210, 21);
+            this.Cbx_buscaCurso.Size = new System.Drawing.Size(186, 21);
             this.Cbx_buscaCurso.TabIndex = 67;
             this.Cbx_buscaCurso.DropDown += new System.EventHandler(this.Cbx_buscaCurso_DropDown);
             this.Cbx_buscaCurso.SelectionChangeCommitted += new System.EventHandler(this.Cbx_buscaCurso_SelectionChangeCommitted);
@@ -395,7 +395,7 @@
             // 
             this.Btn_LimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_LimparFiltro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_LimparFiltro.Location = new System.Drawing.Point(972, 50);
+            this.Btn_LimparFiltro.Location = new System.Drawing.Point(967, 45);
             this.Btn_LimparFiltro.Name = "Btn_LimparFiltro";
             this.Btn_LimparFiltro.Size = new System.Drawing.Size(136, 30);
             this.Btn_LimparFiltro.TabIndex = 68;
@@ -408,7 +408,7 @@
             this.Lbl_buscaCurso.AutoSize = true;
             this.Lbl_buscaCurso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_buscaCurso.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_buscaCurso.Location = new System.Drawing.Point(748, 34);
+            this.Lbl_buscaCurso.Location = new System.Drawing.Point(743, 29);
             this.Lbl_buscaCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaCurso.Name = "Lbl_buscaCurso";
             this.Lbl_buscaCurso.Size = new System.Drawing.Size(147, 20);

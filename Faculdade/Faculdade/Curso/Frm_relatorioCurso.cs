@@ -8,40 +8,28 @@ namespace Faculdade
 {
     public partial class Frm_relatorioCurso : Form
     {
-       
-        Conexao conexao = new Conexao();
         DataTable dt = new DataTable();
+        Relatorios relatorios = new Relatorios();
 
+        string buscaTudo = "SELECT * FROM Curso";
+        string cursos = "cursos";
         public Frm_relatorioCurso(DataTable dt)
         {
             this.dt = dt;
             InitializeComponent();
+            relatorios.filtraRelatorio(relatorioCurso, buscaTudo, cursos);
         }
 
-        private DataTable geraRelatorio()
+        private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conexao.conn;
-            if (conexao.conn.State != ConnectionState.Open)
-            {
-                conexao.conn.Open();
-            }
-            DataTable dt = new DataTable();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM \"curso\""; 
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-            da.Fill(dt);
-            da.Dispose();
-            return dt;
+            string select = "SELECT * FROM Curso WHERE lower(nomeCurso) LIKE '%" + Txb_buscar.Text.ToLower() + "%' ORDER BY nomeCurso LIMIT 100";
+            relatorios.filtraRelatorio(relatorioCurso, select, cursos);
         }
 
-        private void Frm_relatorioCurso_Load(object sender, EventArgs e)
+        private void Btn_limparFiltro_Click(object sender, EventArgs e)
         {
-            relatorioCurso.LocalReport.DataSources.Clear();
-            ReportDataSource relatorio = new ReportDataSource("cursos", geraRelatorio());
-            this.relatorioCurso.LocalReport.DataSources.Add(relatorio);
-            this.relatorioCurso.RefreshReport();
-            this.relatorioCurso.RefreshReport();
+            Txb_buscar.Text = null;
+            relatorios.filtraRelatorio(relatorioCurso, buscaTudo, cursos);
         }
     }
 }

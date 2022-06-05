@@ -110,13 +110,13 @@ namespace Faculdade
                 busca.AtualizaDataGridView(selectTextTurma, Dgv_materias);
             }
             //curso e turma
-            else if(string.IsNullOrWhiteSpace(Txb_buscaMateria.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurma.Text))
+            else if (string.IsNullOrWhiteSpace(Txb_buscaMateria.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurma.Text))
             {
                 string selectCurso = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso ='" + Cbx_buscaCurso.Text + "' and nomeTurma ='" + Cbx_buscaTurma.Text + "' ORDER BY nomeMateria LIMIT 100";
                 busca.AtualizaDataGridView(selectCurso, Dgv_materias);
             }
             // materia, curso e turma
-            else if(!string.IsNullOrWhiteSpace(Txb_buscaMateria.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurma.Text))
+            else if (!string.IsNullOrWhiteSpace(Txb_buscaMateria.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurma.Text))
             {
                 string selectTextCurso = "SELECT nomeMateria, descricaoMateria, nomeCurso, nomeTurma FROM Materia INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE lower(nomeMateria) LIKE '%" + Txb_buscaMateria.Text.ToLower() + "%' and nomeCurso ='" + Cbx_buscaCurso.Text + "' and nomeTurma ='" + Cbx_buscaTurma.Text + "' ORDER BY nomeMateria LIMIT 100";
                 busca.AtualizaDataGridView(selectTextCurso, Dgv_materias);
@@ -128,7 +128,7 @@ namespace Faculdade
             EditaColunaDgv();
         }
 
-        private void preencherCBcurso(ComboBox cb)
+        public void preencherCBcurso(ComboBox cb)
         {
             string selectCurso = "SELECT idCurso, nomeCurso FROM Curso ORDER BY nomeCurso";
             string valueMember = "idCurso";
@@ -137,7 +137,7 @@ namespace Faculdade
             cb.Text = null;
         }
 
-        private void preencherCBturma(ComboBox cb, ComboBox parametro)
+        public void preencherCBturma(ComboBox cb, ComboBox parametro)
         {
             string selectCurso = "SELECT idTurma,nomeTurma,nomeCurso FROM Turma INNER JOIN Curso on FK_idCurso = idCurso WHERE nomeCurso ='" + parametro.Text + "' ORDER BY nomeTurma";
             string valueMember = "idTurma";

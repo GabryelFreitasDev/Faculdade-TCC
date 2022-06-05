@@ -16,35 +16,47 @@ namespace Faculdade
     {
         Conexao conexao = new Conexao();
         DataTable dt = new DataTable();
+        Relatorios relatorios = new Relatorios();
+        string buscaTudo = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso";
+        string turma = "turma";
         public Frm_relatorioTurma(DataTable dt)
         {
             this.dt = dt;
             InitializeComponent();
-        }
-        private DataTable geraRelatorio()
-        {
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Connection = conexao.conn;
-            if (conexao.conn.State != ConnectionState.Open)
-            {
-                conexao.conn.Open();
-            }
-            DataTable dt = new DataTable();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso";
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-            da.Fill(dt);
-            da.Dispose();
-            return dt;
+            relatorios.filtraRelatorio(relatorioTurma,buscaTudo,turma);
         }
 
-        private void Frm_relatorioTurma_Load(object sender, EventArgs e)
+        private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            relatorioTurma.LocalReport.DataSources.Clear();
-            ReportDataSource relatorio = new ReportDataSource("turma", geraRelatorio());
-            this.relatorioTurma.LocalReport.DataSources.Add(relatorio);
-            this.relatorioTurma.RefreshReport();
-            this.relatorioTurma.RefreshReport();
+            //Filtra somente pelo nome do curso
+            if (!string.IsNullOrWhiteSpace(Txb_buscaTurma.Text) && string.IsNullOrWhiteSpace(Cbx_buscaTurno.Text))
+            {
+                string selectText = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE lower(Curso.nomeCurso) LIKE '%" + Txb_buscaTurma.Text.ToLower() + "%' ORDER BY nomeTurma LIMIT 100";
+                relatorios.filtraRelatorio(relatorioTurma, selectText, turma);
+            }
+            // Fltra somente pelo turno
+            else if (string.IsNullOrWhiteSpace(Txb_buscaTurma.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurno.Text))
+            {
+                string selectTurno = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
+                relatorios.filtraRelatorio(relatorioTurma, selectTurno, turma);
+            }
+            //Filtra em conjunto
+            else if (!string.IsNullOrWhiteSpace(Txb_buscaTurma.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurno.Text))
+            {
+                string selectTextTurno = "SELECT idTurma,nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE lower(Curso.nomeCurso) LIKE '%" + Txb_buscaTurma.Text.ToLower() + "%' and turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
+                relatorios.filtraRelatorio(relatorioTurma, selectTextTurno, turma);
+            }
+            else
+            {
+                relatorios.filtraRelatorio(relatorioTurma, buscaTudo, turma);
+            }
+        }
+
+        private void Btn_LimparFiltro_Click(object sender, EventArgs e)
+        {
+            Txb_buscaTurma.Text = null;
+            Cbx_buscaTurno.Text = null;
+            relatorios.filtraRelatorio(relatorioTurma, buscaTudo, turma);
         }
     }
 }
