@@ -28,3 +28,11 @@ namespace Faculdade
         }
     }
 }
+namespace Faculdade
+{
+
+
+    public partial class FaculdadeAluno
+    {
+    }
+}

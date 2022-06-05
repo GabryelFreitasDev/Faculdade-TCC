@@ -325,5 +325,11 @@ namespace Faculdade
         {
             BuscaDataGridView();
         }
+
+        private void Btn_relatorioMateria_Click(object sender, EventArgs e)
+        {
+            Frm_relatorioMateria relatorioMateria = new Frm_relatorioMateria(dt);
+            relatorioMateria.ShowDialog();
+        }
     }
 }

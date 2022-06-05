@@ -373,6 +373,7 @@
             this.Btn_relatorioMateria.TabIndex = 96;
             this.Btn_relatorioMateria.Text = "RELATÓRIO";
             this.Btn_relatorioMateria.UseVisualStyleBackColor = true;
+            this.Btn_relatorioMateria.Click += new System.EventHandler(this.Btn_relatorioMateria_Click);
             // 
             // Btn_LimparFiltro
             // 

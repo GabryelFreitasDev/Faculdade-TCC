@@ -29,19 +29,34 @@ namespace Faculdade
         /// </summary>
         private void InitializeComponent()
         {
+            this.relatorioMateria = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
+            // 
+            // relatorioMateria
+            // 
+            this.relatorioMateria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.relatorioMateria.LocalReport.ReportEmbeddedResource = "Faculdade.Materia.Rlt_Materia.rdlc";
+            this.relatorioMateria.Location = new System.Drawing.Point(0, 0);
+            this.relatorioMateria.Name = "relatorioMateria";
+            this.relatorioMateria.ServerReport.BearerToken = null;
+            this.relatorioMateria.Size = new System.Drawing.Size(800, 450);
+            this.relatorioMateria.TabIndex = 0;
             // 
             // Frm_relatorioMateria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.relatorioMateria);
             this.Name = "Frm_relatorioMateria";
-            this.Text = "Relatorio";
+            this.Text = "Frm_relatorioMateria";
+            this.Load += new System.EventHandler(this.Frm_relatorioMateria_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer relatorioMateria;
     }
 }
