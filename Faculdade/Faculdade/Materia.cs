@@ -23,11 +23,11 @@ namespace Faculdade
             }
         }
 
-        public void Inserir(string nomeMateria, string descricao, int idTurma,int idCurso)
+        public void Inserir(string nomeMateria, string descricao, int idTurma,int idCurso,string nomeTurma)
         {
             try
             {
-                var SQL = "SELECT nomeMateria,nomeTurma FROM Materia INNER JOIN Turma on FK_idTurma = idTurma WHERE nomeMateria ='" + nomeMateria + "'";
+                var SQL = "SELECT nomeMateria,nomeTurma FROM Materia INNER JOIN Turma on FK_idTurma = idTurma WHERE nomeMateria ='" + nomeMateria + "' and nomeTurma = '" + nomeTurma + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count == 0)
                 {
@@ -37,7 +37,7 @@ namespace Faculdade
                 }
                 else
                 {
-                    mensagem = "Essa matéria já existe neste Curso";
+                    mensagem = "Essa matéria já existe nesta turma";
                 }
             }
             catch (Exception ex)

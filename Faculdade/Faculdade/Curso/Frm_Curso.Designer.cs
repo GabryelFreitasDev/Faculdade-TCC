@@ -51,6 +51,7 @@ namespace Faculdade
             this.Dgv_cursos = new System.Windows.Forms.DataGridView();
             this.Lbl_operacaoEscolha = new System.Windows.Forms.Label();
             this.Lbl_nomeAcao = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_cursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,16 +78,16 @@ namespace Faculdade
             // MTxb_cargaHoraria
             // 
             this.MTxb_cargaHoraria.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MTxb_cargaHoraria.Location = new System.Drawing.Point(11, 234);
-            this.MTxb_cargaHoraria.Mask = "0000 Hrs";
+            this.MTxb_cargaHoraria.Location = new System.Drawing.Point(151, 208);
+            this.MTxb_cargaHoraria.Mask = "0000";
             this.MTxb_cargaHoraria.Name = "MTxb_cargaHoraria";
-            this.MTxb_cargaHoraria.Size = new System.Drawing.Size(55, 23);
+            this.MTxb_cargaHoraria.Size = new System.Drawing.Size(28, 23);
             this.MTxb_cargaHoraria.TabIndex = 28;
             // 
             // Txb_descricao
             // 
             this.Txb_descricao.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txb_descricao.Location = new System.Drawing.Point(11, 291);
+            this.Txb_descricao.Location = new System.Drawing.Point(11, 270);
             this.Txb_descricao.Multiline = true;
             this.Txb_descricao.Name = "Txb_descricao";
             this.Txb_descricao.Size = new System.Drawing.Size(379, 67);
@@ -212,7 +213,7 @@ namespace Faculdade
             this.Lbl_descricao.AutoSize = true;
             this.Lbl_descricao.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_descricao.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_descricao.Location = new System.Drawing.Point(8, 269);
+            this.Lbl_descricao.Location = new System.Drawing.Point(8, 248);
             this.Lbl_descricao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_descricao.Name = "Lbl_descricao";
             this.Lbl_descricao.Size = new System.Drawing.Size(95, 20);
@@ -294,12 +295,25 @@ namespace Faculdade
             this.Lbl_nomeAcao.TabIndex = 43;
             this.Lbl_nomeAcao.Text = "NOME DO CURSO:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(184, 211);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "HORAS";
+            // 
             // Frm_Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1120, 576);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Lbl_nomeAcao);
             this.Controls.Add(this.Lbl_operacaoEscolha);
             this.Controls.Add(this.Lbl_descricao);
@@ -347,6 +361,7 @@ namespace Faculdade
         private System.Windows.Forms.DataGridView Dgv_cursos;
         private System.Windows.Forms.Label Lbl_operacaoEscolha;
         private System.Windows.Forms.Label Lbl_nomeAcao;
+        private System.Windows.Forms.Label label1;
     }
 }
 

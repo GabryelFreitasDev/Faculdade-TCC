@@ -438,18 +438,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="FaculdadeDataSet1">
+    <DataSource Name="FaculdadeAluno">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e5b39838-4354-4789-9fe2-b1d219939f1c</rd:DataSourceID>
+      <rd:DataSourceID>e85ffb2c-8a7a-46c3-9515-7c4a486cd6fb</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="cursos">
       <Query>
-        <DataSourceName>FaculdadeDataSet1</DataSourceName>
+        <DataSourceName>FaculdadeAluno</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -471,8 +471,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>FaculdadeDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\FaculdadeDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>FaculdadeAluno</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\FaculdadeData.xsd</rd:SchemaPath>
         <rd:TableName>curso</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

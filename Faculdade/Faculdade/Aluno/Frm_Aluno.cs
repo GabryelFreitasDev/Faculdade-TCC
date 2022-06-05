@@ -21,13 +21,10 @@ namespace Faculdade
         string preecheCurso = "SELECT idCurso, nomeCurso from Curso ORDER BY nomeCurso";
         string valueCurso = "idCurso";
         string displayCurso = "nomeCurso";
-        private void preencheCurso()
+        private void preencheCurso(ComboBox cb)
         {
-            busca.preencherComboBox(Cbx_Curso, preecheCurso, valueCurso, displayCurso);
-        }
-        private void preencheBuscaCurso()
-        {
-            busca.preencherComboBox(Cbx_buscaCurso, preecheCurso, valueCurso, displayCurso);
+            busca.preencherComboBox(cb, preecheCurso, valueCurso, displayCurso);
+            cb.Text = null;
         }
         private void preencheTurma()
         {
@@ -39,19 +36,32 @@ namespace Faculdade
 
         private void BuscaDataGridView()
         {
-            string selectText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeAluno LIKE '%" + Txb_buscaNome.Text + "%' ORDER BY nomeAluno LIMIT 100";
-            busca.AtualizaDataGridView(selectText, Dgv_aluno);
-        }
-        private void BuscaCursoDataGridView()
-        {
-            string selectTurno = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '"+ Cbx_buscaCurso.Text +"' ORDER BY nomeAluno LIMIT 100";
-            busca.BuscaDataGridView(Cbx_buscaCurso, selectTurno, Dgv_aluno);
+            //somente nome
+            if (!string.IsNullOrWhiteSpace(Txb_buscaNome.Text) && string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text))
+            {
+                string selectText = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE lower(nomeAluno) LIKE '%" + Txb_buscaNome.Text.ToLower() + "%' ORDER BY nomeAluno LIMIT 100";
+                busca.AtualizaDataGridView(selectText, Dgv_aluno);
+            }
+            //somente curso
+            else if (string.IsNullOrWhiteSpace(Txb_buscaNome.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text))
+            {
+                string selectCurso = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE nomeCurso = '" + Cbx_buscaCurso.Text + "' ORDER BY nomeAluno LIMIT 100";
+                busca.BuscaDataGridView(Cbx_buscaCurso, selectCurso, Dgv_aluno);
+            }
+            //nome e curso
+            else if (!string.IsNullOrWhiteSpace(Txb_buscaNome.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text))
+            {
+                string selectTextCurso = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma WHERE lower(nomeAluno) LIKE '%" + Txb_buscaNome.Text.ToLower() + "%' and nomeCurso = '" + Cbx_buscaCurso.Text + "' ORDER BY nomeAluno LIMIT 100";
+                busca.AtualizaDataGridView(selectTextCurso, Dgv_aluno);
+            }
+            EditaColunaDgv();
         }
 
         private void AtualizaDGV()
         {
             string dgvSelect = "SELECT nomeAluno,cpf,dataNascimento,contato,contatoParente,email,endereco,nomeCurso,nomeTurma FROM Aluno INNER JOIN Curso on idCurso = FK_idCurso INNER JOIN Turma on idTurma = FK_idTurma";
             busca.AtualizaDataGridView(dgvSelect, Dgv_aluno);
+            EditaColunaDgv();
         }
 
         private void someCamposEditar(bool ft)
@@ -123,6 +133,9 @@ namespace Faculdade
             Txb_email.Clear();
             Txb_endereco.Clear();
             Cbx_turmaAluno.SelectedItem = null;
+            Lbl_turma.Visible = false;
+            Cbx_turmaAluno.Visible = false;
+            Lbl_disponivel.Visible = false;
         }
 
         private void Dgv_Alunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -157,8 +170,8 @@ namespace Faculdade
         public Frm_Aluno()
         {
             InitializeComponent();
-            preencheCurso();
-            preencheBuscaCurso();
+            preencheCurso(Cbx_Curso);
+            preencheCurso(Cbx_buscaCurso);
             preencheTurma();
         }
 
@@ -200,7 +213,6 @@ namespace Faculdade
                 aluno.mensagem = "Erro na inserção: " + ex.Message;
             }
             AtualizaDGV();
-            EditaColunaDgv();
         }
 
         private void Btn_excluiAluno_Click_1(object sender, EventArgs e)
@@ -242,7 +254,6 @@ namespace Faculdade
                 MessageBox.Show(excluir.mensagem);
             }
             AtualizaDGV();
-            EditaColunaDgv();
         }
 
         private void Btn_editaAluno_Click(object sender, EventArgs e)
@@ -256,7 +267,7 @@ namespace Faculdade
                     verificaIsNullOrWhiteSpace();
                     if (MessageBox.Show("Deseja realmente editar o aluno: " + Txb_nomeAluno.Text + " ?\n\n*Todos os aluno cadastrados irão para a turma nova*", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         editar.Editar(Txb_nomeAlterar.Text, Txb_nomeAluno.Text, Mtxb_cpf.Text, MTxb_dataNascimento.Text, MTxb_contato.Text, MTxb_contatoParente.Text, Txb_email.Text, Txb_endereco.Text, (int)Cbx_Curso.SelectedValue, (int)Cbx_turmaAluno.SelectedValue);
-                        MessageBox.Show(editar.mensagem);
+                    MessageBox.Show(editar.mensagem);
                 }
                 else
                 {
@@ -284,7 +295,6 @@ namespace Faculdade
                 MessageBox.Show(editar.mensagem);
             }
             AtualizaDGV();
-            EditaColunaDgv();
         }
 
         private void Btn_relatorio_Click(object sender, EventArgs e)
@@ -303,7 +313,6 @@ namespace Faculdade
         private void Txb_buscaNome_TextChanged(object sender, EventArgs e)
         {
             BuscaDataGridView();
-            EditaColunaDgv();
         }
 
         private void Btn_LimparFiltro_Click(object sender, EventArgs e)
@@ -311,36 +320,39 @@ namespace Faculdade
             Txb_buscaNome.Clear();
             Cbx_buscaCurso.SelectedItem = null;
             AtualizaDGV();
-            EditaColunaDgv();
         }
 
         private void Cbx_buscaCurso_DropDown(object sender, EventArgs e)
         {
-            preencheBuscaCurso();
+            preencheCurso(Cbx_buscaCurso);
         }
         private void Cbx_Curso_DropDown(object sender, EventArgs e)
         {
-            preencheCurso();
+            preencheCurso(Cbx_Curso);
         }
 
         private void Cbx_buscaCurso_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(Cbx_buscaCurso.Text))
             {
-                BuscaCursoDataGridView();
-                EditaColunaDgv();
+                BuscaDataGridView();
             }
         }
 
         private void Cbx_Curso_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Cbx_turmaAluno.Visible = true;
-            Lbl_turma.Text = "Escolha a Turma";
+            Lbl_turma.Visible = true;
             preencheTurma();
             if (Cbx_turmaAluno.Items.Count == 0)
                 Lbl_disponivel.Visible = true;
             else
                 Lbl_disponivel.Visible = false;
+        }
+
+        private void Cbx_turmaAluno_DropDown(object sender, EventArgs e)
+        {
+            preencheTurma();
         }
     }
 }

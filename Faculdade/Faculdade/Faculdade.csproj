@@ -220,21 +220,13 @@
     <Compile Include="Curso\Frm_Curso.Designer.cs">
       <DependentUpon>Frm_Curso.cs</DependentUpon>
     </Compile>
-    <Compile Include="FaculdadeAluno.cs">
-      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
+    <Compile Include="FaculdadeData.cs">
+      <DependentUpon>FaculdadeData.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FaculdadeAluno.Designer.cs">
+    <Compile Include="FaculdadeData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FaculdadeDataSet.cs">
-      <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FaculdadeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
+      <DependentUpon>FaculdadeData.xsd</DependentUpon>
     </Compile>
     <Compile Include="Materia.cs" />
     <Compile Include="Menu\Frm_Menu.cs">
@@ -325,27 +317,16 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Curso\Rlt_Curso.rdlc" />
-    <None Include="FaculdadeAluno.xsc">
-      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
+    <None Include="FaculdadeData.xsc">
+      <DependentUpon>FaculdadeData.xsd</DependentUpon>
     </None>
-    <None Include="FaculdadeAluno.xsd">
+    <None Include="FaculdadeData.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FaculdadeAluno.Designer.cs</LastGenOutput>
+      <LastGenOutput>FaculdadeData.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="FaculdadeAluno.xss">
-      <DependentUpon>FaculdadeAluno.xsd</DependentUpon>
-    </None>
-    <None Include="FaculdadeDataSet.xsc">
-      <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FaculdadeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FaculdadeDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FaculdadeDataSet.xss">
-      <DependentUpon>FaculdadeDataSet.xsd</DependentUpon>
+    <None Include="FaculdadeData.xss">
+      <DependentUpon>FaculdadeData.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\abrirAba.datasource" />

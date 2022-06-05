@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Lbl_nomeAcao = new System.Windows.Forms.Label();
             this.Lbl_operacaoEscolha = new System.Windows.Forms.Label();
             this.Lbl_descricao = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.Lbl_buscaCurso = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_relatorioMateria = new System.Windows.Forms.Button();
+            this.Btn_LimparFiltro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_materias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,6 +207,7 @@
             this.Cbx_Turma.Name = "Cbx_Turma";
             this.Cbx_Turma.Size = new System.Drawing.Size(108, 23);
             this.Cbx_Turma.TabIndex = 77;
+            this.Cbx_Turma.DropDown += new System.EventHandler(this.Cbx_Turma_DropDown);
             // 
             // Cbx_cursoMateria
             // 
@@ -217,7 +219,7 @@
             this.Cbx_cursoMateria.Size = new System.Drawing.Size(220, 23);
             this.Cbx_cursoMateria.TabIndex = 76;
             this.Cbx_cursoMateria.DropDown += new System.EventHandler(this.Cbx_cursoMateria_DropDown);
-            this.Cbx_cursoMateria.SelectedIndexChanged += new System.EventHandler(this.Cbx_cursoMateria_SelectedIndexChanged);
+            this.Cbx_cursoMateria.DropDownClosed += new System.EventHandler(this.Cbx_cursoMateria_DropDownClosed);
             // 
             // Lbl_Curso
             // 
@@ -256,35 +258,35 @@
             this.Dgv_materias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.Dgv_materias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_materias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_materias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_materias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_materias.ColumnHeadersHeight = 30;
             this.Dgv_materias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_materias.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_materias.DefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_materias.Location = new System.Drawing.Point(468, 103);
             this.Dgv_materias.Name = "Dgv_materias";
             this.Dgv_materias.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_materias.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_materias.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_materias.RowHeadersVisible = false;
             this.Dgv_materias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_materias.Size = new System.Drawing.Size(598, 412);
@@ -295,7 +297,7 @@
             // 
             this.Txb_buscaMateria.Location = new System.Drawing.Point(468, 68);
             this.Txb_buscaMateria.Name = "Txb_buscaMateria";
-            this.Txb_buscaMateria.Size = new System.Drawing.Size(295, 20);
+            this.Txb_buscaMateria.Size = new System.Drawing.Size(316, 20);
             this.Txb_buscaMateria.TabIndex = 90;
             this.Txb_buscaMateria.TextChanged += new System.EventHandler(this.Txb_buscaMateria_TextChanged);
             // 
@@ -308,18 +310,21 @@
             this.Cbx_buscaTurma.Name = "Cbx_buscaTurma";
             this.Cbx_buscaTurma.Size = new System.Drawing.Size(108, 23);
             this.Cbx_buscaTurma.TabIndex = 91;
+            this.Cbx_buscaTurma.DropDown += new System.EventHandler(this.Cbx_buscaTurma_DropDown);
+            this.Cbx_buscaTurma.SelectedIndexChanged += new System.EventHandler(this.Cbx_buscaTurma_SelectedIndexChanged);
             // 
             // Cbx_buscaCurso
             // 
             this.Cbx_buscaCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_buscaCurso.Font = new System.Drawing.Font("Nirmala UI", 9F);
             this.Cbx_buscaCurso.FormattingEnabled = true;
-            this.Cbx_buscaCurso.Location = new System.Drawing.Point(790, 67);
+            this.Cbx_buscaCurso.Location = new System.Drawing.Point(793, 67);
             this.Cbx_buscaCurso.Name = "Cbx_buscaCurso";
             this.Cbx_buscaCurso.Size = new System.Drawing.Size(151, 23);
             this.Cbx_buscaCurso.TabIndex = 92;
             this.Cbx_buscaCurso.DropDown += new System.EventHandler(this.Cbx_buscaCurso_DropDown);
             this.Cbx_buscaCurso.SelectedIndexChanged += new System.EventHandler(this.Cbx_buscaCurso_SelectedIndexChanged);
+            this.Cbx_buscaCurso.DropDownClosed += new System.EventHandler(this.Cbx_buscaCurso_DropDownClosed);
             // 
             // Lbl_nomeMateria
             // 
@@ -338,7 +343,7 @@
             this.Lbl_buscaCurso.AutoSize = true;
             this.Lbl_buscaCurso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_buscaCurso.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_buscaCurso.Location = new System.Drawing.Point(786, 44);
+            this.Lbl_buscaCurso.Location = new System.Drawing.Point(789, 44);
             this.Lbl_buscaCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaCurso.Name = "Lbl_buscaCurso";
             this.Lbl_buscaCurso.Size = new System.Drawing.Size(62, 20);
@@ -369,12 +374,25 @@
             this.Btn_relatorioMateria.Text = "RELATÓRIO";
             this.Btn_relatorioMateria.UseVisualStyleBackColor = true;
             // 
+            // Btn_LimparFiltro
+            // 
+            this.Btn_LimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_LimparFiltro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_LimparFiltro.Location = new System.Drawing.Point(824, 532);
+            this.Btn_LimparFiltro.Name = "Btn_LimparFiltro";
+            this.Btn_LimparFiltro.Size = new System.Drawing.Size(136, 32);
+            this.Btn_LimparFiltro.TabIndex = 97;
+            this.Btn_LimparFiltro.Text = "LIMPAR FILTRO";
+            this.Btn_LimparFiltro.UseVisualStyleBackColor = true;
+            this.Btn_LimparFiltro.Click += new System.EventHandler(this.Btn_LimparFiltro_Click);
+            // 
             // Frm_Materia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.ClientSize = new System.Drawing.Size(1120, 576);
+            this.Controls.Add(this.Btn_LimparFiltro);
             this.Controls.Add(this.Btn_relatorioMateria);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Lbl_buscaCurso);
@@ -434,5 +452,6 @@
         private System.Windows.Forms.Label Lbl_buscaCurso;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_relatorioMateria;
+        private System.Windows.Forms.Button Btn_LimparFiltro;
     }
 }

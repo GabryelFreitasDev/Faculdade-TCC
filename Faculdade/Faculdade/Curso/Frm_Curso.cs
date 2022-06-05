@@ -43,7 +43,7 @@ namespace Faculdade
        
         public void BuscaDataGridView()
         {
-            string select = "SELECT * FROM \"curso\" WHERE nomeCurso LIKE '%" + Txb_buscar.Text + "%' ORDER BY nomeCurso LIMIT 100";
+            string select = "SELECT * FROM \"curso\" WHERE lower(nomeCurso) LIKE '%" + Txb_buscar.Text.ToLower() + "%' ORDER BY nomeCurso LIMIT 100";
             busca.AtualizaDataGridView(select,Dgv_cursos);
         }
 
@@ -65,9 +65,9 @@ namespace Faculdade
         private void confereCampos(Curso curso)
         {
             if (string.IsNullOrWhiteSpace(Txb_nomeCurso.Text))
-                curso.mensagem = "Digite o nome do Curso";
+                curso.mensagem = "Digite o nome do curso";
             else if (!MTxb_cargaHoraria.MaskCompleted)
-                curso.mensagem = "Digite a carga horária do Curso";
+                curso.mensagem = "Preencha a carga horária";
             else if (string.IsNullOrWhiteSpace(Txb_descricao.Text))
             {
                 curso.mensagem = "Digite a descrição do Curso";

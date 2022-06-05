@@ -50,18 +50,26 @@ namespace Faculdade
             EditaColunaDgv();
         }
 
-        public void BuscaTurnoDataGridView()
-        {
-
-            string selectTurno = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
-            busca.BuscaDataGridView(Cbx_buscaTurno, selectTurno, Dgv_turmas);
-            EditaColunaDgv();
-        }
-
         public void BuscaDataGridView()
         {
-            string selectText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE Curso.nomeCurso LIKE '%" + Txb_buscaTurma.Text + "%' ORDER BY nomeTurma LIMIT 100";
-            busca.AtualizaDataGridView(selectText, Dgv_turmas);
+            //Filtra somente pelo nome do curso
+            if(!string.IsNullOrWhiteSpace(Txb_buscaTurma.Text) && string.IsNullOrWhiteSpace(Cbx_buscaTurno.Text))
+            {
+                string selectText = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE lower(Curso.nomeCurso) LIKE '%" + Txb_buscaTurma.Text.ToLower() + "%' ORDER BY nomeTurma LIMIT 100";
+                busca.AtualizaDataGridView(selectText, Dgv_turmas);
+            }
+            // Fltra somente pelo turno
+            else if (string.IsNullOrWhiteSpace(Txb_buscaTurma.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurno.Text))
+            {
+                string selectTurno = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
+                busca.BuscaDataGridView(Cbx_buscaTurno, selectTurno, Dgv_turmas);
+            }
+            //Filtra em conjunto
+            else if(!string.IsNullOrWhiteSpace(Txb_buscaTurma.Text) && !string.IsNullOrWhiteSpace(Cbx_buscaTurno.Text))
+            {
+                string selectTextTurno = "SELECT nomeTurma,turno,nomeCurso FROM Turma INNER JOIN Curso on idCurso = FK_idCurso WHERE lower(Curso.nomeCurso) LIKE '%" + Txb_buscaTurma.Text.ToLower() + "%' and turno = '" + Cbx_buscaTurno.Text + "' ORDER BY nomeTurma LIMIT 100";
+                busca.AtualizaDataGridView(selectTextTurno, Dgv_turmas);
+            }
             EditaColunaDgv();
         }
 
@@ -146,7 +154,7 @@ namespace Faculdade
 
         private void Cbx_buscaTurno_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BuscaTurnoDataGridView();
+            BuscaDataGridView();
         }
 
         private void Btn_LimparFiltro_Click(object sender, EventArgs e)

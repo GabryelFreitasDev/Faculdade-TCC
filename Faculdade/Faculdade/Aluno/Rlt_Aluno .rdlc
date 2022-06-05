@@ -717,7 +717,7 @@
         <Top>1.3462cm</Top>
         <Left>0.44662cm</Left>
         <Height>1.2cm</Height>
-        <Width>25.02646cm</Width>
+        <Width>25.02645cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -835,7 +835,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>2f285250-48d4-454c-a58d-d8e14a6e144f</rd:DataSourceID>
+      <rd:DataSourceID>d2d5241d-959c-4cbe-b6c0-92f5c79aacd9</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -888,7 +888,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>FaculdadeAluno</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\UNIPAR\Documents\Aliare-TCC\Faculdade\Faculdade\FaculdadeAluno.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\FaculdadeData.xsd</rd:SchemaPath>
         <rd:TableName>AlunoRelatorio</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

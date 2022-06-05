@@ -89,12 +89,12 @@
             this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_aluno.ColumnHeadersHeight = 37;
             this.Dgv_aluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Dgv_aluno.Location = new System.Drawing.Point(9, 108);
+            this.Dgv_aluno.Location = new System.Drawing.Point(369, 86);
             this.Dgv_aluno.Name = "Dgv_aluno";
             this.Dgv_aluno.ReadOnly = true;
             this.Dgv_aluno.RowHeadersVisible = false;
             this.Dgv_aluno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_aluno.Size = new System.Drawing.Size(1094, 279);
+            this.Dgv_aluno.Size = new System.Drawing.Size(734, 440);
             this.Dgv_aluno.TabIndex = 11;
             this.Dgv_aluno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Alunos_CellContentClick);
             // 
@@ -113,11 +113,10 @@
             // 
             // Lbl_nome
             // 
-            this.Lbl_nome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_nome.AutoSize = true;
             this.Lbl_nome.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_nome.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_nome.Location = new System.Drawing.Point(5, 432);
+            this.Lbl_nome.Location = new System.Drawing.Point(8, 100);
             this.Lbl_nome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nome.Name = "Lbl_nome";
             this.Lbl_nome.Size = new System.Drawing.Size(141, 20);
@@ -126,11 +125,10 @@
             // 
             // Lbl_nomeAlterar
             // 
-            this.Lbl_nomeAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_nomeAlterar.AutoSize = true;
             this.Lbl_nomeAlterar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_nomeAlterar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_nomeAlterar.Location = new System.Drawing.Point(5, 390);
+            this.Lbl_nomeAlterar.Location = new System.Drawing.Point(8, 55);
             this.Lbl_nomeAlterar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nomeAlterar.Name = "Lbl_nomeAlterar";
             this.Lbl_nomeAlterar.Size = new System.Drawing.Size(308, 20);
@@ -139,17 +137,15 @@
             // 
             // Txb_nomeAlterar
             // 
-            this.Txb_nomeAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Txb_nomeAlterar.Location = new System.Drawing.Point(9, 409);
+            this.Txb_nomeAlterar.Location = new System.Drawing.Point(12, 74);
             this.Txb_nomeAlterar.Name = "Txb_nomeAlterar";
             this.Txb_nomeAlterar.Size = new System.Drawing.Size(340, 20);
             this.Txb_nomeAlterar.TabIndex = 52;
             // 
             // Btn_editaAluno
             // 
-            this.Btn_editaAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_editaAluno.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_editaAluno.Location = new System.Drawing.Point(918, 477);
+            this.Btn_editaAluno.Location = new System.Drawing.Point(116, 473);
             this.Btn_editaAluno.Name = "Btn_editaAluno";
             this.Btn_editaAluno.Size = new System.Drawing.Size(84, 32);
             this.Btn_editaAluno.TabIndex = 51;
@@ -159,9 +155,8 @@
             // 
             // Btn_excluiAluno
             // 
-            this.Btn_excluiAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_excluiAluno.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_excluiAluno.Location = new System.Drawing.Point(1019, 477);
+            this.Btn_excluiAluno.Location = new System.Drawing.Point(217, 473);
             this.Btn_excluiAluno.Name = "Btn_excluiAluno";
             this.Btn_excluiAluno.Size = new System.Drawing.Size(84, 32);
             this.Btn_excluiAluno.TabIndex = 50;
@@ -173,7 +168,7 @@
             // 
             this.Btn_relatorio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_relatorio.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_relatorio.Location = new System.Drawing.Point(999, 397);
+            this.Btn_relatorio.Location = new System.Drawing.Point(1004, 532);
             this.Btn_relatorio.Name = "Btn_relatorio";
             this.Btn_relatorio.Size = new System.Drawing.Size(104, 32);
             this.Btn_relatorio.TabIndex = 49;
@@ -183,20 +178,18 @@
             // 
             // Cbx_Curso
             // 
-            this.Cbx_Curso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cbx_Curso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_Curso.FormattingEnabled = true;
-            this.Cbx_Curso.Location = new System.Drawing.Point(480, 451);
+            this.Cbx_Curso.Location = new System.Drawing.Point(12, 381);
             this.Cbx_Curso.Name = "Cbx_Curso";
-            this.Cbx_Curso.Size = new System.Drawing.Size(315, 21);
+            this.Cbx_Curso.Size = new System.Drawing.Size(192, 21);
             this.Cbx_Curso.TabIndex = 48;
             this.Cbx_Curso.DropDown += new System.EventHandler(this.Cbx_Curso_DropDown);
             this.Cbx_Curso.SelectionChangeCommitted += new System.EventHandler(this.Cbx_Curso_SelectionChangeCommitted);
             // 
             // MTxb_contatoParente
             // 
-            this.MTxb_contatoParente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MTxb_contatoParente.Location = new System.Drawing.Point(11, 544);
+            this.MTxb_contatoParente.Location = new System.Drawing.Point(14, 212);
             this.MTxb_contatoParente.Mask = "(00) 00000-0000";
             this.MTxb_contatoParente.Name = "MTxb_contatoParente";
             this.MTxb_contatoParente.Size = new System.Drawing.Size(100, 20);
@@ -204,8 +197,7 @@
             // 
             // Mtxb_cpf
             // 
-            this.Mtxb_cpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Mtxb_cpf.Location = new System.Drawing.Point(364, 451);
+            this.Mtxb_cpf.Location = new System.Drawing.Point(191, 169);
             this.Mtxb_cpf.Mask = "000,000,000-00";
             this.Mtxb_cpf.Name = "Mtxb_cpf";
             this.Mtxb_cpf.Size = new System.Drawing.Size(85, 20);
@@ -213,53 +205,47 @@
             // 
             // MTxb_contato
             // 
-            this.MTxb_contato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MTxb_contato.Location = new System.Drawing.Point(188, 499);
+            this.MTxb_contato.Location = new System.Drawing.Point(191, 212);
             this.MTxb_contato.Mask = "(00) 00000-0000";
             this.MTxb_contato.Name = "MTxb_contato";
-            this.MTxb_contato.Size = new System.Drawing.Size(100, 20);
+            this.MTxb_contato.Size = new System.Drawing.Size(86, 20);
             this.MTxb_contato.TabIndex = 45;
             // 
             // MTxb_dataNascimento
             // 
-            this.MTxb_dataNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MTxb_dataNascimento.Location = new System.Drawing.Point(9, 499);
+            this.MTxb_dataNascimento.Location = new System.Drawing.Point(12, 167);
             this.MTxb_dataNascimento.Mask = "00/00/0000";
             this.MTxb_dataNascimento.Name = "MTxb_dataNascimento";
-            this.MTxb_dataNascimento.Size = new System.Drawing.Size(100, 20);
+            this.MTxb_dataNascimento.Size = new System.Drawing.Size(66, 20);
             this.MTxb_dataNascimento.TabIndex = 44;
             this.MTxb_dataNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // Txb_endereco
             // 
-            this.Txb_endereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Txb_endereco.Location = new System.Drawing.Point(188, 544);
+            this.Txb_endereco.Location = new System.Drawing.Point(12, 308);
             this.Txb_endereco.Multiline = true;
             this.Txb_endereco.Name = "Txb_endereco";
-            this.Txb_endereco.Size = new System.Drawing.Size(489, 20);
+            this.Txb_endereco.Size = new System.Drawing.Size(340, 39);
             this.Txb_endereco.TabIndex = 42;
             // 
             // Txb_email
             // 
-            this.Txb_email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Txb_email.Location = new System.Drawing.Point(364, 499);
+            this.Txb_email.Location = new System.Drawing.Point(12, 255);
             this.Txb_email.Name = "Txb_email";
-            this.Txb_email.Size = new System.Drawing.Size(313, 20);
+            this.Txb_email.Size = new System.Drawing.Size(340, 20);
             this.Txb_email.TabIndex = 41;
             // 
             // Txb_nomeAluno
             // 
-            this.Txb_nomeAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Txb_nomeAluno.Location = new System.Drawing.Point(9, 452);
+            this.Txb_nomeAluno.Location = new System.Drawing.Point(12, 120);
             this.Txb_nomeAluno.Name = "Txb_nomeAluno";
             this.Txb_nomeAluno.Size = new System.Drawing.Size(340, 20);
             this.Txb_nomeAluno.TabIndex = 40;
             // 
             // Btn_insereAluno
             // 
-            this.Btn_insereAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_insereAluno.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_insereAluno.Location = new System.Drawing.Point(820, 476);
+            this.Btn_insereAluno.Location = new System.Drawing.Point(18, 472);
             this.Btn_insereAluno.Name = "Btn_insereAluno";
             this.Btn_insereAluno.Size = new System.Drawing.Size(84, 32);
             this.Btn_insereAluno.TabIndex = 39;
@@ -269,11 +255,10 @@
             // 
             // Lbl_cpf
             // 
-            this.Lbl_cpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_cpf.AutoSize = true;
             this.Lbl_cpf.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_cpf.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_cpf.Location = new System.Drawing.Point(360, 432);
+            this.Lbl_cpf.Location = new System.Drawing.Point(187, 150);
             this.Lbl_cpf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cpf.Name = "Lbl_cpf";
             this.Lbl_cpf.Size = new System.Drawing.Size(39, 20);
@@ -282,24 +267,22 @@
             // 
             // Lbl_dataNascimento
             // 
-            this.Lbl_dataNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_dataNascimento.AutoSize = true;
             this.Lbl_dataNascimento.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_dataNascimento.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_dataNascimento.Location = new System.Drawing.Point(5, 482);
+            this.Lbl_dataNascimento.Location = new System.Drawing.Point(8, 150);
             this.Lbl_dataNascimento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_dataNascimento.Name = "Lbl_dataNascimento";
-            this.Lbl_dataNascimento.Size = new System.Drawing.Size(178, 20);
+            this.Lbl_dataNascimento.Size = new System.Drawing.Size(111, 20);
             this.Lbl_dataNascimento.TabIndex = 57;
-            this.Lbl_dataNascimento.Text = "DATA DE NASCIMENTO:";
+            this.Lbl_dataNascimento.Text = "NASCIMENTO:";
             // 
             // Lbl_contatoAluno
             // 
-            this.Lbl_contatoAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_contatoAluno.AutoSize = true;
             this.Lbl_contatoAluno.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_contatoAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_contatoAluno.Location = new System.Drawing.Point(184, 479);
+            this.Lbl_contatoAluno.Location = new System.Drawing.Point(187, 190);
             this.Lbl_contatoAluno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_contatoAluno.Name = "Lbl_contatoAluno";
             this.Lbl_contatoAluno.Size = new System.Drawing.Size(165, 20);
@@ -308,11 +291,10 @@
             // 
             // Lbl_contatoParente
             // 
-            this.Lbl_contatoParente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_contatoParente.AutoSize = true;
             this.Lbl_contatoParente.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_contatoParente.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_contatoParente.Location = new System.Drawing.Point(5, 522);
+            this.Lbl_contatoParente.Location = new System.Drawing.Point(8, 190);
             this.Lbl_contatoParente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_contatoParente.Name = "Lbl_contatoParente";
             this.Lbl_contatoParente.Size = new System.Drawing.Size(152, 20);
@@ -321,11 +303,10 @@
             // 
             // Lbl_email
             // 
-            this.Lbl_email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_email.AutoSize = true;
             this.Lbl_email.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_email.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_email.Location = new System.Drawing.Point(360, 479);
+            this.Lbl_email.Location = new System.Drawing.Point(8, 235);
             this.Lbl_email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_email.Name = "Lbl_email";
             this.Lbl_email.Size = new System.Drawing.Size(59, 20);
@@ -334,11 +315,10 @@
             // 
             // Lbl_turma
             // 
-            this.Lbl_turma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_turma.AutoSize = true;
             this.Lbl_turma.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_turma.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_turma.Location = new System.Drawing.Point(692, 479);
+            this.Lbl_turma.Location = new System.Drawing.Point(249, 362);
             this.Lbl_turma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_turma.Name = "Lbl_turma";
             this.Lbl_turma.Size = new System.Drawing.Size(68, 20);
@@ -347,11 +327,10 @@
             // 
             // Lbl_cursoAluno
             // 
-            this.Lbl_cursoAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_cursoAluno.AutoSize = true;
             this.Lbl_cursoAluno.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_cursoAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_cursoAluno.Location = new System.Drawing.Point(476, 431);
+            this.Lbl_cursoAluno.Location = new System.Drawing.Point(8, 361);
             this.Lbl_cursoAluno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cursoAluno.Name = "Lbl_cursoAluno";
             this.Lbl_cursoAluno.Size = new System.Drawing.Size(62, 20);
@@ -360,11 +339,10 @@
             // 
             // Lbl_endereco
             // 
-            this.Lbl_endereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_endereco.AutoSize = true;
             this.Lbl_endereco.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_endereco.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_endereco.Location = new System.Drawing.Point(184, 524);
+            this.Lbl_endereco.Location = new System.Drawing.Point(8, 288);
             this.Lbl_endereco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_endereco.Name = "Lbl_endereco";
             this.Lbl_endereco.Size = new System.Drawing.Size(90, 20);
@@ -373,9 +351,8 @@
             // 
             // Btn_limpar
             // 
-            this.Btn_limpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_limpar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_limpar.Location = new System.Drawing.Point(1019, 532);
+            this.Btn_limpar.Location = new System.Drawing.Point(12, 532);
             this.Btn_limpar.Name = "Btn_limpar";
             this.Btn_limpar.Size = new System.Drawing.Size(84, 32);
             this.Btn_limpar.TabIndex = 64;
@@ -385,9 +362,9 @@
             // 
             // Txb_buscaNome
             // 
-            this.Txb_buscaNome.Location = new System.Drawing.Point(9, 82);
+            this.Txb_buscaNome.Location = new System.Drawing.Point(369, 52);
             this.Txb_buscaNome.Name = "Txb_buscaNome";
-            this.Txb_buscaNome.Size = new System.Drawing.Size(444, 20);
+            this.Txb_buscaNome.Size = new System.Drawing.Size(329, 20);
             this.Txb_buscaNome.TabIndex = 65;
             this.Txb_buscaNome.TextChanged += new System.EventHandler(this.Txb_buscaNome_TextChanged);
             // 
@@ -396,7 +373,7 @@
             this.Lbl_buscaNome.AutoSize = true;
             this.Lbl_buscaNome.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_buscaNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_buscaNome.Location = new System.Drawing.Point(8, 59);
+            this.Lbl_buscaNome.Location = new System.Drawing.Point(365, 29);
             this.Lbl_buscaNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaNome.Name = "Lbl_buscaNome";
             this.Lbl_buscaNome.Size = new System.Drawing.Size(209, 20);
@@ -407,9 +384,9 @@
             // 
             this.Cbx_buscaCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_buscaCurso.FormattingEnabled = true;
-            this.Cbx_buscaCurso.Location = new System.Drawing.Point(487, 82);
+            this.Cbx_buscaCurso.Location = new System.Drawing.Point(752, 57);
             this.Cbx_buscaCurso.Name = "Cbx_buscaCurso";
-            this.Cbx_buscaCurso.Size = new System.Drawing.Size(308, 21);
+            this.Cbx_buscaCurso.Size = new System.Drawing.Size(210, 21);
             this.Cbx_buscaCurso.TabIndex = 67;
             this.Cbx_buscaCurso.DropDown += new System.EventHandler(this.Cbx_buscaCurso_DropDown);
             this.Cbx_buscaCurso.SelectionChangeCommitted += new System.EventHandler(this.Cbx_buscaCurso_SelectionChangeCommitted);
@@ -418,7 +395,7 @@
             // 
             this.Btn_LimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_LimparFiltro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_LimparFiltro.Location = new System.Drawing.Point(967, 70);
+            this.Btn_LimparFiltro.Location = new System.Drawing.Point(972, 50);
             this.Btn_LimparFiltro.Name = "Btn_LimparFiltro";
             this.Btn_LimparFiltro.Size = new System.Drawing.Size(136, 30);
             this.Btn_LimparFiltro.TabIndex = 68;
@@ -431,7 +408,7 @@
             this.Lbl_buscaCurso.AutoSize = true;
             this.Lbl_buscaCurso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_buscaCurso.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_buscaCurso.Location = new System.Drawing.Point(483, 59);
+            this.Lbl_buscaCurso.Location = new System.Drawing.Point(748, 34);
             this.Lbl_buscaCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_buscaCurso.Name = "Lbl_buscaCurso";
             this.Lbl_buscaCurso.Size = new System.Drawing.Size(147, 20);
@@ -440,11 +417,10 @@
             // 
             // Lbl_operacaoEscolha
             // 
-            this.Lbl_operacaoEscolha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_operacaoEscolha.AutoSize = true;
             this.Lbl_operacaoEscolha.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_operacaoEscolha.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(885, 449);
+            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(83, 445);
             this.Lbl_operacaoEscolha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_operacaoEscolha.Name = "Lbl_operacaoEscolha";
             this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(167, 20);
@@ -453,21 +429,20 @@
             // 
             // Cbx_turmaAluno
             // 
-            this.Cbx_turmaAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cbx_turmaAluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_turmaAluno.FormattingEnabled = true;
-            this.Cbx_turmaAluno.Location = new System.Drawing.Point(695, 498);
+            this.Cbx_turmaAluno.Location = new System.Drawing.Point(252, 381);
             this.Cbx_turmaAluno.Name = "Cbx_turmaAluno";
             this.Cbx_turmaAluno.Size = new System.Drawing.Size(100, 21);
             this.Cbx_turmaAluno.TabIndex = 71;
+            this.Cbx_turmaAluno.DropDown += new System.EventHandler(this.Cbx_turmaAluno_DropDown);
             // 
             // Lbl_disponivel
             // 
-            this.Lbl_disponivel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_disponivel.AutoSize = true;
             this.Lbl_disponivel.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_disponivel.ForeColor = System.Drawing.Color.Red;
-            this.Lbl_disponivel.Location = new System.Drawing.Point(693, 526);
+            this.Lbl_disponivel.Location = new System.Drawing.Point(141, 405);
             this.Lbl_disponivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_disponivel.Name = "Lbl_disponivel";
             this.Lbl_disponivel.Size = new System.Drawing.Size(211, 34);
