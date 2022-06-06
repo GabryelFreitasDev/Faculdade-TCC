@@ -183,7 +183,7 @@ namespace Faculdade
                 if (!Lbl_nomeAlterar.Visible)
                 {
                     confereCampos();
-                    inserir.Inserir(Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue, Cbx_Turma.Text);
+                    inserir.Inserir(Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_Turma.SelectedValue, (int)Cbx_cursoMateria.SelectedValue, Cbx_Turma.Text);
                     MessageBox.Show(inserir.mensagem);
                 }
                 else
@@ -215,7 +215,7 @@ namespace Faculdade
                     confereCampos();
                     if(MessageBox.Show("Deseja realmente editar a matéria " + Txb_nomeAlterar.Text + " do curso de " + Cbx_cursoMateria.Text + " da turma " + Cbx_Turma.Text + "?", "Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        editar.Editar(Txb_nomeAlterar.Text, Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_cursoMateria.SelectedValue, (int)Cbx_Turma.SelectedValue);
+                        editar.Editar(Txb_nomeAlterar.Text, Txb_nomeMateria.Text, Txb_descricao.Text, (int)Cbx_Turma.SelectedValue, (int)Cbx_cursoMateria.SelectedValue);
                         MessageBox.Show(editar.mensagem);
                     }
                 }

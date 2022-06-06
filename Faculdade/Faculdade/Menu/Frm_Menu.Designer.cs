@@ -70,10 +70,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Faculdade.Properties.Resources.blob__1_;
+            this.pictureBox1.Image = global::Faculdade.Properties.Resources.aliareAcademy;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(264, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(250, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -299,7 +299,7 @@
         private System.Windows.Forms.PictureBox Pic_Maximizar;
         private System.Windows.Forms.PictureBox Pic_Minimizar;
         private System.Windows.Forms.PictureBox Pic_Fechar;
-        public System.Windows.Forms.Panel Pn_Menu;
         private System.Windows.Forms.PictureBox Pic_Maximizar2;
+        public System.Windows.Forms.Panel Pn_Menu;
     }
 }

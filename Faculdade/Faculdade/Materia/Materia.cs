@@ -50,7 +50,7 @@ namespace Faculdade
         {
             try
             {
-                var SQL = "SELECT nomeMateria,nomeTurma FROM Materia INNER JOIN Turma on FK_idTurma = idTurma WHERE nomeMateria ='" + nomeAlterar + "'";
+                var SQL = "SELECT nomeMateria,nomeTurma FROM Materia INNER JOIN Turma on FK_idTurma = idTurma WHERE nomeMateria = '" + nomeAlterar + "'";
                 var dt = db.NpgSQLQuery(SQL);
                 if (dt.Rows.Count > 0)
                 {

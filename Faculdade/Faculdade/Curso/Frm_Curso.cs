@@ -37,6 +37,7 @@ namespace Faculdade
             Dgv_cursos.Columns[0].HeaderText = "ID"; 
             Dgv_cursos.Columns[1].HeaderText = "CURSO";
             Dgv_cursos.Columns[2].HeaderText = "CARGA HORÁRIA";
+            Dgv_cursos.Columns[3].Frozen = true;
             Dgv_cursos.Columns[3].HeaderText = "DESCRIÇÃO";
             Dgv_cursos.AutoResizeColumns();
         }
