@@ -37,28 +37,19 @@
             this.Btn_Notas = new System.Windows.Forms.Button();
             this.Btn_Materias = new System.Windows.Forms.Button();
             this.Btn_Turmas = new System.Windows.Forms.Button();
-            this.Pnl_Letreiro = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Lbl_Introducao = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Pic_Maximizar2 = new System.Windows.Forms.PictureBox();
             this.Pic_Fechar = new System.Windows.Forms.PictureBox();
             this.Pic_Minimizar = new System.Windows.Forms.PictureBox();
             this.Pic_Maximizar = new System.Windows.Forms.PictureBox();
             this.Pn_Menu = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.contadorCursos = new System.Windows.Forms.Panel();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Pnl_Letreiro.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).BeginInit();
-            this.Pn_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl_Menu
@@ -192,52 +183,6 @@
             this.Btn_Turmas.UseVisualStyleBackColor = true;
             this.Btn_Turmas.Click += new System.EventHandler(this.Btn_Professores_Click);
             // 
-            // Pnl_Letreiro
-            // 
-            this.Pnl_Letreiro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pnl_Letreiro.AutoSize = true;
-            this.Pnl_Letreiro.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Pnl_Letreiro.Controls.Add(this.label1);
-            this.Pnl_Letreiro.Controls.Add(this.Lbl_Introducao);
-            this.Pnl_Letreiro.Controls.Add(this.panel2);
-            this.Pnl_Letreiro.Location = new System.Drawing.Point(250, 176);
-            this.Pnl_Letreiro.Name = "Pnl_Letreiro";
-            this.Pnl_Letreiro.Size = new System.Drawing.Size(1139, 253);
-            this.Pnl_Letreiro.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(60, 196);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1030, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "inovando para garantir a melhor experiencia para nossos professores e alunos";
-            // 
-            // Lbl_Introducao
-            // 
-            this.Lbl_Introducao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Lbl_Introducao.AutoSize = true;
-            this.Lbl_Introducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.Lbl_Introducao.Location = new System.Drawing.Point(64, 165);
-            this.Lbl_Introducao.Name = "Lbl_Introducao";
-            this.Lbl_Introducao.Size = new System.Drawing.Size(1014, 31);
-            this.Lbl_Introducao.TabIndex = 1;
-            this.Lbl_Introducao.Text = "Bem-Vindo a Aliare Academy, sua Faculdade de Tecnologia que está sempre";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackgroundImage = global::Faculdade.Properties.Resources.blob__1_;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(386, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 105);
-            this.panel2.TabIndex = 0;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -304,36 +249,12 @@
             // 
             this.Pn_Menu.AutoSize = true;
             this.Pn_Menu.BackColor = System.Drawing.SystemColors.Control;
-            this.Pn_Menu.Controls.Add(this.panel4);
-            this.Pn_Menu.Controls.Add(this.panel5);
-            this.Pn_Menu.Controls.Add(this.contadorCursos);
             this.Pn_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
             this.Pn_Menu.Name = "Pn_Menu";
             this.Pn_Menu.Size = new System.Drawing.Size(1136, 615);
             this.Pn_Menu.TabIndex = 15;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(454, 36);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(215, 236);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(823, 36);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(215, 236);
-            this.panel5.TabIndex = 1;
-            // 
-            // contadorCursos
-            // 
-            this.contadorCursos.Location = new System.Drawing.Point(89, 36);
-            this.contadorCursos.Name = "contadorCursos";
-            this.contadorCursos.Size = new System.Drawing.Size(215, 236);
-            this.contadorCursos.TabIndex = 0;
             // 
             // Frm_Menu
             // 
@@ -344,7 +265,6 @@
             this.ClientSize = new System.Drawing.Size(1386, 715);
             this.Controls.Add(this.Pn_Menu);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.Pnl_Letreiro);
             this.Controls.Add(this.Pnl_Menu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -355,14 +275,11 @@
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.Pnl_Menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Pnl_Letreiro.ResumeLayout(false);
-            this.Pnl_Letreiro.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Fechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Maximizar)).EndInit();
-            this.Pn_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,10 +294,6 @@
         private System.Windows.Forms.Button Btn_Materias;
         private System.Windows.Forms.Button Btn_Turmas;
         private System.Windows.Forms.Button Btn_Alunos;
-        private System.Windows.Forms.Panel Pnl_Letreiro;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Lbl_Introducao;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox Pic_Maximizar;
@@ -388,8 +301,5 @@
         private System.Windows.Forms.PictureBox Pic_Fechar;
         public System.Windows.Forms.Panel Pn_Menu;
         private System.Windows.Forms.PictureBox Pic_Maximizar2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel contadorCursos;
     }
 }

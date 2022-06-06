@@ -29,7 +29,7 @@ namespace Faculdade
             AbrirForm<Frm_Turma>();
             AbrirForm<Frm_Materia>();
             AbrirForm<Frm_Nota>();
-            AbrirForm<Frm_contaCursos>();
+            AbrirForm<Frm_menuGeral>();
         }
 
         Form formAtivo = null;
@@ -49,8 +49,9 @@ namespace Faculdade
 
         private void Frm_Menu_Load(object sender, EventArgs e)
         {
-            Pn_Menu.Visible = false;
             Btn_Menu.BackColor = Color.FromArgb(43, 51, 90);
+            Pn_Menu.Visible = true;
+            AbrirForm<Frm_menuGeral>();
         }
 
         public void descolorirAbas()
@@ -68,7 +69,7 @@ namespace Faculdade
             descolorirAbas();
             Btn_Menu.BackColor = Color.FromArgb(43, 51, 90);
             Pn_Menu.Visible = true;
-            AbrirForm<Frm_contaCursos>();
+            AbrirForm<Frm_menuGeral>();
         }
 
         private void Btn_Cursos_Click(object sender, EventArgs e)
@@ -156,11 +157,9 @@ namespace Faculdade
             if(Pic_Maximizar.Visible) // Se a tela não estiver maximizada
             {
                 WindowState = FormWindowState.Normal;
-                Pnl_Letreiro.Location = new Point(Pnl_Letreiro.Location.X, Pnl_Letreiro.Location.Y - 120);
             } else
             {
                 WindowState = FormWindowState.Maximized;
-                Pnl_Letreiro.Location = new Point(Pnl_Letreiro.Location.X, Pnl_Letreiro.Location.Y + 120);
             }
         }
 

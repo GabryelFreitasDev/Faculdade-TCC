@@ -237,7 +237,6 @@ C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\bin\Debug\pt\M
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.csproj.AssemblyReference.cache
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Aluno.resources
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Curso.resources
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_Menu.resources
@@ -514,4 +513,4 @@ C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\bin\Debug\ru\M
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_relatorioMateria.resources
-C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_contaCursos.resources
+C:\Users\gabry\OneDrive\Documentos\TCC-aliare\Faculdade\Faculdade\obj\Debug\Faculdade.Frm_menuGeral.resources
