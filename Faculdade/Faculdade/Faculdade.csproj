@@ -236,6 +236,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FaculdadeData.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Frm_contaCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_contaCursos.Designer.cs">
+      <DependentUpon>Frm_contaCursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Materia\Frm_relatorioMateria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
       <DependentUpon>Frm_Curso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aluno\Rlt_Aluno .rdlc" />
+    <EmbeddedResource Include="Frm_contaCursos.resx">
+      <DependentUpon>Frm_contaCursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Materia\Frm_relatorioMateria.resx">
       <DependentUpon>Frm_relatorioMateria.cs</DependentUpon>
     </EmbeddedResource>

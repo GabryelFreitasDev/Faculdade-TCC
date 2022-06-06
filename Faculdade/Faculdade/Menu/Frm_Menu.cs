@@ -29,6 +29,7 @@ namespace Faculdade
             AbrirForm<Frm_Turma>();
             AbrirForm<Frm_Materia>();
             AbrirForm<Frm_Nota>();
+            AbrirForm<Frm_contaCursos>();
         }
 
         Form formAtivo = null;
@@ -66,7 +67,8 @@ namespace Faculdade
         {
             descolorirAbas();
             Btn_Menu.BackColor = Color.FromArgb(43, 51, 90);
-            Pn_Menu.Visible = false;
+            Pn_Menu.Visible = true;
+            AbrirForm<Frm_contaCursos>();
         }
 
         private void Btn_Cursos_Click(object sender, EventArgs e)

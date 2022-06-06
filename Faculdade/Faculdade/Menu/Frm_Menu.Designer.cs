@@ -49,7 +49,7 @@
             this.Pn_Menu = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.contadorCursos = new System.Windows.Forms.Panel();
             this.Pnl_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Pnl_Letreiro.SuspendLayout();
@@ -306,7 +306,7 @@
             this.Pn_Menu.BackColor = System.Drawing.SystemColors.Control;
             this.Pn_Menu.Controls.Add(this.panel4);
             this.Pn_Menu.Controls.Add(this.panel5);
-            this.Pn_Menu.Controls.Add(this.panel1);
+            this.Pn_Menu.Controls.Add(this.contadorCursos);
             this.Pn_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pn_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Pn_Menu.Location = new System.Drawing.Point(250, 100);
@@ -328,12 +328,12 @@
             this.panel5.Size = new System.Drawing.Size(215, 236);
             this.panel5.TabIndex = 1;
             // 
-            // panel1
+            // contadorCursos
             // 
-            this.panel1.Location = new System.Drawing.Point(89, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 236);
-            this.panel1.TabIndex = 0;
+            this.contadorCursos.Location = new System.Drawing.Point(89, 36);
+            this.contadorCursos.Name = "contadorCursos";
+            this.contadorCursos.Size = new System.Drawing.Size(215, 236);
+            this.contadorCursos.TabIndex = 0;
             // 
             // Frm_Menu
             // 
@@ -390,6 +390,6 @@
         private System.Windows.Forms.PictureBox Pic_Maximizar2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel contadorCursos;
     }
 }
