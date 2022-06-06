@@ -14,12 +14,6 @@ namespace Faculdade
 {
     public partial class Frm_Menu : Form
     {
-        //public const int WM_NCLBUTTONDOWN = 0xA1;
-        //public const int HT_CAPTION = 0X2;
-        //[DllImport("user32.dll")]
-        //public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        //[DllImport("user32.dll")]
-        //public static extern bool ReleaseCapture();
 
         public Frm_Menu()
         {
@@ -31,21 +25,6 @@ namespace Faculdade
             AbrirForm<Frm_Nota>();
             AbrirForm<Frm_menuGeral>();
         }
-
-        Form formAtivo = null;
-        private void AbreFormulario(Form formulario)
-        {
-            if (formAtivo != null)
-                formAtivo.Close();
-            formAtivo = formulario;
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.Dock = DockStyle.Fill;
-            Pn_Menu.Controls.Add(formulario);
-            Pn_Menu.Tag = formulario;
-            formulario.Show();
-            formulario.BringToFront();
-        } 
 
         private void Frm_Menu_Load(object sender, EventArgs e)
         {
@@ -136,7 +115,6 @@ namespace Faculdade
                     formulario.BringToFront();
             }
         }
-        
 
         private void Pic_Fechar_Click(object sender, EventArgs e)
         {
