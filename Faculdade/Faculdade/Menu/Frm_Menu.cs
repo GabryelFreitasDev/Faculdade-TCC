@@ -154,11 +154,9 @@ namespace Faculdade
             if(Pic_Maximizar.Visible) // Se a tela não estiver maximizada
             {
                 WindowState = FormWindowState.Normal;
-                Pnl_Letreiro.Location = new Point(Pnl_Letreiro.Location.X, Pnl_Letreiro.Location.Y - 120);
             } else
             {
                 WindowState = FormWindowState.Maximized;
-                Pnl_Letreiro.Location = new Point(Pnl_Letreiro.Location.X, Pnl_Letreiro.Location.Y + 120);
             }
         }
 
@@ -170,6 +168,11 @@ namespace Faculdade
         private void Pic_Maximizar2_Click(object sender, EventArgs e)
         {
             Maximizar();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
