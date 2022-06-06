@@ -30,7 +30,7 @@ namespace Faculdade
         {
             try
             {
-                var sql = "SELECT nomeTurma,turno FROM Turma WHERE nomeTurma = '" + nomeTurma + "' and FK_idCurso = '" + idCurso + "' and turno = '" + turno + "'";
+                var sql = "SELECT nomeTurma,turno FROM Turma WHERE nomeTurma = '" + nomeTurma + "' and FK_idCurso = '" + idCurso + "'";
                 var dt = db.NpgSQLQuery(sql);
                 if (dt.Rows.Count == 0)
                 {

@@ -248,7 +248,7 @@
     <Compile Include="Materia\Frm_relatorioMateria.Designer.cs">
       <DependentUpon>Frm_relatorioMateria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materia.cs" />
+    <Compile Include="Materia\Materia.cs" />
     <Compile Include="Menu\Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>

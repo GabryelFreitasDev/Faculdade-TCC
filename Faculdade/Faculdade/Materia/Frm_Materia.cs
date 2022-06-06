@@ -162,7 +162,7 @@ namespace Faculdade
             }
             else if (string.IsNullOrWhiteSpace(Txb_descricao.Text))
             {
-                materia.mensagem = "Insira o nome da descrição";
+                materia.mensagem = "Insira a descrição";
             }
             else if (Cbx_Turma.SelectedItem == null)
             {

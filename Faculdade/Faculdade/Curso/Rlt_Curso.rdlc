@@ -364,7 +364,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>1.10807cm</Top>
-          <Left>0cm</Left>
           <Height>0.97042cm</Height>
           <Width>17.06057cm</Width>
           <Style>
@@ -407,7 +406,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.38438cm</Top>
+          <Top>0.37896cm</Top>
           <Left>0.24786cm</Left>
           <Height>0.86458cm</Height>
           <Width>7.2625cm</Width>
@@ -436,7 +435,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.38438cm</Top>
+          <Top>0.37896cm</Top>
           <Left>12.6039cm</Left>
           <Height>0.86458cm</Height>
           <Width>4.03396cm</Width>

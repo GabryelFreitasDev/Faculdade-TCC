@@ -69,7 +69,7 @@ namespace Faculdade
             this.Lbl_contadorTurmas.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_contadorTurmas.Font = new System.Drawing.Font("Nirmala UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_contadorTurmas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.Lbl_contadorTurmas.Location = new System.Drawing.Point(337, 439);
+            this.Lbl_contadorTurmas.Location = new System.Drawing.Point(623, 439);
             this.Lbl_contadorTurmas.Name = "Lbl_contadorTurmas";
             this.Lbl_contadorTurmas.Size = new System.Drawing.Size(165, 128);
             this.Lbl_contadorTurmas.TabIndex = 1;
@@ -83,7 +83,7 @@ namespace Faculdade
             this.Lbl_contadorAlunos.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_contadorAlunos.Font = new System.Drawing.Font("Nirmala UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_contadorAlunos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
-            this.Lbl_contadorAlunos.Location = new System.Drawing.Point(623, 439);
+            this.Lbl_contadorAlunos.Location = new System.Drawing.Point(337, 439);
             this.Lbl_contadorAlunos.Name = "Lbl_contadorAlunos";
             this.Lbl_contadorAlunos.Size = new System.Drawing.Size(165, 128);
             this.Lbl_contadorAlunos.TabIndex = 2;
