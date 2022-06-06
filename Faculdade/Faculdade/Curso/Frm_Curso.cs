@@ -245,6 +245,11 @@ namespace Faculdade
             limpaCampos();
             Txb_buscar.Clear();
         }
+
+        private void MTxb_cargaHoraria_Click(object sender, EventArgs e)
+        {
+            MTxb_cargaHoraria.SelectionStart = 0;
+        }
     }
 }
 

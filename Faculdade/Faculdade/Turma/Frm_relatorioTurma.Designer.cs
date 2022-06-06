@@ -45,7 +45,7 @@ namespace Faculdade
             this.relatorioTurma.Location = new System.Drawing.Point(0, 73);
             this.relatorioTurma.Name = "relatorioTurma";
             this.relatorioTurma.ServerReport.BearerToken = null;
-            this.relatorioTurma.Size = new System.Drawing.Size(682, 435);
+            this.relatorioTurma.Size = new System.Drawing.Size(682, 584);
             this.relatorioTurma.TabIndex = 0;
             // 
             // Btn_LimparFiltro
@@ -130,7 +130,7 @@ namespace Faculdade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 508);
+            this.ClientSize = new System.Drawing.Size(682, 655);
             this.Controls.Add(this.Btn_buscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -140,7 +140,8 @@ namespace Faculdade
             this.Controls.Add(this.Txb_buscaTurma);
             this.Controls.Add(this.relatorioTurma);
             this.Name = "Frm_relatorioTurma";
-            this.Text = "Frm_relatorioTurma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Relatório Turma";
             this.ResumeLayout(false);
             this.PerformLayout();
 

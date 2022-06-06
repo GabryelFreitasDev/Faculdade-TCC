@@ -40,18 +40,21 @@
             // 
             // RelatorioAluno
             // 
+            this.RelatorioAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RelatorioAluno.LocalReport.ReportEmbeddedResource = "Faculdade.Aluno.Rlt_Aluno .rdlc";
             this.RelatorioAluno.Location = new System.Drawing.Point(0, 82);
             this.RelatorioAluno.Name = "RelatorioAluno";
             this.RelatorioAluno.ServerReport.BearerToken = null;
-            this.RelatorioAluno.Size = new System.Drawing.Size(1184, 579);
+            this.RelatorioAluno.Size = new System.Drawing.Size(983, 736);
             this.RelatorioAluno.TabIndex = 0;
             // 
             // Btn_LimparFiltro
             // 
             this.Btn_LimparFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_LimparFiltro.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_LimparFiltro.Location = new System.Drawing.Point(822, 43);
+            this.Btn_LimparFiltro.Location = new System.Drawing.Point(831, 47);
             this.Btn_LimparFiltro.Name = "Btn_LimparFiltro";
             this.Btn_LimparFiltro.Size = new System.Drawing.Size(136, 30);
             this.Btn_LimparFiltro.TabIndex = 73;
@@ -120,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.ClientSize = new System.Drawing.Size(979, 697);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Btn_buscar);
             this.Controls.Add(this.label2);
@@ -129,11 +132,9 @@
             this.Controls.Add(this.Cbx_buscaCurso);
             this.Controls.Add(this.Txb_buscaNome);
             this.Controls.Add(this.RelatorioAluno);
-            this.MaximumSize = new System.Drawing.Size(1400, 700);
-            this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "Frm_relatorioAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_relatorioAluno";
+            this.Text = "Relatório Aluno";
             this.Load += new System.EventHandler(this.Frm_relatorioAluno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

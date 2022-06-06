@@ -43,26 +43,29 @@ namespace Faculdade
             // 
             // relatorioMateria
             // 
+            this.relatorioMateria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.relatorioMateria.LocalReport.ReportEmbeddedResource = "Faculdade.Materia.Rlt_Materia.rdlc";
             this.relatorioMateria.Location = new System.Drawing.Point(0, 73);
             this.relatorioMateria.Name = "relatorioMateria";
             this.relatorioMateria.ServerReport.BearerToken = null;
-            this.relatorioMateria.Size = new System.Drawing.Size(800, 425);
+            this.relatorioMateria.Size = new System.Drawing.Size(718, 574);
             this.relatorioMateria.TabIndex = 0;
             // 
             // Txb_buscaMateria
             // 
             this.Txb_buscaMateria.Location = new System.Drawing.Point(12, 47);
             this.Txb_buscaMateria.Name = "Txb_buscaMateria";
-            this.Txb_buscaMateria.Size = new System.Drawing.Size(438, 20);
+            this.Txb_buscaMateria.Size = new System.Drawing.Size(342, 20);
             this.Txb_buscaMateria.TabIndex = 1;
             // 
             // Btn_Buscar
             // 
             this.Btn_Buscar.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Btn_Buscar.Location = new System.Drawing.Point(681, 31);
+            this.Btn_Buscar.Location = new System.Drawing.Point(585, 33);
             this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Size = new System.Drawing.Size(107, 36);
+            this.Btn_Buscar.Size = new System.Drawing.Size(119, 36);
             this.Btn_Buscar.TabIndex = 2;
             this.Btn_Buscar.Text = "BUSCAR";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
@@ -83,7 +86,7 @@ namespace Faculdade
             this.Cbx_buscaTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_buscaTurma.Font = new System.Drawing.Font("Nirmala UI", 9F);
             this.Cbx_buscaTurma.FormattingEnabled = true;
-            this.Cbx_buscaTurma.Location = new System.Drawing.Point(584, 44);
+            this.Cbx_buscaTurma.Location = new System.Drawing.Point(495, 47);
             this.Cbx_buscaTurma.Name = "Cbx_buscaTurma";
             this.Cbx_buscaTurma.Size = new System.Drawing.Size(79, 23);
             this.Cbx_buscaTurma.TabIndex = 93;
@@ -93,7 +96,7 @@ namespace Faculdade
             this.Cbx_buscaCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbx_buscaCurso.Font = new System.Drawing.Font("Nirmala UI", 9F);
             this.Cbx_buscaCurso.FormattingEnabled = true;
-            this.Cbx_buscaCurso.Location = new System.Drawing.Point(456, 44);
+            this.Cbx_buscaCurso.Location = new System.Drawing.Point(367, 47);
             this.Cbx_buscaCurso.Name = "Cbx_buscaCurso";
             this.Cbx_buscaCurso.Size = new System.Drawing.Size(122, 23);
             this.Cbx_buscaCurso.TabIndex = 94;
@@ -102,7 +105,7 @@ namespace Faculdade
             // Btn_limparFiltro
             // 
             this.Btn_limparFiltro.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_limparFiltro.Location = new System.Drawing.Point(681, 1);
+            this.Btn_limparFiltro.Location = new System.Drawing.Point(585, 1);
             this.Btn_limparFiltro.Name = "Btn_limparFiltro";
             this.Btn_limparFiltro.Size = new System.Drawing.Size(119, 23);
             this.Btn_limparFiltro.TabIndex = 96;
@@ -124,7 +127,7 @@ namespace Faculdade
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(452, 20);
+            this.label2.Location = new System.Drawing.Point(363, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 21);
             this.label2.TabIndex = 98;
@@ -134,7 +137,7 @@ namespace Faculdade
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(580, 20);
+            this.label3.Location = new System.Drawing.Point(491, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 99;
@@ -144,7 +147,7 @@ namespace Faculdade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 497);
+            this.ClientSize = new System.Drawing.Size(718, 646);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -156,7 +159,8 @@ namespace Faculdade
             this.Controls.Add(this.Txb_buscaMateria);
             this.Controls.Add(this.relatorioMateria);
             this.Name = "Frm_relatorioMateria";
-            this.Text = "Frm_relatorioMateria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Relatório Matéria";
             this.Load += new System.EventHandler(this.Frm_relatorioMateria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -33,7 +33,6 @@ namespace Faculdade
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Txb_buscar = new System.Windows.Forms.TextBox();
             this.Lbl_operacao = new System.Windows.Forms.Label();
             this.MTxb_cargaHoraria = new System.Windows.Forms.MaskedTextBox();
             this.Txb_descricao = new System.Windows.Forms.TextBox();
@@ -52,16 +51,9 @@ namespace Faculdade
             this.Lbl_operacaoEscolha = new System.Windows.Forms.Label();
             this.Lbl_nomeAcao = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Txb_buscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_cursos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Txb_buscar
-            // 
-            this.Txb_buscar.Location = new System.Drawing.Point(432, 47);
-            this.Txb_buscar.Name = "Txb_buscar";
-            this.Txb_buscar.Size = new System.Drawing.Size(598, 20);
-            this.Txb_buscar.TabIndex = 23;
-            this.Txb_buscar.TextChanged += new System.EventHandler(this.Txb_buscar_TextChanged);
             // 
             // Lbl_operacao
             // 
@@ -81,8 +73,9 @@ namespace Faculdade
             this.MTxb_cargaHoraria.Location = new System.Drawing.Point(151, 208);
             this.MTxb_cargaHoraria.Mask = "0000";
             this.MTxb_cargaHoraria.Name = "MTxb_cargaHoraria";
-            this.MTxb_cargaHoraria.Size = new System.Drawing.Size(28, 23);
+            this.MTxb_cargaHoraria.Size = new System.Drawing.Size(34, 23);
             this.MTxb_cargaHoraria.TabIndex = 28;
+            this.MTxb_cargaHoraria.Click += new System.EventHandler(this.MTxb_cargaHoraria_Click);
             // 
             // Txb_descricao
             // 
@@ -152,7 +145,7 @@ namespace Faculdade
             this.Btn_relatorioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_relatorioCurso.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_relatorioCurso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_relatorioCurso.Location = new System.Drawing.Point(920, 532);
+            this.Btn_relatorioCurso.Location = new System.Drawing.Point(970, 532);
             this.Btn_relatorioCurso.Name = "Btn_relatorioCurso";
             this.Btn_relatorioCurso.Size = new System.Drawing.Size(112, 32);
             this.Btn_relatorioCurso.TabIndex = 33;
@@ -253,7 +246,7 @@ namespace Faculdade
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgv_cursos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Dgv_cursos.Location = new System.Drawing.Point(432, 82);
+            this.Dgv_cursos.Location = new System.Drawing.Point(432, 76);
             this.Dgv_cursos.Name = "Dgv_cursos";
             this.Dgv_cursos.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -267,7 +260,7 @@ namespace Faculdade
             this.Dgv_cursos.RowHeadersVisible = false;
             this.Dgv_cursos.RowHeadersWidth = 62;
             this.Dgv_cursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_cursos.Size = new System.Drawing.Size(600, 444);
+            this.Dgv_cursos.Size = new System.Drawing.Size(650, 444);
             this.Dgv_cursos.TabIndex = 7;
             this.Dgv_cursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_curso_CellContentClick);
             // 
@@ -300,12 +293,21 @@ namespace Faculdade
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(184, 211);
+            this.label1.Location = new System.Drawing.Point(190, 211);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 44;
             this.label1.Text = "HORAS";
+            // 
+            // Txb_buscar
+            // 
+            this.Txb_buscar.Font = new System.Drawing.Font("Nirmala UI", 9F);
+            this.Txb_buscar.Location = new System.Drawing.Point(432, 47);
+            this.Txb_buscar.Name = "Txb_buscar";
+            this.Txb_buscar.Size = new System.Drawing.Size(379, 23);
+            this.Txb_buscar.TabIndex = 23;
+            this.Txb_buscar.TextChanged += new System.EventHandler(this.Txb_buscar_TextChanged);
             // 
             // Frm_Curso
             // 
@@ -343,7 +345,6 @@ namespace Faculdade
         }
 
         #endregion
-        private System.Windows.Forms.TextBox Txb_buscar;
         private System.Windows.Forms.Label Lbl_operacao;
         private System.Windows.Forms.MaskedTextBox MTxb_cargaHoraria;
         private System.Windows.Forms.TextBox Txb_descricao;
@@ -362,6 +363,7 @@ namespace Faculdade
         private System.Windows.Forms.Label Lbl_operacaoEscolha;
         private System.Windows.Forms.Label Lbl_nomeAcao;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Txb_buscar;
     }
 }
 

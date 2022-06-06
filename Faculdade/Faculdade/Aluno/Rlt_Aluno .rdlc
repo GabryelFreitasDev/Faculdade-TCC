@@ -12,25 +12,25 @@
               <Width>3.92875cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.0502cm</Width>
+              <Width>2.65938cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.26188cm</Width>
+              <Width>2.20896cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.26188cm</Width>
+              <Width>2.18251cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.28833cm</Width>
+              <Width>2.00659cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.92333cm</Width>
+              <Width>2.71166cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.18792cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.94979cm</Width>
+              <Width>3.02917cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -209,7 +209,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CONTATO PAR.</Value>
+                              <Value>CON PAR.</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -717,7 +717,7 @@
         <Top>1.3462cm</Top>
         <Left>0.44662cm</Left>
         <Height>1.2cm</Height>
-        <Width>25.02645cm</Width>
+        <Width>24.40139cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -728,7 +728,7 @@
     <Height>2.97917in</Height>
     <Style />
   </Body>
-  <Width>10.35169in</Width>
+  <Width>9.91785in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -757,7 +757,7 @@
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>1.10807cm</Top>
           <Height>0.97042cm</Height>
-          <Width>26.29329cm</Width>
+          <Width>25.19133cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -798,10 +798,40 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.67542cm</Top>
+          <Top>1.38438cm</Top>
           <Left>0.44662cm</Left>
           <Height>0.86458cm</Height>
           <Width>7.2625cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>1.38438cm</Top>
+          <Left>20.81405cm</Left>
+          <Height>0.86458cm</Height>
+          <Width>4.03396cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -819,8 +849,8 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>

@@ -26,13 +26,12 @@ namespace Faculdade
 
         private void Frm_Turma_Load(object sender, EventArgs e)
         {
-          
-            Cbx_Turno.SelectedItem = null;
-            Cbx_cursoAntigo.SelectedItem = null;
-            Cbx_cursoTurma.SelectedItem = null;
             someCampos(false);
             preencherCBcurso(Cbx_cursoTurma);
             preencherCBcurso(Cbx_cursoAntigo);
+            Cbx_Turno.SelectedItem = null;
+            Cbx_cursoAntigo.SelectedItem = null;
+            Cbx_cursoTurma.Text = null;
         }
 
         private void EditaColunaDgv()

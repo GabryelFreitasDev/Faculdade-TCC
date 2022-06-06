@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Dgv_aluno = new System.Windows.Forms.DataGridView();
             this.Lbl_acao = new System.Windows.Forms.Label();
             this.Lbl_nome = new System.Windows.Forms.Label();
@@ -79,14 +79,14 @@
             this.Dgv_aluno.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.Dgv_aluno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_aluno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_aluno.ColumnHeadersHeight = 37;
             this.Dgv_aluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_aluno.Location = new System.Drawing.Point(369, 86);
@@ -168,7 +168,7 @@
             // 
             this.Btn_relatorio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_relatorio.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_relatorio.Location = new System.Drawing.Point(1004, 532);
+            this.Btn_relatorio.Location = new System.Drawing.Point(999, 532);
             this.Btn_relatorio.Name = "Btn_relatorio";
             this.Btn_relatorio.Size = new System.Drawing.Size(104, 32);
             this.Btn_relatorio.TabIndex = 49;
@@ -441,8 +441,8 @@
             // 
             this.Lbl_disponivel.AutoSize = true;
             this.Lbl_disponivel.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_disponivel.ForeColor = System.Drawing.Color.Red;
-            this.Lbl_disponivel.Location = new System.Drawing.Point(141, 405);
+            this.Lbl_disponivel.ForeColor = System.Drawing.Color.IndianRed;
+            this.Lbl_disponivel.Location = new System.Drawing.Point(153, 411);
             this.Lbl_disponivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_disponivel.Name = "Lbl_disponivel";
             this.Lbl_disponivel.Size = new System.Drawing.Size(211, 34);

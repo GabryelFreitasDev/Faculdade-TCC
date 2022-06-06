@@ -39,11 +39,14 @@ namespace Faculdade
             // 
             // relatorioCurso
             // 
+            this.relatorioCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.relatorioCurso.LocalReport.ReportEmbeddedResource = "Faculdade.Curso.Rlt_Curso.rdlc";
             this.relatorioCurso.Location = new System.Drawing.Point(0, 71);
             this.relatorioCurso.Name = "relatorioCurso";
             this.relatorioCurso.ServerReport.BearerToken = null;
-            this.relatorioCurso.Size = new System.Drawing.Size(712, 678);
+            this.relatorioCurso.Size = new System.Drawing.Size(706, 678);
             this.relatorioCurso.TabIndex = 0;
             // 
             // label3
@@ -99,7 +102,8 @@ namespace Faculdade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 749);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(704, 729);
             this.Controls.Add(this.Btn_limparFiltro);
             this.Controls.Add(this.Btn_buscar);
             this.Controls.Add(this.label3);
@@ -107,7 +111,8 @@ namespace Faculdade
             this.Controls.Add(this.Txb_buscar);
             this.Controls.Add(this.relatorioCurso);
             this.Name = "Frm_relatorioCurso";
-            this.Text = "Frm_relatorioCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Relatório Curso";
             this.ResumeLayout(false);
             this.PerformLayout();
 
