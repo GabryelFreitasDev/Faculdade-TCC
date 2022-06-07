@@ -29,10 +29,10 @@ namespace Faculdade
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Lbl_operacao = new System.Windows.Forms.Label();
             this.MTxb_cargaHoraria = new System.Windows.Forms.MaskedTextBox();
             this.Txb_descricao = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@ namespace Faculdade
             this.Lbl_operacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.Lbl_operacao.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_operacao.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_operacao.Location = new System.Drawing.Point(12, 21);
+            this.Lbl_operacao.Location = new System.Drawing.Point(12, 9);
             this.Lbl_operacao.Name = "Lbl_operacao";
             this.Lbl_operacao.Size = new System.Drawing.Size(142, 45);
             this.Lbl_operacao.TabIndex = 29;
@@ -92,7 +92,7 @@ namespace Faculdade
             this.Btn_InsereCurso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Btn_InsereCurso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_InsereCurso.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_InsereCurso.Location = new System.Drawing.Point(13, 415);
+            this.Btn_InsereCurso.Location = new System.Drawing.Point(18, 473);
             this.Btn_InsereCurso.Name = "Btn_InsereCurso";
             this.Btn_InsereCurso.Size = new System.Drawing.Size(84, 32);
             this.Btn_InsereCurso.TabIndex = 25;
@@ -103,7 +103,7 @@ namespace Faculdade
             // Txb_nomeCurso
             // 
             this.Txb_nomeCurso.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txb_nomeCurso.Location = new System.Drawing.Point(11, 162);
+            this.Txb_nomeCurso.Location = new System.Drawing.Point(12, 162);
             this.Txb_nomeCurso.Name = "Txb_nomeCurso";
             this.Txb_nomeCurso.Size = new System.Drawing.Size(379, 23);
             this.Txb_nomeCurso.TabIndex = 24;
@@ -112,7 +112,7 @@ namespace Faculdade
             // 
             this.Btn_excluiCurso.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_excluiCurso.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_excluiCurso.Location = new System.Drawing.Point(214, 415);
+            this.Btn_excluiCurso.Location = new System.Drawing.Point(217, 473);
             this.Btn_excluiCurso.Name = "Btn_excluiCurso";
             this.Btn_excluiCurso.Size = new System.Drawing.Size(84, 32);
             this.Btn_excluiCurso.TabIndex = 30;
@@ -124,7 +124,7 @@ namespace Faculdade
             // 
             this.Btn_editar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_editar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_editar.Location = new System.Drawing.Point(115, 415);
+            this.Btn_editar.Location = new System.Drawing.Point(116, 473);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(84, 32);
             this.Btn_editar.TabIndex = 31;
@@ -169,7 +169,7 @@ namespace Faculdade
             // 
             this.Btn_limpar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_limpar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_limpar.Location = new System.Drawing.Point(12, 532);
+            this.Btn_limpar.Location = new System.Drawing.Point(18, 532);
             this.Btn_limpar.Name = "Btn_limpar";
             this.Btn_limpar.Size = new System.Drawing.Size(84, 32);
             this.Btn_limpar.TabIndex = 37;
@@ -182,7 +182,7 @@ namespace Faculdade
             this.Lbl_cargaHoraria.AutoSize = true;
             this.Lbl_cargaHoraria.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_cargaHoraria.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_cargaHoraria.Location = new System.Drawing.Point(8, 211);
+            this.Lbl_cargaHoraria.Location = new System.Drawing.Point(9, 211);
             this.Lbl_cargaHoraria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cargaHoraria.Name = "Lbl_cargaHoraria";
             this.Lbl_cargaHoraria.Size = new System.Drawing.Size(138, 20);
@@ -219,8 +219,8 @@ namespace Faculdade
             this.Dgv_cursos.AllowUserToDeleteRows = false;
             this.Dgv_cursos.AllowUserToOrderColumns = true;
             this.Dgv_cursos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_cursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_cursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.Dgv_cursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -228,35 +228,35 @@ namespace Faculdade
             this.Dgv_cursos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.Dgv_cursos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_cursos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_cursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_cursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.Dgv_cursos.ColumnHeadersHeight = 30;
             this.Dgv_cursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_cursos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_cursos.DefaultCellStyle = dataGridViewCellStyle43;
             this.Dgv_cursos.Location = new System.Drawing.Point(432, 76);
             this.Dgv_cursos.Name = "Dgv_cursos";
             this.Dgv_cursos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_cursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_cursos.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.Dgv_cursos.RowHeadersVisible = false;
             this.Dgv_cursos.RowHeadersWidth = 62;
             this.Dgv_cursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -269,7 +269,7 @@ namespace Faculdade
             this.Lbl_operacaoEscolha.AutoSize = true;
             this.Lbl_operacaoEscolha.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_operacaoEscolha.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(9, 389);
+            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(18, 445);
             this.Lbl_operacaoEscolha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_operacaoEscolha.Name = "Lbl_operacaoEscolha";
             this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(167, 20);
@@ -281,7 +281,7 @@ namespace Faculdade
             this.Lbl_nomeAcao.AutoSize = true;
             this.Lbl_nomeAcao.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_nomeAcao.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_nomeAcao.Location = new System.Drawing.Point(8, 140);
+            this.Lbl_nomeAcao.Location = new System.Drawing.Point(9, 140);
             this.Lbl_nomeAcao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nomeAcao.Name = "Lbl_nomeAcao";
             this.Lbl_nomeAcao.Size = new System.Drawing.Size(137, 20);

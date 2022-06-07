@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Dgv_aluno = new System.Windows.Forms.DataGridView();
             this.Lbl_acao = new System.Windows.Forms.Label();
             this.Lbl_nome = new System.Windows.Forms.Label();
@@ -79,14 +79,14 @@
             this.Dgv_aluno.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(51)))), ((int)(((byte)(90)))));
             this.Dgv_aluno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_aluno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_aluno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_aluno.ColumnHeadersHeight = 37;
             this.Dgv_aluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_aluno.Location = new System.Drawing.Point(369, 86);
@@ -104,7 +104,7 @@
             this.Lbl_acao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.Lbl_acao.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold);
             this.Lbl_acao.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_acao.Location = new System.Drawing.Point(7, 9);
+            this.Lbl_acao.Location = new System.Drawing.Point(12, 9);
             this.Lbl_acao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_acao.Name = "Lbl_acao";
             this.Lbl_acao.Size = new System.Drawing.Size(142, 45);
@@ -245,7 +245,7 @@
             // Btn_insereAluno
             // 
             this.Btn_insereAluno.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_insereAluno.Location = new System.Drawing.Point(18, 472);
+            this.Btn_insereAluno.Location = new System.Drawing.Point(18, 473);
             this.Btn_insereAluno.Name = "Btn_insereAluno";
             this.Btn_insereAluno.Size = new System.Drawing.Size(84, 32);
             this.Btn_insereAluno.TabIndex = 39;
@@ -352,7 +352,7 @@
             // Btn_limpar
             // 
             this.Btn_limpar.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_limpar.Location = new System.Drawing.Point(12, 532);
+            this.Btn_limpar.Location = new System.Drawing.Point(18, 532);
             this.Btn_limpar.Name = "Btn_limpar";
             this.Btn_limpar.Size = new System.Drawing.Size(84, 32);
             this.Btn_limpar.TabIndex = 64;
@@ -420,7 +420,7 @@
             this.Lbl_operacaoEscolha.AutoSize = true;
             this.Lbl_operacaoEscolha.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.Lbl_operacaoEscolha.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(14, 445);
+            this.Lbl_operacaoEscolha.Location = new System.Drawing.Point(18, 445);
             this.Lbl_operacaoEscolha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_operacaoEscolha.Name = "Lbl_operacaoEscolha";
             this.Lbl_operacaoEscolha.Size = new System.Drawing.Size(167, 20);
@@ -442,7 +442,7 @@
             this.Lbl_disponivel.AutoSize = true;
             this.Lbl_disponivel.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_disponivel.ForeColor = System.Drawing.Color.IndianRed;
-            this.Lbl_disponivel.Location = new System.Drawing.Point(153, 411);
+            this.Lbl_disponivel.Location = new System.Drawing.Point(153, 405);
             this.Lbl_disponivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_disponivel.Name = "Lbl_disponivel";
             this.Lbl_disponivel.Size = new System.Drawing.Size(211, 34);
