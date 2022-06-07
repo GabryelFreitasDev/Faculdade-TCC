@@ -61,6 +61,7 @@ namespace Faculdade
                     Txb_nomeAlterar.Text = row.Cells["nomeMateria"].Value.ToString();
                     Txb_nomeMateria.Clear();
                     Cbx_cursoMateria.Text = row.Cells["nomeCurso"].Value.ToString();
+                    Txb_descricao.Text = row.Cells["descricaoMateria"].Value.ToString();
                     Cbx_Turma.Text = row.Cells["nomeTurma"].Value.ToString();
                 }
             }

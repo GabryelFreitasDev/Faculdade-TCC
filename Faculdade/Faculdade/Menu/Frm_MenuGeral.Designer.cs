@@ -66,7 +66,7 @@ namespace Faculdade
             this.Lbl_contadorCursos.ForeColor = System.Drawing.Color.White;
             this.Lbl_contadorCursos.Location = new System.Drawing.Point(36, 166);
             this.Lbl_contadorCursos.Name = "Lbl_contadorCursos";
-            this.Lbl_contadorCursos.Size = new System.Drawing.Size(164, 128);
+            this.Lbl_contadorCursos.Size = new System.Drawing.Size(165, 128);
             this.Lbl_contadorCursos.TabIndex = 0;
             this.Lbl_contadorCursos.Text = "10";
             this.Lbl_contadorCursos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -80,7 +80,7 @@ namespace Faculdade
             this.Lbl_contadorTurmas.ForeColor = System.Drawing.Color.White;
             this.Lbl_contadorTurmas.Location = new System.Drawing.Point(35, 166);
             this.Lbl_contadorTurmas.Name = "Lbl_contadorTurmas";
-            this.Lbl_contadorTurmas.Size = new System.Drawing.Size(164, 128);
+            this.Lbl_contadorTurmas.Size = new System.Drawing.Size(165, 128);
             this.Lbl_contadorTurmas.TabIndex = 1;
             this.Lbl_contadorTurmas.Text = "10";
             this.Lbl_contadorTurmas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,7 +94,7 @@ namespace Faculdade
             this.Lbl_contadorAlunos.ForeColor = System.Drawing.Color.White;
             this.Lbl_contadorAlunos.Location = new System.Drawing.Point(33, 166);
             this.Lbl_contadorAlunos.Name = "Lbl_contadorAlunos";
-            this.Lbl_contadorAlunos.Size = new System.Drawing.Size(164, 128);
+            this.Lbl_contadorAlunos.Size = new System.Drawing.Size(165, 128);
             this.Lbl_contadorAlunos.TabIndex = 2;
             this.Lbl_contadorAlunos.Text = "10";
             this.Lbl_contadorAlunos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,7 +108,7 @@ namespace Faculdade
             this.Lbl_contadorMaterias.ForeColor = System.Drawing.Color.White;
             this.Lbl_contadorMaterias.Location = new System.Drawing.Point(33, 163);
             this.Lbl_contadorMaterias.Name = "Lbl_contadorMaterias";
-            this.Lbl_contadorMaterias.Size = new System.Drawing.Size(164, 128);
+            this.Lbl_contadorMaterias.Size = new System.Drawing.Size(165, 128);
             this.Lbl_contadorMaterias.TabIndex = 3;
             this.Lbl_contadorMaterias.Text = "10";
             this.Lbl_contadorMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,7 +279,7 @@ namespace Faculdade
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(447, 151);
+            this.label1.Location = new System.Drawing.Point(431, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 45);
             this.label1.TabIndex = 16;

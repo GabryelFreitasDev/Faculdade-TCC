@@ -55,7 +55,7 @@ namespace Faculdade
                 Dgv.DataSource = dt;
                 cmd.ExecuteNonQuery();
             }
-            catch(Npgsql.PostgresException)
+            catch(PostgresException)
             {
                 MessageBox.Show("Erro na busca insira caracteres válidos");
             }

@@ -21,11 +21,9 @@ namespace Faculdade
         public Frm_menuGeral()
         {
             InitializeComponent();
-            Lbl_contadorCursos.Text = contador(selectCurso);
-            Lbl_contadorTurmas.Text = contador(selectAluno);
-            Lbl_contadorAlunos.Text = contador(selectTurma);
-            Lbl_contadorMaterias.Text = contador(selectMateria);
+            contaTudo();
         }
+
         private string contador(string contador)
         {
             db = new Conexao();
@@ -33,6 +31,14 @@ namespace Faculdade
             var dt = db.NpgSQLQuery(SQL);
             string quantia = dt.Rows.Count.ToString();
             return quantia;
+        }
+
+        private void contaTudo()
+        {
+            Lbl_contadorCursos.Text = contador(selectCurso);
+            Lbl_contadorTurmas.Text = contador(selectAluno);
+            Lbl_contadorAlunos.Text = contador(selectTurma);
+            Lbl_contadorMaterias.Text = contador(selectMateria);
         }
     }
 }
